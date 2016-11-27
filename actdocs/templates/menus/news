@@ -5,7 +5,7 @@
     </a>
     <ul class="dropdown-menu">
       [% WRAPPER menus/item %]
-        <a href="[% make_uri('news') %]">{{News}}</a>
+        <a href="[% make_uri('news') %]">abc{{News}}</a>
       [% END %]
       [% WRAPPER menus/item %]
         <a href="[% make_uri('newsadmin') %]">{{News Administration}}</a>

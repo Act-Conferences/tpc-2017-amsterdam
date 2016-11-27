@@ -3,6 +3,7 @@ html,body {
 }
 body{
     margin:0;
+	color: #232323;
 }
 .input-link {
   border: 0;
@@ -109,3 +110,37 @@ p.message {
 .starcount {
   font-size: small;
 }
+
+
+/* yapc2017 */
+#ext_menu-0 {
+  font-size: 80%;
+}
+
+#ext_menu-0 li a {
+  color: #fff;
+}
+
+#ext_menu-0 li a:hover,
+#ext_menu-0 li a:focus {
+  color: #b8312f;
+}
+
+.navbar-static-top {
+  border-width: 0;
+}
+
+.container > .navbar-header {
+  margin-right: 60px;
+}
+
+.intro-header section {
+	margin-top: -20px;
+	padding-top: 0px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+	padding-bottom: 50px;
+	color: #f8f8f8;
+	background: url(../img/gevels.jpg) no-repeat center center;
+	background-size: cover;
+	text-align: center;
+}
+
