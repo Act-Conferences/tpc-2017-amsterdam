@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="[% global.request.language %]">
   <head>
-    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap.min.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'font-awesome.min.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style-copied-from-theo.css') %]" />    
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'mbr-additional.css') %]" />
-    
-    <!--
-    <link rel="stylesheet" type="text/css" href="http://bootswatch.com/simplex/bootstrap.min.css" />
-    -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="[% make_uri_info('js', 'jquery-1.11.0.min.js') %]"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="description" content="The Perl Conference">
     <title>[% global.conference.name %][% IF title %] | [% title  %][% END %]</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
+    <link rel="stylesheet" href="[% make_uri_info('assets/bootstrap-material-design-font/css' , 'material.css'        ) %]">
+    <link rel="stylesheet" href="[% make_uri_info('assets/tether'                             , 'tether.min.css'      ) %]">
+    <link rel="stylesheet" href="[% make_uri_info('assets/animate.css'                        , 'animate.min.css'     ) %]">
+    <link rel="stylesheet" href="[% make_uri_info('assets/dropdown/css'                       , 'style.css'           ) %]">
+    <link rel="stylesheet" href="[% make_uri_info('assets/theme/css'                          , 'style.css'           ) %]">
+    <link rel="stylesheet" href="[% make_uri_info('assets/mobirise/css'                       , 'mbr-additional.css'  ) %]" type="text/css">
+
+    <script src="[% make_uri_info('js', 'jquery-1.11.0.min.js') %]"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -51,6 +62,18 @@
       [% PROCESS footer %]
     </div>
 
-    <script src="[% make_uri_info('js', 'bootstrap.min.js') %]"></script>
+
+    <script src="[% make_uri_info('assets/web/assets/jquery', 'jquery.min.js'            ) %]" ></script>
+    <script src="[% make_uri_info('assets/tether'           , 'tether.min.js'            ) %]" ></script>
+    <script src="[% make_uri_info('assets/bootstrap/js'     , 'bootstrap.min.js'         ) %]" ></script>
+    <script src="[% make_uri_info('assets/smooth-scroll'    , 'SmoothScroll.js'          ) %]" ></script>
+    <script src="[% make_uri_info('assets/viewportChecker'  , 'jquery.viewportchecker.js') %]" ></script>
+    <script src="[% make_uri_info('assets/jarallax'         , 'jarallax.js'              ) %]" ></script>
+    <script src="[% make_uri_info('assets/dropdown/js'      , 'script.min.js'            ) %]" ></script>
+    <script src="[% make_uri_info('assets/touchSwipe'       , 'jquery.touchSwipe.min.js' ) %]" ></script>
+    <script src="[% make_uri_info('assets/theme/js'         , 'script.js'                ) %]" ></script>
+  
+  <input name="animation" type="hidden">
+
   </body>
 </html>

@@ -1,21 +1,20 @@
-<div id="page-footer">
-  <div class="holder">
-    <div class="frame">
-      <div class="navbar navbar-default">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              [% PROCESS footers/conferences %]
-            </div>
-            <div class="col-sm-6">
-              [% PROCESS footers/social %]
-            </div>
-            <div class="col-sm-12">
-              [% PROCESS footers/powered %]
-            </div>
-          </div>
-        </div>
+<section class="mbr-section mbr-section-md-padding mbr-footer footer1" id="contacts1-0" style="background-color: rgb(0, 0, 0); padding-top: 90px; padding-bottom: 90px;">
+  
+  <div class="container">
+    <div class="row">
+      <div class="mbr-footer-content col-xs-12 col-md-3">
+        <div><img src="assets/images/yapc-amsterdam-128x128-68.png"></div>
       </div>
+      <div class="mbr-footer-content col-xs-12 col-md-3">
+        <p></p>
+      </div>
+      <div class="mbr-footer-content col-xs-12 col-md-3">
+        <p><strong>Contacts</strong><br><a href="mailto:organisatie@perlworkshop.nl" target="_blank" class="text-white">organisatie@perlworkshop.nl</a><br>+ 31 - 384 603 033<br>+ 31 - 624 619 072</p>
+      </div>
+      <div class="mbr-footer-content col-xs-12 col-md-3">
+        <p><strong>Remember...</strong><br><span style="line-height: 1.5;">The Perl Conference</span><br>in Amdsterdam<br>9 . . 11 August 2017</p>
+      </div>
+
     </div>
   </div>
-</div>
+</section>
