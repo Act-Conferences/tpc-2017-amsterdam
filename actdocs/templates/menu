@@ -2,9 +2,9 @@
 
     <div class="navbar-brand">
         <a href="[% make_uri %]" class="navbar-logo">
-          <img src="[% make_uri_info('img', 'yapc-amsterdam-128x128-78.png') %]" alt="[% global.conference.name %]" title="[% global.conference.name %]">
+          <img src="[% make_uri_info('img', 'yapc-amsterdam-128x128-78.png') %]" alt="[% global.conference.name %]" title="Back to home">
         </a>
-        <a class="navbar-caption" href="[% make_uri %]">
+        <a class="navbar-caption" href="[% make_uri %]" title="Back to home">
           <span class="hidden-md-down"                                     >[% global.conference.name %]</span>
           <span class="hidden-lg-up hidden-xs-down"  style="font-size:80%" >[% global.conference.name %]</span>
           <span class="hidden-sm-up"                 style="font-size:60%" >[% global.conference.name %]</span>

@@ -1,35 +1,44 @@
-<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-after-navbar" id="header2-0" style="background-image: url([% make_uri_info('img', 'gevels.jpg') %]);">
+<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-after-navbar" id="header2-0">
 
-    <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);">
-    </div>
+  <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);">
+  </div>
 
-    <div class="mbr-table mbr-table-full">
-        <div class="mbr-table-cell">
+  <div class="mbr-table mbr-table-full">
+    <div class="mbr-table-cell">
 
-            <div class="container">
-                <div class="mbr-section row">
-                    <div class="mbr-table-md-up">
-                        
-                        <div class="mbr-table-cell mbr-right-padding-md-up mbr-valign-top col-md-7">
-                            <div class="mbr-figure"><img src="[% make_uri_info('img', 'yapc-amsterdam-1400x1400-96.png') %]"></div>
-                        </div>
-                        <div class="mbr-table-cell col-md-5 text-xs-center text-md-left">
+      <div class="container">
+        <div class="mbr-section row">
+          <div class="mbr-table-md-up">
+            
+            <div class="mbr-table-cell mbr-right-padding-md-up mbr-valign-top col-md-7">
+              <div class="mbr-figure">
+                <img class="hidden-sm-down" src="[% make_uri_info('img', 'yapc-amsterdam-1400x1400-96.png') %]">
+              </div>
+            </div>
+            <div class="mbr-table-cell col-md-5 text-xs-center text-md-left">
 
-                          <h3 class="mbr-section-title display-2">The Perl Conference<br><span style="font-weight: normal;">in Amsterdam</span></h3>
+              <h3 class="mbr-section-title display-2">
+                <span class="hidden-sm-down">
+                  The Perl Conference<br><span style="font-weight: normal;">in Amsterdam</span>
+                </span>
+                <span class="hidden-md-up" style="font-size:80%;">
+                  The Perl Conference<br><span style="font-weight: normal;">in Amsterdam</span>
+                </span>
+              </h3>
 
-                          <div class="mbr-section-text lead">
-                              <p style="font-size:130%;">9 .. 11 August, 2017</p>
-                          </div>
+              <div class="mbr-section-text lead">
+                <p style="font-size:130%;">9 .. 11 August, 2017</p>
+              </div>
 
-                      </div>
-
-                    </div>
-                </div>
             </div>
 
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#features3-0"><i class="mbr-arrow-icon"></i></a></div>
+    </div>
+  </div>
+
+  <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#features3-0"><i class="mbr-arrow-icon"></i></a></div>
 
 </section>
