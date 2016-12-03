@@ -113,16 +113,20 @@ p.message {
 
 
 /* yapc2017 */
-#ext_menu-0 {
-  font-size: 80%;
+#ext_menu-0 .link {
+  font-size: 1rem;
 }
 
-#ext_menu-0 li a {
+#ext_menu-0 a,
+{
   color: #fff;
 }
 
-#ext_menu-0 li a:hover,
-#ext_menu-0 li a:focus {
+#ext_menu-0 .bg-color.transparent .link:hover,
+#ext_menu-0 .bg-color.transparent .link:focus,
+#ext_menu-0 .link:hover,
+#ext_menu-0 .link:focus
+{
   color: #b8312f;
 }
 
@@ -144,3 +148,10 @@ p.message {
 	text-align: center;
 }
 
+.nav-dropdown ,
+.navbar-dropdown .navbar-caption
+{
+	font-family: "Raleway", 'sans-serif';
+	font-size:   1rem;
+	font-weight: normal;
+}

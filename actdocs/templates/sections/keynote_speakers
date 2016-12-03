@@ -1,0 +1,49 @@
+<section class="mbr-cards mbr-section mbr-section-nopadding" id="features3-0" style="background-color: rgb(255, 255, 255);">
+
+    
+
+    <div class="mbr-cards-row row">
+        <div class="mbr-cards-col col-xs-12 col-lg-4" style="padding-top: 80px; padding-bottom: 80px;">
+            <div class="container">
+              <div class="card cart-block">
+                  <div class="card-img"><img src="assets/images/wall-larry-perl-cowboy-450-600x600-40.jpg" class="card-img-top" alt="Larry Wall" title="Larry Wall"></div>
+                  <div class="card-block">
+                    <h4 class="card-title">Larry Wall</h4>
+                    <h5 class="card-subtitle">The Father of Perl &amp; Perl 6</h5>
+                    <p class="card-text">The three chief virtues of a programmer are: Laziness, Impatience and Hubris</p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mbr-cards-col col-xs-12 col-lg-4" style="padding-top: 80px; padding-bottom: 80px;">
+            <div class="container">
+                <div class="card cart-block">
+                    <div class="card-img"><img src="assets/images/damian-conway-osdc-2011-600x600-98.jpg" class="card-img-top" alt="Damian Conway" title="Damina Conway"></div>
+                    <div class="card-block">
+                        <h4 class="card-title">Damian Conway</h4>
+                        <h5 class="card-subtitle">Insane Regular Expressions</h5>
+                        <p class="card-text">Programming is a Dark Art, and it always will be. The programmer is fighting against the two most destructive forces in the universe: entropy and human stupidity. These are not things you can overcome with a "methodology" or on a schedule.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mbr-cards-col col-xs-12 col-lg-4" style="padding-top: 80px; padding-bottom: 80px;">
+            <div class="container">
+                <div class="card cart-block">
+                    <div class="card-img"><img src="assets/images/red-question-mark-png-215-600x600-51.png" class="card-img-top"></div>
+                    <div class="card-block">
+                        <h4 class="card-title">Mystery Guest<br><span style="color: rgb(91, 91, 91); font-family: Lora, serif; font-size: 0.875rem; font-style: italic; font-weight: 400; line-height: 1.7857;">Don't you love surprises … ?</span><br></h4>
+                        <h5 class="card-subtitle"></h5>
+                        <p class="card-text">Soon, our main sponsor will let you know who will be the third speaker in this row. Some interesting names have passed by, you won't be disapointed!</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</section>

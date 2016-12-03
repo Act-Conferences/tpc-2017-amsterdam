@@ -1,1 +1,3 @@
-<h2>[% content %]</h2>
+<li class="nav-item">
+  [% content %]
+</li>

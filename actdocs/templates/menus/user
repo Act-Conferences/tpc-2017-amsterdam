@@ -1,4 +1,5 @@
 <!-- user menu -->
+<!--
 [% IF global.request.user %]
   <li class="dropdown">
     <a href="" class="dropdown-toggle" data-toggle="dropdown">
@@ -39,4 +40,51 @@
     [% END %]
     </ul>
   </li>
+[% END %]
+-->
+
+[% IF global.request.user %]
+
+  <li class="nav-item dropdown">
+
+    <a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="#" aria-expanded="false">
+      <i class="fa fa-user hidden-lg-up"></i>
+      <span class="hidden-md-down">[% global.request.user.login %]</span>
+      <span class="hidden-md-up"  >[% global.request.user.login %]</span>
+      <b class="caret"></b>
+    </a>
+    
+    <ul class="dropdown-menu">
+    [% UNLESS global.request.user.participation OR global.config.closed %]
+      <a class="dropdown-item" href="[% make_uri('register') %]">{{Register}}</a>
+    [% END %]
+    
+      <a class="dropdown-item" href="[% make_uri('main') %]">{{Edit profile}}</a>
+      <a class="dropdown-item" href="[% make_uri_info('user', global.request.user.user_id) %]">{{View}}</a>
+      <li class="hidden-sm-down dropdown-divider"></li>
+      <a class="dropdown-item" href="[% make_uri('logout') %]">{{Logout}}</a>
+    </ul>
+
+  </li>
+  
+[% ELSE %]
+
+  <li class="nav-item dropdown">
+
+    <a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="#" aria-expanded="false">
+      <i class="fa fa-user hidden-lg-up"></i>
+      <span class="hidden-md-down">{{Register}}</span>
+      <span class="hidden-md-up"  >{{Register}}</span>
+      <b class="caret"></b>
+    </a>
+    
+    <ul class="dropdown-menu">
+        <a class="dropdown-item" href="[% make_uri('main') %]">{{Log in}}</a>
+    [% UNLESS global.config.closed %]
+      <li class="hidden-sm-down dropdown-divider"></li>
+      <a class="dropdown-item" href="[% make_uri('register') %]">{{New user}}</a>
+    [% END %]
+    </ul>
+  </li>
+
 [% END %]

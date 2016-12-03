@@ -1,10 +1,13 @@
+<!--
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-    <i class="fa fa-bullhorn hidden-md hidden-lg"></i><span class="hidden-sm"> {{Talks & events}}</span> <b class="caret"></b>
+    <i class="fa fa-bullhorn hidden-md hidden-lg"></i>
+    <span class="hidden-sm"> {{Talks & events}}</span> 
+    <b class="caret"></b>
   </a>
   <ul class="dropdown-menu">
-    <li><a href="[% make_uri('talks') %]">{{Presentations}}</a></li>
-    <li><a href="[% make_uri('favtalks') %]"> {{Favorite Talks}}</a></li>
+    <li><a href="[% make_uri('talks')    %]">{{Presentations}}</a></li>
+    <li><a href="[% make_uri('favtalks') %]">{{Favorite Talks}}</a></li>
 
     [% IF global.config.talks_submissions_open OR global.request.user.is_talks_admin %]
       <li><a href="[% make_uri('newtalk') %]">{{Submit a talk proposal}}</a></li>
@@ -38,3 +41,22 @@
 
   </ul>
 </li>
+-->
+
+<!-- taslks menu -->
+<li class="nav-item dropdown">
+
+  <a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="#" aria-expanded="false">
+    <i class="fa fa-bullhorn hidden-lg-up"></i>
+    <span class="hidden-md-down">{{Talks & events}}</span>
+    <span class="hidden-md-up"  >{{Talks & events}}</span>
+    <b class="caret"></b>
+  </a>
+  
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="[% make_uri('search') %]">{{Presentations}}</a>
+    <a class="dropdown-item" href="[% make_uri('stats') %]" >{{Favorite Talks}}</a>
+  </div>
+  
+</li>
+

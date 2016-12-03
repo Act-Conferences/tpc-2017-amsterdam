@@ -1,5 +1,8 @@
 [% WRAPPER ui banner = 1%]
 
+
+
+
 <p>
 Welcome to Our Conference web site.
 </p>
@@ -21,18 +24,18 @@ Watch this space for updates, or check the <a href="[% global.request.base_url %
  %]
 
 [% IF news.size %]
-<h2>Latest News</h2>
-[% FOREACH item = news %]
-<div class="news-entry">
- <h3 class="news-header">
-  <span class="news-date">[% date_format(item.datetime, 'date_short') %]</span>
-  <span class="news-title">[% item.title %]</span>
- </h3>
- <div class="news-text">
-  [% item.content %]
- </div>
-</div>
-[% END %]
+  <h2>Latest News</h2>
+  [% FOREACH item = news %]
+  <div class="news-entry">
+  <h3 class="news-header">
+    <span class="news-date">[% date_format(item.datetime, 'date_short') %]</span>
+    <span class="news-title">[% item.title %]</span>
+  </h3>
+  <div class="news-text">
+    [% item.content %]
+  </div>
+  </div>
+  [% END %]
 [% END %]
 
 [% IF more %]
@@ -40,5 +43,11 @@ Watch this space for updates, or check the <a href="[% global.request.base_url %
  <a href="[% make_uri('news') %]" class="news-link">Older announcements</a>
 </p>
 [% END %]
+
+
+[% PROCESS sections/keynote_speakers %]
+
+
+
 
 [% END %]

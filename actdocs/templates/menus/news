@@ -13,7 +13,11 @@
     </ul>
   </li>
 [% ELSE %]
-  [% WRAPPER menus/item %]
-    <a href="[% make_uri('news') %]"><i class="fa fa-newspaper-o hidden-md hidden-lg"></i><span class="hidden-sm"> {{News}}</span></a>
-  [% END %]
+  <li class="nav-item">
+    <a class="nav-link link" href="[% make_uri('news') %]">
+      <i class="fa fa-newspaper-o hidden-lg-up"></i>
+      <span class="hidden-md-down"> {{News}}</span>
+      <span class="hidden-md-up"  > {{News}}</span>
+    </a>
+  </li>
 [% END %]
