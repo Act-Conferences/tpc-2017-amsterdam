@@ -1,23 +1,30 @@
+<!-- news menu -->
+
 [% IF global.request.user.is_news_admin %]
-  <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-      <i class="fa fa-newspaper-o hidden-md hidden-lg"></i><span class="hidden-sm"> {{News}}</span> <b class="caret"></b>
+
+  <li class="nav-item dropdown">
+  
+    <a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="#" aria-expanded="false">
+      <i class="fa fa-newspaper-o hidden-lg-up" title="View/edit news"></i>
+      <span class="hidden-md-down" title="View/edit news">{{News}}</span>
+      <span class="hidden-md-up"   title="View/edit news">{{News}}</span>
+      <b class="caret"></b>
     </a>
+
     <ul class="dropdown-menu">
-      [% WRAPPER menus/item %]
-        <a href="[% make_uri('news') %]">abc{{News}}</a>
-      [% END %]
-      [% WRAPPER menus/item %]
-        <a href="[% make_uri('newsadmin') %]">{{News Administration}}</a>
-      [% END %]
+      <a class="dropdown-item" href="[% make_uri('news')      %]">{{News}}</a>
+      <a class="dropdown-item" href="[% make_uri('newsadmin') %]">{{News Administration}}</a>
     </ul>
   </li>
+
 [% ELSE %]
+
   <li class="nav-item">
     <a class="nav-link link" href="[% make_uri('news') %]">
-      <i class="fa fa-newspaper-o hidden-lg-up"></i>
-      <span class="hidden-md-down"> {{News}}</span>
-      <span class="hidden-md-up"  > {{News}}</span>
+      <i class="fa fa-newspaper-o hidden-lg-up" title="View news"></i>
+      <span class="hidden-md-down" title="View news">{{News}}</span>
+      <span class="hidden-md-up"   title="View news">{{News}}</span>
     </a>
   </li>
+
 [% END %]

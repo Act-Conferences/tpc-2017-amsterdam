@@ -24,9 +24,11 @@ body{
     width:100%;
     display:table-row;
 }
+
 #page-content {
-    padding: 40px 0;
 }
+/*     padding: 40px 0; */
+
 #main-menu .jumbotron {
     background-color: transparent;
     padding-left: 0;
@@ -154,4 +156,15 @@ p.message {
 	font-family: "Raleway", 'sans-serif';
 	font-size:   1rem;
 	font-weight: normal;
+}
+
+.nav-dropdown-sm .dropdown-item {
+	/* Make sure in mobile menu, menu items are slightly indented */
+	/* Need to override !important from assets/dropdown/css/style.css */
+	padding-left: 3em !important;
+}
+
+
+#page-content {
+  padding-top: 100px;
 }

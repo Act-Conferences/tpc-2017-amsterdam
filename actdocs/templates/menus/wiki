@@ -1,5 +1,9 @@
-[% WRAPPER menus/item %]
-  <a href="[% make_uri('wiki') %]">
-    <i class="fa fa-edit hidden-md hidden-lg"></i><span class="hidden-sm"> Wiki</span>
-  </a>
-[% END %]
+<!-- wiki menu -->
+
+  <li class="nav-item">
+    <a class="nav-link link" href="[% make_uri('wiki') %]">
+      <i class="fa fa-edit hidden-lg-up" title="View/edit wiki"></i>
+      <span class="hidden-md-down" title="View/edit wiki">Wiki</span>
+      <span class="hidden-md-up"  >Wiki</span>
+    </a>
+  </li>

@@ -4,7 +4,11 @@
         <a href="[% make_uri %]" class="navbar-logo">
           <img src="[% make_uri_info('img', 'yapc-amsterdam-128x128-78.png') %]" alt="[% global.conference.name %]" title="[% global.conference.name %]">
         </a>
-        <a class="navbar-caption" href="[% make_uri %]">[% global.conference.name %]</a>
+        <a class="navbar-caption" href="[% make_uri %]">
+          <span class="hidden-md-down"                                     >[% global.conference.name %]</span>
+          <span class="hidden-lg-up hidden-xs-down"  style="font-size:80%" >[% global.conference.name %]</span>
+          <span class="hidden-sm-up"                 style="font-size:60%" >[% global.conference.name %]</span>
+        </a>
     </div>
 
 </div>
@@ -33,10 +37,11 @@
 
   <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
     
-    [% PROCESS menus/news %]
+    [% PROCESS menus/news  %]
     [% PROCESS menus/talks %]
     [% PROCESS menus/users %]
-    [% PROCESS menus/user %]
+    [% PROCESS menus/wiki  %]
+    [% PROCESS menus/user  %]
             
   </ul>
   <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
