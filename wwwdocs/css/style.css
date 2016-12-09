@@ -145,7 +145,7 @@ p.message {
   background-color: #fe0000;
 }
 
-.mbr-author-desc {
+.text-on-dark {
   color:white;
 }
 
@@ -162,6 +162,10 @@ p.message {
 	text-align: center;
 }
 /* 	background-size: cover; */
+
+#venue_intro .mbr-section-title, #venue_intro p {
+    color: #fff;
+}
 
 @media (max-width: 767px)  {
   .intro-header section {

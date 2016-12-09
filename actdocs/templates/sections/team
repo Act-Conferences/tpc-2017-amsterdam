@@ -1,11 +1,11 @@
-﻿<section class="mbr-section amsterdam_red_bg" id="testimonials1-0" style="padding-top: 40px; padding-bottom: 40px;">
+﻿<section class="mbr-section amsterdam_red_bg" id="team" style="padding-top: 40px; padding-bottom: 40px;">
 
   <div class="mbr-section mbr-section__container mbr-section__container--middle">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 text-xs-center">
           <h3 class="mbr-section-title display-2">OUR FABULOUS TEAM</h3>
-          <small class="mbr-section-subtitle">Meet the people that make this Perl Event happen …</small>
+          <small class="mbr-section-subtitle text-on-dark">Meet the people that make this Perl Event happen …</small>
         </div>
       </div>
     </div>
@@ -22,7 +22,7 @@
             <div class="mbr-author card-footer">
               <div class="mbr-author-img"><img src="assets/images/534083c8b81d013303dc191e04f68ca1-160x160-94.jpg" class="img-circle" alt="Theo van Hoesel, main organiser" title="Theo van Hoesel, main organiser"></div>
               <div class="mbr-author-name">Theo van Hoesel</div>
-              <small class="mbr-author-desc">Main Organiser</small>
+              <small class="mbr-author-desc text-on-dark">Main Organiser</small>
             </div>
           </div>
         </div><div class="col-xs-12 col-lg-4">
@@ -32,7 +32,7 @@
             <div class="mbr-author card-footer">
               <div class="mbr-author-img"><img src="assets/images/mark-overmeer-160x160-19.jpg" class="img-circle" alt="Mark Overmeer, Co-Organiser" title="Mark Overmeer, Co-Organiser"></div>
               <div class="mbr-author-name">Mark Overmeer</div>
-              <small class="mbr-author-desc">Co-organiser</small>
+              <small class="mbr-author-desc text-on-dark">Co-organiser</small>
             </div>
           </div>
         </div><div class="col-xs-12 col-lg-4">
@@ -42,7 +42,7 @@
             <div class="mbr-author card-footer">
               <div class="mbr-author-img"><img src="assets/images/16826242802-95d4c8a749-160x160-39.jpg" class="img-circle" alt="Wendy van Dijk, Advisor" title="Wendy van Dijk, Advisor"></div>
               <div class="mbr-author-name">Wendy van Dijk</div>
-              <small class="mbr-author-desc">Advisor</small>
+              <small class="mbr-author-desc text-on-dark">Advisor</small>
             </div>
           </div>
         </div>

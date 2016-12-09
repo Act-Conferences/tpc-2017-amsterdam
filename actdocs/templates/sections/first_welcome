@@ -15,5 +15,7 @@
     </div>
   </div>
 
+  <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#news_overview"><i class="mbr-arrow-icon"></i></a></div>
+
 </section>
 
