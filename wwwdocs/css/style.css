@@ -135,9 +135,18 @@ p.message {
 }
 /*  color: #b8312f; */
 /* toneelschoolposter: #ed1b24 */
+/* theos team-ontwerp: #b60300 */
 
 .amsterdam_red {
   color: #fe0000;
+}
+
+.amsterdam_red_bg {
+  background-color: #fe0000;
+}
+
+.mbr-author-desc {
+  color:white;
 }
 
 .navbar-static-top {
