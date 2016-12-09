@@ -1,0 +1,27 @@
+<section class="mbr-section mbr-parallax-background" id="content5-0" style="background-image: url(assets/images/nlpw2016-2000x988-92.jpg); padding-top: 200px; padding-bottom: 200px;">
+
+  <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(0, 0, 0);">
+  </div>
+
+  <div class="container">
+    <h3 class="mbr-section-title display-2">
+      <span style="font-size: 3rem; line-height: 1.1;">
+        <a class="amsterdam_red" href="http://b-buildingbusiness.com/amsterdam/b-1/" target="_blank">B.Amsterdam</a><br>
+      </span><br>
+      City in a building
+    </h3>
+    <div class="lead">
+      <p>
+        With its 28.000 square meters and two buildings, B.Amsterdam is the biggest startup ecosystem in Europe. 
+        B. is a creative working space for innovation, education and growth. 
+        We build a bridge between startups, creatives and corporates and bring them together, 
+        setting up ways to connect with-, learn from- and grow with each other.<br>
+        To accommodate growth, whether you’re a starting entrepreneur or an experienced one, 
+        B.Amsterdam provides numerous services and facilities, 
+        such as work spots, events spaces, meeting units, two lounges, a gym, a cinema, 
+        parking spots aplenty and even a rooftop restaurant overlooking Amsterdam.
+      </p>
+    </div>
+  </div>
+
+</section>

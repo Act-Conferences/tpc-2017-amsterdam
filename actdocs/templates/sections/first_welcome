@@ -1,0 +1,19 @@
+<section class="mbr-section mbr-section-full" id="first_welcome">
+
+  <div class="mbr-table-cell">
+
+    <div class="container">
+      <div class="row">
+        <div class="mbr-section col-md-10">
+
+          <h2>Welcome to The Perl Conference</h2>
+          <p>Traditionally called <a href="https://en.wikipedia.org/wiki/Yet_Another_Perl_Conference" target="_blank">YAPC</a>, 
+          now referred to as The Perl Conference for clarity.</p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
