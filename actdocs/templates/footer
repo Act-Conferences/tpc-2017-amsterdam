@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="mbr-footer-content col-xs-12 col-md-3">
-        <div><img src="assets/images/yapc-amsterdam-128x128-68.png"></div>
+        <div><img src="[% make_uri_info('assets/images', 'yapc-amsterdam-128x128-68.png') %]"></div>
       </div>
       <div class="mbr-footer-content col-xs-12 col-md-3">
         <p></p>

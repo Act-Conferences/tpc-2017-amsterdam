@@ -127,9 +127,17 @@ p.message {
 #ext_menu-0 .bg-color.transparent .link:hover,
 #ext_menu-0 .bg-color.transparent .link:focus,
 #ext_menu-0 .link:hover,
-#ext_menu-0 .link:focus
+#ext_menu-0 .link:focus,
+#ext_menu-0 .navbar-caption:hover,
+#ext_menu-0 .navbar-caption:focus
 {
-  color: #b8312f;
+  color: #fe0000;
+}
+/*  color: #b8312f; */
+/* toneelschoolposter: #ed1b24 */
+
+.amsterdam_red {
+  color: #fe0000;
 }
 
 .navbar-static-top {
@@ -176,7 +184,6 @@ p.message {
 	/* Need to override !important from assets/dropdown/css/style.css */
 	padding-left: 3em !important;
 }
-
 
 #page-content {
   padding-top: 100px;

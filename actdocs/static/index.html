@@ -1,21 +1,6 @@
 [% WRAPPER ui banner = 1%]
 
-
-
-
-<p>
-Welcome to Our Conference web site.
-</p>
-
-<p>
-consequatur veniam voluptatem quod tempor modi atque amet voluptatum
-maxime voluptas reprehenderit duis animi cupidatat commodi incididunt
-rerum unde magna delectus dolor alias ab iste corporis vel natus saepe
-</p>
-
-<p>
-Watch this space for updates, or check the <a href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml">feed</a>.
-</p>
+[% PROCESS sections/first_welcome mbrstyle=1 %]
 
 [% news = global.news(3);
    IF news.size > 2;
@@ -45,9 +30,7 @@ Watch this space for updates, or check the <a href="[% global.request.base_url %
 [% END %]
 
 
-[% PROCESS sections/keynote_speakers %]
-
-
-
+[% PROCESS sections/keynote_speakers mbrstyle=1 %]
+[% PROCESS sections/venue_intro      mbrstyle=1 %]
 
 [% END %]
