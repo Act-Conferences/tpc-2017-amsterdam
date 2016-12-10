@@ -17,9 +17,9 @@
   [% head_a_attr        = 'href="#" class="dropdown-toggle" data-toggle="dropdown"' %]
   [% icon_class         = 'hidden-md hidden-lg' %]
   [% head_attr_big      = 'class="hidden-sm hidden-xs"'   %]
-  [% head_attr_small    = 'class="hidden-md hidden-lg"'   %]
+  [% head_attr_small    = 'class="hidden-lg hidden-md hidden-sm"'   %]
   
   [% item_a_attr        = ''  %]
-  [% div_li_attr        = 'class="hidden-sm divider"'  %]
+  [% div_li_attr        = 'class="hidden-xs divider"'  %]
 
 [% END %]

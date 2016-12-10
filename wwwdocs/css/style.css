@@ -128,16 +128,37 @@ p.message {
 
 }
 
-/* === Customizations in mobirise menu === */
+/* === Customizations in menu === */
+/*   under #ext_menu-0 for mobirise  */
+/*   under #main-menu for bootstrap3 */
 
 #ext_menu-0 .link {
   font-size: 1rem;
 }
 
-#ext_menu-0 a,
+#main-menu {
+  background-color: #282828;
+}
+
+#main-menu .navbar-nav > li > a ,
+#main-menu .navbar-header a,
+#ext_menu-0 a 
 {
   color: #fff;
+  font-family: "Raleway", 'sans-serif';
 }
+
+#main-menu .navbar-nav > li > a ,
+#main-menu .navbar-header a
+{
+  font-size:   1.4rem;
+  font-weight: normal;
+}
+
+#main-menu .navbar-nav > li > a:hover ,
+#main-menu .navbar-nav > li > a:focus ,
+#main-menu .navbar-header a:hover,
+#main-menu .navbar-header a:focus,
 
 #ext_menu-0 .bg-color.transparent .link:hover,
 #ext_menu-0 .bg-color.transparent .link:focus,

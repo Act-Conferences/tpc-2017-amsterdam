@@ -18,8 +18,8 @@
       <li><a [% item_a_attr %] href="[% make_uri('register') %]">{{Register}}</a></li>
     [% END %]
     
-      <li><a [% item_a_attr %] href="[% make_uri('main') %]">{{Edit profile}}</a></li>
-      <li><a [% item_a_attr %] href="[% make_uri_info('user', global.request.user.user_id) %]">{{View}}</a>
+      <li><a [% item_a_attr %] href="[% make_uri('main') %]">User settings</a></li>
+      <li><a [% item_a_attr %] href="[% make_uri_info('user', global.request.user.user_id) %]">User info</a>
       <li [% div_li_attr %]></li>
       <li><a [% item_a_attr %] href="[% make_uri('logout') %]">{{Logout}}</a></li>
     </ul>
