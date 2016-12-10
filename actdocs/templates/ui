@@ -1,32 +1,16 @@
 <!DOCTYPE html>
-<html lang="[% global.request.language %]">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="[% global.request.language %]" xml:lang="[% global.request.language %]">
   <head>
-    <!-- link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap.min.css') %]" /> -->
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap3.min.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'font-awesome.min.css') %]" />
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css') %]" />
+    <!--
+    <link rel="stylesheet" type="text/css" href="http://bootswatch.com/simplex/bootstrap.min.css" />
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <meta name="description" content="The Perl Conference">
-    <title>[% global.conference.name %][% IF title %] | [% title  %][% END %]</title>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-    
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/bootstrap-material-design-font/css' , 'material.css'        ) %]">
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/tether'                             , 'tether.min.css'      ) %]">
-    
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/bootstrap/css'                      , 'bootstrap.min.css'   ) %]">
-
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/animate.css'                        , 'animate.min.css'     ) %]">
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/dropdown/css'                       , 'style.css'           ) %]">
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/theme/css'                          , 'style.css'           ) %]">
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/mobirise/css'                       , 'mbr-additional.css'  ) %]">
-
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css'                                       , 'style.css'           ) %]">
-
     <script src="[% make_uri_info('js', 'jquery-1.11.0.min.js') %]"></script>
+    <title>[% global.conference.name %][% IF title %] | [% title  %][% END %]</title>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -36,47 +20,23 @@
   <body>
     <div id="page">
       <div id="page-body">
-      
-        <section id="ext_menu-0">
-      
-          <nav class="navbar navbar-dropdown bg-color navbar-fixed-top">
-            <div class="container">
-              <div class="mbr-table">
-                [% PROCESS menu %]
-              </div>
-            </div>
-          </nav>
-          
-        </section>
-
-        <div class="intro-header">
-          [% IF banner %]
-            [% PROCESS banner %]
-          [% END %]
-          [% IF title %]
-            <h1>[% title %]</h1>
-          [% END %]
+        <div class="navbar navbar-default navbar-static-top" id="main-menu" role="navigation">
+          [% PROCESS menu %]
+        </div>
+        
+        <div class="container page-title">
+          [% IF title %]<h1>[% title %]</h1>[% END %]
         </div>
 
-        [% content %]
-        
+        <div class="container" id="page-content">
+          <div class="col-xs-12">
+            [% content %]
+          </div>
+        </div>
       </div>
 
-      [% PROCESS footer %]
     </div>
 
-
-    <script src="[% make_uri_info('assets/web/assets/jquery', 'jquery.min.js'            ) %]" ></script>
-    <script src="[% make_uri_info('assets/tether'           , 'tether.min.js'            ) %]" ></script>
-    <script src="[% make_uri_info('assets/bootstrap/js'     , 'bootstrap.min.js'         ) %]" ></script>
-    <script src="[% make_uri_info('assets/smooth-scroll'    , 'SmoothScroll.js'          ) %]" ></script>
-    <script src="[% make_uri_info('assets/viewportChecker'  , 'jquery.viewportchecker.js') %]" ></script>
-    <script src="[% make_uri_info('assets/jarallax'         , 'jarallax.js'              ) %]" ></script>
-    <script src="[% make_uri_info('assets/dropdown/js'      , 'script.min.js'            ) %]" ></script>
-    <script src="[% make_uri_info('assets/touchSwipe'       , 'jquery.touchSwipe.min.js' ) %]" ></script>
-    <script src="[% make_uri_info('assets/theme/js'         , 'script.js'                ) %]" ></script>
-  
-  <input name="animation" type="hidden">
-
+    <script src="[% make_uri_info('js', 'bootstrap3.min.js') %]"></script>
   </body>
 </html>

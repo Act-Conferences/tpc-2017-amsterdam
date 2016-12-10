@@ -3,7 +3,7 @@ html,body {
 }
 body{
     margin:0;
-	color: #232323;
+  color: #232323;
 }
 .input-link {
   border: 0;
@@ -115,6 +115,21 @@ p.message {
 
 
 /* yapc2017 */
+
+/* === Customizations of bootstrap3 templates === */
+.page-title {
+  margin-top:		20px; /* don't cover menu */
+  margin-bottom: 	20px;
+  padding-top:		20px;
+  padding-bottom:	20px;
+  text-align:center;
+  background-color:#e0e0e0;
+  font-family: "Raleway", 'sans-serif';
+
+}
+
+/* === Customizations in mobirise menu === */
+
 #ext_menu-0 .link {
   font-size: 1rem;
 }
@@ -145,10 +160,6 @@ p.message {
   background-color: #fe0000;
 }
 
-.text-on-dark {
-  color:white;
-}
-
 .navbar-static-top {
   border-width: 0;
 }
@@ -157,47 +168,58 @@ p.message {
   margin-right: 60px;
 }
 
-.intro-header section {
-	color: #f8f8f8;
-	text-align: center;
+.nav-dropdown ,
+.navbar-dropdown .navbar-caption
+{
+  font-family: "Raleway", 'sans-serif';
+  font-size:   1rem;
+  font-weight: normal;
 }
-/* 	background-size: cover; */
+
+.nav-dropdown-sm .dropdown-item {
+  /* Make sure in mobile menu, menu items are slightly indented */
+  /* Need to override !important from assets/dropdown/css/style.css */
+  padding-left: 3em !important;
+}
+
+/* --- Customizations in frontpage sections --- */
+
+/* Every section needs 100px top margin because of menu */
+.frontpage-section section {
+  margin-top:100px;
+}
+
+/* Default in sections is dark text on bright background */
+.frontpage-sections section {
+  color: #232323;
+}
+
+/* add this class when background is dark */
+.text-on-dark {
+  color:white;
+}
+
+
+/*   background-size: cover; */
 
 #venue_intro .mbr-section-title, #venue_intro p {
     color: #fff;
 }
 
 @media (max-width: 767px)  {
-  .intro-header section {
-	margin-top:  -50px;
-	padding-top: 0px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-	padding-bottom: 0px;
-	background: url(../img/gevels-768.jpg) no-repeat center center;
+  #banner {
+  margin-top:  -50px;
+  padding-top: 0px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom: 0px;
+  background: url(../img/gevels-768.jpg) no-repeat center center;
   }
 }
 @media (min-width: 768px)  {
-  .intro-header section {
-	margin-top:  50px;
-	padding-top: 0px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-	padding-bottom: 50px;
-	background: url(../img/gevels.jpg) no-repeat center center;
+  #banner {
+  margin-top:  50px;
+  padding-top: 0px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom: 50px;
+  background: url(../img/gevels.jpg) no-repeat center center;
   }
 }
 
-.nav-dropdown ,
-.navbar-dropdown .navbar-caption
-{
-	font-family: "Raleway", 'sans-serif';
-	font-size:   1rem;
-	font-weight: normal;
-}
-
-.nav-dropdown-sm .dropdown-item {
-	/* Make sure in mobile menu, menu items are slightly indented */
-	/* Need to override !important from assets/dropdown/css/style.css */
-	padding-left: 3em !important;
-}
-
-#page-content {
-  padding-top: 100px;
-}

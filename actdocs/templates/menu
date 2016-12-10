@@ -1,35 +1,24 @@
-<div class="mbr-table-cell">
+<div class="container">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu-options">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="[% make_uri %]">[% global.conference.name %]</a>
+  </div>
 
-    <div class="navbar-brand">
-        <a href="[% make_uri %]" class="navbar-logo">
-          <img src="[% make_uri_info('img', 'yapc-amsterdam-128x128-78.png') %]" alt="[% global.conference.name %]" title="Back to home">
-        </a>
-        <a class="navbar-caption" href="[% make_uri %]" title="Back to home">
-          <span class="hidden-md-down"                                     >[% global.conference.name %]</span>
-          <span class="hidden-lg-up hidden-xs-down"  style="font-size:80%" >[% global.conference.name %]</span>
-          <span class="hidden-sm-up"                 style="font-size:60%" >[% global.conference.name %]</span>
-        </a>
-    </div>
-
-</div>
-
-<div class="mbr-table-cell">
-
-  <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-      <div class="hamburger-icon"></div>
-  </button>
-
-  <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
-    
-    [% PROCESS menus/news  %]
-    [% PROCESS menus/talks %]
-    [% PROCESS menus/users %]
-    [% PROCESS menus/wiki  %]
-    [% PROCESS menus/user  %]
-            
-  </ul>
-  <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-    <div class="close-icon"></div>
-  </button>
-
+  <div class="collapse navbar-collapse" id="nav-menu-options">
+    <ul class="nav navbar-nav">
+      [% PROCESS menus/news     bootstrap3=1 %]
+      [% PROCESS menus/talks    bootstrap3=1 %]
+      [% PROCESS menus/users    bootstrap3=1 %]
+      [% PROCESS menus/wiki     bootstrap3=1 %]
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      [% PROCESS menus/user     bootstrap3=1 %]
+    </ul>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-[% WRAPPER ui_bootstrap3 title = loc('Your information') %]
+[% WRAPPER ui title = loc('Your information') %]
 
 [% PROCESS error
    msgs = {
