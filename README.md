@@ -1,12 +1,7 @@
-THANKS A BUNDLE FOR THIS CONVENIENT FRAMEWORK!!!
+﻿α-version of the conference website for The Perl Conference 2017 in Amsterdam
 
-act-responsive
-==============
+Unfortunately we stumbled upon an incompatibility between our frontpage based on the latest Bootstrap (v4.0.0-alpha.2) and a set of responsive ACT templates we intended to use (https://github.com/barcelonapm/act-responsive, kindly provided by the Barcelona Perl Mongers), which are based on Bootstrap  v3.2.0.
 
-Basic template and assets pack for ACT to look responsive and from this century.
+Therefore, for the moment the look-and-feel of the frontpage doesn't match the underlying pages, but at least all pages should be functional.
 
-This repo provides an almost Bootstrap (http://getbootstrap.com/) pure theme for ACT (https://github.com/book/Act). This means you can apply Bootstrap themes into it to customize colors, fonts, etc. I really encourage you to do it.
-
-This is not intended to be a final ACT theme. It's rather an attempt to provide a nicer default to customize. This is basically an upgrade of the default ACT templates that also looks good on mobile.
-
-Act-responsive is under development. Some templates are not ported yet and some others still need work. All feedback and help will be truly welcome. Feel free to open an issue or do a pull request.
+Updates will follow in due course.
