@@ -1,34 +1,36 @@
-<!-- taslks menu -->
+[% PROCESS menus/bootstrap_v3_v4_adaptor %]
+
+<!-- talks menu -->
 <li class="nav-item dropdown">
 
-  <a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="#" aria-expanded="false">
-    <i class="fa fa-bullhorn hidden-lg-up" title="View/manage talks & events"></i>
-    <span class="hidden-md-down" title="View/manage talks & events">{{Talks & events}}</span>
-    <span class="hidden-md-up"   title="View/manage talks & events">{{Talks & events}}</span>
+  <a [% head_a_attr %]>
+    <i class="fa fa-bullhorn [% icon_class %]" title="View/manage talks & events"></i>
+    <span [% head_attr_big   %]  title="View/manage talks & events">{{Talks & events}}</span>
+    <span [% head_attr_small %]  title="View/manage talks & events">{{Talks & events}}</span>
     <b class="caret"></b>
   </a>
   
   <ul class="dropdown-menu">
-    <a class="dropdown-item" href="[% make_uri('talks')    %]">{{Presentations}}</a>
-    <a class="dropdown-item" href="[% make_uri('favtalks') %]">{{Favorite Talks}}</a>
+    <li><a [% item_a_attr %] href="[% make_uri('talks')    %]">{{Presentations}}</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('favtalks') %]">{{Favorite Talks}}</a></li>
 
 [% IF global.config.talks_submissions_open OR global.request.user.is_talks_admin %]
-    <a class="dropdown-item" href="[% make_uri('newtalk') %]">{{Submit a talk proposal}}</a>
+    <li><a [% item_a_attr %] href="[% make_uri('newtalk') %]">{{Submit a talk proposal}}</a></li>
 [% END %]
 
 [% IF global.config.talks_show_schedule OR global.request.user.is_talks_admin %]
-    <li class="hidden-sm-down dropdown-divider"></li>
-    <a class="dropdown-item" href="[% make_uri('schedule') %]">{{Schedule}}</a>
+    <li [% div_li_attr %]></li>
+    <li><a [% item_a_attr %] href="[% make_uri('schedule') %]">{{Schedule}}</a></li>
     
     [% IF global.request.user.has_registered %]
-      <a class="dropdown-item" href="[% make_uri('myschedule') %]">{{Personal Schedule}}</a>
+      <li><a [% item_a_attr %] href="[% make_uri('myschedule') %]">{{Personal Schedule}}</a></li>
     [% END %]
 
-    <a class="dropdown-item" href="[% make_uri('timetable.ics') %]">{{iCal export}}</a>
+    <li><a [% item_a_attr %] href="[% make_uri('timetable.ics') %]">{{iCal export}}</a></li>
 
     [% IF global.request.user.is_talks_admin %]
-      <a class="dropdown-item" href="[% make_uri('ical_import') %]">{{iCal import}}</a>
-      <a class="dropdown-item" href="[% make_uri('export_talks') %]">{{CSV export}}</a>
+      <li><a [% item_a_attr %] href="[% make_uri('ical_import') %]">{{iCal import}}</a></li>
+      <li><a [% item_a_attr %] href="[% make_uri('export_talks') %]">{{CSV export}}</a></li>
     [% END %]
       
 [% END %]

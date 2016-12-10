@@ -58,15 +58,7 @@
           [% END %]
         </div>
 
-[% IF mbrstyle %]
-            [% content %]
-[% ELSE %]
-        <div class="container" id="page-content">
-          <div class="col-xs-12">
-            [% content %]
-          </div>
-        </div>
-[% END %]        
+        [% content %]
         
       </div>
 

@@ -13,22 +13,6 @@
 
 </div>
 
-<!--
-<div class="collapse navbar-collapse" id="nav-menu-options">
-  <ul class="nav navbar-nav">
-    [%# PROCESS menus/news %]
-    [%# PROCESS menus/talks %]
-    [%# PROCESS menus/users %]
-    [%# PROCESS menus/wiki %]
-  </ul>
-  <ul class="nav navbar-nav navbar-right">
-    [%# PROCESS menus/language %]
-    [%# PROCESS menus/user %]
-  </ul>
-</div>
-
--->
-
 <div class="mbr-table-cell">
 
   <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">

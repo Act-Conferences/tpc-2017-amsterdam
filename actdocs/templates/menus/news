@@ -1,29 +1,31 @@
+[% PROCESS menus/bootstrap_v3_v4_adaptor %]
+
 <!-- news menu -->
 
 [% IF global.request.user.is_news_admin %]
 
   <li class="nav-item dropdown">
   
-    <a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="#" aria-expanded="false">
-      <i class="fa fa-newspaper-o hidden-lg-up" title="View/edit news"></i>
-      <span class="hidden-md-down" title="View/edit news">{{News}}</span>
-      <span class="hidden-md-up"   title="View/edit news">{{News}}</span>
+    <a [% head_a_attr %]>
+      <i class="fa fa-newspaper-o [% icon_class %]" title="View/edit news"></i>
+      <span [% head_attr_big    %] title="View/edit news">{{News}}</span>
+      <span [% head_attr_small  %] title="View/edit news">{{News}}</span>
       <b class="caret"></b>
     </a>
 
     <ul class="dropdown-menu">
-      <a class="dropdown-item" href="[% make_uri('news')      %]">{{News}}</a>
-      <a class="dropdown-item" href="[% make_uri('newsadmin') %]">{{News Administration}}</a>
+      <li><a [% item_a_attr %] href="[% make_uri('news')      %]">{{News}}</a></li>
+      <li><a [% item_a_attr %] href="[% make_uri('newsadmin') %]">{{News Administration}}</a></li>
     </ul>
   </li>
 
 [% ELSE %]
 
-  <li class="nav-item">
-    <a class="nav-link link" href="[% make_uri('news') %]">
-      <i class="fa fa-newspaper-o hidden-lg-up" title="View news"></i>
-      <span class="hidden-md-down" title="View news">{{News}}</span>
-      <span class="hidden-md-up"   title="View news">{{News}}</span>
+  <li [% link_li_attr %]>
+    <a [% link_a_attr %] href="[% make_uri('news') %]">
+            <i class="fa fa-newspaper-o [% icon_class %]" title="View news"></i>
+      <span [% head_attr_big    %] title="View news">{{News}}</span>
+      <span [% head_attr_small  %] title="View news">{{News}}</span>
     </a>
   </li>
 

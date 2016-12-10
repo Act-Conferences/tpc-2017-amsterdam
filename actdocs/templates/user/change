@@ -1,4 +1,4 @@
-[% WRAPPER ui title = loc('Your information') %]
+[% WRAPPER ui_bootstrap3 title = loc('Your information') %]
 
 [% PROCESS error
    msgs = {
@@ -82,7 +82,7 @@
 
     <div class="form-group">
       <label for="form-nb-family" class="col-sm-4 control-label">{{Coming with}}</label>
-      <div class="col-sm-2">
+      <div class="col-sm-3">
         <select name="nb_family" class="form-control input-small" id="form-nb-family">
            <option value="0"[% ' selected="selected"' UNLESS nb_family %]>0</option>
            [% FOREACH c = [ 1..5 ] %]
@@ -91,7 +91,7 @@
            <option value="6"[% ' selected="selected"' IF nb_family AND nb_family >= 6 %]>{{6 or more}}</option>
         </select>
       </div>
-      <div class"col-sm-4 form-control-static">
+      <div class="col-sm-4 form-control-static">
         {{people (who will not attend the conference)}}
       </div>
     </div>

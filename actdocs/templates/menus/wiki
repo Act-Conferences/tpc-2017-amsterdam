@@ -1,9 +1,11 @@
+[% PROCESS menus/bootstrap_v3_v4_adaptor %]
+
 <!-- wiki menu -->
 
-  <li class="nav-item">
-    <a class="nav-link link" href="[% make_uri('wiki') %]">
-      <i class="fa fa-edit hidden-lg-up" title="View/edit wiki"></i>
-      <span class="hidden-md-down" title="View/edit wiki">Wiki</span>
-      <span class="hidden-md-up"  >Wiki</span>
-    </a>
-  </li>
+<li [% link_li_attr %]>
+  <a [% link_a_attr %] href="[% make_uri('wiki') %]">
+    <i class="fa fa-edit [% icon_class %]" title="View/edit wiki"></i>
+    <span [% head_attr_big    %]  title="View/edit wiki">Wiki</span>
+    <span [% head_attr_small  %]                        >Wiki</span>
+  </a>
+</li>
