@@ -14,18 +14,26 @@
  %]
 
 [% IF news.size %]
+
   <h2>Latest News</h2>
   [% FOREACH item = news %]
   <div class="news-entry">
-  <h3 class="news-header">
-    <span class="news-date">[% date_format(item.datetime, '%Y-%m-%d') %]</span>
-    <span class="news-title">[% item.title %]</span>
-  </h3>
+    <h3 class="news-header">
+      <span class="news-date">[% date_format(item.datetime, '%Y-%m-%d') %]</span>
+      <span class="news-title">[% item.title %]</span>
+    </h3>
   <div class="news-text">
     [% item.content %]
   </div>
-  </div>
   [% END %]
+
+[% ELSE %]
+
+  <h2>News overview</h2>
+  <div class="news-text">
+    <p>This is where news will appear - if and when there is news!</p>
+  </div>
+
 [% END %]
 
 [% IF more %]

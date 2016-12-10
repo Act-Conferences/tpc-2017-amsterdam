@@ -164,10 +164,6 @@ p.message {
   border-width: 0;
 }
 
-.container > .navbar-header {
-  margin-right: 60px;
-}
-
 .nav-dropdown ,
 .navbar-dropdown .navbar-caption
 {

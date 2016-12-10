@@ -6,13 +6,16 @@
   <div class="container">
     <h3 class="mbr-section-title display-2">
       <span style="font-size: 3rem; line-height: 1.1;">
-        <a class="amsterdam_red" href="http://b-buildingbusiness.com/amsterdam/b-1/" target="_blank">B.Amsterdam</a><br>
+        <a class="amsterdam_red" href="http://b-buildingbusiness.com/amsterdam/b-1/" target="_blank">
+          <span class="hidden-sm-down">B.Amsterdam</span>
+          <span class="hidden-md-up" style="font-size:80%;">B.Amsterdam</span>
+        </a><br>
       </span><br>
       City in a building
     </h3>
     <div class="lead">
       <p>
-        With its 28.000 square meters and two buildings, B.Amsterdam is the biggest startup ecosystem in Europe. 
+        With its 28,000 square meters and two buildings, B.Amsterdam is the biggest startup ecosystem in Europe. 
         B. is a creative working space for innovation, education and growth. 
         We build a bridge between startups, creatives and corporates and bring them together, 
         setting up ways to connect with, learn from and grow with each other.<br>
