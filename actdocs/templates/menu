@@ -12,7 +12,8 @@
       <img src="[% make_uri_info('img', 'yapc-amsterdam-128x128-78.png') %]" alt="[% global.conference.name %]" title="Back to home" height="40px" style="position:relative;top:-10px">
     </a>
     <a class="navbar-brand" href="[% make_uri %]">
-      [% global.conference.name %]
+      <span class="hidden-xs">[% global.conference.name %]</span>
+      <span class="hidden-sm hidden-md hidden-lg hidden-xl" style="font-size:60%">[% global.conference.name %]</span>
     </a>
   </div>
 

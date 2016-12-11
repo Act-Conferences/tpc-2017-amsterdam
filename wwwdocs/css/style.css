@@ -117,7 +117,8 @@ p.message {
 /* yapc2017 */
 
 /* === Customizations of bootstrap3 templates === */
-.page-title {
+.page-title h1 {
+  border-radius:    20px;
   margin-top:		20px; /* don't cover menu */
   margin-bottom: 	20px;
   padding-top:		20px;
