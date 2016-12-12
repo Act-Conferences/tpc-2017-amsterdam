@@ -37,6 +37,11 @@
             [% content %]
           </div>
         </div>
+        
+        <div class="container" id="acknowledge-not-front">
+          [% PROCESS chunks/acknowledge %]
+        </div>
+        
       </div>
 
     </div>

@@ -224,6 +224,8 @@ p.message {
     color: #fff;
 }
 
+/* selective appropriate size and position of background picture for banner */
+
 @media (max-width: 767px)  {
   #banner {
   margin-top:  -50px;
@@ -241,3 +243,27 @@ p.message {
   }
 }
 
+#acknowledge-front div {
+  margin-top:2em;
+}
+
+#acknowledge-front p {
+  text-align:center;
+}
+
+/* don't put footer on non-front page too high */
+#page-content {
+  min-height:400px;
+}
+
+#acknowledge-not-front {
+  margin-top:100px;
+}
+
+#acknowledge-not-front p {
+  padding: 0 15px;
+  margin: 0;
+  text-align:center;
+  color:#888;
+  font-size:90%;
+}
