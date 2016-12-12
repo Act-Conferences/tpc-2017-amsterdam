@@ -38,8 +38,8 @@
           </div>
         </div>
 
-        <div id="footer-not-front">
-          [% PROCESS footer %]
+        <div id="footer-bootstrap3">
+          [% PROCESS footer bootstrap3=1%]
         </div>
        </div>
 

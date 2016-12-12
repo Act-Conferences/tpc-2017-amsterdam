@@ -55,7 +55,9 @@
         
       </div>
 
-      [% PROCESS footer %]
+      <div id="footer-bootstrap4">
+        [% PROCESS footer %]
+      </div>
 
     </div>
 

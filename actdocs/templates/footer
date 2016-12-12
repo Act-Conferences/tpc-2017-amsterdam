@@ -1,23 +1,31 @@
+[% IF NOT bootstrap3 %]
+  [% col_class         = 'mbr-footer-content col-xs-12 col-md-3' %]
+
+[% ELSE %]
+  [% col_class         = 'col-xs-12 col-sm-3' %]
+
+[% END %]
+
 <section class="mbr-section mbr-section-md-padding mbr-footer footer1" id="contacts1-0" style="background-color: rgb(0, 0, 0); padding-top: 90px; padding-bottom: 90px;">
   
   <div class="container">
     <div class="row">
-      <div class="mbr-footer-content col-xs-12 col-md-3">
+      <div class="[% col_class %]">
         <div><img src="[% make_uri_info('assets/images', 'yapc-amsterdam-128x128-68.png') %]"></div>
       </div>
-      <div class="mbr-footer-content col-xs-12 col-md-3">
+      <div class="[% col_class %]">
         <p></p>
       </div>
-      <div class="mbr-footer-content col-xs-12 col-md-3">
+      <div class="[% col_class %]">
         <p><strong>Contacts</strong><br><a href="mailto:orga@yapc.amsterdam" target="_blank" class="text-white">orga@yapc.amsterdam</a><br>+ 31 - 384 603 033<br>+ 31 - 624 619 072</p>
       </div>
-      <div class="mbr-footer-content col-xs-12 col-md-3">
+      <div class="[% col_class %]">
         <p><strong>Remember...</strong><br><span style="line-height: 1.5;">The Perl Conference</span><br>in Amdsterdam<br>9 . . 11 August 2017</p>
       </div>
 
     </div>
     
-    <div class="row" id="acknowledge">
+    <div class="row acknowledge" id="acknowledge">
       <div class="mbr-footer-content">
         [% PROCESS chunks/acknowledge %]
       </div>

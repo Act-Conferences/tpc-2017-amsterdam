@@ -265,10 +265,10 @@ p.message {
 }
 
 /* adapt style of non-frontpage footer to style used by Mobirise */
-/* use id #footer-not-front to select this situation */
+/* use id #footer-bootstrap3 to select this situation */
 
-#footer-not-front p, 
-#footer-not-front p a
+#footer-bootstrap3 p, 
+#footer-bootstrap3 p a
 {
   color:#ffffff;
   text-decoration:none;
@@ -277,7 +277,7 @@ p.message {
   font-weight: 350;
 }
 
-#footer-not-front strong {
+#footer-bootstrap3 strong {
   color: #7c7c7c;
   font-size:1.6rem;
   font-weight:700;
@@ -285,3 +285,10 @@ p.message {
   line-height: 5em;
   margin-bottom: 1.875em;
 }
+
+/* Centered full-width acknowledgement becomes ugly when columns above stack */
+/* Make paras narrow at same breakpoint */
+@media (max-width: 767px)  {
+  #acknowledge p { max-width:150px; }
+}
+
