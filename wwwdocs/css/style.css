@@ -243,27 +243,45 @@ p.message {
   }
 }
 
-#acknowledge-front div {
+/* force style in acknowledgement to style used by Mobirise */
+
+#acknowledge > div {
   margin-top:2em;
 }
 
-#acknowledge-front p {
+#acknowledge p {
   text-align:center;
+  margin:0;
+}
+
+#acknowledge p a {
+  color:#ffffff;
 }
 
 /* don't put footer on non-front page too high */
+/* so page doesn't look squashed */
 #page-content {
   min-height:400px;
 }
 
-#acknowledge-not-front {
-  margin-top:100px;
+/* adapt style of non-frontpage footer to style used by Mobirise */
+/* use id #footer-not-front to select this situation */
+
+#footer-not-front p, 
+#footer-not-front p a
+{
+  color:#ffffff;
+  text-decoration:none;
+  font-size:12px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 350;
 }
 
-#acknowledge-not-front p {
-  padding: 0 15px;
-  margin: 0;
-  text-align:center;
-  color:#888;
-  font-size:90%;
+#footer-not-front strong {
+  color: #7c7c7c;
+  font-size:1.6rem;
+  font-weight:700;
+  letter-spacing:-1px;
+  line-height: 5em;
+  margin-bottom: 1.875em;
 }

@@ -17,12 +17,11 @@
 
     </div>
     
-    <div class="row" id="acknowledge-front">
+    <div class="row" id="acknowledge">
       <div class="mbr-footer-content">
         [% PROCESS chunks/acknowledge %]
       </div>
     </div>
-    
     
   </div>
 </section>
