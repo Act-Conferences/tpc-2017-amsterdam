@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="[% global.request.language %]" xml:lang="[% global.request.language %]">
   <head>
-    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap3.min.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'font-awesome.min.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css') %]" />
