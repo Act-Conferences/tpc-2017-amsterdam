@@ -286,9 +286,18 @@ p.message {
   margin-bottom: 1.875em;
 }
 
+/* === individual tweaks */
+
 /* Centered full-width acknowledgement becomes ugly when columns above stack */
 /* Make paras narrow at same breakpoint */
 @media (max-width: 767px)  {
   #acknowledge p { max-width:150px; }
 }
 
+/* prevent ugly line-break in "Talks & events" by providing enough space */
+/* Must not apply below 992x as text is hidden then */
+@media (min-width: 992px)  {
+  #talks-menu-head {
+    min-width:120px;
+  }
+}

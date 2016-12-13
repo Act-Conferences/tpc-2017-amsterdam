@@ -3,7 +3,7 @@
 <!-- talks menu -->
 <li class="nav-item dropdown">
 
-  <a [% head_a_attr %]>
+  <a [% head_a_attr %] id="talks-menu-head">
     <i class="fa fa-bullhorn [% icon_class %]" title="View/manage talks & events"></i>
     <span [% head_attr_big   %]  title="View/manage talks & events">{{Talks & events}}</span>
     <span [% head_attr_small %]  title="View/manage talks & events">{{Talks & events}}</span>
