@@ -133,6 +133,24 @@ p.message {
 /*   under #ext_menu-0 for mobirise  */
 /*   under #main-menu for bootstrap3 */
 
+/* create bit more space for menu on bigger screens */
+@media (min-width: 767px)  {
+  #ext_menu-0 .container {
+	padding-left: 0px;
+  }
+}
+
+/* make bootstrap3 menu equally high as mobirise menu */
+#main-menu .navbar-brand {
+  height: 90px;
+  padding-top:35px;
+}
+
+#main-menu .navbar-nav {
+  height: 90px;
+  padding-top:20px;
+}
+
 #ext_menu-0 .link {
   font-size: 1rem;
 }
