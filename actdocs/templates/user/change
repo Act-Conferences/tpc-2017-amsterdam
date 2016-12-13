@@ -1,4 +1,5 @@
-[% WRAPPER ui title = loc('Your information') %]
+[%# WRAPPER ui            title = loc('Your information') %]
+[%  WRAPPER ui_bootstrap4 title = loc('Your information') %]
 
 [% PROCESS error
    msgs = {
@@ -19,11 +20,22 @@
   }
 %]
 
-<form class="form-horizontal" role="form" method="POST" action="[% global.request.r.uri %]">
+[% IF NOT bootstrap3 %]
+  [% b34_form_outer_class = 'row form-horizontal' %]
+  [% b34_form_group_class = 'row form-group' %]
+[% ELSE %]
+  [% b34_form_outer_class = 'form-horizontal' %]
+  [% b34_form_group_class = 'form-group' %]
+[% END %]
+
+[% form_label_class = 'col-sm-5 control-label' %]
+[% form_input_class = 'col-sm-7' %]
+
+<form class="[% b34_form_outer_class %]" role="form" method="POST" action="[% global.request.r.uri %]">
   <div class="col-md-6">
-    <div class="form-group">
-      <label for="form-salutation" class="col-sm-4 control-label">{{Salutation}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="form-salutation" class="[% form_label_class %]">{{Salutation}}</label>
+      <div class="[% form_input_class %]">
         <div class="form-control-static">
           [% FOREACH s = [1 .. salutations] %]
             <input type="radio" name="salutation" id="form-salutation" value="[% s %]"[% " checked" IF salutation == s %] /> <label for="form-salutation">[% loc("salutation_$s") %]</label>
@@ -32,30 +44,30 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="first_name" class="col-sm-4 control-label">{{First Name}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="first_name" class="[% form_label_class %]">{{First Name}}</label>
+      <div class="[% form_input_class %]">
         <input type="text" class="form-control" name="first_name" id="form-first-name"  value="[% first_name %]" maxlength="60" />
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="last_name" class="col-sm-4 control-label">{{Last Name}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="last_name" class="[% form_label_class %]">{{Last Name}}</label>
+      <div class="[% form_input_class %]">
         <input type="text" class="form-control" name="last_name" id="form-last-name"  value="[% last_name %]" maxlength="60" />
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="nick_name" class="col-sm-4 control-label">{{Nickname}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="nick_name" class="[% form_label_class %]">{{Nickname}}</label>
+      <div class="[% form_input_class %]">
         <input type="text" class="form-control" name="nick_name" id="form-nick-name"  value="[% nick_name %]" maxlength="60" />
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="pseudonymous" class="col-sm-4 control-label">{{Stay pseudonymous}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="pseudonymous" class="[% form_label_class %]">{{Stay pseudonymous}}</label>
+      <div class="[% form_input_class %]">
         <div class="form-control-static">
           <input type="radio" name="pseudonymous" value="1" [% "checked" IF pseudonymous %] /> {{Yes}}
           <input type="radio" name="pseudonymous" value="0" [% "checked" UNLESS pseudonymous %] /> {{No}}
@@ -63,16 +75,16 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="email" class="col-sm-4 control-label">{{Email}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="email" class="[% form_label_class %]">{{Email}}</label>
+      <div class="[% form_input_class %]">
         <input type="email" class="form-control" name="email" id="form-email"  value="[% email %]" maxlength="60" />
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="email_hide" class="col-sm-4 control-label">{{Hide email}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="email_hide" class="[% form_label_class %]">{{Hide email}}</label>
+      <div class="[% form_input_class %]">
         <div class="form-control-static">
           <input type="radio" name="email_hide" value="1" [% "checked" IF email_hide %] /> {{Yes}}
           <input type="radio" name="email_hide" value="0" [% "checked" UNLESS email_hide %] /> {{No}}
@@ -80,8 +92,8 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="form-nb-family" class="col-sm-4 control-label">{{Coming with}}</label>
+    <div class="[% b34_form_group_class %]">
+      <label for="form-nb-family" class="[% form_label_class %]">{{Coming with}}</label>
       <div class="col-sm-3">
         <select name="nb_family" class="form-control input-small" id="form-nb-family">
            <option value="0"[% ' selected="selected"' UNLESS nb_family %]>0</option>
@@ -91,14 +103,14 @@
            <option value="6"[% ' selected="selected"' IF nb_family AND nb_family >= 6 %]>{{6 or more}}</option>
         </select>
       </div>
-      <div class="col-sm-4 form-control-static">
+      <div class="col-sm-4 form-control-static" style="font-size:70%;padding-top:0;">
         {{people (who will not attend the conference)}}
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="form-tshirt-size" class="col-sm-4 control-label">{{T-shirt size}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="form-tshirt-size" class="[% form_label_class %]">{{T-shirt size}}</label>
+      <div class="[% form_input_class %]">
         <select name="tshirt_size" id="form-tshirt-size" class="form-control">
           [% UNLESS tshirt_size %]<option value="" selected="selected" />[% END %]
           [% FOREACH t = [ 'XS', 'XS (W)', 'S', 'S (W)', 'M', 'M (W)',
@@ -110,16 +122,16 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="form-town" class="col-sm-4 control-label">{{City}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="form-town" class="[% form_label_class %]">{{City}}</label>
+      <div class="[% form_input_class %]">
         <input type="text" class="form-control" name="town" id="form-town"  value="[% town %]" maxlength="60" />
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="form-country" class="col-sm-4 control-label">{{Country}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="form-country" class="[% form_label_class %]">{{Country}}</label>
+      <div class="[% form_input_class %]">
         <select name="country" id="form-country" class="form-control">
           [% FOREACH c = countries %]
             <option value="[% c.iso %]"[% ' selected="selected"' IF country == c.iso %]>[% c.name %]</option>
@@ -128,9 +140,9 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="form-timezone" class="col-sm-4 control-label">{{Timezone}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="form-timezone" class="[% form_label_class %]">{{Timezone}}</label>
+      <div class="[% form_input_class %]">
         <select name="timezone" id="form-timezone" class="form-control">
           [% FOREACH tz = timezones %]
             <option value="[% tz %]"[% ' selected="selected"' IF timezone == tz %]>[% tz %]</option>
@@ -139,9 +151,9 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="form-address" class="col-sm-4 control-label">{{Full address}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="form-address" class="[% form_label_class %]">{{Full address}}</label>
+      <div class="[% form_input_class %]">
         <textarea name="address" id="form-address" class="form-control" rows="5" >[% address | form_unescape %]</textarea>
       </div>
     </div>
@@ -149,8 +161,8 @@
   </div>
 
   <div class="col-md-6">
-    <div class="form-group">
-      <label for="form-timezone" class="col-sm-4 control-label">
+    <div class="[% b34_form_group_class %]">
+      <label for="form-timezone" class="[% form_label_class %]">
         [%- IF web_page %]
            <a href="[% web_page %]" >
         [% END %]
@@ -159,13 +171,13 @@
            </a>
         [% END %]
       </label>
-      <div class="col-sm-8">
+      <div class="[% form_input_class %]">
         <input type="text" name="web_page" class="form-control" value="[% web_page %]" maxlength="120" />
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="pm_group" class="col-sm-4 control-label">
+    <div class="[% b34_form_group_class %]">
+      <label for="pm_group" class="[% form_label_class %]">
         [%- IF pm_group_url %]
            <a href="[% pm_group_url %]" >
         [% END %]
@@ -174,13 +186,13 @@
            </a>
         [% END %]
       </label>
-      <div class="col-sm-8">
+      <div class="[% form_input_class %]">
         <input type="text" name="pm_group" class="form-control" value="[% pm_group %]" maxlength="120" placeholder="City.pm, city name in English, please"/>
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="pm_group_url" class="col-sm-4 control-label">
+    <div class="[% b34_form_group_class %]">
+      <label for="pm_group_url" class="[% form_label_class %]">
         [%- IF pm_group_url %]
            <a href="[% pm_group_url %]" >
         [% END %]
@@ -189,13 +201,13 @@
            </a>
         [% END %]
       </label>
-      <div class="col-sm-8">
+      <div class="[% form_input_class %]">
         <input type="text" name="pm_group_url" class="form-control"  value="[% pm_group_url %]" maxlength="120" />
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="company" class="col-sm-4 control-label">
+    <div class="[% b34_form_group_class %]">
+      <label for="company" class="[% form_label_class %]">
         [%- IF company_url %]
            <a href="[% company_url %]" >
         [% END %]
@@ -204,20 +216,20 @@
            </a>
         [% END %]
       </label>
-      <div class="col-sm-8">
+      <div class="[% form_input_class %]">
         <input type="text" name="company" class="form-control" value="[% company %]" maxlength="120" />
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="company" class="col-sm-4 control-label">{{VAT Number}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="company" class="[% form_label_class %]">{{VAT Number}}</label>
+      <div class="[% form_input_class %]">
         <input type="text" name="vat" id="form-vat" class="form-control" value="[% vat %]" maxlength="60" />
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="company_url" class="col-sm-4 control-label">
+    <div class="[% b34_form_group_class %]">
+      <label for="company_url" class="[% form_label_class %]">
         [%- IF company_url %]
            <a href="[% company_url %]" >
         [% END %]
@@ -226,13 +238,13 @@
            </a>
         [% END %]
       </label>
-      <div class="col-sm-8">
+      <div class="[% form_input_class %]">
         <input type="text" name="company_url" class="form-control" value="[% company_url %]" maxlength="120" />
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="gpg_key_id" class="col-sm-4 control-label">
+    <div class="[% b34_form_group_class %]">
+      <label for="gpg_key_id" class="[% form_label_class %]">
         [%- IF gpg_key_id %]
            <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x[% gpg_key_id %]">
         [% END %]
@@ -241,7 +253,7 @@
            </a>
         [% END %]
       </label>
-      <div class="col-sm-8">
+      <div class="[% form_input_class %]">
         <div class="input-group">
           <span class="input-group-addon">Ox</span>
           <input type="text" name="gpg_key_id" class="form-control" value="[% gpg_key_id %]" maxlength="8" />
@@ -249,8 +261,8 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="pause_id" class="col-sm-4 control-label">
+    <div class="[% b34_form_group_class %]">
+      <label for="pause_id" class="[% form_label_class %]">
         [%- IF pause_id %]
            <a href="https://metacpan.org/author/[% pause_id %]/" >
         [% END %]
@@ -259,13 +271,13 @@
            </a>
         [% END %]
       </label>
-      <div class="col-sm-8">
+      <div class="[% form_input_class %]">
         <input type="text" name="pause_id" class="form-control" value="[% pause_id %]" maxlength="60" />
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="monk_id" class="col-sm-4 control-label">
+    <div class="[% b34_form_group_class %]">
+      <label for="monk_id" class="[% form_label_class %]">
         [%- IF monk_id %]
            <a href="http://perlmonks.org/index.pl?node_id=[% monk_id %]" >
         [% END %]
@@ -274,22 +286,22 @@
            </a>
         [% END %]
       </label>
-      <div class="col-sm-8">
+      <div class="[% form_input_class %]">
         <input type="text" name="monk_id" class="form-control" value="[% monk_id %]" maxlength="60" />
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="im" class="col-sm-4 control-label">{{IM}}</label>
-      <div class="col-sm-8">
+    <div class="[% b34_form_group_class %]">
+      <label for="im" class="[% form_label_class %]">{{IM}}</label>
+      <div class="[% form_input_class %]">
         <input type="text" name="im" id="form_im" class="form-control" value="[% im %]" maxlength="60" />
       </div>
     </div>
 
     [% FOREACH lang = global.config.languages.keys %]
-      <div class="form-group">
-        <label for="bio" class="col-sm-4 control-label">{{Bio}} [% global.config.languages.$lang.name|ucfirst %]</label>
-        <div class="col-sm-8">
+      <div class="[% b34_form_group_class %]">
+        <label for="bio" class="[% form_label_class %]">{{Bio}} [% global.config.languages.$lang.name|ucfirst %]</label>
+        <div class="[% form_input_class %]">
           <textarea name="bio_[% lang %]" class="form-control" rows="5" placeholder="[% IF lang == 'en' %] {{(please fill at least this one)}}[% END %]">[% bio.$lang | form_unescape %]</textarea>
         </div>
       </div>
@@ -297,13 +309,14 @@
 
   </div>
 
-  <div class="col-md-12">
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10 text-right">
+  <div class="[% b34_form_group_class %]">
+    <div class="col-sm-12">
+      <div style="text-align:right;">
         <input class="btn btn-lg btn-primary" type="submit" name="join" value="{{Update info}}" />
       </div>
     </div>
   </div>
+  
 </form>
 
 [% END %]

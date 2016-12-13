@@ -49,10 +49,33 @@
           
         </section>
 
+        <div id="space-for-menu" />
+
+        [% IF title %]
+          <div class="container page-title">
+            <div class="col-xs-12">
+              <h1>[% title %]</h1>
+            </div>
+          </div>
+        [% END %]
+
+[% IF mobirise_section %]
+  [%# mobirise sections have their own container element %]
+
         <div class="frontpage-sections">
           [% content %]
         </div>
-        
+
+[% ELSE %]
+
+        <div class="container" id="page-content">
+          <div class="col-xs-12">
+            [% content %]
+          </div>
+        </div>
+
+[% END %]
+
       </div>
 
       <div id="footer-bootstrap4">

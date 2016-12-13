@@ -133,6 +133,10 @@ p.message {
 /*   under #ext_menu-0 for mobirise  */
 /*   under #main-menu for bootstrap3 */
 
+#space-for-menu {
+  margin-top: 100px; /* menu must not overlap content */
+}
+
 /* create bit more space for menu on bigger screens */
 @media (min-width: 767px)  {
   #ext_menu-0 .container {
@@ -242,11 +246,11 @@ p.message {
     color: #fff;
 }
 
-/* selective appropriate size and position of background picture for banner */
+/* select appropriate size and position of background picture for banner */
 
 @media (max-width: 767px)  {
   #banner {
-  margin-top:  -50px;
+  margin-top:  -150px;
   padding-top: 0px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
   padding-bottom: 0px;
   background: url(../img/gevels-768.jpg) no-repeat center center;
@@ -254,8 +258,8 @@ p.message {
 }
 @media (min-width: 768px)  {
   #banner {
-  margin-top:  50px;
-  padding-top: 0px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  margin-top: -50px;
+  padding-top: 0px;
   padding-bottom: 50px;
   background: url(../img/gevels.jpg) no-repeat center center;
   }
