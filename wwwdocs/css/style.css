@@ -145,7 +145,7 @@ p.message {
 }
 
 /* make bootstrap3 menu equally high as mobirise menu */
-/* interferce with mobile menu, so larger screens only! */
+/* interferes with mobile menu, so larger screens only! */
 @media (min-width: 768px)  {
   #main-menu .navbar-brand {
     height: 90px;
@@ -317,6 +317,12 @@ p.message {
 }
 
 /* === individual tweaks */
+
+#user-change-form label {
+  font-size:80%;
+  font-weight:500;
+  padding-top:0.3em;
+}
 
 /* Centered full-width acknowledgement becomes ugly when columns above stack */
 /* Make paras narrow at same breakpoint */

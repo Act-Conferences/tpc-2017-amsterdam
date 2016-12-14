@@ -18,23 +18,22 @@
     <![endif]-->
   </head>
 
-  
-[% bootstrap3=1 %]
-
   <body>
     <div id="page">
       <div id="page-body">
         <div class="navbar navbar-default navbar-static-top" id="main-menu" role="navigation">
           [% PROCESS menu %]
         </div>
+
+        <div class="space-for-menu"></div>
         
-        <div class="container page-title">
-          [% IF title %]
+        [% IF title %]
+          <div class="container page-title">
             <div class="col-xs-12">
               <h1>[% title %]</h1>
             </div>
-          [% END %]
-        </div>
+          </div>
+        [% END %]
 
         <div class="container" id="page-content">
           <div class="col-xs-12">
