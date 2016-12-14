@@ -145,9 +145,17 @@ p.message {
 }
 
 /* make bootstrap3 menu equally high as mobirise menu */
-#main-menu .navbar-brand {
-  height: 90px;
-  padding-top:35px;
+/* interferce with mobile menu, so larger screens only! */
+@media (min-width: 768px)  {
+  #main-menu .navbar-brand {
+    height: 90px;
+    padding-top:35px;
+  }
+  
+  #main-menu .navbar-nav {
+    height: 90px;
+    padding-top:20px;
+  }
 }
 
 #main-menu .navbar-nav {
