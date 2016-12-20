@@ -8,16 +8,6 @@ Currently in the process of adapting templates to bootstrap v4.x. The default wr
 
 Once templates are adapted to bootstrap v4.x, the wrapper can be replaced with actdocs/templates/ui_bootstrap4 in each template individually.
 
-### Done with significant modifications:
+To keep track of the progress, a log of the templates that have been converted is maintained on:
 
-  * http://test.mongueurs.net/tpc-2017-amsterdam/login
-  * http://test.mongueurs.net/tpc-2017-amsterdam/change
-
-### Done, without needing modifications:
-
-  * http://test.mongueurs.net/tpc-2017-amsterdam/logout
-  * http://test.mongueurs.net/tpc-2017-amsterdam/main
-
-## Differences between v3.x and v4.x:
-
-https://v4-alpha.getbootstrap.com/migration/
+https://github.com/Act-Conferences/tpc-2017-amsterdam/wiki/Log-of-making-ACT-templates-Bootstrap-v4-compatible 
