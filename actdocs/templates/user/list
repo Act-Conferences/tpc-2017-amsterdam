@@ -1,3 +1,13 @@
+[%# This template is used from user/search_form %]
+
+[% IF !bootstrap3 %]
+  [% b34_field_label_class  = 'col-xs-4 hidden-sm-up' %]
+  [% b34_value_class        = 'col-xs-8 col-sm-12'    %]
+[% ELSE %]
+  [% b34_field_label_class  = 'col-xs-4 visible-xs'   %]
+  [% b34_value_class        = 'col-xs-8 col-sm-12'    %]
+[% END %]
+
 <p class="message">{{Committed users are listed in <b>bold</b> type}}</p>
 
 [% IF users.size %]
@@ -18,10 +28,10 @@
         <tr>
           <td>
             <div class="row">
-              <div class="col-xs-4 visible-xs">
+              <div class="[% b34_field_label_class %]">
                 <b>{{Name}}:</b>
               </div>
-              <div class="col-xs-8 col-sm-12">
+              <div class="[% b34_value_class %]">
                 [% "<strong>" IF u.committed %][% user_info(u) %][% "</strong>" IF u.committed %]
                 [% IF u.photo_name %]
                   <img src="/images/photo.png" alt="photo" title="photo" width="12" height="12" />
@@ -32,10 +42,10 @@
 
           <td>
             <div class="row">
-              <div class="col-xs-4 visible-xs">
+              <div class="[% b34_field_label_class %]">
                 <b>{{City}}:</b>
               </div>
-              <div class="col-xs-8 col-sm-12">
+              <div class="[% b34_value_class %]">
                 [%- IF u.town %]
                    [% u.town %]
                 [%- ELSE %]
@@ -47,10 +57,10 @@
 
           <td>
             <div class="row">
-              <div class="col-xs-4 visible-xs">
+              <div class="[% b34_field_label_class %]">
                 <b>{{Country}}:</b>
               </div>
-              <div class="col-xs-8 col-sm-12">
+              <div class="[% b34_value_class %]">
                 [% countries_iso.${u.country} %]
               </div>
             </div>
@@ -58,10 +68,10 @@
 
           <td>
             <div class="row">
-              <div class="col-xs-4 visible-xs">
+              <div class="[% b34_field_label_class %]">
                 <b>{{Monger group}}:</b>
               </div>
-              <div class="col-xs-8 col-sm-12">
+              <div class="[% b34_value_class %]">
                 [%- IF u.pm_group %]
                   [% IF u.pm_group_url %]<a href="[% u.pm_group_url %]">[% END %]
                   [%- u.pm_group -%]
@@ -76,10 +86,10 @@
           [% IF global.request.user.is_users_admin %]
             <td>
               <div class="row">
-                <div class="col-xs-4 visible-xs">
+                <div class="[% b34_field_label_class %]">
                   <b>{{Email}}:</b>
                 </div>
-                <div class="col-xs-8 col-sm-12">
+                <div class="[% b34_value_class %]">
                   <a href="mailto:[% u.email %]">[% u.email %]</a>
                 </div>
               </div>

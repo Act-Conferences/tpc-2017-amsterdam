@@ -1,21 +1,43 @@
-[% WRAPPER ui title = loc('Search for users') %]
+[% WRAPPER ui_bootstrap4 title = loc('Search for users') %]
+[% bootstrap3=0 %]
+
+[% IF NOT bootstrap3 %]
+  [% b34_outer_class          = 'card' %]
+  [% b34_block_class          = 'card-block' %]
+  [% b34_footer_class         = 'card-footer' %]
+  [% b34_footer_inner_class   = 'col-sm-offset-9 col-sm-3 col-md-offset-9 col-md-3' %]
+  
+  [% b34_form_group_class     = 'row form-group' %]
+
+[% ELSE %]
+  [% b34_outer_class          = 'panel panel-default' %]
+  [% b34_block_class          = 'panel-body form-horizontal' %]
+  [% b34_footer_class         = 'panel-footer text-right' %]
+  [% b34_footer_inner_class   = '' %]
+  
+  [% b34_form_group_class     = 'form-group' %]
+
+[% END %]
 
 <form method="POST" action="[% global.request.r.uri %]" id="user-search">
-  <div class="panel panel-default">
-    <div class="panel-body form-horizontal">
-      <div class="form-group">
+  <div class="[% b34_outer_class %]">
+    <div class="[% b34_block_class %]">
+  
+      <div class="[% b34_form_group_class %]">
         <label for="user-name" class="col-md-3">{{Name}}</label>
         <div class="col-md-9">
           <input type="text" class="form-control" name="name" id="user-name" value="[% global.request.args.name %]" maxlength="60" />
         </div>
       </div>
-      <div class="form-group">
+      
+      <div class="[% b34_form_group_class %]">
         <label for="user-city" class="col-md-3">{{City}}</label>
         <div class="col-md-9">
           <input type="text" class="form-control" name="city" id="user-city" value="[% global.request.args.city %]" maxlength="60" />
         </div>
       </div>
-      <div class="form-group">
+
+      <div class="[% b34_form_group_class %]">
         <label for="user-country" class="col-md-3">{{Country}}</label>
         <div class="col-md-9">
           <select name="country" id="user-country" class="form-control">
@@ -26,7 +48,8 @@
           </select>
         </div>
       </div>
-      <div class="form-group">
+
+      <div class="[% b34_form_group_class %]">
         <label for="user-group" class="col-md-3">{{Monger group}}</label>
         <div class="col-md-9">
           <select name="pm_group" id="user-group" class="form-control">
@@ -37,10 +60,17 @@
           </select>
         </div>
       </div>
+
     </div>
-    <div class="panel-footer text-right">
-      <button type="submit" name="search" class="btn btn-primary btn-lg">{{Search}}</button>
+    
+    <div class="[% b34_footer_class %]">
+      <div class="[% b34_form_group_class %]" style="height:30px;">
+        <div class="[% b34_footer_inner_class %]">
+          <button type="submit" name="search" class="btn btn-primary btn-lg">{{Search}}</button>
+        </div>
+      </div>
     </div>
+
   </div>
 
   [% PROCESS user/list IF users %]
@@ -49,11 +79,13 @@
     <input type="hidden" name="oprev" value="[% oprev %]" />
     <input class="btn btn-primary" type="submit" name="prev"  value="&lt;&lt;" />
   [% END %]
+
   [% IF next %]
     [% "&nbsp;&nbsp;&nbsp;" IF oprev %]
     <input type="hidden" name="onext" value="[% onext %]" />
     <input class="btn btn-primary" type="submit" name="next"  value="&gt;&gt;" />
   [% END %]
+
 </form>
 
 [% END %]
