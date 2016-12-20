@@ -1,4 +1,4 @@
-[% WRAPPER ui title = loc('<conf name> Statistics', global.conference.name) %]
+[% WRAPPER ui_bootstrap4 title = loc('<conf name> Statistics', global.conference.name) %]
 
 <p>
  [% loc('There are n registered people', stats.users, stats.countries.size, stats.pm.size, stats.committed) %]
