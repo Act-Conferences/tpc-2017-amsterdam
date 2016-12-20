@@ -138,7 +138,7 @@ p.message {
 }
 
 /* create bit more space for menu on bigger screens */
-@media (min-width: 767px)  {
+@media (min-width: 768px)  {
   #ext_menu-0 .container {
 	padding-left: 0px;
   }
@@ -156,11 +156,6 @@ p.message {
     height: 90px;
     padding-top:20px;
   }
-}
-
-#main-menu .navbar-nav {
-  height: 90px;
-  padding-top:20px;
 }
 
 #ext_menu-0 .link {
