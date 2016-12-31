@@ -332,3 +332,8 @@ p.message {
     min-width:120px;
   }
 }
+
+/* less empty space between keynote speaker pics and title */
+#keynote_speakers .mbr-cards-col {
+  padding-top: 1em;
+}
