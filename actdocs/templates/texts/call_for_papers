@@ -1,0 +1,88 @@
+
+<p>
+We invite you to contribute to The Perl Conference, which will take
+place in August 2017 in Amsterdam, The Netherlands.  These meetings were
+formerly known as YAPC::EU, the yearly meeting of Perl Mongers in Europe.
+</p>
+
+<h2>The theme</h2>
+<p>
+The theme of this conference is <b>High-end Perl</b>: Perl is (often
+in a somewhat hidden way) used for many large commercial and research applications.
+So, a considerable number of talks will focus their content in this area.
+</p><p>
+But please, do not feel restricted to this topic: we welcome <em>any</em>
+good story about your experiences with our magnificent languages!
+</p>
+
+<h2>Slots</h2>
+<p>
+Presentations can take 5 minutes (lightning talks), 20 or 40
+minutes (normal lengths), and longer.
+</p><p>
+The preferred format is a 20 minute talk. It is projected that the
+majority of talks will be of this length: we prefer concise
+contributions by as many conferences participants as possible. We would like 40
+minute talks to adhere more strictly to their subject and published audience
+level.
+</p><p>
+Long talks (60 up to 90 minutes) are reserved for experienced
+speakers covering major topics. If you have an in-depth topic you would like 
+to present in some detail, perhaps with considerable discussion, a
+long slot may be available for you.  This is usually split into an
+introductory and an advanced session.
+</p><p>
+Tutorials (up to 180 minutes) are available for beginner and
+introductory style presentations.
+</p>
+
+<h2>Suggestions for subjects</h2>
+<p>
+Just to give you some hints about "high end":
+<ul>
+  <li>Something where Perl saved you (a lot of) time</li>
+  <li>Something where you made (a lot of) money with perl</li>
+  <li>How you made (a significant) contribution to OSS</li>
+  <li>A development that caused new standards in IEEE/IETF/W3C/...</li>
+  <li>tools that caused new (national) regulations</li>
+  <li>running Perl on thousands of servers</li>
+  <li>Perl responsible for millions of turnover</li>
+  <li>business quality security applications in Perl</li>
+  <li>...</li>
+</ul>
+</p>
+<h2>How to submit</h2>
+<p>
+If you are willing to give a talk:
+</p><p>
+<ul>
+  <li>submit proposals to our website before 2017-06-15</li>
+  <li>we probably will confirm some talks soon after the are sent
+      in, but not all of them.  But at least before 2017-07-01</li>
+  <li>come up with a challenging title</li>
+  <li>use 100 upto 300 words to describe the content of your talk. 
+      Not too short please, not too long either.</li>
+  <li>write-up a short biography of yourself</li>
+  <li>pick the preferred length of the talk, the assumed audience
+      level, subject categories</li>
+  <li>the conference language is English, no exceptions</li>
+</ul>
+The organizers reserve the right to assign a shorter time-slot to a
+talk than requested by the submitter.  They may also suggest changes in
+the content. They will fix language errors without notice.
+
+<h2>Where to submit</h2>
+<p>
+First, register as a participant. Then a menu option to submit a presentation will be available in the <em>Users</em> menu. Once logged in and registered, you'll also find this link in your settings page under <em>&lt;your login&gt;/User settings</em>
+</p><p>
+Please leave remarks in the submission form.  If you have
+questions, then mail the program committee at <a href="mailto:program@perlconference.amsterdam" target="_top">program@perlconference.amsterdam</a>.
+</p>
+
+<h2>Other activities</h2>
+<p>
+The venue will have space available for hacking sessions out of the
+schedule. If you have anything to contribute to hacking sessions,
+please
+notify the organizers so they can reserve hacking spaces.
+</p>
