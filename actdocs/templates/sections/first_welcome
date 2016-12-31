@@ -7,9 +7,23 @@
         <div class="mbr-section col-md-10">
 
           <h2>Welcome to The Perl Conference</h2>
-          <p>Traditionally called <a href="https://en.wikipedia.org/wiki/Yet_Another_Perl_Conference" target="_blank">YAPC</a>, 
-          now referred to as The Perl Conference for clarity.</p>
-          <p></p>
+          <p>
+We invite you to participate in The Perl Conference, which will take
+place in August 2017 in Amsterdam, The Netherlands.  These meetings were
+formerly known as YAPC::EU, the yearly meeting of Perl Mongers in Europe.
+          </p>
+          <p>
+The Perl conferences started off as grassroots user meetings, with
+discussions among Perl Mongers, and has grown from there.  The focus is
+on enjoying the ideas of others, discovering new concepts, and feeling the
+enthousiasm of fellow programmers in the Perl (5) and Perl 6 programming
+languages.
+          </p>
+          <p>
+This years theme is: <b>High-end Perl</b>. We are open for contributions:
+sponsors and potential speakers, please continue reading this page.
+          </p>
+
         </div>
       </div>
     </div>
