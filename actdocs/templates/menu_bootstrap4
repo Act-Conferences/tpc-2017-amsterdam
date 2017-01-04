@@ -21,11 +21,12 @@
 
   <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
     
-    [% PROCESS menus/news  %]
-    [% PROCESS menus/talks %]
-    [% PROCESS menus/users %]
-    [% PROCESS menus/wiki  %]
-    [% PROCESS menus/user  %]
+    [% PROCESS menus/conference  %]
+    [% PROCESS menus/news        %]
+    [% PROCESS menus/wiki        %]
+    [% PROCESS menus/talks       %]
+    [%# PROCESS menus/users       %]
+    [% PROCESS menus/user        %]
             
   </ul>
   <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">

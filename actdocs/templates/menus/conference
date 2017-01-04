@@ -1,0 +1,46 @@
+[% PROCESS menus/bootstrap_v3_v4_adaptor %]
+
+<!-- conference menu -->
+<li class="nav-item dropdown">
+
+  <a [% head_a_attr %]>
+    <i class="fa fa-hand-o-right [% icon_class %]" title="View/manage talks & events"></i>
+    <span [% head_attr_big   %]  title="View/manage talks & events">Conference</span>
+    <span [% head_attr_small %]  title="View/manage talks & events">Conference</span>
+    <b class="caret"></b>
+  </a>
+  
+  <ul class="dropdown-menu">
+    <li><a [% item_a_attr %] href="[% make_uri('#first_welcome')          %]">Welcome</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('#keynote_speakers')       %]">Keynotes</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('#venue_intro')            %]">Venue</a></li>
+
+[%# below is the original users menu %]  
+  
+    <li [% div_li_attr %]></li>
+    <li><a [% item_a_attr %] href="[% make_uri('search')            %]">User Search</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('stats')             %]">User Statistics</a></li>
+
+[% IF global.request.user.is_users_admin %]  
+    <li [% div_li_attr %]></li>
+    <li><a [% item_a_attr %] href="[% make_uri('export')            %]">{{CSV export}}</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('confirm_attend')    %]">{{Confirm Attendance}}</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('create')            %]">{{Register a new user}}</a></li>
+[% END %]  
+  
+[% IF global.request.user.is_treasurer %]  
+    <li [% div_li_attr %]></li>
+    <li><a [% item_a_attr %] href="[% make_uri('payments')          %]">{{Payments}}</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('csv/payments')      %]">{{Payments}} (CSV)</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('csv/payment_items') %]">{{Payment Details}} (CSV)</a></li>
+[% END %]
+
+[% IF global.request.user.is_admin %]
+    <li [% div_li_attr %]></li>
+    <li><a [% item_a_attr %] href="[% make_uri('rights')            %]">{{Rights management}}</a></li>
+[% END %]
+
+  </ul>
+
+</li>
+

@@ -159,7 +159,7 @@ p.message {
 }
 
 #ext_menu-0 .link {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 #main-menu {
@@ -215,7 +215,6 @@ p.message {
 .navbar-dropdown .navbar-caption
 {
   font-family: "Raleway", 'sans-serif';
-  font-size:   1rem;
   font-weight: normal;
 }
 
@@ -329,7 +328,7 @@ p.message {
 /* Must not apply below 992x as text is hidden then */
 @media (min-width: 992px)  {
   #talks-menu-head {
-    min-width:120px;
+    min-width:90px;
   }
 }
 
