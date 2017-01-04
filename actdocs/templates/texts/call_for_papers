@@ -73,7 +73,8 @@ the content. They will fix language errors without notice.
 
 <h2>Where to submit</h2>
 <p>
-First, register as a participant. Then a menu option to submit a presentation will be available in the <em>Users</em> menu. Once logged in and registered, you'll also find this link in your settings page under <em>&lt;your login&gt;/User settings</em>
+First, you need to be registered as a participant (existing users find a link to <a href="[% make_uri('register') %]">register</a> on their <a href="[% make_uri('main') %]">User settings</a> page, new users click <a href="[% make_uri('register') %]">Register / New user</a>. Then a link to <a href="[% make_uri('newtalk') %]">submit a talk</a> will be available on the <a href="[% make_uri('main') %]">User settings</a> page. You can also find this link in the <em>Talks &amp; events</em> menu.
+
 </p><p>
 Please leave remarks in the submission form.  If you have
 questions, then mail the program committee at <a href="mailto:program@perlconference.amsterdam" target="_top">program@perlconference.amsterdam</a>.
