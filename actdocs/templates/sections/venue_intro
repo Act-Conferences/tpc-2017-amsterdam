@@ -1,29 +1,59 @@
-<section class="mbr-section mbr-parallax-background" id="venue_intro" style="background-image: url(assets/images/nlpw2016-2000x988-92.jpg); padding-top: 200px; padding-bottom: 200px;">
+<section class="mbr-section mbr-parallax-background" id="venue_intro" style="background-image: url(assets/images/nlpw2016-2000x988-92.jpg); padding-top: 100px; padding-bottom: 0px;">
 
   <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(0, 0, 0);">
   </div>
 
-  <div class="container">
-    <h3 class="mbr-section-title display-2">
-      <span style="font-size: 3rem; line-height: 1.1;">
-        <a class="amsterdam_red" href="http://b-buildingbusiness.com/amsterdam/b-1/" target="_blank">
-          <span class="hidden-sm-down">B.Amsterdam</span>
-          <span class="hidden-md-up" style="font-size:80%;">B.Amsterdam</span>
-        </a><br>
-      </span><br>
-      City in a building
-    </h3>
-    <div class="lead">
+  <div class="mbr-table mbr-table-full">
+    <div class="mbr-table-cell">
+
+      <div class="container">
+        <h3 class="mbr-section-title display-2" style="text-align:center;">
+          <span style="font-size: 3rem; line-height: 1.1;">
+            <a class="amsterdam_red" href="http://b-buildingbusiness.com/amsterdam/b-1/" target="_blank">
+              <span class="hidden-sm-down">Our venue: B.Amsterdam</span>
+              <span class="hidden-md-up" style="font-size:80%;">Our venue: B.Amsterdam</span>
+            </a>
+          </span>
+        </h3>
+
+        <div class="mbr-section row">
+          <div class="mbr-table-md-up">
+
+            <div class="mbr-table-cell mbr-right-padding-md-up col-md-5 text-xs-center text-md-right">
+
+              <h3 class="mbr-section-title display-4">A city in a building</h3>
+
+              <div class="mbr-section-text lead">
       <p>
-        With its 28,000 square meters and two buildings, B.Amsterdam is the biggest startup ecosystem in Europe. 
-        B. is a creative working space for innovation, education and growth. 
-        We build a bridge between startups, creatives and corporates and bring them together, 
-        setting up ways to connect with, learn from and grow with each other.<br>
-        To accommodate growth, whether you’re a starting entrepreneur or an experienced one, 
-        B.Amsterdam provides numerous services and facilities, 
-        such as work spots, events spaces, meeting units, two lounges, a gym, a cinema, 
-        parking spots aplenty and even a rooftop restaurant overlooking Amsterdam.
+  With its 40,000 square meters of combined office space, B.Amsterdam is the
+  biggest startup ecosystem in Europe.  Vacant office buildings were
+  redeveloped as a creative working space for innovation, education, and
+  growth: affordable space in a dynamic environment.
+      </p><p>
+  B.Amsterdam is very close to Schiphol Airport (10 minutes by car) and
+  very close to Amsterdam city center (20 minutes by bike).
       </p>
+  <p style="margin-bottom:0;">Address:</p>
+  <p style="margin-bottom:0;">Johan Huizingalaan 763a</p>
+  <p>1066 VH Amsterdam</p>
+
+              </div>
+
+              [%# <div class="mbr-section-btn"><a class="btn btn-primary" href="https://mobirise.com">MORE</a></div> %]
+
+            </div>
+            <div class="mbr-table-cell mbr-valign-top col-md-7">
+              <div class="mbr-figure">
+                <a href="[% make_uri_info('img', 'b-amsterdam1.jpg') %]">
+                  <img src="[% make_uri_info('img', 'b-amsterdam1.jpg') %]" style="height:460px;">
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 

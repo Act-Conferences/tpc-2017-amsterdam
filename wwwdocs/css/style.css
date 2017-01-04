@@ -336,3 +336,7 @@ p.message {
 #keynote_speakers .mbr-cards-col {
   padding-top: 1em;
 }
+
+#venue_intro .mbr-section {
+  padding-top: 0px;
+}
