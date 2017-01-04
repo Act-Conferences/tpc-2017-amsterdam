@@ -1,0 +1,29 @@
+<section class="mbr-section mbr-section-full" id="sponsoring_intro">
+
+  <div class="mbr-table-cell">
+
+    <div class="container">
+      <div class="row">
+        <div class="mbr-section col-md-10">
+
+          <h2>Sponsors make for a better conference</h2>
+          <p>
+We already have contracted a few large sponsors, but are still in need
+of contributions of various size.  Companies, please show our community
+that you appreciate its existence - that you also benefit from.
+          </p>
+          <p>
+          
+Contact <a href="mailto:sponsors@perlconference.amsterdam" target="_top">sponsors@perlconference.amsterdam</a> for information about how you
+can help this Perl conference to be affordable for everyone.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#venue_intro"><i class="mbr-arrow-icon"></i></a></div>
+
+</section>
+

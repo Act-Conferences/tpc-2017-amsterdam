@@ -13,6 +13,7 @@
   <ul class="dropdown-menu">
     <li><a [% item_a_attr %] href="[% make_uri('#first_welcome')          %]">Welcome</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('#keynote_speakers')       %]">Keynotes</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('#sponsoring_intro')       %]">Sponsoring</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('#venue_intro')            %]">Venue</a></li>
 
 [%# below is the original users menu %]  
