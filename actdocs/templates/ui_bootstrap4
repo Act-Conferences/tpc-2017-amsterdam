@@ -14,17 +14,18 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/bootstrap-material-design-font/css' , 'material.css'        ) %]">
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/tether'                             , 'tether.min.css'      ) %]">
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/bootstrap-material-design-font/css' , 'material.css'       ) %]">
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/tether'                             , 'tether.min.css'     ) %]">
     
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/bootstrap/css'                      , 'bootstrap.min.css'   ) %]">
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/bootstrap/css'                      , 'bootstrap.min.css'  ) %]">
 
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/animate.css'                        , 'animate.min.css'     ) %]">
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/dropdown/css'                       , 'style.css'           ) %]">
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/theme/css'                          , 'style.css'           ) %]">
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/mobirise/css'                       , 'mbr-additional.css'  ) %]">
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/animate.css'                        , 'animate.min.css'    ) %]">
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/socicon/css'                        , 'socicon.min.css'    ) %]">
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/dropdown/css'                       , 'style.css'          ) %]">
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/theme/css'                          , 'style.css'          ) %]">
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('assets/mobirise/css'                       , 'mbr-additional.css' ) %]">
 
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css'                                       , 'style.css'           ) %]">
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css'                                       , 'style.css'          ) %]">
 
     <script src="[% make_uri_info('js', 'jquery-1.11.0.min.js') %]"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

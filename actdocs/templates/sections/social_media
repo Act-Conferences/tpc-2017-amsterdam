@@ -1,0 +1,12 @@
+<section class="mbr-section mbr-section-md-padding mbr-parallax-background" id="social-buttons2-1" style="background-image: url(assets/images/landscape3.jpg); padding-top: 90px; padding-bottom: 90px;">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-xs-center">
+                <h3 class="mbr-section-title display-2">FOLLOW US</h3>
+                <div><a class="btn btn-social" title="Twitter" target="_blank" href="https://twitter.com/TPCiA"><i class="socicon socicon-twitter"></i></a> <a class="btn btn-social" title="Facebook" target="_blank" href="https://www.facebook.com/thePerlConference"><i class="socicon socicon-facebook"></i></a>         </div>
+            </div>
+        </div>
+    </div>
+</section>
+
