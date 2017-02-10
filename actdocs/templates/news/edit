@@ -2,13 +2,40 @@
 
 
   [%#
-    variable $items doesn't appear to get filled in properly
-    fill it in now
+    Required variable $items no longer gets filled in in 
+    Act::Handler::News::Edit
+    
+    A diff of source code from 2010 and 2017 shows:
+    
+137c137
+<             $fields->{items} = $news->items;
+---
+>             $fields->{title} = $news->{items}{ $Request{language} }{title};
+    
+    Note:
+    The variable $items does NOT multiple news items. Rather it holds various
+    language versions of a single news item.
+    It is a hash holding a single news item's titles and texts 
+    indexed by language, i.e.
+    
+      $items.en.title = English title
+      $items.en.text  = English text
+      etc.
+    
+    Since this template requires $items to be filled in, use the following
+    workaround:
+      - retrieve all news from global.news
+      - get relevant news_id from url arguments
+      - loop over news array and get correct entry based on news_id
+      
+    Unfortunately, this only works for published news. Unpublished news entries
+    are not supplied in global.news.
   %]
 
   [% search_id = global.request.args.news_id %]
-  [% lang = global.config.languages.keys.0 %]
   [% news = global.news %]
+  
+  [% lang = global.config.languages.keys.0 %]
 <p>No. of news items: [% news.size %]</p>
 
   [% FOREACH n = news %]
@@ -16,14 +43,14 @@
     [% IF search_id==n.news_id %]
       [% news_id  = search_id %]
       
-      [%# items.en.title = n.title %]
-      [%# items.en.text  = n.text  %]
       [% items = n.items %]
 
-      <p>debug 2: Found:<br>
-        title=[% n.title %]<br>
-        text=[% n.text %]
-      </p>
+      [%#
+        <p>debug 2: Found:<br>
+          title=[% n.title %]<br>
+          text=[% n.text %]
+        </p>
+      %]
 
     [% END %]
   [% END %]
@@ -109,9 +136,6 @@ END %]
   </td>
 </tr>
 
-
-   </td>
-</tr>
 <tr>
    <td colspan="3" align="right">
       <input type="submit" name="preview" value="{{Preview}}" />
