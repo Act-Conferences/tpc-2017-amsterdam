@@ -16,6 +16,8 @@
       [% items.en.title = n.title %]
       [% items.en.text  = n.text  %]
 
+      <p>Found: title=[% n.title %], text=[% n.text %]</p>
+
     [% END %]
   [% END %]
   
