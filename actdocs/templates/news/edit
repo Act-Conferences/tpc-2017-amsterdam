@@ -1,11 +1,19 @@
 [% WRAPPER ui title = loc("Edit a news item") %]
 
 
-<p>Dit doet-ie:<br>
-  [% FOREACH val = items.keys %]
-    [% val %]<br>
+  [%#
+    variable $items doesn't appear to get filled in properly
+    fill it in now
+  %]
+  
+  [% search_id = global.request.args.news_id %]
+
+  [% FOREACH n = global.news %]
+    [% IF search_id==n.news_id %]
+        [% items = n.items %]
+    [% END %]
   [% END %]
-</p>
+  
 
 [% IF preview;
      FOREACH lang = global.config.languages.keys;
