@@ -16,10 +16,14 @@
     [% IF search_id==n.news_id %]
       [% news_id  = search_id %]
       
-      [% items.en.title = n.title %]
-      [% items.en.text  = n.text  %]
+      [%# items.en.title = n.title %]
+      [%# items.en.text  = n.text  %]
+      [% items = n.items %]
 
-      <p>Found: title=[% n.title %], text=[% n.text %]</p>
+      <p>debug 2: Found:<br>
+        title=[% n.title %]<br>
+        text=[% n.text %]
+      </p>
 
     [% END %]
   [% END %]
