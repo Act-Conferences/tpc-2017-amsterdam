@@ -5,11 +5,13 @@
     variable $items doesn't appear to get filled in properly
     fill it in now
   %]
-  
+
+<p>Try global.news(3)</p>
   [% search_id = global.request.args.news_id %]
   [% lang = global.config.languages.keys.0 %]
+  [% news = global.news(3) %]
 
-  [% FOREACH n = global.news %]
+  [% FOREACH n = news %]
     [% IF search_id==n.news_id %]
       [% news_id  = search_id %]
       
