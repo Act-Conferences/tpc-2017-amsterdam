@@ -10,7 +10,11 @@
 
   [% FOREACH n = global.news %]
     [% IF search_id==n.news_id %]
-        [% items = n.items %]
+      [% news_id  = search_id %]
+      
+      [% items.en.title = n.title %]
+      [% items.en.text  = n.text  %]
+
     [% END %]
   [% END %]
   
