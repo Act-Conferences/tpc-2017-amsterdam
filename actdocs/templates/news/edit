@@ -45,13 +45,6 @@
       
       [% items = n.items %]
 
-      [%#
-        <p>debug 2: Found:<br>
-          title=[% n.title %]<br>
-          text=[% n.text %]
-        </p>
-      %]
-
     [% END %]
   [% END %]
   
