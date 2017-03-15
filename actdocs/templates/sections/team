@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 text-xs-center">
-          <h3 class="mbr-section-title display-2">OUR FABULOUS TEAM</h3>
+          <h3 class="mbr-section-title display-2">OUR FABULOUS TEAM LEADERS</h3>
           <small class="mbr-section-subtitle text-on-dark">Meet the people that make this Perl Event happen …</small>
         </div>
       </div>
@@ -15,7 +15,7 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-xs-12 col-lg-4">
+        <div class="col-xs-12 col-lg-6">
 
           <div class="mbr-testimonial card mbr-testimonial-lg">
             <div class="card-block"><p>“from 'send-a-newbie' to organising the Perl Conference in Amsterdam and more...”</p></div>
@@ -25,18 +25,9 @@
               <small class="mbr-author-desc text-on-dark">Main Organiser</small>
             </div>
           </div>
-        </div><div class="col-xs-12 col-lg-4">
-
-          <div class="mbr-testimonial card mbr-testimonial-lg">
-            <div class="card-block"><p>“It was about time that the conference would come back to Amsterdam”</p></div>
-            <div class="mbr-author card-footer">
-              <div class="mbr-author-img"><img src="assets/images/mark-overmeer-160x160-19.jpg" class="img-circle" alt="Mark Overmeer, Co-Organiser" title="Mark Overmeer, Co-Organiser"></div>
-              <div class="mbr-author-name">Mark Overmeer</div>
-              <small class="mbr-author-desc text-on-dark">Co-organiser</small>
-            </div>
-          </div>
-        </div><div class="col-xs-12 col-lg-4">
-
+        </div>
+        
+        <div class="col-xs-12 col-lg-6">
           <div class="mbr-testimonial card mbr-testimonial-lg">
             <div class="card-block"><p>“Making sure that the world knows about Perl and Perl-6<br>and everything else!”</p></div>
             <div class="mbr-author card-footer">
