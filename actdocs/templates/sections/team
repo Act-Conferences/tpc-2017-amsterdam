@@ -18,7 +18,7 @@
         <div class="col-xs-12 col-lg-6">
 
           <div class="mbr-testimonial card mbr-testimonial-lg">
-            <div class="card-block"><p>“from 'send-a-newbie' to organising the Perl Conference in Amsterdam and more...”</p></div>
+            <div class="card-block"><p>“From 'send-a-newbie' to organising the Perl Conference in Amsterdam and more...”</p></div>
             <div class="mbr-author card-footer">
               <div class="mbr-author-img"><img src="assets/images/534083c8b81d013303dc191e04f68ca1-160x160-94.jpg" class="img-circle" alt="Theo van Hoesel, main organiser" title="Theo van Hoesel, main organiser"></div>
               <div class="mbr-author-name">Theo van Hoesel</div>
@@ -29,7 +29,7 @@
         
         <div class="col-xs-12 col-lg-6">
           <div class="mbr-testimonial card mbr-testimonial-lg">
-            <div class="card-block"><p>“Making sure that the world knows about Perl and Perl-6<br>and everything else!”</p></div>
+            <div class="card-block"><p>“Making sure that the world knows about Perl and Perl-6 and everything else!”</p></div>
             <div class="mbr-author card-footer">
               <div class="mbr-author-img"><img src="assets/images/16826242802-95d4c8a749-160x160-39.jpg" class="img-circle" alt="Wendy van Dijk, Advisor" title="Wendy van Dijk, Advisor"></div>
               <div class="mbr-author-name">Wendy van Dijk</div>
