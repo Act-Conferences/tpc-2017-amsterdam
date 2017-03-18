@@ -1,7 +1,7 @@
 [general]
-full_uri  = http://act.perlconference.org/tpc-2017-amsterdam/
+#full_uri  = http://act.perlconference.org/tpc-2017-amsterdam/
 #full_uri  = http://cv:9000/yapc2017/
-#full_uri  = http://test.mongueurs.net/tpc-2017-amsterdam/
+full_uri  = http://test.mongueurs.net/tpc-2017-amsterdam/
 languages = en
 default_language = en
 default_country  = nl
@@ -22,7 +22,7 @@ open = 1
 
 [talks]
 submissions_open = 1
-submissions_notify_address  = program@theperlconference.amsterdam
+submissions_notify_address  = detlev@xs4all.nl
 submissions_notify_language = en
 notify_accept = 1
 edition_open  = 0
@@ -49,21 +49,49 @@ r3_name_en = Room 3
 #type        = YEF
 type = FAKE
 currency    = EUR
-open        = 0
-invoices    = 0
+open        = 1
+invoices    = 1
 products    = registration
 
 [product_registration]
 name_en     = Registration
-prices      = 2
+prices      = 9
 
 [product_registration_price1]
-name_en     = Regular price
-amount      = FIXME
+name_en     = Corporate Attendee
+amount      = 385
 
 [product_registration_price2]
-name_en     = Reduced price
-amount      = FIXME
+name_en     = Private Attendee
+amount      = 145
+
+[product_registration_price3]
+name_en     = Private Attendee - Early Bird
+amount      = 105
+
+[product_registration_price4]
+name_en     = Private Attendee - Student
+amount      = 65
+
+[product_registration_price5]
+name_en     = Speaker giving full-length presentation (45 minutes)
+amount      = 0
+
+[product_registration_price6]
+name_en     = Sponsored attendee
+amount      = 0
+
+[product_registration_price7]
+name_en     = Single-day pass (Wednesday)
+amount      = 145
+
+[product_registration_price8]
+name_en     = Single-day pass (Thursday)
+amount      = 145
+
+[product_registration_price9]
+name_en     = Single-day pass (Friday)
+amount      = 145
 
 # optional Flickr support
 [flickr]
