@@ -33,11 +33,8 @@
     [% IF global.request.user.is_talks_admin %]
       <li><a [% item_a_attr %] href="[% make_uri('ical_import') %]">{{iCal import}}</a></li>
       <li><a [% item_a_attr %] href="[% make_uri('export_talks') %]">{{CSV export}}</a></li>
-      
-      [%# Events menu %]
-      <li class="divider"></li>
-      <li><a href="[% make_uri('events') %]">{{Events}}</a></li>
-      <li><a href="[% make_uri('newevent') %]">{{Submit a new event}}</a></li>	
+      <li><a [% item_a_attr %] href="[% make_uri('events') %]">{{Events}}</a></li>
+      <li><a [% item_a_attr %] href="[% make_uri('newevent') %]">{{Submit a new event}}</a></li>
     [% END %]
       
 [% END %]
