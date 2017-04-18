@@ -36,7 +36,7 @@
               
                 <div class="[% b34_form_group_class %]">
                   <label for="credential-0">{{Login}}</label>
-                  <input type="text" class="form-control" name="credential_0" id="form-credential-0" placeholder="{{ Specify your login or email address }}">
+                  <input type="text" class="form-control" name="credential_0" id="form-credential-0" placeholder="{{ Login }}">
                 </div>
                 
                 <div class="[% b34_form_group_class %]">
