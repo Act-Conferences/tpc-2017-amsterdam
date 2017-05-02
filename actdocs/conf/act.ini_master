@@ -26,7 +26,7 @@ submissions_notify_address  = detlev@xs4all.nl
 submissions_notify_language = en
 notify_accept = 1
 edition_open  = 0
-show_schedule = 0
+show_schedule = 1
 durations  = 20 45 60 90
 start_date = 2017-08-09 08:00:00
 end_date   = 2017-08-11 20:00:00
@@ -55,7 +55,7 @@ products    = registration
 
 [product_registration]
 name_en     = Registration
-prices      = 5
+prices      = 7
 
 [product_registration_price1]
 name_en     = Corporate Attendee
@@ -66,16 +66,24 @@ name_en     = Private Attendee
 amount      = 145.00
 
 [product_registration_price3]
-name_en     = Private Attendee - Early Bird
-amount      = 105.00
-
-[product_registration_price4]
 name_en     = Private Attendee - Student
 amount      = 65.00
 
-[product_registration_price5]
-name_en     = Speaker (≥ 45 mins.)
+[product_registration_price4]
+name_en     = Speaker (full talk, at least 45 minutes)
 amount      = 0.00
+
+[product_registration_price5]
+name_en     = Single-Day - Wed. 9th of August
+amount      = 145.00
+
+[product_registration_price6]
+name_en     = Single-Day - Thu. 10th of August
+amount      = 145.00
+
+[product_registration_price7]
+name_en     = Single-Day - Fri. 11th of August
+amount      = 145.00
 
 # optional Flickr support
 [flickr]
