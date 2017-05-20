@@ -4,15 +4,4 @@
 
 CMS category: [% my_category %]
 
-<!--
-[% SET my_category = "my_test"]
-[% PROCESS cms_read_category category = my_category %]
-
-[% FOREACH item IN CMS.$my_category.items %]
-<DIV>
-    <H3>[% item.title %]</H3>
-    <P>[% item.intro %]</P>
-</DIV>
-[% END %]
--->
 [% END %]
