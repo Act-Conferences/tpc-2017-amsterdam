@@ -1,13 +1,9 @@
-<h3>CMS._list as hash</h3>
-[% SET CMS = {
-    list = [ 'item_2', 'item_1' ]
-    other = "John"
-} %]
+<h3>CMS.list as hash</h3>
 [% PROCESS "cms/$category/index.tt" %]
 <p>
 And now then: [% CMS.other %]
 </p>
-[% FOREACH item_name IN CMS._list %]
+[% FOREACH item_name IN CMS.list %]
 [% item_path = 'cms/' _ category _ '/' _ item_name _ '.tt' %]
 [% PROCESS "$item_path" %]
 [% END %]
