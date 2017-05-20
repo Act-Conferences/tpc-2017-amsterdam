@@ -1,0 +1,4 @@
+[% SET CMS._list = [
+    'item_1',
+    'item_2',
+] %]
