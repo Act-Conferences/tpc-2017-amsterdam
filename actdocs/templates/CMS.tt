@@ -7,3 +7,5 @@ And now then: [% CMS.other %]
 [% item_path = 'cms/' _ category _ '/' _ item_name _ '.tt' %]
 [% PROCESS "$item_path" %]
 [% END %]
+
+IMAGE: [% CMS.item.image %]
