@@ -1,12 +1,12 @@
 [% WRAPPER ui_bootstrap4 title="CMS Test Page" %]
 
 [% SET my_category = "my_test" %]
-[% PROCESS cms_read_category category = my_category %]
+[% PROCESS CMS category = my_category %]
 
-[% FOREACH item IN CMS.$my_category.items %]
+[% FOREACH my_item IN CMS._items %]
 <DIV>
-    <H3>[% item.title %]</H3>
-    <P>[% item.intro %]</P>
+    <H3>[% my_item.title %]</H3>
+    <P>[% my_item.intro %]</P>
 </DIV>
 [% END %]
 
