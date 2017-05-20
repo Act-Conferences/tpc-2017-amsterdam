@@ -2,3 +2,7 @@
     'item_1',
     'item_2',
 ] %]
+[% SET CMS._list = [
+    'item_1',
+    'item_2',
+] %]
