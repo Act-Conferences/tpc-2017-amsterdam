@@ -1,21 +1,5 @@
-<p>
-inside CMS.tt : [% GET category %]
-</p>
-
 [% PROCESS "cms/$category/index.tt" %]
-
-<p>I am Back!!!</p>
-
 [% FOREACH my_name IN CMS_list %]
-<br>
-<br>
-<h2>[% my_name %]<h2>
-<br>
 [% my_item_path = 'cms/' _ category _ '/' _ my_name _ '.tt' %]
 [% PROCESS "$my_item_path" %]
-<br>
 [% END %]
-
-<p>
-and processed index.tt
-</p>
