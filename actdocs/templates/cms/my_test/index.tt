@@ -2,3 +2,9 @@
     'item_1',
     'item_2',
 ] %]
+
+[% FOREACH my_item IN CMS._list %]
+<h3>___ [% my_item %] ___ </h3>
+[% END %]
+
+<h2> Done!</h2>
