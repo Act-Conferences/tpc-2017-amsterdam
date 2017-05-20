@@ -1,0 +1,1 @@
+inside CMS.tt : [% GET category %]
