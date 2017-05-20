@@ -2,6 +2,7 @@
 
 Hello ...
 
+[% SET CMS.items = [] %]
 [% PROCESS 'CMS.tt' category = 'my_test' %]
 
 I've imported [% CMS.items.size %] items
