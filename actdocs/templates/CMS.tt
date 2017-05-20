@@ -1,12 +1,12 @@
 <h3>CMS._list as hash</h3>
 [% SET CMS = {
-    list = [ "hello", "World", "are we here" ]
+    list = [ 'item_2', 'item_1' ]
     other = "John"
 } %]
-<p>
-And now: [% CMS.other %]
-</p>
 [% PROCESS "cms/$category/index.tt" %]
+<p>
+And now then: [% CMS.other %]
+</p>
 [% FOREACH item_name IN CMS._list %]
 [% item_path = 'cms/' _ category _ '/' _ item_name _ '.tt' %]
 [% PROCESS "$item_path" %]
