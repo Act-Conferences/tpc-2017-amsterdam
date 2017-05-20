@@ -1,0 +1,10 @@
+[% CMS._item = {
+    title = "First Item" %]
+    lands = "land_here_item_1" %]
+    image = "what.jpg" %]
+    intro = "Hi, this is my first CMS item ..." %]
+    texts = [
+        "This First CMS Item is here just as a place holder",
+        "And we can aim for multi paragraph texts as well"
+    ]
+} %]
