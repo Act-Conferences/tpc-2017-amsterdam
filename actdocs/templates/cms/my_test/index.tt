@@ -1,6 +1,10 @@
 Current list: [% CMS._list.size %]
+<br>
+Other: [% CMS.other %] 
 
 [% SET CMS._list = [
     'item_1',
     'item_2',
 ] %]
+
+[% SET CMS.other = "Maria" %]
