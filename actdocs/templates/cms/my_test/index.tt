@@ -2,7 +2,7 @@ Current list: [% CMS.list.size %]
 <br>
 Other: [% CMS.other %] 
 
-[% SET CMS._list = [
+[% SET CMS.list = [
     'item_1',
     'item_2',
 ] %]
