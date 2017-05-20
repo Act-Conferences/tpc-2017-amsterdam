@@ -1,4 +1,4 @@
-Current list: [% CMS._list.size %]
+Current list: [% CMS.list.size %]
 <br>
 Other: [% CMS.other %] 
 
