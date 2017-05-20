@@ -1,1 +1,9 @@
+<p>
 inside CMS.tt : [% GET category %]
+</p>
+
+[% PROCESS "cms/$category/index.tt" %]
+
+<p>
+and processed index.tt
+</p>
