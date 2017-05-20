@@ -1,10 +1,1 @@
-[%#
-    CMS - reading Template Toolkit Include files int CMS data structures
-    
-    do not use categories '_list' or '_item' --- internaly overridden
-    
-    you can use CMS._items in the caller
-    
-%]
-
-Category Name inside CMS:[% GET category %]
+Booh!!!
