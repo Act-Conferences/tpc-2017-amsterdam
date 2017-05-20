@@ -1,6 +1,7 @@
+<h3>CMS._list</h3>
 [% CMS._list = [] %]
 [% PROCESS "cms/$category/index.tt" %]
-[% FOREACH my_name IN CMS._list %]
-[% my_item_path = 'cms/' _ category _ '/' _ my_name _ '.tt' %]
-[% PROCESS "$my_item_path" %]
+[% FOREACH item_name IN CMS._list %]
+[% item_path = 'cms/' _ category _ '/' _ item_name _ '.tt' %]
+[% PROCESS "$item_path" %]
 [% END %]
