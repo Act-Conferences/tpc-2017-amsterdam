@@ -4,6 +4,14 @@ inside CMS.tt : [% GET category %]
 
 [% PROCESS "cms/$category/index.tt" %]
 
+[% FOREACH my_name IN CMS._list %]
+<br>
+<br>
+<h2>[% my_name %]<h2>
+<br>
+<br>
+[% END %]
+
 <p>
 and processed index.tt
 </p>
