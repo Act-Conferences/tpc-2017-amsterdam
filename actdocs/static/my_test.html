@@ -1,6 +1,11 @@
 [% WRAPPER ui_bootstrap4 title="CMS Test Page" %]
 
 [% SET my_category = "my_test"]
+
+CMS category: [% my_category %]
+
+<!--
+[% SET my_category = "my_test"]
 [% PROCESS cms_read_category category = my_category %]
 
 [% FOREACH item IN CMS.$my_category.items %]
@@ -9,5 +14,5 @@
     <P>[% item.intro %]</P>
 </DIV>
 [% END %]
-
+-->
 [% END %]
