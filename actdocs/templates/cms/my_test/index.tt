@@ -1,3 +1,5 @@
+Current list: [% CMS._list.size %]
+
 [% SET CMS._list = [
     'item_1',
     'item_2',
