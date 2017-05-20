@@ -2,15 +2,16 @@
     CMS - reading Template Toolkit Include files int CMS data structures
     
     do not use categories '_list' or '_item' --- internaly overridden
+    
+    you can use CMS._items in the caller
+    
 %]
 
 [% PROCESS "cms/$category/index" %]
 
-[% FOREACH my_item IN CMS.$category._list %]
+[% FOREACH my_item IN CMS._list %]
     [% PROCESS "cms/$category/$my_item" %]
     [% CMS._item._item = my_item %]
-    [% CMS.categories.$category.items.push( CMS._item ) %]
+    [% CMS._items.$my_item = CMS._item %]
     [% CMS.delete ( '_item' ) %]
 [% END %]
-
-[% CMS.delete( '_list' ) %]
