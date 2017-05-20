@@ -4,7 +4,7 @@
 <br>
 <h3>[% my_name %]<h3>
 <br>
-[% PROCESS "cms/$category/$my_name.tt" %]
+[% PROCESS "cms/$category/$my_name" _ '.tt' %]
 <br>
 [% END %]
 
