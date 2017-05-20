@@ -7,11 +7,4 @@
     
 %]
 
-[% PROCESS "cms/$category/index" %]
-
-[% FOREACH my_item IN CMS._list %]
-    [% PROCESS "cms/$category/$my_item" %]
-    [% CMS._item._item = my_item %]
-    [% CMS._items.$my_item = CMS._item %]
-    [% CMS.delete ( '_item' ) %]
-[% END %]
+Category Name inside CMS:[% GET category %]
