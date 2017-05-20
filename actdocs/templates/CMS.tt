@@ -11,6 +11,7 @@ inside CMS.tt : [% GET category %]
 <br>
 <h2>[% my_name %]<h2>
 <br>
+[% PROCESS "cms/$category/$my_name" _ '.tt' %]
 <br>
 [% END %]
 
