@@ -5,15 +5,8 @@
         tasks = "main organiser",
         intro = "The BIG idiot that brought YAPC to Amsterdam",
         texts = [
-            "Not long ago, 2013 in Kiev, my first Perl Conference"
-          _ " -- sponsored through the Send-A-Newbie program --"
-          _ " I decided to help with the Dutch Perl Workshop."
-          _ " It was only a little later, that organising a Conference would be"
-          _ " the next insane thing to do",
-            
-            "I feel so privileged to be amongst great and inspirational people "
-          _ " that have a same passion as I have...",
-            
+            "Not long ago, 2013 in Kiev, my first Perl Conference -- sponsored through the Send-A-Newbie program -- I decided to help with the Dutch Perl Workshop. It was only a little later, that organising a Conference would be the next insane thing to do",
+            "I feel so privileged to be amongst great and inspirational people that have a same passion as I have...",
             "Make The Perl Conference in Amsterdam ... GREAT!!!",
         ],
     }
