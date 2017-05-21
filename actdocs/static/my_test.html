@@ -2,7 +2,7 @@
     CMS = {
         topic = 'my_test',
         index = {},
-        items = []
+        items = {},
     }
 %]
 
@@ -14,7 +14,8 @@
     <p>[% words %]</p>
 [% END %]
 
-[% FOREACH item IN CMS.items %]
+[% FOREACH item_name IN CMS.index.items %]
+    [% item = CMS.items.$item_name %]
     <h2>[% item.title %]</h2>
     <p><b><i>[% item.intro %]</i></b></p>
     [% FOREACH words IN item.texts %]
