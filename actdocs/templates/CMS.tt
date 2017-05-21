@@ -2,5 +2,5 @@
 [% FOREACH item_name IN CMS.index.items %]
     [% item_path = 'cms/' _ CMS.topic _ '/' _ item_name _ '.tt' %]
     [% PROCESS "$item_path" %]
-    [% CMS.items.push(CMS.item) %]
+    [% CMS.items.$item_name = CMS.item %]
 [% END %]
