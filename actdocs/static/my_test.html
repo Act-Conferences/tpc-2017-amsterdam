@@ -3,7 +3,9 @@
 
 [% WRAPPER ui_bootstrap4 title=CMS.index.title %]
 
-i've [% CMS.index.texts.size %] paragraphs
+[% FOREACH words IN CMS.index.texts %]
+    <p>[% words %]</p>
+[% END %]
 
 [% FOREACH item IN CMS.items %]
 <h2>[% item.title %]</h2>
