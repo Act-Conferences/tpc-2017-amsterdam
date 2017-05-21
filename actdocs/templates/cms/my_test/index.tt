@@ -1,4 +1,10 @@
-[% SET CMS.list = [
-    'item_1',
-    'item_2',
-] %]
+[%
+    SET CMS.index = {
+        title = "TEST CMS", 
+        items = [
+            'item_1',
+            'item_2',
+        ],
+        image = "test.jpg"
+    }
+%]

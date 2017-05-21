@@ -1,8 +1,7 @@
-[% SET CMS.items = [] %]
+[% SET CMS.index = {} %]
 [% PROCESS "cms/$category/index.tt" %]
-[% FOREACH item_name IN CMS.list %]
+[% FOREACH item_name IN CMS.index.items %]
     [% item_path = 'cms/' _ category _ '/' _ item_name _ '.tt' %]
     [% PROCESS "$item_path" %]
     [% CMS.items.push(CMS.item) %]
 [% END %]
-<h3>pushed [% CMS.items.size %]</h3>
