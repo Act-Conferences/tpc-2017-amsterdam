@@ -3,17 +3,16 @@
 
 [% WRAPPER ui_bootstrap4 title=CMS.index.title %]
 
-[% FOREACH words IN CMS.index.texts %]
+[% FOREACH words IN CMS.index.texts.split('¶') %]
     <p>[% words %]</p>
 [% END %]
 
 [% FOREACH item IN CMS.items %]
     <h2>[% item.title %]</h2>
     <p><b><i>[% item.intro %]</i></b></p>
-    [% FOREACH words IN CMS.item.texts %]
+    [% FOREACH words IN CMS.item.texts.split('¶') %]
         <p>[% words %]</p>
     [% END %]
-    
 [% END %]
 
 [% END %]

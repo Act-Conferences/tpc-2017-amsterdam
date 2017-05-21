@@ -1,7 +1,8 @@
-[% CMS.item = {
-    title = "Second Item",
-    intro = "This is my second CMS item ...",
-    texts = [
-        "We only have so much to say about text",
-    ],
-} %]
+[%
+    SET CMS.item = {
+        title = "Second Item",
+        intro = "This is my second CMS item",
+        texts =
+            "We only have so much to say about text",
+    }
+%]
