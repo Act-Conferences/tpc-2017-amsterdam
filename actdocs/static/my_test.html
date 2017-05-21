@@ -8,19 +8,19 @@
 
 [% WRAPPER ui_bootstrap4 title=CMS.index.title %]
 
-<h1>TOPICS</h1>
-
-[% FOREACH words IN CMS.index.texts %]
-    <p>[% words %]</p>
-[% END %]
-
-[% FOREACH item_name IN CMS.index.items %]
-    [% item = CMS.items.$item_name %]
-    <h2>[% item.title %]</h2>
-    <p><b><i>[% item.intro %]</i></b></p>
-    [% FOREACH words IN item.texts %]
+    [% FOREACH words IN CMS.index.texts %]
         <p>[% words %]</p>
     [% END %]
-[% END %]
+    
+    [% FOREACH item_name IN CMS.index.items %][% item = CMS.items.$item_name %]
+    
+        <h2>[% item.title %]</h2>
+        <p><b><i>[% item.intro %]</i></b></p>
+    
+        [% FOREACH words IN item.texts %]
+            <p>[% words %]</p>
+        [% END %]
+    
+    [% END %]
 
 [% END %]
