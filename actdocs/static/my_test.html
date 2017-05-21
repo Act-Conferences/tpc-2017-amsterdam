@@ -1,7 +1,9 @@
-[% WRAPPER ui_bootstrap4 title="CMS Test Page" %]
-
 [% SET CMS = { index = {}, items = [] } %]
 [% PROCESS 'CMS.tt' category = 'my_test' %]
+
+[% WRAPPER ui_bootstrap4 title=CMS.index.title %]
+
+i've [% CMS.index.texts.size %] paragraphs
 
 [% FOREACH item IN CMS.items %]
 <h2>[% item.title %]</h2>
