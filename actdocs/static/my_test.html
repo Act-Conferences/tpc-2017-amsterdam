@@ -1,7 +1,9 @@
-[% SET CMS = { index = {}, items = [] } %]
-[% PROCESS 'CMS.tt' category = 'my_test' %]
+[% SET CMS = { topic = 'my_test', index = {}, items = [] } %]
+[% PROCESS 'CMS.tt' %]
 
 [% WRAPPER ui_bootstrap4 title=CMS.index.title %]
+
+<h1>TOPICS</h1>
 
 [% FOREACH words IN CMS.index.texts %]
     <p>[% words %]</p>
