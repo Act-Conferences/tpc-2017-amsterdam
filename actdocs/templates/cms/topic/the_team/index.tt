@@ -8,6 +8,7 @@
         texts = [
             "No conference without the hard labour of a dedicated team of people."
           _ " Each of them has their own special talents, like giving hugs",
+            
             "Make sure that you meet them during the conference and buy them a beer",
         ],
     }
