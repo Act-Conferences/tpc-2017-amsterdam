@@ -1,7 +1,7 @@
 [%
     SET CMS.item = {
         title = "Melinda Kiss",
-        image = "melinda.jpg",
+        image = "melinda.png",
         tasks = "web editor",
         intro = "Just making sure you read the right info",
         texts = [
