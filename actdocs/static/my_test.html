@@ -8,8 +8,12 @@
 [% END %]
 
 [% FOREACH item IN CMS.items %]
-<h2>[% item.title %]</h2>
-<p>[% item.intro %]</p>
+    <h2>[% item.title %]</h2>
+    <p><b><i>[% item.intro %]</i></b></p>
+    [% FOREACH words IN CMS.item.texts %]
+        <p>[% words %]</p>
+    [% END %]
+    
 [% END %]
 
 [% END %]
