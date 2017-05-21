@@ -1,10 +1,14 @@
 [%
     SET CMS.index = {
-        title = "TEST CMS", 
+        title = "TEST CMS from INDEX", 
         items = [
             'item_1',
             'item_2',
         ],
-        image = "test.jpg"
+        image = "test.jpg",
+        texts = [
+            "This is just the begining of what can be done",
+            "We will see more soon",
+        ]
     }
 %]
