@@ -6,8 +6,8 @@
             'item_2',
         ],
         image = "test.jpg",
-        texts = "This is just the begining of what can be done"
-                _ '¶' _
-                "We will see more soon",
+        texts = [
+            "This is just the begining of what can be done",
+            "We will see more soon",
     }
 %]
