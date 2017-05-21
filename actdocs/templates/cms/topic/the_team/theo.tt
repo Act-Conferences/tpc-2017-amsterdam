@@ -2,7 +2,7 @@
     SET CMS.item = {
         title = "Theo van Hoesel",
         image = "theo.jpg",
-        tasks = "main organiser"
+        tasks = "main organiser",
         intro = "The BIG idiot that brought YAPC to Amsterdam",
         texts = [
             "Not long ago, 2013 in Kiev, my first Perl Conference"
