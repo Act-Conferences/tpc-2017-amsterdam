@@ -7,6 +7,6 @@
         texts = [
             "This First CMS Item is here just as a place holder",
             "And we can aim for multi paragraph texts as well",
-        ]
+        ],
     }
 %]

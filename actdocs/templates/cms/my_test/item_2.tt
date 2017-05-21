@@ -4,6 +4,6 @@
         intro = "This is my second CMS item",
         texts = [
             "We only have so much to say about text",
-        ]
+        ],
     }
 %]
