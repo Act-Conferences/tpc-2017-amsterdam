@@ -1,5 +1,10 @@
-[% SET CMS = { topic = 'my_test', index = {}, items = [] } %]
-[% PROCESS 'CMS.tt' %]
+[% PROCESS 'CMS.tt'
+    CMS = {
+        topic = 'my_test',
+        index = {},
+        items = []
+    }
+%]
 
 [% WRAPPER ui_bootstrap4 title=CMS.index.title %]
 
