@@ -1,0 +1,26 @@
+[% PROCESS 'CMS.tt'
+    CMS = {
+        topic = 'my_test',
+        index = {},
+        items = {},
+    }
+%]
+
+[% WRAPPER ui_mobirise3 title=CMS.index.title %]
+
+    [% FOREACH words IN CMS.index.texts %]
+        <p>[% words %]</p>
+    [% END %]
+    
+    [% FOREACH item_name IN CMS.index.items %][% item = CMS.items.$item_name %]
+    
+        <h2>[% item.title %]</h2>
+        <p><b><i>[% item.intro %]</i></b></p>
+    
+        [% FOREACH words IN item.texts %]
+            <p>[% words %]</p>
+        [% END %]
+    
+    [% END %]
+
+[% END %]

@@ -1,0 +1,6 @@
+[% PROCESS "cms/topic/$CMS.topic/index.tt" %]
+[% FOREACH item_name IN CMS.index.items %]
+    [% item_path = 'cms/topic/' _ CMS.topic _ '/' _ item_name _ '.tt' %]
+    [% PROCESS "$item_path" %]
+    [% CMS.items.$item_name = CMS.item %]
+[% END %]
