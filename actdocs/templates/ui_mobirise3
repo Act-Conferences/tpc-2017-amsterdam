@@ -52,29 +52,15 @@
 
         <div id="space-for-menu" />
 
-[% IF mobirise_section %]
-  [%# mobirise sections have their own container element %]
-
-        <div class="frontpage-sections">
-          [% content %]
-        </div>
-
-[% ELSE %]
-
-        <div class="container" id="page-content">
-          <div class="col-xs-12">
-            [% content %]
-          </div>
-        </div>
-
-[% END %]
-
       </div>
-
+    </div>
+    
+    [% content %]
+    
+    <div>
       <div id="footer-bootstrap4">
         [% PROCESS footer %]
       </div>
-
     </div>
 
 
