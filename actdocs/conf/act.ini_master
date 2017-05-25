@@ -47,7 +47,7 @@ r3_name_en = Room 3
 
 [payment]
 #type        = YEF
-type = FAKE
+type = Fake
 currency    = EUR
 open        = 1
 invoices    = 1
@@ -58,32 +58,32 @@ name_en     = Registration
 prices      = 7
 
 [product_registration_price1]
-name_en     = Corporate Attendee
-amount      = 385.00
+name_en     = Regular price
+amount      = 365
 
 [product_registration_price2]
 name_en     = Private Attendee
-amount      = 145.00
+amount      = 145
 
 [product_registration_price3]
 name_en     = Private Attendee - Student
-amount      = 65.00
+amount      = 65
 
 [product_registration_price4]
 name_en     = Speaker (full talk, at least 45 minutes)
-amount      = 0.00
+amount      = 0
 
 [product_registration_price5]
 name_en     = Single-Day - Wed. 9th of August
-amount      = 145.00
+amount      = 130
 
 [product_registration_price6]
 name_en     = Single-Day - Thu. 10th of August
-amount      = 145.00
+amount      = 130
 
 [product_registration_price7]
 name_en     = Single-Day - Fri. 11th of August
-amount      = 145.00
+amount      = 130
 
 # optional Flickr support
 [flickr]
