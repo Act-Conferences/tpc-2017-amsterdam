@@ -47,10 +47,10 @@
         <div class="row">
           <div class="mbr-table-md-up">
             
-            [% IF loop.index %2 %]
+            [% IF loop.index % 2 %]
               
               <div class="mbr-table-cell col-md-5 text-xs-center text-md-right content-size">
-                [% PROCESS ITEM_DESCRIPTION item = item %]
+                [% PROCESS description item = item %]
               </div>
               <div class="mbr-table-cell mbr-left-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 40%;">
                 <div class="mbr-figure"><img src="[% '/tpc-2017-amsterdam/cms/topic/lodging/' _ item.image %]"></div>
@@ -62,7 +62,7 @@
                 <div class="mbr-figure"><img src="[% '/tpc-2017-amsterdam/cms/topic/lodging/' _ item.image %]"></div>
               </div>
               <div class="mbr-table-cell col-md-5 text-xs-center text-md-left content-size">
-                [% PROCESS ITEM_DESCRIPTION item = item %]
+                [% PROCESS description item = item %]
               </div>
               
             [% END %]
@@ -77,7 +77,7 @@
   
 [% END %]
 
-[% BLOCK ITEM_DESCRIPTION %]
+[% BLOCK description %]
                 <h3 class="mbr-section-title display-2">[% item.title %]</h3>
                 <div class="lead">
                   
