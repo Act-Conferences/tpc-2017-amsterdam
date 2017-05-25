@@ -1,0 +1,75 @@
+[% PROCESS 'CMS.tt'
+    CMS = {
+        topic = 'speakers',
+        index = {},
+        items = {},
+    }
+%]
+
+[% WRAPPER ui_mobirise3 title=CMS.index.title %]
+  
+  
+  <section class="mbr-section mbr-section__container article" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12">
+                  <h3 class="mbr-section-title display-2">[% CMS.index.title %]</h3>
+                  
+                  <p>
+                    [% CMS.index.intro %]
+                  </p>
+                  
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  
+  [% FOREACH item_name IN CMS.index.items %][% item = CMS.items.$item_name %]
+    
+    <section class="mbr-section" style="background-color: rgb(242, 242, 242); padding-top: 80px; padding-bottom: 120px;">
+      
+      
+      <div class="container">
+        <div class="row">
+          <div class="mbr-table-md-up">
+            
+            <div class="mbr-table-cell mbr-right-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 30%;">
+              <div class="mbr-figure">
+                <img
+                  src="/tpc-2017-amsterdam/cms/topic/speakers/[% item.image %]"
+                  alt="Portrait of [% item.title %]"
+                  title="[% item.title %]"
+                >
+              </div>
+            </div>
+            
+            <div class="mbr-table-cell col-md-5 text-xs-center text-md-left content-size">
+              <h3 class="mbr-section-title display-2">[% item.title %]</h3>
+              
+              <div class="lead">
+                
+                <p>
+                  <i>[% item.intro %]</i>
+                </p>
+                
+                [% FOREACH words IN CMS.index.texts %]
+                  <p>
+                    [% words %]
+                  </p>
+                [% END %]
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+    </section>
+    
+  [% END %]
+  
+  
+[% END %]
