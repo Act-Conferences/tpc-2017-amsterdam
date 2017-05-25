@@ -32,7 +32,6 @@
     
   </section>
   
-  
   [% FOREACH item_name IN CMS.index.items %][% item = CMS.items.$item_name %]
     
     <section
@@ -47,22 +46,27 @@
       <div class="container">
         <div class="row">
           <div class="mbr-table-md-up">
-            <div class="mbr-table-cell col-md-5 text-xs-center text-md-right content-size">
-              <h3 class="mbr-section-title display-2">[% item.title %]</h3>
-              <div class="lead">
-                
-                <b><i>[% item.intro %]</i></b>
-  
-                [% FOREACH words IN item.texts %]
-                  <p>[% words %]</p>
-                [% END %]
-  
+            
+            [% IF loop.index %2 %]
+              
+              <div class="mbr-table-cell col-md-5 text-xs-center text-md-right content-size">
+                [% PROCESS ITEM_DESCRIPTION item = item %]
               </div>
-              <div><a class="btn btn-primary" href="https://booking.com">B.ooking</a></div>
-            </div>
-            <div class="mbr-table-cell mbr-left-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 40%;">
-              <div class="mbr-figure"><img src="[% '/tpc-2017-amsterdam/cms/topic/lodging/' _ item.image %]"></div>
-            </div>
+              <div class="mbr-table-cell mbr-left-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 40%;">
+                <div class="mbr-figure"><img src="[% '/tpc-2017-amsterdam/cms/topic/lodging/' _ item.image %]"></div>
+              </div>
+              
+            [% ELSE %]
+              
+              <div class="mbr-table-cell mbr-left-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 40%;">
+                <div class="mbr-figure"><img src="[% '/tpc-2017-amsterdam/cms/topic/lodging/' _ item.image %]"></div>
+              </div>
+              <div class="mbr-table-cell col-md-5 text-xs-center text-md-left content-size">
+                [% PROCESS ITEM_DESCRIPTION item = item %]
+              </div>
+              
+            [% END %]
+            
           </div>
         </div>
       </div>
@@ -71,4 +75,18 @@
   [% END %]
   
   
+[% END %]
+
+[% BLOCK ITEM_DESCRIPTION %]
+                <h3 class="mbr-section-title display-2">[% item.title %]</h3>
+                <div class="lead">
+                  
+                  <b><i>[% item.intro %]</i></b>
+    
+                  [% FOREACH words IN item.texts %]
+                    <p>[% words %]</p>
+                  [% END %]
+    
+                </div>
+                <div><a class="btn btn-primary" href="https://booking.com">B.ooking</a></div>
 [% END %]
