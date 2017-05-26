@@ -340,3 +340,65 @@ p.message {
 #venue_intro .mbr-section {
   padding-top: 0px;
 }
+
+/* === styling for registration feedback */
+
+.reg_status_in_banner_para {
+  color:white;
+  background-color:#aaa;
+  text-align:center;
+  font-size:70%;
+  border-radius:10px;
+  opacity: 0.8;
+  padding: 0 1em;
+}
+
+.reg_status_in_banner_para a {
+   color:white;
+   text-decoration:underline;
+}
+
+/* xs */
+@media (max-width: 543px)  {
+  .reg_status_in_banner {
+	height:60px;
+	position:absolute;
+	top:150px;
+	right:10px;
+	font-size:80%;
+  }
+  #reg_status_extra_space { height:40px;}
+}
+
+/* sm */
+@media (min-width: 544px) and (max-width: 767px)  {
+  .reg_status_in_banner {
+	height:80px;
+	position:absolute;
+	top:150px;
+	right:10px;
+  }
+  #reg_status_extra_space { height:60px;}
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 1199px)  {
+  .reg_status_in_banner {
+	height:80px;
+	position:absolute;
+	top:60px;
+	right:0px;
+  }
+  #reg_status_extra_space { height:0px;}
+}
+
+/* lg and up */
+@media (min-width: 1200px)  {
+  .reg_status_in_banner {
+	height:80px;
+	position:absolute;
+	top:60px;
+	right:0px;
+  }
+  #reg_status_extra_space { height:0px;}
+}
