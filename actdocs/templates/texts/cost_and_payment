@@ -40,7 +40,7 @@ To purchase your conference ticket, click the relevant button in the below <a hr
 To purchase your conference ticket, please first make sure you're <a href="[% make_uri('login') %]">logged in</a> and have <a href="[% make_uri('register') %]">registered</a> to attend. If you then come back to this page, you'll find buttons for each ticket in the below <a href="#price_table">price table</a>.
 [% END %]
 
-For all tickets (other than the free tickets for full-talk speakers) the transaction will need to be confirmed once more by clicking <b>Buy now</b>, and you will then be taken to the secure credit card transaction.
+For all tickets (other than the free tickets for full-talk speakers) the transaction will need to be confirmed once more by clicking <b>Credit card payment</b>, and you will then be taken to the secure credit card transaction.
 
 </p>
 
