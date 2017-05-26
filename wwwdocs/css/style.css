@@ -402,3 +402,51 @@ p.message {
   }
   #reg_status_extra_space { height:0px;}
 }
+
+/* === styling for price table */
+
+.price_table_intro {
+  font-size:80%;
+}
+
+.price_table_intro a {
+  color:#CD9B1D;
+}
+
+.price_table_head {
+  font-size:80%;
+  font-weight:bold;
+  border-width:1px;
+  border-style:solid solid solid solid;
+  background-color:#aaa;
+  color:white;
+}
+
+.price_table_rows {
+  font-size:80%;
+  border-width:1px;
+  border-width:1px;
+  border-style:none solid solid solid;
+  min-height:50px;
+}
+
+/* sm and down */
+@media (max-width: 767px) {
+
+  .price_table_rows form {}
+  
+  .price_table_col1 {font-weight:bold;}
+  .price_table_col2 {}
+  .price_table_col3 {}
+  .price_table_col4 {text-align:center;margin-bottom:10px;}
+}
+
+/* md and up */
+@media (min-width: 768px) {
+  .price_table_rows form { position:relative;top:10px; }
+  
+  .price_table_col1 {}
+  .price_table_col2 {text-align:center;}
+  .price_table_col3 {}
+  .price_table_col4 {text-align:center;}
+}
