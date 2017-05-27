@@ -355,13 +355,14 @@ p.message {
   font-size:80%;
   font-weight:bold;
   border-width:1px;
+  border-color:#888;
   border-style:solid solid solid solid;
 }
 
 .price_table_rows {
   font-size:80%;
   border-width:1px;
-  border-width:1px;
+  border-color:#888;
   border-style:none solid solid solid;
   min-height:50px;
 }
