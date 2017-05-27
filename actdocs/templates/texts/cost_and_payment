@@ -50,7 +50,7 @@ To make a donation, please go to our <a href="[% make_uri('purchase') %]">paymen
 </p>
 
 <a name="price_table"></a>
-<h2>Ticket choices</h2>
+<h3>Ticket choices</h3>
 <p>
 We offer the following tickets based on your personal circumstances and type of attendance. All prices are inclusive of 21% Dutch VAT.
 </p>
