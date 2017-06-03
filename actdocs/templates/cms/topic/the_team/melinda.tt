@@ -2,18 +2,18 @@
     SET CMS.item = {
         title = "Melinda Kiss",
         image = "melinda.png",
-        tasks = "web editor",
+        tasks = "World Bender aka Content Editor",
         intro = "Just making sure you read the right info",
         texts = [
            "One of the many things I do, is updating the website content.
             There, is sooo much that the organising team likes to share with you,
-            and I love to publish it here",
-            
+            and I love to publish it here.",
+
            "Another project I am involved in is SHA2017 and enjoy bringing in
-            my personal experiences",
-            
+            my personal experiences.",
+
            "Sure, if you find something you think we should add, just give me
-            a shout",
+            a shout.",
         ],
     }
 %]
