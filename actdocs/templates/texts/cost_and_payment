@@ -10,7 +10,8 @@ Please find the conference price applicable to your situation in the <a href="#p
 <h3>How to pay?</h3>
 
 <p>
-All payments should be made by <u>credit card</u> through our <u>online payment system</u>. (If you really cannot pay by credit card, please contact us at <a href="mailto:orga@theperlconference.amsterdam">orga@theperlconference.amsterdam</a>).
+All payments should be made by <u>credit card</u> through our <u>online payment system</u>. (If you really cannot pay by credit card, please contact us at <a href="mailto:orga@theperlconference.amsterdam">orga@theperlconference.amsterdam
+</a>).
 </p>
 
 [% 
@@ -37,22 +38,22 @@ All payments should be made by <u>credit card</u> through our <u>online payment 
 To purchase your conference ticket, click the relevant button in the below <a href="#price_table">price table</a>.
 
 [% ELSE %]
-To purchase your conference ticket, please first make sure you're <a href="[% make_uri('login') %]">logged in</a> and have <a href="[% make_uri('register') %]">registered</a> to attend. If you then come back to this page, you'll find buttons for each ticket in the below <a href="#price_table">price table</a>.
+To purchase your conference ticket, please first make sure you're <a href="[% make_uri('login') %]">logged in</a> and have <a href="[% make_uri('register') %]">registered</a> to attend. If you then come back to this page you'll find buttons for each ticket in the below <a href="#price_table">price table</a>.
 [% END %]
 
-For all tickets (other than the free tickets for full-talk speakers) the transaction will need to be confirmed once more by clicking <b>Credit card payment</b>, and you will then be taken to the secure credit card transaction.
+For all tickets (other than the free tickets for full-talk speakers) the transaction needs to be confirmed once more by clicking <b>Buy now</b> and will then be taken to the secured credit card transaction.
 
 </p>
 
 <h3>Donations</h3>
 <p>
-To make a donation, please go to our <a href="[% make_uri('purchase') %]">payment page</a>, fill in the desired amount and click <b>Buy now</b>. The payment page also allows you to buy any of the below conference tickets at the same time, if you haven't done so yet.
+To make a donation, please go to our <a href="[% make_uri('purchase') %]">Payment page</a>, fill in the desired amount and click <b>Buy now</b>. The payment page also allows you to buy any of the below conference tickets at the same time, if you haven't done so yet.
 </p>
 
 <a name="price_table"></a>
-<h3>Ticket choices</h3>
+<h2>Prices</h2>
 <p>
-We offer the following tickets based on your personal circumstances and type of attendance. All prices are inclusive of 21% Dutch VAT.
+We offer the following tickets based on your personal circumstances and type of attendance:
 </p>
 
 </div>
@@ -128,32 +129,31 @@ We offer the following tickets based on your personal circumstances and type of 
    </div>
 </div>
 
+
 [% FOREACH i_price IN [ 1 .. 7 ] %]
 
-  <div class="row price_table_rows">
-    <div class="[% pt_class_1 %]">
-      [% prices.$i_price.name %]
-    </div>
-    <div class="[% pt_class_2 %]">
-      [% prices.$i_price.amount %]
-    </div>
-    <div class="[% pt_class_3 %]">
-      [% prices.$i_price.descr %]
-    </div>
-
-    <div class="[% pt_class_4 %]">
-      [% IF can_pay %]
-        <form action="[% make_uri('purchase') %]" method="post">
-          <input type="hidden" name="purchase"              value="x">
-          <input type="hidden" name="product-registration"  value="x">
-          <input type="hidden" name="price-registration"    value="[% i_price %]">
+    <div class="row price_table_rows">
+      <div class="[% pt_class_1 %]">
+        [% prices.$i_price.name %]
+      </div>
+      <div class="[% pt_class_2 %]">
+        [% prices.$i_price.amount %]
+      </div>
+      <div class="[% pt_class_3 %]">
+        [% prices.$i_price.descr %]
+      </div>
+  
+      <div class="[% pt_class_4 %]">
+        <form action="[% make_uri('purchase') %]" method="GET">
+          <input type="hidden" name="presel" value="[% i_price %]">
           <input type="submit" name="buy" value="Buy this"><br>
         </form> 
-      [% END %]
+      </div>
+      
     </div>
-    
-  </div>
- 
+
+
 [% END %]
+
 
 <br><br>
