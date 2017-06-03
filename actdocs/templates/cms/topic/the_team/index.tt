@@ -4,9 +4,8 @@
         items = [
             'theo',
             'wendy',
-            'tux',
+	    'tux',
             'judith',
-            'eric',
             'melinda',
         ],
         texts = [
