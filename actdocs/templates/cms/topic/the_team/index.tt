@@ -2,13 +2,13 @@
     SET CMS.index = {
         title = "The Fabulous Team",
         items = [
-            'theo',
-            'wendy',
-	          'tux',
-            'lenn',
-            'eric',
-            'judith',
-            'melinda',
+            'Theo_vanHoesel',
+            'Wendy_vanDijk',
+            'HMerijn_Brand',
+            'Lenn_vanWinden',
+            'Eric_Slachmuylders',
+            'Judith_deHont',
+            'Melinda_Kiss',
         ],
         texts = [
            "No conference without the hard labour of team with dedicated people.
