@@ -1,0 +1,59 @@
+
+[% rs_yes = '<span style="color:green;font-size:140%;font-weight:200;" title="Yes">✓</span>'  %]
+[% rs_no = '<span style="color:red;font-size:140%" title="No">❌</span>'  %]
+
+[%# compute the number of talks submitted this year %]
+
+  [% tpc_thisconf = global.request.conference %]
+  [% tpc_ntalks = 0 %]
+  [% talks = global.request.user.talks %]
+
+  [% FOR t = talks %]
+    [% IF tpc_thisconf==t.conf_id %]
+      [% tpc_ntalks=tpc_ntalks+1 %]
+    [% END %]
+  [% END %]
+
+
+[%# rs_item_sep = "&nbsp;-$nbsp" %]
+[%# rs_item_sep = "<br>" %]
+[% rs_item_sep = 
+  '<span class="hidden-sm-down">&nbsp;-&nbsp;</span><span class="hidden-md-up"><br></span>'
+%]
+
+
+[% IF !global.request.user.login %]
+  <p class="reg_status_in_banner_para">
+    You're not <a href="[% make_uri( 'main') %]">logged in</a>
+  </p>
+  
+[% ELSE %]
+
+  <p class="reg_status_in_banner_para">
+
+    [% IF global.request.user.has_registered %]
+      You're registered to come [% rs_yes %]
+    [% ELSE %]
+      Not yet registered to come [% rs_no %]
+    [% END %]
+    
+    [% rs_item_sep %]
+
+    [% IF global.request.user.has_paid %]
+      You bought your ticket [% rs_yes %]
+    [% ELSE %]
+      No ticket bought yet [% rs_no %]
+    [% END %]
+
+    [% rs_item_sep %]
+
+    [% IF tpc_ntalks %]
+      Submitted [% tpc_ntalks %] [% tcp_ntalks==1 ? 'talk' : 'talks' %] [% rs_yes %]
+    [% ELSE %]
+      No talks submitted [% rs_no %]
+    [% END %]
+  </p>
+
+[% END %]
+
+

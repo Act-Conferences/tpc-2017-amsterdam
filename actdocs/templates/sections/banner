@@ -7,6 +7,7 @@
     <div class="mbr-table-cell">
 
       <div class="container">
+      
         <div class="mbr-section row">
           <div class="mbr-table-md-up">
             
@@ -15,7 +16,11 @@
                 <img class="hidden-sm-down" src="[% make_uri_info('img', 'perlconference-amsterdam_logo_354x354.png') %]">
               </div>
             </div>
+            
+            
             <div class="mbr-table-cell col-md-5 text-xs-center text-md-left">
+
+              <p id="reg_status_extra_space"></p>
 
               <h3 class="mbr-section-title display-2">
                 <span class="hidden-sm-down">
@@ -42,6 +47,11 @@
 
           </div>
         </div>
+        
+        <div class="reg_status_in_banner">
+          [% PROCESS "texts/reg_status" %]
+        </div>
+
       </div>
 
     </div>
