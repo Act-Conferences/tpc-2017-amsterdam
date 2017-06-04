@@ -2,8 +2,8 @@
     SET CMS.index = {
         title = "Lodging, where to sleep?", 
         items = [
-            'corendon',
-            'artemis',
+            'Corendon',
+            'Artemis',
         ],
         texts = [
            "We want you to enjoy the conference, but a good place to sleep is
