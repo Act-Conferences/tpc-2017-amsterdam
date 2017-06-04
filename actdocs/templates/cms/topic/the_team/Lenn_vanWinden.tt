@@ -1,0 +1,18 @@
+[%
+    SET CMS.item = {
+        title = "Lenn van Winden",
+        image = "lenn.jpg",
+        tasks = "Administration and Planing",
+        intro = "Administration for The Perl Conference in Amsterdam",
+        texts = [
+           "Happy to assist the team on planning, administration, booking and all other kind of activities you can expect from an assistant.
+           Because that will be my role.",
+
+           "I am not in to any code at all (I know how to deal with Merijn - and that is the only tech language I know)",
+
+           "Working as assistant for Hewlett Packard Enterprise for many years and living close to Amsterdam.",
+
+           "I have joined many YAPC's as a spouse and now I am happy to be your help for all questions related to travel, tourism in the Netherlands, weather forecast and what else.",
+        ],
+    }
+%]
