@@ -2,7 +2,7 @@
     SET CMS.index = {
         title = "An awesome line-up of world class speakers", 
         items = [
-            'larry_wall',
+            'Larry_Wall',
         ],
         texts = [ ],
     }
