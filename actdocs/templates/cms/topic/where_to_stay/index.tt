@@ -1,6 +1,6 @@
 [%
     SET CMS.index = {
-        title = "Lodging, where to sleep?", 
+        title = "Where to stay?", 
         items = [
             'Corendon',
             'Artemis',
@@ -9,7 +9,7 @@
            "We want you to enjoy the conference, but a good place to sleep is
             also very important.",
             
-           "Below, you will find some recomendations and useful information to
+           "Below, you will find some recommendations and useful information to
             book your place.",
         ],
     }
