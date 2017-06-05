@@ -1,0 +1,10 @@
+[% cn_closed   =global.config.closed %]
+[%# cn_closed   = 1 %]
+
+[% IF cn_closed %]
+
+<div style="color:white;background-color:#E08080;margin:1em 1em;padding:1em 1em;text-align:center;">
+  <p><i>Note</i>: This conference is over. Registration, payment etc. are no longer possible. The following content is only shown for reference!</p>
+</div>
+
+[% END %]

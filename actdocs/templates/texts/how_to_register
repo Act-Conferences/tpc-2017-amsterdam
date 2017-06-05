@@ -1,0 +1,81 @@
+[%
+  hr_logged_in=global.request.user;
+  hr_has_paid =0;
+  hr_has_reg  =0;
+%]
+
+[% IF hr_logged_in %]
+  [% hr_has_reg  = global.request.user.has_registered %]
+  [% hr_has_paid = global.request.user.has_paid       %]
+[% END %]
+
+[% INCLUDE texts/closed_notification %]
+
+
+[% IF !hr_logged_in %]
+
+  <h2>Registration and payment</h2>
+  <p>
+  You're currently not logged in, so we're showing information for users who may or may not have an account already.
+  </p>
+  <p>
+  Please note that registration and payment are two separate steps. You first need to register as an attendee (see below) and then purchase your conference ticket (see <a href="[% make_uri('cost-and-payment.html') %]">Cost and Payment</a> page).
+  </p>
+  
+  <h2>Registering with or without a previous account</h2>
+  
+  <p>There is a slight difference depending on whether you already have an account from a previous Perl conference.</p>
+  
+  <ul>
+    <li>If you don't have an account yet...
+      <ul>
+        <li>Submit your email address in the <b>"No account yet?"</b> section of the <a href="[% make_uri('main') %]">Login/Registration</a> page.
+        </li>
+        <li>Click the link in the email you'll receive and follow the instructions.</li>
+        <li>This process will 1) create your account, 2) register you for the conference and 3) log you in all in one go.</li>
+  
+      </ul>
+    </li>
+    <li>If you already have an account...
+      <ul>
+        <li>Log in using the <b>"Returning user"</b> section of the <a href="[% make_uri('main') %]">Login/Registration</a> page.
+        </li>
+        <li>Upon login, you'll be taken to your <b>User Settings</b> page with a link to <b>"register for this conference"</b>.</li>
+      </ul>
+    </li>
+  </ul>
+
+[% ELSIF !hr_has_reg %]
+  <h2>Registration and payment</h2>
+  <p>
+    You're currently logged in but you haven't yet registered for [% global.conference.name %] or bought your conference ticket.
+  </p>
+  <p>
+  Please note that registration and payment are two separate steps.
+  </p>
+  <ul>
+    <li>
+      <b>Registration</b><br>
+      Since you're logged in already, just click <a href="[% make_uri('register') %]">Register for the conference</a> and <i>Join</i> to confirm your attendance. This link is also available on your <a href="[% make_uri('main') %]">User settings</a> page.
+    </li>
+
+    <li>
+      <b>Payment</b><br>
+      After registration, please buy your conference ticket. For details see <a href="[% make_uri('cost-and-payment.html') %]">Cost and Payment</a>.
+
+    </li>
+  </ul>
+
+[% ELSIF !hr_has_paid %]
+  <h2>You've registered for the conference already</h2>
+  <p>
+    You're currently logged in and you've registered for [% global.conference.name %]. However, you still need to buy your conference ticket. See <a href="[% make_uri('cost-and-payment.html') %]">Cost and payment</a> for details.
+  </p>
+
+[% ELSE %]
+  <h2>You've done everything already</h2>
+  <p>
+    You're currently logged in, you've registered for [% global.conference.name %] and you bought your conference ticket. You can manage all remaining settings on your <a href="[% make_uri('main') %]">User settings</a> page.
+  </p>
+
+[% END %]
