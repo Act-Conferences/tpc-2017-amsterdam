@@ -1,0 +1,16 @@
+[%
+    SET CMS.index = {
+        title = "Where to stay?", 
+        items = [
+            'Corendon',
+            'Artemis',
+        ],
+        texts = [
+           "We want you to enjoy the conference, but a good place to sleep is
+            also very important.",
+            
+           "Below, you will find some recommendations and useful information to
+            book your place.",
+        ],
+    }
+%]
