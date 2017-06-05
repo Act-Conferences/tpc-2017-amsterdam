@@ -23,7 +23,7 @@ languages.
 This years' theme is: <b>High-end Perl</b>. We are open for contributions:
 sponsors and potential speakers, please continue reading this page.
 <br>
-And note our <a href="[% make_uri('call-for-papers.html') %]">Call for Papers</a>! 
+And note our <a href="[% make_uri('call-for-papers.html') %]">Call for Papers</a>!
           </p>
 
         </div>
@@ -34,4 +34,3 @@ And note our <a href="[% make_uri('call-for-papers.html') %]">Call for Papers</a
   <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#news_overview"><i class="mbr-arrow-icon"></i></a></div>
 
 </section>
-
