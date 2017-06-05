@@ -1,6 +1,27 @@
 [% WRAPPER ui title = loc("Online payment") %]
   <script type="text/javascript">
-    $( document ).ready(function() {
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+  
+    $( function() {
+        //check whether there is a query param like ?presel=3 and if there is
+        //turn on the radio button with id="price-registration-3"
+        var i_presel = getParameterByName('presel');
+        if (i_presel) {
+          var radio = $(':radio[id="price-registration-'+i_presel+'"]');
+          if (radio) {
+            radio.prop('checked', true);
+            $(":checkbox[id='product-registration']").prop("checked", true);
+          }
+        }
+    
         var amounts = [% amounts %];
         $(function() {
             get_radios = function(product) { return $(":radio[name=price-" + product +"]") };
