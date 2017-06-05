@@ -1,0 +1,92 @@
+[% PROCESS 'CMS.tt'
+    CMS = {
+        topic = 'where_to_stay',
+        index = {},
+        items = {},
+    }
+%]
+
+[% WRAPPER ui_mobirise3 title=CMS.index.title %]
+  
+  <section class="mbr-section" id="testimonials2-3" style="background-color: rgb(255, 255, 255); padding-top: 120px; padding-bottom: 120px;">
+    
+    <div class="mbr-section mbr-section__container mbr-section__container--middle">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 text-xs-center">
+            
+            <h3 class="mbr-section-title display-2">
+              [% CMS.index.title %]
+            </h3>
+            
+            <small class="mbr-section-subtitle">
+              [% FOREACH words IN CMS.index.texts %]
+                [% words %]<br>
+              [% END %]
+            </small>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  
+  [% FOREACH item_name IN CMS.index.items %][% item = CMS.items.$item_name %]
+    
+    <section
+      class="mbr-section mbr-parallax-background"
+      id="msg-box6-h"
+      style="
+        background-image: url([% '/tpc-2017-amsterdam/cms/topic/where_to_stay/' _ item.large %]);
+        padding-top: 120px;
+        padding-bottom: 120px;
+      ">
+      <div class="mbr-overlay" style="opacity: 0.9; background-color: rgb(255, 255, 255);"></div>
+      <div class="container">
+        <div class="row">
+          <div class="mbr-table-md-up">
+            
+            [% IF loop.index % 2 %]
+              
+              <div class="mbr-table-cell col-md-5 text-xs-center text-md-right content-size">
+                [% PROCESS description item = item %]
+              </div>
+              <div class="mbr-table-cell mbr-left-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 40%;">
+                <div class="mbr-figure"><img src="[% '/tpc-2017-amsterdam/cms/topic/where_to_stay/' _ item.image %]"></div>
+              </div>
+              
+            [% ELSE %]
+              
+              <div class="mbr-table-cell mbr-left-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 40%;">
+                <div class="mbr-figure"><img src="[% '/tpc-2017-amsterdam/cms/topic/where_to_stay/' _ item.image %]"></div>
+              </div>
+              <div class="mbr-table-cell col-md-5 text-xs-center text-md-left content-size">
+                [% PROCESS description item = item %]
+              </div>
+              
+            [% END %]
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  [% END %]
+  
+  
+[% END %]
+
+[% BLOCK description %]
+                <h3 class="mbr-section-title display-2">[% item.title %]</h3>
+                <div class="lead">
+                  
+                  <b><i>[% item.intro %]</i></b>
+    
+                  [% FOREACH words IN item.texts %]
+                    <p>[% words %]</p>
+                  [% END %]
+    
+                </div>
+<!--            <div><a class="btn btn-primary" href="https://booking.com">B.ooking</a></div> -->
+[% END %]
