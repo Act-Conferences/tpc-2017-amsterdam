@@ -6,7 +6,7 @@
   [% b34_outer_class          = 'card' %]
   [% b34_block_class          = 'card-block' %]
   [% b34_footer_class         = 'card-footer' %]
-  [% b34_footer_inner_class   = 'col-sm-offset-7 col-sm-3 col-md-offset-7 col-md-3' %]
+  [% b34_footer_inner_class   = 'col-xs-offset-1 col-xs-9 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-4 col-lg-4 col-xl-offset-5 col-xl-4' %]
   
   [% b34_form_group_class     = 'row form-group' %]
 
@@ -15,12 +15,9 @@
   [% b34_block_class          = 'panel-body' %]
   [% b34_footer_class         = 'panel-footer text-right' %]
   [% b34_footer_inner_class   = '' %]
-  
   [% b34_form_group_class     = 'form-group' %]
 
 [% END %]
-
-[% logreg_title_style = 'text-align:center;margin-top:1em' %]
 
 <div class="row">
 
@@ -39,11 +36,11 @@
         <div class="[% b34_outer_class %]">
           <div class="[% b34_block_class %]"  style="padding-top:2px;padding-bottom:0;">
   
-            <div class="[% b34_form_group_class %]" style="[% logreg_title_style %]">
+            <div class="[% b34_form_group_class %] logreg_title">
               <h4>Returning user</h4>
             </div>
 
-            <div class="[% b34_form_group_class %]" style="height:40px;">
+            <div class="[% b34_form_group_class %]" id="logreg_spacer_login">
             </div>
 
             <div class="[% b34_form_group_class %]">
@@ -58,7 +55,7 @@
             
             <div class="[% b34_form_group_class %]">
               <div class="checkbox">
-                <label>
+                <label id="logreg_smaller_label">
                   <input name="credential_2" id="form-credential-2" type="checkbox" value="Remember Me">{{Remember me on this computer}}
                 </label>
               </div>
@@ -69,7 +66,7 @@
           <div class="[% b34_footer_class %]">
             <div class="[% b34_form_group_class %]" style="height:30px;">
               <div class="[% b34_footer_inner_class %]">
-                <button type="submit" name="join" class="btn btn-primary btn-lg">{{Submit}}</button>
+                <button type="submit" name="join" class="btn btn-primary btn-lg logreg_button">Login</button>
               </div>
             </div>
           </div>
@@ -97,11 +94,11 @@
         <div class="[% b34_outer_class %]" s>
           <div class="[% b34_block_class %]"  style="padding-top:2px;padding-bottom:0;">
           
-            <div class="[% b34_form_group_class %]"  style="[% logreg_title_style %]">
+            <div class="[% b34_form_group_class %] logreg_title">
               <h4>No account yet? Register here.</h4>
             </div>
   
-            <div class="[% b34_form_group_class %]" style="height:120px;">
+            <div class="[% b34_form_group_class %] logreg_alert">
               <div class="alert alert-warning">
                 {{This operation requires a confirmation. Please enter your email address,}}
               </div>
@@ -115,15 +112,15 @@
             %]
 
 
-            <div class="[% b34_form_group_class %]" style="height:10px;">
+            <div class="[% b34_form_group_class %]" id='logreg_spacer_email'>
             </div>
 
             <div class="[% b34_form_group_class %]">
               <label for="email">{{Email}}</label>
-              <input type="email" class="form-control"  name="email" value="[% email %]" size="25" maxlength="256" />
+              <input type="email" class="form-control"  name="email" value="[% email %]" placeholder="Email" size="25" maxlength="256" />
             </div>
 
-            <div class="[% b34_form_group_class %]" style="height:40px;">
+            <div class="[% b34_form_group_class %]" id="logreg_spacer_req">
             </div>
 
           </div>
@@ -132,7 +129,7 @@
           <div class="[% b34_footer_class %]">
             <div class="[% b34_form_group_class %]" style="height:30px;">
               <div class="[% b34_footer_inner_class %]">
-                <button type="submit" name="twostepsubmit" class="btn btn-primary btn-lg" value="OK">Send</button>
+                <button type="submit" name="twostepsubmit" class="btn btn-primary btn-lg logreg_button" value="OK">Request email</button>
               </div>
             </div>
           </div>
