@@ -18,6 +18,11 @@
     <li><a [% item_a_attr %] href="[% make_uri('the-fabulous-team.html')  %]">Our team</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('tour-in-Amsterdam.html')  %]">Exploring Amsterdam</a></li>
 
+[%# payment %]  
+    <li [% div_li_attr %]></li>
+    <li><a [% item_a_attr %] href="[% make_uri('how-to-register.html') %]">How to register</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('cost-and-payment.html') %]">Cost and payment</a></li>
+
 [%# below is the original users menu %]  
   
     <li [% div_li_attr %]></li>
