@@ -1,0 +1,55 @@
+<p style="margin:0;"></p>
+
+[% IF invoice_validity_warning %]
+  <p style="font-size:150%;color:red;text-align:center;">
+    This is a sample for test purposes only!
+  </p>
+[% END %]
+
+<div style="text-align:center">
+
+  <p style="font-size:160%;font-weight:bold;margin:0 0 0.2em 0;">
+    <u>Invoice</u>
+  </p>
+
+  <p style="font-size:80%;margin:0;">
+    for admission to
+  </p>
+  
+  <p style="font-size:140%;margin:0.2em 0;">
+    [% global.conference.name %]
+  </p>
+
+  <p style="font-size:100%;margin:0;">
+    [% conference_dates %]
+  </p>
+
+</div>
+
+<p style="margin:20px 0 1em 0"><u>Customer and invoice details:</u></p>
+
+<div style="margin:0 10px 0 10px;">
+
+  <table border="0" style="font-size:80%">
+   <tr>
+ 
+     <td width="50%">
+       [% PROCESS payment/invoice_customer %]
+     </td>
+     
+     <td width="5%">&nbsp;</td>
+ 
+     <td width="45%" valign="top">
+       [% PROCESS payment/invoice_number_date %]
+     </td>
+     
+ 
+   </tr>
+ </table>
+</div>
+
+<p style="margin:20px 0 1em 0"><u>Order details:</u></p>
+
+<div style="margin:0 10px 0 10px;font-size:90%;">
+ [% PROCESS payment/invoice_purchases %]
+</div>

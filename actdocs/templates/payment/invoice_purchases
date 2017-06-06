@@ -1,0 +1,84 @@
+[% invoice_dec_sep='.' %]
+
+<table border="1" width="90%" 
+  style="border-collapse:collapse;border-style:solid;border-width:1px;font-size:90%;"
+>
+
+  <tr style="font-size:80%;">
+    <th style="padding:0 0.3em 0 0.3em;">{{Description}}</th>
+    <th style="padding:0 0.3em 0 0.3em;">
+      <t><nl>excl. BTW</nl><en>excl. VAT</en></t>
+    </th>
+    <th style="padding:0 0.3em 0 0.3em;">
+      <t><nl>21% BTW</nl><en>21% VAT</en></t>
+    </th>
+    <th style="padding:0 0.3em 0 0.3em;">
+      <t><nl>incl. BTW</nl><en>incl. VAT</en></t>
+    </th>
+  </tr>
+
+  <tr>
+    <td align="left" colspan="4">
+      <br>
+        {{Your order number:}}
+
+        [%# info about the payment: order #, payment date and payment means
+          you can use this to turn this invoice into a receipt
+        %]
+        [% order.order_id %] - [% date_format(order.datetime, 'date_short') %] - [% order.means %]
+    </td>
+  </tr>
+
+  [% FOREACH item IN order.items %]
+    [% invoice_ex_btw = item.amount*0.826446280991736 %]
+    [% invoice_btw    = item.amount-invoice_ex_btw %]
+    <tr>
+      <td align="left">[% item.name %]</td>
+      <td align="right">
+        [% FILTER replace('\.', invoice_dec_sep) %]
+          [% FILTER format('%.2f') %]
+            [% invoice_ex_btw %]
+          [% END %]
+        [% END %]
+        &nbsp;&euro;
+      </td>
+      <td align="right">
+        [% FILTER replace('\.', invoice_dec_sep) %]
+          [% FILTER format('%.2f') %]
+            [% invoice_btw %]
+          [% END %]
+        [% END %]
+        &nbsp;&euro;
+      </td>
+      <td align="right">[% item.amount %]&nbsp;&euro;</td>
+    </tr>
+  [% END %]
+
+  <tr>
+    [% invoice_ex_btw = invoice.amount*0.826446280991736 %]
+    [% invoice_btw    = invoice.amount-invoice_ex_btw %]
+    <td colspan="1" style="text-align:right;font-weight:bold;">
+      {{Total due}}
+    </td>
+    <td             style="text-align:right;font-weight:bold;">
+        [% FILTER replace('\.', invoice_dec_sep) %]
+          [% FILTER format('%.2f') %] 
+            [% invoice_ex_btw %] 
+          [% END %]
+        [% END %]
+        &nbsp;&euro;
+    </td>
+    <td             style="text-align:right;font-weight:bold;">
+        [% FILTER replace('\.', invoice_dec_sep) %]
+          [% FILTER format('%.2f') %] 
+            [% invoice_btw %] 
+          [% END %]
+        [% END %]
+        &nbsp;&euro;
+    </td>
+    <td             style="text-align:right;font-weight:bold;">
+      [% invoice.amount %]&nbsp;&euro;
+    </td>
+  </tr>
+
+</table>

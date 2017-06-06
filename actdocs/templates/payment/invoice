@@ -1,0 +1,58 @@
+[%
+  invoice_validity_warning = 1;
+  sender_name                 = 'WenZPerl B.V.'   ;
+  sender_street_and_number    = 'Bosstraat 21'    ;
+  sender_pc_place             = '6101NV Echt'     ;
+  sender_country              = 'The Netherlands' ;
+  sender_vat_reg_no           = '<span style="color:red">&lt;fill in VAT reg. no.&gt;</span>';
+  sender_chamber_of_commerce  = '59473770';
+  sender_logo                 =  make_uri_info('img','wenzperl_logo.png');
+  
+  conference_dates            = '9th to 11th of August, 2017';
+  invoice_table_sep           = '&nbsp;:&nbsp;';
+  invoice_style_table_right   = 'font-weight:normal;';
+%]
+
+[% BLOCK invoice_body  %]
+
+<div style="width:700px;background-color:#FFF;color:#000;">
+  [% PROCESS payment/invoice_letter_head %]
+  [% PROCESS payment/invoice_below_head %]
+</div>
+
+[% END %]
+
+[% IF printer_friendly %]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="[% global.request.language %]" xml:lang="[% global.request.language %]">
+<head>
+<title>{{Invoice}}</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+[% PROCESS invoice_body %]
+</body>
+</html>
+
+
+[% ELSE;
+   WRAPPER ui title = loc('Invoice')
+%]
+
+<!--
+[%# Remove the following <div>...</div> if you use the printer_friendly version mechanism %]
+<div id="dontprint">
+<p>{{You can print this page: only the invoice below will be printed.}}</p>
+</div>
+-->
+
+<p>
+Please find below the invoice for your attendance of [% global.conference.name %]. <a href="[% printer_uri %]" target="_blank">Click here for a print-friendly version.</a>
+
+</p>
+<hr>
+[% PROCESS invoice_body %]
+
+<div style="margin-top:1em;"></div>
+
+[% END; END %]

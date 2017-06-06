@@ -1,0 +1,16 @@
+<table border="0">
+  <tr>
+    <td valign="middle" align="left">
+      <img
+    src="[% sender_logo %]" border="0" valign="top"
+    alt="Perl Programming Republic" width="160" height="160"
+      >
+    </td>
+    <td width="20"></td>
+    <td valign="top">
+      [% PROCESS payment/invoice_sender %]
+    </td>
+  </tr>
+</table>
+
+<p style="margin-top:20px;"></p>

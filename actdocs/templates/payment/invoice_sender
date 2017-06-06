@@ -1,0 +1,39 @@
+
+<div style="font-size: 90%";>
+  <h2 style="margin-bottom:0.3em;">[% sender_name %]</h2>
+
+  <table style="font-size:90%;">
+  
+    </tr>
+      <td>[% sender_street_and_number %]</td>
+    </tr>
+  
+    <tr>
+      <td>[% sender_pc_place %]</td>
+    </tr>
+    
+    <tr>
+      <td>[% sender_country %]</td>
+    </tr>
+    
+  </table>
+
+  <p style="margin:0.4em;"></p>
+  
+  <table style="font-size:90%;">
+  
+    </tr>
+      <td>Chambre of Commerce #</td>
+      <td>[% invoice_table_sep %]</td>
+      <td>[% sender_chamber_of_commerce %]</td>
+    </tr>
+  
+    <tr>
+      <td>VAT reg. #</td>
+      <td>[% invoice_table_sep %]</td>
+      <td>[% sender_vat_reg_no %]</td>
+    </tr>
+    
+  </table>
+
+</div>
