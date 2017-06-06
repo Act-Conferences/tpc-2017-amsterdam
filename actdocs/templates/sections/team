@@ -1,11 +1,47 @@
-﻿<section class="mbr-section amsterdam_red_bg" id="team">
+﻿[% PROCESS 'CMS.tt'
+    CMS = {
+        topic = 'the_team',
+        index = {},
+        items = {},
+    }
+%]
+
+[%# fill @available with available indices: 0 .. members.size-1 %]
+[%
+  USE Math;
+  available = [];
+  i=0;
+%]
+
+[% WHILE i<CMS.index.items.size #>%]
+  [% available.$i = i  %]
+  [% i=i+1             %]
+[% END %]
+
+[%# fill @thekeys with 3 distinct values from @available %]
+[% 
+  thekeys   = [];
+  i=0; 
+%]
+
+[% WHILE i<3 %] [%#>%]
+  [% i_use      = Math.int( Math.rand( available.size)  )       %]
+  [% thekeys.$i = available.$i_use                              %]
+  [% CALL available.splice(i_use,1, [])                         %]
+  [% i=i+1 %]
+[% END %]
+
+
+<section class="mbr-section amsterdam_red_bg" id="team">
 
   <div class="mbr-section mbr-section__container mbr-section__container--middle">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 text-xs-center">
-          <h3 class="mbr-section-title display-2">OUR FABULOUS TEAM LEADERS</h3>
-          <small class="mbr-section-subtitle text-on-dark">Meet the people that make this Perl Event happen …</small>
+          <h3 class="mbr-section-title display-2">OUR FABULOUS TEAM</h3>
+          <small class="mbr-section-subtitle text-on-dark">
+            Meet the people that make this Perl Event happen …
+          </small>
         </div>
       </div>
     </div>
@@ -15,29 +51,29 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-xs-12 col-lg-6">
+        [% FOREACH thekey IN thekeys %]
+          [% item_name = CMS.index.items.$thekey %]
+          [% member = CMS.items.$item_name %]
 
-          <div class="mbr-testimonial card mbr-testimonial-lg">
-            <div class="card-block"><p>“From 'send-a-newbie' to organising the Perl Conference in Amsterdam and more...”</p></div>
-            <div class="mbr-author card-footer">
-              <div class="mbr-author-img"><img src="assets/images/534083c8b81d013303dc191e04f68ca1-160x160-94.jpg" class="img-circle" alt="Theo van Hoesel, main organiser" title="Theo van Hoesel, main organiser"></div>
-              <div class="mbr-author-name">Theo van Hoesel</div>
-              <small class="mbr-author-desc text-on-dark">Main Organiser</small>
+          <div class="col-xs-12 col-lg-4">
+  
+            <div class="mbr-testimonial card mbr-testimonial-lg">
+              <div class="card-block"><p>[% member.intro %]</p></div>
+              <div class="mbr-author card-footer">
+                <div class="mbr-author-img">
+                  <img src="[% make_uri('cms/topic/the_team') %]/[% member.image %]" class="img-circle" 
+                    alt="[% member.title %], [% member.tasks %]" 
+                    title="[% member.title %], [% member.tasks %]"
+                  >
+                </div>
+                <div class="mbr-author-name">[% member.title %]</div>
+                <small class="mbr-author-desc text-on-dark">[% member.tasks %]</small>
+              </div>
             </div>
+            
           </div>
-        </div>
+        [% END %]
         
-        <div class="col-xs-12 col-lg-6">
-          <div class="mbr-testimonial card mbr-testimonial-lg">
-            <div class="card-block"><p>“Making sure that the world knows about Perl and Perl-6 and everything else!”</p></div>
-            <div class="mbr-author card-footer">
-              <div class="mbr-author-img"><img src="assets/images/16826242802-95d4c8a749-160x160-39.jpg" class="img-circle" alt="Wendy van Dijk, Advisor" title="Wendy van Dijk, Advisor"></div>
-              <div class="mbr-author-name">Wendy van Dijk</div>
-              <small class="mbr-author-desc text-on-dark">Advisor</small>
-            </div>
-          </div>
-        </div>
-
       </div>
 
     </div>
