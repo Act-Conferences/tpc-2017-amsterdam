@@ -1,5 +1,5 @@
 [%
-  reg_link_logged    = global.request.user;
+  reg_link_logged_in = global.request.user;
   reg_link_has_reg   = global.request.user AND global.request.user.has_registered;
   
   reg_link_text_use = reg_link_text OR 'Register';
