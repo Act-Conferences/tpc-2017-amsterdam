@@ -1,5 +1,5 @@
-[%# WRAPPER ui            title = loc('Your information') %]
-[%  WRAPPER ui_bootstrap4 title = 'Login or Register' %]
+[%# WRAPPER ui            title = 'Login / Register' %]
+[%  WRAPPER ui_bootstrap4 title = 'Login / Register' %]
 [% bootstrap3=0 %]
 
 [% IF NOT bootstrap3 %]
@@ -18,6 +18,15 @@
   [% b34_form_group_class     = 'form-group' %]
 
 [% END %]
+
+[%# create variable use_destination that has prio over given destination %]
+[% 
+IF global.request.args.destination;
+  use_destination = global.request.args.destination;
+ELSE;
+  use_destination = destination;
+END;
+%]
 
 <div class="row">
 
@@ -73,7 +82,7 @@
           
         </div>
           
-        <input type="hidden" name="destination" value="[% destination %]">
+        <input type="hidden" name="destination" value="[% use_destination %]">
         
       </form>
   
@@ -129,7 +138,7 @@
           <div class="[% b34_footer_class %]">
             <div class="[% b34_form_group_class %]" style="height:30px;">
               <div class="[% b34_footer_inner_class %]">
-                <button type="submit" name="twostepsubmit" class="btn btn-primary btn-lg logreg_button" value="OK">Request email</button>
+                <button type="submit" name="twostepsubmit" class="btn btn-primary btn-lg logreg_button" value="OK">Send me the link</button>
               </div>
             </div>
           </div>
