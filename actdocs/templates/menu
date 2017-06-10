@@ -9,7 +9,7 @@
     </button>
     
     <a class="navbar-brand" href="[% make_uri %]">
-      <img src="[% make_uri_info('img', 'perlconference-amsterdam_logo_128x128.png') %]" alt="[% global.conference.name %]" title="Back to home" height="40px" style="position:relative;top:-10px">
+      <img src="[% make_uri_info('img', 'perlconference-amsterdam_logo_128x128.png') %]" alt="[% global.conference.name %]" title="Back to home" height="40" style="position:relative;top:-10px">
     </a>
     <a class="navbar-brand" href="[% make_uri %]">
       <span class="hidden-xs">[% global.conference.name %]</span>
