@@ -39,7 +39,7 @@
       <div id="page-body">
       
         <section id="ext_menu-0">
-      
+          <h2 class="sr-only">Navigation section</h2>
           <nav class="navbar navbar-dropdown bg-color navbar-fixed-top">
             <div class="container">
               <div class="mbr-table">
