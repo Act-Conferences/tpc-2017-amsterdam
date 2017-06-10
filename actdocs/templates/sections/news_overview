@@ -22,8 +22,10 @@
       <span class="news-date">[% date_format(item.datetime, '%Y-%m-%d') %]</span>
       <span class="news-title">[% item.title %]</span>
     </h3>
-  <div class="news-text">
-    [% item.content %]
+    
+    <div class="news-text">
+      [% item.content %]
+    </div>
   </div>
   [% END %]
 

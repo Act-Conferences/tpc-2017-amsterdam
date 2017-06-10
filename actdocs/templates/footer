@@ -11,16 +11,25 @@
   <div class="container">
     <div class="row">
       <div class="[% col_class %]">
-        <div><img src="[% make_uri_info('img', 'perlconference-amsterdam_logo_128x128.png') %]"></div>
+        <div><img src="[% make_uri_info('img', 'perlconference-amsterdam_logo_128x128.png') %]" alt="[% global.conference.name %] logo"></div>
       </div>
       <div class="[% col_class %]">
         <p></p>
       </div>
       <div class="[% col_class %]">
-        <p><strong>Contacts</strong><br><a href="mailto:orga@theperlconference.amsterdam" target="_blank" class="text-white">orga@theperlconference.amsterdam</a><br>+ 31 - 384 603 033<br>+ 31 - 624 619 072</p>
+        <h3 style="margin-bottom:0;"><strong>Contacts</strong></h3>
+        <p>
+          <a href="mailto:orga@theperlconference.amsterdam" target="_blank" class="text-white">orga&#8203;@theperlconference&#8203;.amsterdam</a>
+          <br>+ 31 - 384 603 033
+          <br>+ 31 - 624 619 072
+        </p>
       </div>
       <div class="[% col_class %]">
-        <p><strong>Remember...</strong><br><span style="line-height: 1.5;">The Perl Conference</span><br>in Amsterdam<br>9 . . 11 August 2017</p>
+        <h3 style="margin-bottom:0;"><strong>Remember...</strong></h3>
+        <p>
+          <span style="line-height: 1.5;">The Perl Conference</span>
+          <br>in Amsterdam<br>9 . . 11 August 2017
+        </p>
       </div>
 
     </div>

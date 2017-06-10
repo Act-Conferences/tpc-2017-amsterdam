@@ -36,10 +36,10 @@
     <div class="mbr-cards-col col-xs-12 col-lg-4">
       <div class="container">
         <div class="card cart-block">
-          <div class="card-img"><img src="assets/images/red-question-mark-png-215-600x600-51.png" class="card-img-top"></div>
+          <div class="card-img"><img src="assets/images/red-question-mark-png-215-600x600-51.png" class="card-img-top" alt="red question mark"></div>
           <div class="card-block">
-            <h4 class="card-title">Mystery Guest<br><span style="color: rgb(91, 91, 91); font-family: Lora, serif; font-size: 0.875rem; font-style: italic; font-weight: 400; line-height: 1.7857;">Don't you love surprises … ?</span><br></h4>
-            <h5 class="card-subtitle"></h5>
+            <h4 class="card-title">Mystery Guest</h4>
+            <h5 class="card-subtitle">Don't you love surprises … ?</h5>
             <p class="card-text">Soon, our main sponsor will let you know who will be the third speaker in this row. Some interesting names have passed by, you won't be disapointed!</p>
             
           </div>

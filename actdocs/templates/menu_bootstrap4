@@ -1,22 +1,22 @@
 <div class="mbr-table-cell">
 
-    <div class="navbar-brand">
-        <a href="[% make_uri %]" class="navbar-logo">
-          <img src="[% make_uri_info('img', 'perlconference-amsterdam_logo_128x128.png') %]" alt="[% global.conference.name %]" title="Back to home">
-        </a>
-        <a class="navbar-caption" href="[% make_uri %]" title="Back to home">
-          <span class="hidden-md-down"                                     >[% global.conference.name %]</span>
-          <span class="hidden-lg-up hidden-xs-down"  style="font-size:80%" >[% global.conference.name %]</span>
-          <span class="hidden-sm-up"                 style="font-size:60%" >[% global.conference.name %]</span>
-        </a>
-    </div>
+  <div class="navbar-brand">
+    <a href="[% make_uri %]" class="navbar-logo">
+      <img src="[% make_uri_info('img', 'perlconference-amsterdam_logo_128x128.png') %]" alt="[% global.conference.name %]" title="Back to home">
+    </a>
+    <a class="navbar-caption" href="[% make_uri %]" title="Back to home">
+      <span class="hidden-md-down"                                     >[% global.conference.name %]</span>
+      <span class="hidden-lg-up hidden-xs-down"  style="font-size:80%" >[% global.conference.name %]</span>
+      <span class="hidden-sm-up"                 style="font-size:60%" >[% global.conference.name %]</span>
+    </a>
+  </div>
 
 </div>
 
 <div class="mbr-table-cell">
 
   <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-      <div class="hamburger-icon"></div>
+    <div class="hamburger-icon"></div>
   </button>
 
   <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
