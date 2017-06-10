@@ -50,7 +50,7 @@
           
         </section>
 
-        <div id="space-for-menu" />
+        <div id="space-for-menu" ></div>
 
         [% IF title %]
           <div class="container page-title">

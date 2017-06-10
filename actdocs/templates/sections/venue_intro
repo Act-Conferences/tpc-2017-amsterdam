@@ -7,14 +7,14 @@
     <div class="mbr-table-cell">
 
       <div class="container">
-        <h3 class="mbr-section-title display-2" style="text-align:center;">
+        <h2 class="mbr-section-title display-2" style="text-align:center;">
           <span style="font-size: 3rem; line-height: 1.1;">
             <a class="amsterdam_red" href="http://b-buildingbusiness.com/amsterdam/b-1/" target="_blank">
               <span class="hidden-sm-down">Our venue: B.Amsterdam</span>
               <span class="hidden-md-up" style="font-size:80%;">Our venue: B.Amsterdam</span>
             </a>
           </span>
-        </h3>
+        </h2>
 
         <div class="mbr-section row">
           <div class="mbr-table-md-up">
@@ -45,7 +45,7 @@
             <div class="mbr-table-cell mbr-valign-top col-md-7">
               <div class="mbr-figure">
                 <a href="[% make_uri_info('img', 'b-amsterdam1.jpg') %]">
-                  <img src="[% make_uri_info('img', 'b-amsterdam1.jpg') %]" style="height:460px;">
+                  <img src="[% make_uri_info('img', 'b-amsterdam1.jpg') %]" alt="Map for venue B.Amsterdam" style="height:460px;">
                 </a>
               </div>
             </div>
