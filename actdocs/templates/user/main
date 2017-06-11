@@ -1,15 +1,17 @@
-[% WRAPPER ui_bootstrap4 title = loc("Main private page") %]
+[% WRAPPER ui_bootstrap4 title = "Account settings" %]
 <p>
- {{This is your personal page.}}
- [% IF global.request.conference %]
- [% loc("to <this conference>", global.conference.name) %]
- [% ELSE %]
- {{to Act-enabled conferences.}}
- [% END %]
+  On this page you can manage all your settings regarding your
+  [% IF global.request.conference %]
+    attendance of [% global.conference.name %].
+  [% ELSE %]
+    attendance of Act-enabled conferences.
+  [% END %]
 </p>
 
 [% IF global.request.conference %]
+  <p>
     [% IF global.request.user.has_registered %]
+        You <b>have registered</b> to attend this conference.
         [% IF global.request.user.has_paid %]
             <p>{{You have purchased your conference ticket:}}</p>
             <p><blockquote>
@@ -37,6 +39,7 @@
     [% ELSIF !global.config.closed %]
         [% loc("You did not register for this conference", make_uri('register')) %]
     [% END %]
+  </p>
 [% END %]
 
 <p><b>{{You can:}}</b></p>

@@ -15,6 +15,7 @@
                 <img class="hidden-sm-down" src="[% make_uri_info('img', 'perlconference-amsterdam_logo_354x354.png') %]" alt="View of Amsterdam">
               </div>
             </div>
+            
             <div class="mbr-table-cell col-md-5 text-xs-center text-md-left">
 
               <h3 class="mbr-section-title display-2">
@@ -37,7 +38,11 @@
                   1066 VH Amsterdam
                 </p>
               </div>
-
+              
+              <div class="mbr-section-btn">
+                [% INCLUDE texts/register_link mobirise=1 reg_link_text='Register now!' %]
+              </div>
+                            
             </div>
 
           </div>

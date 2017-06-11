@@ -18,8 +18,8 @@
       <li><a [% item_a_attr %] href="[% make_uri('register') %]">{{Register}}</a></li>
     [% END %]
     
-      <li><a [% item_a_attr %] href="[% make_uri('main') %]">User settings</a></li>
-      <li><a [% item_a_attr %] href="[% make_uri_info('user', global.request.user.user_id) %]">User info</a>
+      <li><a [% item_a_attr %] href="[% make_uri('main') %]">My account</a></li>
+      <li><a [% item_a_attr %] href="[% make_uri_info('user', global.request.user.user_id) %]">My user info</a>
       <li [% div_li_attr %]></li>
       <li><a [% item_a_attr %] href="[% make_uri('logout') %]">{{Logout}}</a></li>
     </ul>
@@ -27,23 +27,15 @@
   </li>
   
 [% ELSE %]
-
+  [% menu_user_text = 'Login' %]
   <li class="nav-item dropdown">
 
-    <a [% head_a_attr %]>
-      <i class="fa fa-user [% icon_class %]" title="Register, Login, Settings"></i>
-      <span [% head_attr_big   %] title="Register, Login, Settings">{{Register}}</span>
-      <span [% head_attr_small %] title="Register, Login, Settings">{{Register}}</span>
-      <b class="caret"></b>
+  <li [% link_li_attr %]>
+    <a [% link_a_attr %] href="[% make_uri('main') %]">
+            <i class="fa fa-user-o [% icon_class %]" title="[% menu_user_text %]"></i>
+      <span [% head_attr_big    %] title="Login/Register">[% menu_user_text %]</span>
+      <span [% head_attr_small  %] title="Login/Register">[% menu_user_text %]</span>
     </a>
-    
-    <ul class="dropdown-menu">
-      <li><a [% item_a_attr %] href="[% make_uri('main') %]">{{Log in}}</a></li>
-    [% UNLESS global.config.closed %]
-      <li [% div_li_attr %]></li>
-      <li><a [% item_a_attr %] href="[% make_uri('register') %]">{{New user}}</a></li>
-    [% END %]
-    </ul>
   </li>
 
 [% END %]

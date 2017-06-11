@@ -1,0 +1,24 @@
+[%
+  reg_link_logged_in = global.request.user;
+  reg_link_has_reg   = global.request.user AND global.request.user.has_registered;
+  
+  reg_link_text_use = reg_link_text OR 'Register';
+  
+  reg_link_class = '';
+  IF mobirise;
+    reg_link_class = 'btn btn-info';
+  END;
+%]
+
+[% IF !reg_link_has_reg %]
+    [% IF !reg_link_logged_in %]
+      <a class="[%reg_link_class %]"  href="[% make_uri('login') %]?destination=[% make_uri('register') %]">
+        [%- reg_link_text_use -%]
+      </a>
+    [% ELSE %]
+      <a class="[%reg_link_class %]" href="[% make_uri('register') %]">
+        [%- reg_link_text_use -%]
+      </a>
+    [% END %]
+
+[% END %]
