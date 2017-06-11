@@ -348,14 +348,14 @@ p.message {
 @media (max-width:767px) {
   .logreg_title { text-align:center;margin-top:0.5em; margin-bottom:0.5em}
   .logreg_alert {}
+  #logreg_account_hint  {font-size:80%}
   #logreg_smaller_label {}
-  #logreg_spacer_login  {}
 }
 @media (min-width:768px) {
   .logreg_title { text-align:center;margin-top:1em; }
   .logreg_alert {height:120px}
+  #logreg_account_hint  {height:40px;font-size:70%}
   #logreg_smaller_label {height:30px;font-size:70%;}
-  #logreg_spacer_login  {height:40px}
 }
 
 @media (max-width: 767px) {
