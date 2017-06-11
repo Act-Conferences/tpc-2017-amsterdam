@@ -49,6 +49,7 @@
   [%
     ex_vat_total = 0;
     vat_total    = 0;
+    amount_total = 0;
   %]
   
   [% FOREACH item IN order.items %]
