@@ -53,9 +53,9 @@
         <div id="space-for-menu"></div>
 
       </div>
+      
+      [% content %]
     </div>
-    
-    [% content %]
     
     <div>
       <div id="footer-bootstrap4">
