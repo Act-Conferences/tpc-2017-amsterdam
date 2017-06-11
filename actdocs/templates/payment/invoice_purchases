@@ -5,80 +5,77 @@
 >
 
   <tr style="font-size:80%;">
-    <th style="padding:0 0.3em 0 0.3em;">{{Description}}</th>
-    <th style="padding:0 0.3em 0 0.3em;">
-      <t><nl>excl. BTW</nl><en>excl. VAT</en></t>
+    <th style="padding:0 0.3em 0 0.3em;text-align:center;">{{Description}}</th>
+    <th style="padding:0 0.3em 0 0.3em;text-align:center;">
+      excl. VAT
     </th>
-    <th style="padding:0 0.3em 0 0.3em;">
-      <t><nl>21% BTW</nl><en>21% VAT</en></t>
+    <th style="padding:0 0.3em 0 0.3em;text-align:center;">
+      21% VAT
     </th>
-    <th style="padding:0 0.3em 0 0.3em;">
-      <t><nl>incl. BTW</nl><en>incl. VAT</en></t>
+    <th style="padding:0 0.3em 0 0.3em;text-align:center;">
+      incl. VAT
     </th>
   </tr>
 
   <tr>
-    <td align="left" colspan="4">
-      <br>
+    <td colspan="4" style="text-align:left;vertical-align:middle;height:40px;padding-left:0.5em;">
+
         {{Your order number:}}
 
-        [%# info about the payment: order #, payment date and payment means
+          [%# info about the payment: order #, payment date and payment means
           you can use this to turn this invoice into a receipt
         %]
         [% order.order_id %] - [% date_format(order.datetime, 'date_short') %] - [% order.means %]
     </td>
   </tr>
 
+[% BLOCK amount_cell %]
+  [% bold_attr = bold ? 'font-weight:bold;' : '' %]
+      <td style="text-align:right;padding:0 0.5em;[% bold_attr %]">
+        [% IF amount>0 %]
+          [%
+            amount 
+              FILTER format('%.2f') 
+                FILTER replace('\.', invoice_dec_sep)
+          
+          %]
+          &nbsp;&euro;
+        [% ELSE %]
+          n/a&nbsp;&nbsp;&nbsp;&nbsp;
+        [% END %]
+      </td>
+[% END %]
+
+  [%
+    ex_vat_total = 0;
+    vat_total    = 0;
+  %]
+  
   [% FOREACH item IN order.items %]
-    [% invoice_ex_btw = item.amount*0.826446280991736 %]
-    [% invoice_btw    = item.amount-invoice_ex_btw %]
+    
+    [%
+      vat_rate      = item.name.search('^Donation$') ? 0 : 0.21;
+      ex_vat        = item.amount / (1+vat_rate) FILTER format('%.2f');
+      vat           = item.amount - ex_vat;
+      amount_total  = amount_total + item.amount;
+      ex_vat_total  = ex_vat_total + ex_vat;
+      vat_total     = vat_total    + vat;
+    %]
     <tr>
-      <td align="left">[% item.name %]</td>
-      <td align="right">
-        [% FILTER replace('\.', invoice_dec_sep) %]
-          [% FILTER format('%.2f') %]
-            [% invoice_ex_btw %]
-          [% END %]
-        [% END %]
-        &nbsp;&euro;
-      </td>
-      <td align="right">
-        [% FILTER replace('\.', invoice_dec_sep) %]
-          [% FILTER format('%.2f') %]
-            [% invoice_btw %]
-          [% END %]
-        [% END %]
-        &nbsp;&euro;
-      </td>
-      <td align="right">[% item.amount %]&nbsp;&euro;</td>
+      <td style="text-align:left;padding:0 0.5em;">[% item.name %]</td>
+      [% PROCESS amount_cell amount=ex_vat %]
+      [% PROCESS amount_cell amount=vat    %]
+      [% PROCESS amount_cell amount=item.amount %]
     </tr>
   [% END %]
 
   <tr>
-    [% invoice_ex_btw = invoice.amount*0.826446280991736 %]
-    [% invoice_btw    = invoice.amount-invoice_ex_btw %]
-    <td colspan="1" style="text-align:right;font-weight:bold;">
+    <td colspan="1" style="text-align:right;font-weight:bold;padding-right:0.5em;">
       {{Total due}}
     </td>
-    <td             style="text-align:right;font-weight:bold;">
-        [% FILTER replace('\.', invoice_dec_sep) %]
-          [% FILTER format('%.2f') %] 
-            [% invoice_ex_btw %] 
-          [% END %]
-        [% END %]
-        &nbsp;&euro;
-    </td>
-    <td             style="text-align:right;font-weight:bold;">
-        [% FILTER replace('\.', invoice_dec_sep) %]
-          [% FILTER format('%.2f') %] 
-            [% invoice_btw %] 
-          [% END %]
-        [% END %]
-        &nbsp;&euro;
-    </td>
-    <td             style="text-align:right;font-weight:bold;">
-      [% invoice.amount %]&nbsp;&euro;
-    </td>
+    [% PROCESS amount_cell amount=ex_vat_total    bold=1 %]
+    [% PROCESS amount_cell amount=vat_total       bold=1 %]
+    [% PROCESS amount_cell amount=invoice.amount  bold=1 %]
   </tr>
 
 </table>

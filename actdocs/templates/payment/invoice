@@ -1,5 +1,6 @@
 [%
-  invoice_validity_warning = 1;
+  base_url = global.request.base_url;
+  invoice_validity_warning    =  base_url.search('^https?\:\/\/(test\.mongueurs\.net|\w+\:9000)');
   sender_name                 = 'WenZPerl B.V.'   ;
   sender_street_and_number    = 'Bosstraat 21'    ;
   sender_pc_place             = '6101NV Echt'     ;
