@@ -1,12 +1,12 @@
-[%# WRAPPER ui            title = loc('Your information') %]
-[%  WRAPPER ui_bootstrap4 title = loc('Your information') %]
+[%# WRAPPER ui            title = 'Login / Register' %]
+[%  WRAPPER ui_bootstrap4 title = 'Login / Register' %]
 [% bootstrap3=0 %]
 
 [% IF NOT bootstrap3 %]
   [% b34_outer_class          = 'card' %]
   [% b34_block_class          = 'card-block' %]
   [% b34_footer_class         = 'card-footer' %]
-  [% b34_footer_inner_class   = 'col-sm-offset-7 col-sm-3 col-md-offset-7 col-md-3' %]
+  [% b34_footer_inner_class   = 'col-xs-offset-1 col-xs-9 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-4 col-lg-4 col-xl-offset-5 col-xl-4' %]
   
   [% b34_form_group_class     = 'row form-group' %]
 
@@ -15,67 +15,151 @@
   [% b34_block_class          = 'panel-body' %]
   [% b34_footer_class         = 'panel-footer text-right' %]
   [% b34_footer_inner_class   = '' %]
-  
   [% b34_form_group_class     = 'form-group' %]
 
 [% END %]
 
-  <div class="row">
-    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+[%# create variable use_destination that has prio over given destination %]
+[% 
+IF global.request.args.destination;
+  use_destination = global.request.args.destination;
+ELSE;
+  use_destination = destination;
+END;
+%]
 
+<div class="row">
+
+  <div class="col-md-6">
+  
+    <div class="row" style="margin:5px">
+  
       <form method="POST" action="[% action %]">
-          [% IF error;
-               WRAPPER error_ui;
-                 loc('Incorrect login or password');
-               END;
-             END
-          %]
+        [% IF error;
+            WRAPPER error_ui;
+              loc('Incorrect login or password');
+            END;
+          END
+        %]
+  
+        <div class="[% b34_outer_class %]">
+          <div class="[% b34_block_class %]"  style="padding-top:2px;padding-bottom:0;">
+  
+            <div class="[% b34_form_group_class %] logreg_title">
+              <h4>Returning user</h4>
+            </div>
 
-          <div class="[% b34_outer_class %]" >
-            <div class="[% b34_block_class %]"  style="padding-top:2px;padding-bottom:0;">
-              
-                <div class="[% b34_form_group_class %]">
-                  <label for="credential-0">{{Login}}</label>
-                  <input type="text" class="form-control" name="credential_0" id="form-credential-0" placeholder="{{ Login }}">
-                </div>
-                
-                <div class="[% b34_form_group_class %]">
-                  <label for="credential-1">{{Password}}</label>
-                  <input type="password" class="form-control" name="credential_1" id="form-credential-1" placeholder="{{ Password }}">
-                </div>
-                
-                <div class="[% b34_form_group_class %]">
-                  <div class="checkbox">
-                    <label>
-                      <input name="credential_2" id="form-credential-2" type="checkbox" value="Remember Me">{{Remember me on this computer}}
-                    </label>
-                  </div>
-                </div>
-                
+            <div class="[% b34_form_group_class %]" id="logreg_account_hint">
+              <p>If you already have an account from this or another Perl conference.</p>
+            </div>
 
+            <div class="[% b34_form_group_class %]">
+              <label for="credential-0">{{Login}}</label>
+              <input type="text" class="form-control" name="credential_0" id="form-credential-0" placeholder="{{ Login }}">
             </div>
             
-            <div class="[% b34_footer_class %]">
-              <div class="[% b34_form_group_class %]" style="height:30px;">
-                <div class="[% b34_footer_inner_class %]">
-                  <button type="submit" name="join" class="btn btn-primary btn-lg">{{Submit}}</button>
-                </div>
+            <div class="[% b34_form_group_class %]">
+              <label for="credential-1">{{Password}}</label>
+              <input type="password" class="form-control" name="credential_1" id="form-credential-1" placeholder="{{ Password }}">
+            </div>
+            
+            <div class="[% b34_form_group_class %]">
+              <div class="checkbox">
+                <label id="logreg_smaller_label">
+                  <input name="credential_2" id="form-credential-2" type="checkbox" value="Remember Me">{{Remember me on this computer}}
+                </label>
               </div>
             </div>
-            
+  
           </div>
           
-        <input type="hidden" name="destination" value="[% destination %]">
+          <div class="[% b34_footer_class %]">
+            <div class="[% b34_form_group_class %]" style="height:30px;">
+              <div class="[% b34_footer_inner_class %]">
+                <button type="submit" name="join" class="btn btn-primary btn-lg logreg_button">Login</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+          
+        <input type="hidden" name="destination" value="[% use_destination %]">
         
       </form>
-
-      <p>[% loc('Forgot your password?', make_uri('changepwd')) %]</p>
-
-      <p>
-        [% loc('This site uses cookies to authenticate logged in users.', domain) %]
+  
+      <p style="background-color:white;text-align:center;">
+        [% loc('Forgot your password?', make_uri('changepwd')) %]
       </p>
-
+  
+  
     </div>
   </div>
   
+  <div class="col-md-6">
+  
+    <div class="row" style="margin:5px">
+  
+      <form method="POST" action="/[% global.request.conference %]/register">
+  
+        <div class="[% b34_outer_class %]" s>
+          <div class="[% b34_block_class %]"  style="padding-top:2px;padding-bottom:0;">
+          
+            <div class="[% b34_form_group_class %] logreg_title">
+              <h4>No account yet? Register here.</h4>
+            </div>
+  
+            <div class="[% b34_form_group_class %] logreg_alert">
+              <div class="alert alert-warning">
+                {{This operation requires a confirmation. Please enter your email address,}}
+              </div>
+            </div>
+      
+            [% PROCESS error
+              msgs = {
+                ERR_EMAIL        => loc("You must enter your email"),
+                ERR_EMAIL_SYNTAX => loc("Your email address looks bogus."),
+              }
+            %]
+
+
+            <div class="[% b34_form_group_class %]" id='logreg_spacer_email'>
+            </div>
+
+            <div class="[% b34_form_group_class %]">
+              <label for="email">{{Email}}</label>
+              <input type="email" class="form-control"  name="email" value="[% email %]" placeholder="Email" size="25" maxlength="256" />
+            </div>
+
+            <div class="[% b34_form_group_class %]" id="logreg_spacer_req">
+            </div>
+
+          </div>
+
+
+          <div class="[% b34_footer_class %]">
+            <div class="[% b34_form_group_class %]" style="height:30px;">
+              <div class="[% b34_footer_inner_class %]">
+                <button type="submit" name="twostepsubmit" class="btn btn-primary btn-lg logreg_button" value="OK">Send me the link</button>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </form>
+  
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-xs-2"></div>
+  <div class="col-xs-8">
+    <p style="font-size:70%;text-align:center;margin-top:10px;">
+    [% loc('This site uses cookies to authenticate logged in users.', domain) %]
+    </p>
+  </div>
+  <div class="col-xs-2"></div>
+</div>
+
 [% END %]

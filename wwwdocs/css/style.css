@@ -340,3 +340,146 @@ p.message {
 #venue_intro .mbr-section {
   padding-top: 0px;
 }
+
+/* === styling for combined login/register template (templates/login) */
+
+.logreg_button {min-width:240px}
+
+@media (max-width:767px) {
+  .logreg_title { text-align:center;margin-top:0.5em; margin-bottom:0.5em}
+  .logreg_alert {}
+  #logreg_account_hint  {font-size:80%}
+  #logreg_smaller_label {}
+}
+@media (min-width:768px) {
+  .logreg_title { text-align:center;margin-top:1em; }
+  .logreg_alert {height:120px}
+  #logreg_account_hint  {height:40px;font-size:70%}
+  #logreg_smaller_label {height:30px;font-size:70%;}
+}
+
+@media (max-width: 767px) {
+  #logreg_spacer_req    {}
+  #logreg_spacer_email  {}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #logreg_spacer_email  {height:5px}
+  #logreg_spacer_req    {height:20px}
+}
+@media (min-width: 992px) {
+  #logreg_spacer_email  {height:10px;}
+  #logreg_spacer_req    {height:44px;}
+}
+
+/* === styling for registration feedback */
+
+.reg_status_in_banner_para {
+  color:white;
+  background-color:#aaa;
+  text-align:center;
+  font-size:70%;
+  border-radius:10px;
+  opacity: 0.8;
+  padding: 0 1em;
+}
+
+.reg_status_in_banner_para a {
+   color:white;
+   text-decoration:underline;
+}
+
+/* xs */
+@media (max-width: 543px)  {
+  .reg_status_in_banner {
+	height:60px;
+	position:absolute;
+	top:150px;
+	right:10px;
+	font-size:80%;
+  }
+  #reg_status_extra_space { height:40px;}
+}
+
+/* sm */
+@media (min-width: 544px) and (max-width: 767px)  {
+  .reg_status_in_banner {
+	height:80px;
+	position:absolute;
+	top:150px;
+	right:10px;
+  }
+  #reg_status_extra_space { height:60px;}
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 1199px)  {
+  .reg_status_in_banner {
+	height:80px;
+	position:absolute;
+	top:60px;
+	right:0px;
+  }
+  #reg_status_extra_space { height:0px;}
+}
+
+/* lg and up */
+@media (min-width: 1200px)  {
+  .reg_status_in_banner {
+	height:80px;
+	position:absolute;
+	top:60px;
+	right:0px;
+  }
+  #reg_status_extra_space { height:0px;}
+}
+
+/* === styling for price table */
+
+.price_table_intro {
+}
+
+.price_table_intro a {
+  color:#CD9B1D;
+}
+
+.price_table_head {
+  font-size:80%;
+  font-weight:bold;
+  border-width:1px;
+  border-color:#888;
+  border-style:solid solid solid solid;
+}
+
+.price_table_rows {
+  font-size:80%;
+  border-width:1px;
+  border-color:#888;
+  border-style:none solid solid solid;
+  min-height:50px;
+}
+
+/* sm and down */
+@media (max-width: 767px) {
+
+  .price_table_rows form {}
+  
+  .price_table_col1 {font-weight:bold;}
+  .price_table_col2 {}
+  .price_table_col3 {}
+  .price_table_col4 {text-align:center;margin-bottom:10px;}
+}
+
+/* md and up */
+@media (min-width: 768px) {
+   .price_table_head {
+     background-color:#aaa;
+     color:white;
+   }
+  .price_table_rows input { position:relative;top:10px; }
+  
+  .price_table_col1 {}
+  .price_table_col2 {text-align:center;}
+  .price_table_col3 {}
+  .price_table_col4 {text-align:center;}
+}
+
