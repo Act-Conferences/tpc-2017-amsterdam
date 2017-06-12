@@ -1,0 +1,19 @@
+[%
+    SET CMS.item = {
+        title = "Corporate 2",
+        extra = "only Thursday?",
+        price = 145,
+        forms => [ # be warned, these values are in Act.ini
+            'product_registration' => "registration",
+            'price-registration' => "6"
+        ],
+        offer = [
+           "THURSDAY","CONFERENCE","-","Drinks & Lunch","T-Shirt","10 AUG"
+        ],
+        texts = [
+           "You are a true Perl Master and can not be missed from the company",
+            
+           "Check out the schedule (soon) to select what day you will attend."
+        ],
+    }
+%]
