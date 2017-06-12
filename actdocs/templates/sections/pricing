@@ -9,82 +9,14 @@
 
 <section class="mbr-section" id="pricing-table1-b" style="background-color: rgb(48, 48, 48); padding-top: 120px; padding-bottom: 120px;">
 
-
   <div class="mbr-section mbr-section__container mbr-section__container--middle">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-xs-center">
-                <h3 class="mbr-section-title display-2">[% CMS.index.title %]</h3>
-                <small class="mbr-section-subtitle">[% CMS.index.intro %]</small>
+                <h3 class="mbr-section-title display-2">TEST</h3>
+                <small class="mbr-section-subtitle">ticket section</small>
             </div>
         </div>
-    </div>
-  </div>
-
-
-  <div class="mbr-section mbr-section-nopadding mbr-price-table">
-    <div class="row">
-
-      [% FOREACH item_name IN [ 'student', 'private', 'friends', 'regular' ] %]
-        
-        [% item = CMS.items.$item_name %]
-        
-        <div class="col-xs-12  col-md-6 col-xl-3">
-          <div class="mbr-plan card text-xs-center">
-      
-            <!-- upper half -->
-      
-            <div class="mbr-plan-header card-block">
-              <div class="card-title">
-      
-                <h3 class="mbr-plan-title">[% item.title %]</h3>
-                <small class="mbr-plan-subtitle">
-                  [% item.extra %]
-                </small>
-      
-              </div>
-              <div class="card-text">
-                <div class="mbr-price">
-                  <span class="mbr-price-value">€</span>
-                  <span class="mbr-price-figure">
-      
-                    [% item.price %]
-      
-                  </span>
-                  <small class="mbr-price-term"></small>
-                </div>
-      
-                <small class="mbr-plan-price-desc">[% item.intro %]</small>
-      
-              </div>
-            </div>
-      
-            <!-- lower half -->
-      
-            <div class="mbr-plan-body card-block">
-              <div class="mbr-plan-list">
-                <ul class="list-group list-group-flush">
-      
-                  [% FOREACH words IN item.offer %]
-                    <li class="list-group-item">
-                      [% words %]
-                    </li>
-                  [% END %]
-      
-                </ul>
-              </div>
-      
-              <div class="mbr-plan-btn">
-                <a href="https://mobirise.com" class="btn btn-white btn-white-outline">BUY NOW!</a>
-              </div>
-      
-            </div>
-      
-          </div>
-        </div>
-        
-      [% END %]
-    
     </div>
   </div>
 
