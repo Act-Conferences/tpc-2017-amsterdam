@@ -19,6 +19,6 @@
             all new Perl6 which offers the best you can get from a dynamic
             language."
         ],
-        badge => "SPECIAL OFFER",
+        badge = "SPECIAL OFFER",
     }
 %]

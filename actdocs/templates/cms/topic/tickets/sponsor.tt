@@ -19,6 +19,6 @@
             doing you well and you want to share it with others, enjoying a good
             cup off coffee (or another hot drink)"
         ],
-        badge => "BEST CHOICE",
+        badge = "BEST CHOICE",
     }
 %]
