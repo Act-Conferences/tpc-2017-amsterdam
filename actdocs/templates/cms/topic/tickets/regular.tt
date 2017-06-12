@@ -1,0 +1,22 @@
+[%
+    SET CMS.item = {
+        title = "Regular",
+        extra = "The Company pays the bills",
+        price = 365,
+        forms => [ # be warned, these values are in Act.ini
+            'product_registration' => "registration",
+            'price-registration' => "1"
+        ],
+        offer = [
+           "3 DAYS","CONFERENCE","Pre-Social","Conference Party","T-Shirt","ALL"
+        ],
+        intro =
+           "You are one of the lucky few that gets the opportunity from your
+            boss to go to the conference?",
+        texts = [
+           "The head of finance will be happily surprised to see what he has to
+            pay for your attendance. Normal conference will cost a tenfold!"
+        ],
+        badge => "BEST CHOICE",
+    }
+%]
