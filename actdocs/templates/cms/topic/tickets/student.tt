@@ -3,7 +3,7 @@
         title = "Student",
         extra = "You are never to old to learn Perl",
         price =  65,
-        forms => [ # be warned, these values are in Act.ini
+        forms = [ # be warned, these values are in Act.ini
             'product_registration'  => "registration",
             'price-registration'    => "3"
         ],

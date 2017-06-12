@@ -3,7 +3,7 @@
         title = "Friends",
         extra = "Your Community",
         price = 255,
-        forms => [ # be warned, these values are in Act.ini
+        forms = [ # be warned, these values are in Act.ini
             'product_registration' => "registration",
             'price-registration' => "8"
         ],
