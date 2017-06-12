@@ -3,10 +3,10 @@
         title = "Corporate 1",
         extra = "only Wednesday?",
         price = 145,
-        forms = [ # be warned, these values are in Act.ini
-            'product_registration' => "registration",
-            'price-registration' => "5"
-        ],
+        forms = { # be warned, these values are in Act.ini
+            'product_registration'  = "registration",
+            'price-registration'    = "5"
+        },
         offer = [
            "WEDNESDAY","CONFERENCE","-","Drinks & Lunch","T-Shirt","9 AUG"
         ],

@@ -3,10 +3,10 @@
         title = "Unlimitted",
         extra = "... coffee for all",
         price = 485,
-        forms = [ # be warned, these values are in Act.ini
-            'product_registration' => "registration",
-            'price-registration' => "9"
-        ],
+        forms = { # be warned, these values are in Act.ini
+            'product_registration'  = "registration",
+            'price-registration'    = "9"
+        },
         offer = [
            "3 DAYS","CONFERENCE","Pre-Social","Conference Party","Coffee Mug","ALL"
         ],
