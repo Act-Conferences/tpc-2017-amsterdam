@@ -3,10 +3,10 @@
         title = "Private",
         extra = "Come and join us",
         price = 145,
-        forms = [ # be warned, these values are in Act.ini
-            'product_registration' => "registration",
-            'price-registration' => "2"
-        ],
+        forms = { # be warned, these values are in Act.ini
+            'product_registration'  = "registration",
+            'price-registration'    = "2"
+        },
         offer = [
            "3 DAYS","CONFERENCE","Pre-Social","Conference Party","T-Shirt","ALL"
         ],

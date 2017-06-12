@@ -3,10 +3,10 @@
         title = "Regular",
         extra = "The Company pays the bills",
         price = 365,
-        forms = [ # be warned, these values are in Act.ini
-            'product_registration' => "registration",
-            'price-registration' => "1"
-        ],
+        forms = { # be warned, these values are in Act.ini
+            'product_registration'  = "registration",
+            'price-registration'    = "1"
+        },
         offer = [
            "3 DAYS","CONFERENCE","Pre-Social","Conference Party","T-Shirt","ALL"
         ],
