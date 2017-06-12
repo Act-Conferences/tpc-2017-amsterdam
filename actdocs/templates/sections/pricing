@@ -20,5 +20,17 @@
     </div>
   </div>
 
+  <div class="mbr-section mbr-section__container mbr-section__container--middle">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-xs-center">
+                <h3 class="mbr-section-title display-2">[% CMS.index.title %]</h3>
+                <small class="mbr-section-subtitle">[% CMS.index.intro %]</small>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
 
 </section>
