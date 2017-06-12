@@ -17,6 +17,6 @@
            "The head of finance will be happily surprised to see what he has to
             pay for your attendance. Normal conference will cost a tenfold!"
         ],
-        badge => "BEST CHOICE",
+        badge = "BEST CHOICE",
     }
 %]
