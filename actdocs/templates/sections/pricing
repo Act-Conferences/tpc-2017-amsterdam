@@ -1,11 +1,3 @@
-[% PROCESS 'CMS.tt'
-    CMS = {
-        topic = 'tickets',
-        index = {},
-        items = {},
-    }
-%]
-
 
 <section class="mbr-section" id="pricing-table1-b" style="background-color: rgb(48, 48, 48); padding-top: 120px; padding-bottom: 120px;">
 
