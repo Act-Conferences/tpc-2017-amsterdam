@@ -3,7 +3,7 @@
         title = "Corporate 2",
         extra = "only Thursday?",
         price = 145,
-        forms => [ # be warned, these values are in Act.ini
+        forms = [ # be warned, these values are in Act.ini
             'product_registration' => "registration",
             'price-registration' => "6"
         ],
