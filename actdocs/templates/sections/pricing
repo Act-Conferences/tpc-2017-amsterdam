@@ -1,3 +1,5 @@
+
+
 [% PROCESS 'CMS.tt'
     CMS = {
         topic = 'tickets',
@@ -75,7 +77,45 @@
               </div>
       
               <div class="mbr-plan-btn">
-                <a href="https://mobirise.com" class="btn btn-white btn-white-outline">BUY NOW!</a>
+              
+                [% IF NOT global.request.user %]
+                
+                  <a
+                    href=[% make_uri('login?destination=/index.html') %]
+                    class="btn btn-white btn-white-outline"
+                  >
+                    LOGIN
+                  </a>
+                  
+                [% ELSIF NOT global.request.user.has_registered %]
+                  
+                  <a
+                    href=[% make_uri('register') %]
+                    class="btn btn-white btn-white-outline"
+                  >
+                    JOIN
+                  </a>
+                  
+                [% ELSIF NOT global.request.user.has_paid %]
+                  
+                  <a
+                    href=[% make_uri('purchase') %]
+                    class="btn btn-white btn-white-outline"
+                  >
+                    BUY NOW
+                  </a>
+                  
+                [% ELSE %]
+                  
+                  <a
+                    href=[% make_uri('donate') %]
+                    class="btn btn-white btn-white-outline"
+                  >
+                    DONATE
+                  </a>
+                  
+                [% END %]
+                
               </div>
       
             </div>
