@@ -97,14 +97,29 @@
                   </a>
                   
                 [% ELSIF NOT global.request.user.has_paid %]
-                  
-                  <a
-                    href=[% make_uri('purchase') %]
-                    class="btn btn-white btn-white-outline"
-                  >
-                    BUY NOW
-                  </a>
-                  
+
+                  <form method="POST" action="[% make_uri('purchase') %]">
+                    
+                    <input
+                      type="hidden"
+                      name="product-registration"
+                      value="registration"
+                    >
+                    
+                    <input
+                      type="hidden"
+                      name="price-registration"
+                      value="[% item.forms.price_registration %]"
+                    >
+                    
+                    <button
+                      type="submit" name="purchase" value="Buy Now!"
+                      class="btn btn-white btn-white-outline"
+                    >
+                      BUY NOW
+                    </button>
+                  </form>
+
                 [% ELSE %]
                   
                   <a
