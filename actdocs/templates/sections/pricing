@@ -109,7 +109,7 @@
                     <input
                       type="hidden"
                       name="price-registration"
-                      value="[% item.forms.price_registration %]"
+                      value="[% item.forms.price-registration %]"
                     >
                     
                     <button
