@@ -106,10 +106,11 @@
                       value="registration"
                     >
                     
+                    [% field_name = 'price-registration' %]
                     <input
                       type="hidden"
                       name="price-registration"
-                      value="[% item.forms.price-registration %]"
+                      value="[% item.forms.$field_name %]"
                     >
                     
                     <button
