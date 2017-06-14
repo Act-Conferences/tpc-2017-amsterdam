@@ -14,11 +14,16 @@
             'sponsor', # 9: 485 - sponsor the coffee
         ],
         texts = [
-           "We want you to enjoy the conference, but a good place to sleep is
-            also very important.",
+           "All payments should be made by credit card through our online
+            payment system. If you really cannot pay by credit card, please
+            contact us at orga@​theperlconference​.amsterdam",
             
-           "Below, you will find some recommendations and useful information to
-            book your place.",
+           "To purchase your conference ticket, it's best to first make sure
+            you're logged in and have registered to attend.",
+            
+           "On the payment page you have the option to add an arbitrary
+           'integer amount' as a donation. You can still visit the payment page
+            later to make an additional donation",
         ],
     }
 %]
