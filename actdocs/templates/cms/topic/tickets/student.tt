@@ -1,0 +1,24 @@
+[%
+    SET CMS.item = {
+        title = "Student",
+        extra = "You are never to old to learn Perl",
+        price =  65,
+        forms = { # be warned, these values are in Act.ini
+            'product_registration'  = "registration",
+            'price-registration'    = "3"
+        },
+        offer = [
+           "3 DAYS", "CONFERENCE","-","Conference Party","T-Shirt"
+        ],
+        intro = 
+           "We really like it when students learn new things about Perl and
+            Perl6. So we decided to make it extra affordable for you to join.",
+        texts = [
+           "Get your ticket and boost your knowledge about a 'battled tested'
+            computer language that gets the job done. Or learn more about the
+            all new Perl6 which offers the best you can get from a dynamic
+            language."
+        ],
+        badge = "SPECIAL OFFER",
+    }
+%]

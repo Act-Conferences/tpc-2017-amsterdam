@@ -1,0 +1,9 @@
+﻿
+  invoices
+    ├─ invoice_letter_head
+    │   └─ invoice_sender
+    └─ invoice_below_head
+         ├─ payment/invoice_number_date
+         ├─ payment/invoice_customer
+         └─ payment/invoice_purchases
+

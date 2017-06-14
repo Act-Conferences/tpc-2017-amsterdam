@@ -1,0 +1,24 @@
+[%
+    SET CMS.item = {
+        title = "Friends",
+        extra = "Your Community",
+        price = 255,
+        forms = { # be warned, these values are in Act.ini
+            'product_registration'  = "registration",
+            'price-registration'    = "8"
+        },
+        offer = [
+           "3 DAYS","CONFERENCE","Pre-Social","Conference Party","Hoody","ALL"
+        ],
+        intro =
+           "Meet the people that make Perl so great! Your main-track is at the
+            hall-way and the schedule depends on who offers you a drink",
+        texts = [
+           "You know that this event is ridiculous cheap, but you know also that
+            it is still expensive for others to make it here. Your contribution
+            makes it affordable for others to meet and talk with the community
+            members"
+        ],
+        badge = "BEST CHOICE",
+    }
+%]

@@ -1,0 +1,22 @@
+[%
+    SET CMS.item = {
+        title = "Private",
+        extra = "Come and join us",
+        price = 145,
+        forms = { # be warned, these values are in Act.ini
+            'product_registration'  = "registration",
+            'price-registration'    = "2"
+        },
+        offer = [
+           "3 DAYS","CONFERENCE","Pre-Social","Conference Party","T-Shirt","ALL"
+        ],
+        intro =
+           "Coming to the Perl Conference in Amsterdam is what you want because
+            you love Perl.",
+        texts = [
+           "But because of reasons, you do not have the resources to pay the
+            the normal amount a conference is worth... feel free to take this
+            discounted price. Don't worry, we are not going to check"
+        ],
+    }
+%]

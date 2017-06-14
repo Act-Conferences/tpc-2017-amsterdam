@@ -18,30 +18,16 @@
     <li><a [% item_a_attr %] href="[% make_uri('the-fabulous-team.html')  %]">Our team</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('tour-in-Amsterdam.html')  %]">Exploring Amsterdam</a></li>
 
+[%# payment %]  
+    <li [% div_li_attr %]></li>
+    <li><a [% item_a_attr %] href="[% make_uri('how-to-register.html') %]">How to register</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('tickets.html') %]">Tickets</a></li>
+
 [%# below is the original users menu %]  
   
     <li [% div_li_attr %]></li>
     <li><a [% item_a_attr %] href="[% make_uri('search')            %]">User Search</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('stats')             %]">User Statistics</a></li>
-
-[% IF global.request.user.is_users_admin %]  
-    <li [% div_li_attr %]></li>
-    <li><a [% item_a_attr %] href="[% make_uri('export')            %]">{{CSV export}}</a></li>
-    <li><a [% item_a_attr %] href="[% make_uri('confirm_attend')    %]">{{Confirm Attendance}}</a></li>
-    <li><a [% item_a_attr %] href="[% make_uri('create')            %]">{{Register a new user}}</a></li>
-[% END %]  
-  
-[% IF global.request.user.is_treasurer %]  
-    <li [% div_li_attr %]></li>
-    <li><a [% item_a_attr %] href="[% make_uri('payments')          %]">{{Payments}}</a></li>
-    <li><a [% item_a_attr %] href="[% make_uri('csv/payments')      %]">{{Payments}} (CSV)</a></li>
-    <li><a [% item_a_attr %] href="[% make_uri('csv/payment_items') %]">{{Payment Details}} (CSV)</a></li>
-[% END %]
-
-[% IF global.request.user.is_admin %]
-    <li [% div_li_attr %]></li>
-    <li><a [% item_a_attr %] href="[% make_uri('rights')            %]">{{Rights management}}</a></li>
-[% END %]
 
   </ul>
 

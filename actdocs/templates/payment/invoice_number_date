@@ -1,0 +1,30 @@
+
+
+  <table border="0">
+    
+    <tr>
+      <td valign="top">{{Invoice #}}</td>
+      <td valign="top">[% invoice_table_sep %]</td>
+      <td style="[% invoice_style_table_right %]">
+        [% invoice.invoice_no %]
+      </td>
+    </tr>
+    
+    <tr>
+      <td valign="top">Invoice date</td>
+      <td valign="top">[% invoice_table_sep %]</td>
+      <td style="[% invoice_style_table_right %]">
+        [% date_format(invoice.datetime, 'date_full') %]
+      </td>
+    </tr>
+    
+    <tr>
+      <td valign="top">{{Printed on}}</td>
+      <td valign="top">[% invoice_table_sep %]</td>
+      <td style="[% invoice_style_table_right %]">
+        [% date_format(today, 'date_full') %]
+      </td>
+    </tr>
+
+  </table>
+

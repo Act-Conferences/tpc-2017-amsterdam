@@ -1,0 +1,42 @@
+<!-- klantgegevens -->
+
+  <table border="0">
+    
+    <tr>
+      <td valign="top">Name</td>
+      <td valign="top">[% invoice_table_sep %]</td>
+      <td style="[% invoice_style_table_right %]">
+        [% invoice.first_name %]&nbsp;[% invoice.last_name %]
+      </td>
+    </tr>
+    
+    [% IF invoice.company %]
+      <tr>
+        <td valign="top">Company</td>
+        <td valign="top">[% invoice_table_sep %]</td>
+        <td style="[% invoice_style_table_right %]">
+          [% invoice.company %]
+        </td>
+      </tr>
+    [% END %]
+    
+    <tr>
+      <td valign="top">Address</td>
+      <td valign="top">[% invoice_table_sep %]</td>
+      <td style="[% invoice_style_table_right %]">
+        [% invoice.address | html_line_break %]
+      </td>
+    </tr>
+    
+    [% IF invoice.vat %]
+      <tr>
+        <td valign="top">VAT&nbsp;reg.&nbsp;#</td>
+        <td valign="top">[% invoice_table_sep %]</td>
+        <td style="[% invoice_style_table_right %]">
+          [% invoice.vat %]
+        </td>
+      </tr>
+    [% END %]
+
+  </table>
+

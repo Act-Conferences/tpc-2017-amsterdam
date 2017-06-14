@@ -1,0 +1,82 @@
+[% invoice_dec_sep='.' %]
+
+<table border="1" width="90%" 
+  style="border-collapse:collapse;border-style:solid;border-width:1px;font-size:90%;"
+>
+
+  <tr style="font-size:80%;">
+    <th style="padding:0 0.3em 0 0.3em;text-align:center;">{{Description}}</th>
+    <th style="padding:0 0.3em 0 0.3em;text-align:center;">
+      excl. VAT
+    </th>
+    <th style="padding:0 0.3em 0 0.3em;text-align:center;">
+      21% VAT
+    </th>
+    <th style="padding:0 0.3em 0 0.3em;text-align:center;">
+      incl. VAT
+    </th>
+  </tr>
+
+  <tr>
+    <td colspan="4" style="text-align:left;vertical-align:middle;height:40px;padding-left:0.5em;">
+
+        {{Your order number:}}
+
+          [%# info about the payment: order #, payment date and payment means
+          you can use this to turn this invoice into a receipt
+        %]
+        [% order.order_id %] - [% date_format(order.datetime, 'date_short') %] - [% order.means %]
+    </td>
+  </tr>
+
+[% BLOCK amount_cell %]
+  [% bold_attr = bold ? 'font-weight:bold;' : '' %]
+      <td style="text-align:right;padding:0 0.5em;[% bold_attr %]">
+        [% IF amount>0 %]
+          [%
+            amount 
+              FILTER format('%.2f') 
+                FILTER replace('\.', invoice_dec_sep)
+          
+          %]
+          &nbsp;&euro;
+        [% ELSE %]
+          n/a&nbsp;&nbsp;&nbsp;&nbsp;
+        [% END %]
+      </td>
+[% END %]
+
+  [%
+    ex_vat_total = 0;
+    vat_total    = 0;
+    amount_total = 0;
+  %]
+  
+  [% FOREACH item IN order.items %]
+    
+    [%
+      vat_rate      = item.name.search('^Donation$') ? 0 : 0.21;
+      ex_vat        = item.amount / (1+vat_rate) FILTER format('%.2f');
+      vat           = item.amount - ex_vat;
+      amount_total  = amount_total + item.amount;
+      ex_vat_total  = ex_vat_total + ex_vat;
+      vat_total     = vat_total    + vat;
+    %]
+    <tr>
+      <td style="text-align:left;padding:0 0.5em;">[% item.name %]</td>
+      [% PROCESS amount_cell amount=ex_vat %]
+      [% PROCESS amount_cell amount=vat    %]
+      [% PROCESS amount_cell amount=item.amount %]
+    </tr>
+  [% END %]
+
+  <tr>
+    <td colspan="1" style="text-align:right;font-weight:bold;padding-right:0.5em;">
+      {{Total due}}
+    </td>
+    [% PROCESS amount_cell amount=ex_vat_total    bold=1 %]
+    [% PROCESS amount_cell amount=vat_total       bold=1 %]
+    [% PROCESS amount_cell amount=invoice.amount  bold=1 %]
+  </tr>
+
+</table>

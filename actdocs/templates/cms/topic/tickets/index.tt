@@ -1,0 +1,29 @@
+[%
+    SET CMS.index = {
+        title = "Tickets",
+        intro = "Find your ticket below ...",
+        items = [
+            'regular', # 1: 365
+            'private', # 2: 145
+            'student', # 3:  60
+#           'zerofee', # 4:   0 - remove, admins will handle this
+            'single1', # 5: 130 - day 1
+            'single2', # 6: 130 - day 2
+            'single3', # 7: 130 - day 3
+            'friends', # 8: 235
+            'sponsor', # 9: 485 - sponsor the coffee
+        ],
+        texts = [
+           "All payments should be made by credit card through our online
+            payment system. If you really cannot pay by credit card, please
+            contact us at orga@​theperlconference​.amsterdam",
+            
+           "To purchase your conference ticket, it's best to first make sure
+            you're logged in and have registered to attend.",
+            
+           "On the payment page you have the option to add an arbitrary
+           'integer amount' as a donation. You can still visit the payment page
+            later to make an additional donation",
+        ],
+    }
+%]
