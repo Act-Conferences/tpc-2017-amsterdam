@@ -123,12 +123,11 @@
 
                 [% ELSE %]
                   
-                  <a
-                    href=[% make_uri('#') %]
+                  <div
                     class="btn btn-white btn-white-outline"
                   >
                     THANK YOU
-                  </a>
+                  </div>
                   
                 [% END %]
                 
