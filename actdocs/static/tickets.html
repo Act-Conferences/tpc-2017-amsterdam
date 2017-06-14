@@ -33,7 +33,7 @@
     ]
   %]
   
-    <section class="mbr-section" style="background-color: [% IF loop.index % 2 %]rgb(48, 48, 48)[% ELSE %]rgb(128, 48, 48)[% END %]; padding-top: 120px; padding-bottom: 120px;">
+    <section class="mbr-section" style="background-color: [% IF loop.even %]rgb(48, 48, 48)[% ELSE %]rgb(128, 48, 48)[% END %]; padding-top: 120px; padding-bottom: 120px;">
 
       <div class="mbr-section mbr-section-nopadding mbr-price-table">
         <div class="row">
@@ -52,7 +52,7 @@
           
                     <h3 class="mbr-plan-title">[% item.title %]</h3>
                     <small class="mbr-plan-subtitle">
-                      [% item.extra %]
+                      [% item.intro %]
                     </small>
           
                   </div>
@@ -67,7 +67,14 @@
                       <small class="mbr-price-term"></small>
                     </div>
           
-                    <small class="mbr-plan-price-desc">[% item.intro %]</small>
+                    <small class="mbr-plan-price-desc">
+
+                      [% FOREACH words IN item.texts %]
+                        [% words %]
+                        [% UNLESS loop.last %]<br>[% END %]
+                      [% END %]
+
+                    </small>
           
                   </div>
                 </div>
