@@ -1,4 +1,4 @@
-<section class="mbr-section mbr-section__container article" id="header3-x" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
+<section class="mbr-section mbr-section__container article" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -18,14 +18,14 @@
 
 [% FOREACH news_item IN latest_news %]
 
-  <section class="mbr-section article mbr-section__container" id="content2-w" style="background-color: rgb(255, 255, 255); padding-top: 10px; padding-bottom: 20px;">
+  <section class="mbr-section article mbr-section__container" style="background-color: rgb(255, 255, 255); padding-top: 10px; padding-bottom: 20px;">
   
     <div class="container">
       <div class="row">
         <div class="col-xs-12 lead">
           [% date_format(news_item.datetime, '%Y-%m-%d') %]
           <br>
-          <b>[% news_item.title %]</b>
+          <h4>[% news_item.title %]</h4>
           <blockquote class="">
             [% news_item.content %]
           </blockquote>
