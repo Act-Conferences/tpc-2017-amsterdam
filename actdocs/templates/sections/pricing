@@ -146,7 +146,7 @@
 
 </section>
 
-<section class="mbr-section article" style="background-color: rgb(48, 48, 48); padding-top: 45px; padding-bottom: 120px;">
+<section class="mbr-section article" style="background-color: rgb(48, 48, 48); color: rgb(255, 255, 255); padding-top: 45px; padding-bottom: 120px;">
 
     
   <div class="container">
@@ -162,7 +162,7 @@
         </div>
         <div>
           <a class="btn btn-secondary" href="[% make_uri('/tickets.html') %]">
-            SEE ALL OTHER TICKETS OPTIONS
+            SEE OTHER TICKETS OPTIONS
           </a>
         </div>
       </div>
