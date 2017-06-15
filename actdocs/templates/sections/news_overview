@@ -19,7 +19,7 @@
         <div class="col-xs-12 lead">
           [% date_format(news_item.datetime, '%Y-%m-%d') %]
           <br>
-          <b>[% news_item.title]</b>
+          <b>[% news_item.title %]</b>
           <blockquote class="">
             [% news_item.content %]
           </blockquote>
