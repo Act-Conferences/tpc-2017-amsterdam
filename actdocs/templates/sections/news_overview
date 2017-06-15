@@ -9,8 +9,14 @@
   </div>
 </section>
 
+[% latest_news = global.news(3);
+   IF latest_news.size > 2;
+     more = latest_news.pop;
+   END;
+ %]
 
-[% FOREACH news_item IN news %]
+
+[% FOREACH news_item IN latest_news %]
 
   <section class="mbr-section article mbr-section__container" id="content2-w" style="background-color: rgb(255, 255, 255); padding-top: 10px; padding-bottom: 20px;">
   
