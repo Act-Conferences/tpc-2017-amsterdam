@@ -85,6 +85,14 @@ amount      = 130
 name_en     = Single-Day - Fri. 11th of August
 amount      = 130
 
+[product_registration_price8]
+name_en     = Friends of Perl
+amount      = 255
+
+[product_registration_price9]
+name_en     = Unlimited... Coffee
+amount      = 485
+
 # optional Flickr support
 [flickr]
 tags = perl,amsterdam
