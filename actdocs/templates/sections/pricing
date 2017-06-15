@@ -93,7 +93,7 @@
                     href=[% make_uri('register') %]
                     class="btn btn-white btn-white-outline"
                   >
-                    JOIN
+                    JOIN FIRST
                   </a>
                   
                 [% ELSIF NOT global.request.user.has_paid %]
