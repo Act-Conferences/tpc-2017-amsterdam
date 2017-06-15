@@ -1,36 +1,38 @@
-<section class="mbr-section mbr-section-full" id="first_welcome">
+<section class="mbr-section" style="background-color: rgb(48, 48, 48); color: rgb(255, 255, 255); padding-top: 120px; padding-bottom: 120px;">
 
-  <div class="mbr-table-cell">
+  
+  <div class="container">
+    <div class="row">
+      <div class="mbr-table-md-up">
 
-    <div class="container">
-      <div class="row">
-        <div class="mbr-section col-md-10">
-
-          <h2>Welcome to The Perl Conference</h2>
-          <p>
-We invite you to participate in The Perl Conference, which will take
-place in August 2017 in Amsterdam, The Netherlands.  These meetings were
-formerly known as YAPC::EU, the yearly meeting of Perl Mongers in Europe.
-          </p>
-          <p>
-The Perl conferences started off as grassroots user meetings, with
-discussions among Perl Mongers, and has grown from there.  The focus is
-on enjoying the ideas of others, discovering new concepts, and feeling the
-enthusiasm of fellow programmers in the Perl (5) and Perl 6 programming
-languages.
-          </p>
-          <p>
-This years' theme is: <b>High-end Perl</b>. We are open for contributions:
-sponsors and potential speakers, please continue reading this page.
-<br>
-And note our <a href="[% make_uri('call-for-papers.html') %]">Call for Papers</a>!
-          </p>
-
+        <div class="mbr-table-cell mbr-right-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 35%;">
+          <div class="mbr-figure">
+            <img src="[% make_uri('assets/images/stamp_2.png') %]" class="">
+          </div>
         </div>
+        
+        <div class="mbr-table-cell col-md-5 text-xs-center text-md-left content-size">
+          <div class="lead">
+
+            <p class="">
+              The Perl Conference - formerly known as YAPC::EU - is the yearly
+              meeting of Perl Mongers in Europe.
+            </p>
+            <p class="">
+              The Perl conferences started off as grassroots user meetings, with
+              discussions among Perl Mongers, and has grown from there.  The
+              focus is on enjoying the ideas of others, discovering new
+              concepts, and feeling the enthusiasm of fellow programmers in the
+              Perl (5) and Perl 6 programming languages.
+            </p>
+            <p class="">
+            </p>
+
+          </div>
+        </div>
+        
       </div>
     </div>
   </div>
-
-  <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#news_overview"><i class="mbr-arrow-icon"></i></a></div>
 
 </section>
