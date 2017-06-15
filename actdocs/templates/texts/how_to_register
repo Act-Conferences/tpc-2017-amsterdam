@@ -19,7 +19,7 @@
   You're currently not logged in, so we're showing information for users who may or may not have an account already.
   </p>
   <p>
-  Please note that registration and payment are two separate steps. You first need to register as an attendee (see below) and then purchase your conference ticket (see <a href="[% make_uri('cost-and-payment.html') %]">Cost and Payment</a> page).
+  Please note that registration and payment are two separate steps. You first need to register as an attendee (see below) and then purchase your conference ticket (see <a href="[% make_uri('tickets.html') %]">Tickets and Payment</a> page).
   </p>
   
   <h2>Registering with or without a previous account</h2>
@@ -61,7 +61,7 @@
 
     <li>
       <b>Payment</b><br>
-      After registration, please buy your conference ticket. For details see <a href="[% make_uri('cost-and-payment.html') %]">Cost and Payment</a>.
+      After registration, please buy your conference ticket. For details see <a href="[% make_uri('tickets.html') %]">Tickets and Payment</a>.
 
     </li>
   </ul>
@@ -69,7 +69,7 @@
 [% ELSIF !hr_has_paid %]
   <h2>You've registered for the conference already</h2>
   <p>
-    You're currently logged in and you've registered for [% global.conference.name %]. However, you still need to buy your conference ticket. See <a href="[% make_uri('cost-and-payment.html') %]">Cost and payment</a> for details.
+    You're currently logged in and you've registered for [% global.conference.name %]. However, you still need to buy your conference ticket. See <a href="[% make_uri('tickets.html') %]">Tickets and Payment</a> for details.
   </p>
 
 [% ELSE %]
