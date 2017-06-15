@@ -10,7 +10,7 @@
 </section>
 
 
-[% FOREACH news_item = news %]
+[% FOREACH news_item IN news %]
 
   <section class="mbr-section article mbr-section__container" id="content2-w" style="background-color: rgb(255, 255, 255); padding-top: 10px; padding-bottom: 20px;">
   
