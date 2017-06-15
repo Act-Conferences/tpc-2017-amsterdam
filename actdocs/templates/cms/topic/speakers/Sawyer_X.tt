@@ -1,0 +1,12 @@
+[%
+    SET CMS.item = {
+        title = "Sawyer X",
+        image = "sawyer_x.jpeg",
+        intro =
+           "Perl developer, public speaker, project leader for the Dancer web framework, 2015 White Camel award recipient, terrible bio writer.",
+        texts = [
+           "Sawyer X has been a core developer of Dancer probably too quickly after it came into the world.
+           He has led Dancer and now leads the new branch of Dancer: Dancer2. He's the current project leader and main developer.",
+        ],
+    }
+%]
