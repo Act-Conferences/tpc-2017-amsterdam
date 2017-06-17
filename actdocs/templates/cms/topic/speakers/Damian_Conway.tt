@@ -3,7 +3,8 @@
         title = "Damian Conway",
         image = "damian_conway.jpg",
         intro =
-           "Programming is a Dark Art, and it always will be. The programmer is fighting against the two most destructive forces in the universe: entropy and human stupidity. These are not things you can overcome with a "methodology" or on a schedule.",
+           "Programming is a Dark Art, and it always will be. The programmer is fighting against the two most destructive forces in the universe: entropy and human stupidity.
+           These are not things you can overcome with a "methodology" or on a schedule.",
         texts = [
            "Damian Conway is a computer scientist, a member of the Perl community and the author of several books. Until 2010, he was also an adjunct associate professor in the Faculty of Information Technology at Monash University.
            Damian completed his BSc (with honours) and PhD at Monash. He is perhaps best known for his contributions to CPAN and Perl 6 language design, and his Perl programming training courses.
