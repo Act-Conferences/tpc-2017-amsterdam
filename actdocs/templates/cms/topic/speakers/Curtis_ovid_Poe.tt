@@ -1,0 +1,14 @@
+[%
+    SET CMS.item = {
+        title = "Curtis 'ovid' Poe",
+        image = "curtis_ovid_poe.jpg",
+        intro =
+           "Ovid is the CTO of All Around the World, a technology consulting firm building and maintaining software for clients.",
+        texts = [
+           "Ovid hacks in a variety of languages and really loves Perl.
+           He wrote or co-wrote two popular Perl books, the test harness that ships with the Perl core, and sits on the Board of Directors of The Perl Foundation.
+           He travels to many countries giving talks about Perl, Agile, and why your database is broken. Walk up and say hello;
+           Ovid's friendly and (mostly) housebroken.",
+        ],
+    }
+%]
