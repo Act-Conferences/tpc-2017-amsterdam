@@ -7,66 +7,66 @@
 %]
 
 [% WRAPPER ui_mobirise3 title=CMS.index.title %]
-  
-  
+
+
   <section class="mbr-section mbr-section__container article" style="background-color: rgb(48, 48, 48); color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
       <div class="container">
           <div class="row">
               <div class="col-xs-12">
                   <h3 class="mbr-section-title display-2">[% CMS.index.title %]</h3>
-                  
+
                   <p>
                     [% CMS.index.intro %]
                   </p>
-                  
+
               </div>
           </div>
       </div>
   </section>
-  
-  
-  
+
+
+
   [%
     FOREACH item_list IN [
       [ 'student', 'private', 'friends', 'sponsor' ],
       [ 'single1', 'single2', 'single3', 'regular' ],
     ]
   %]
-  
+
     <section class="mbr-section" style="background-color: [% IF loop.even %]rgb(48, 48, 48)[% ELSE %]rgb(128, 48, 48)[% END %]; padding-top: 120px; padding-bottom: 120px;">
 
       <div class="mbr-section mbr-section-nopadding mbr-price-table">
         <div class="row">
-    
+
           [% FOREACH item_name IN item_list %]
-            
+
             [% item = CMS.items.$item_name %]
-            
+
             <div class="col-xs-12  col-md-6 col-xl-3">
               <div class="mbr-plan card text-xs-center">
-          
+
                 <!-- upper half -->
-          
+
                 <div class="mbr-plan-header card-block">
                   <div class="card-title">
-          
+
                     <h3 class="mbr-plan-title">[% item.title %]</h3>
                     <small class="mbr-plan-subtitle">
                       [% item.intro %]
                     </small>
-          
+
                   </div>
                   <div class="card-text">
                     <div class="mbr-price">
                       <span class="mbr-price-value">€</span>
                       <span class="mbr-price-figure">
-          
+
                         [% item.price %]
-          
+
                       </span>
                       <small class="mbr-price-term"></small>
                     </div>
-          
+
                     <small class="mbr-plan-price-desc">
 
                       [% FOREACH words IN item.texts %]
@@ -75,62 +75,62 @@
                       [% END %]
 
                     </small>
-          
+
                   </div>
                 </div>
-          
+
                 <!-- lower half -->
-          
+
                 <div class="mbr-plan-body card-block">
                   <div class="mbr-plan-list">
                     <ul class="list-group list-group-flush">
-          
+
                       [% FOREACH words IN item.offer %]
                         <li class="list-group-item">
                           [% words %]
                         </li>
                       [% END %]
-          
+
                     </ul>
                   </div>
-          
+
                   <div class="mbr-plan-btn">
-                  
+
                     [% IF NOT global.request.user %]
-                    
+
                       <a
                         href=[% make_uri('login?destination') _ '=' _ make_uri('/index.html') %]
                         class="btn btn-white btn-white-outline"
                       >
-                        LOGIN
+                        LOGIN FIRST
                       </a>
-                      
+
                     [% ELSIF NOT global.request.user.has_registered %]
-                      
+
                       <a
                         href=[% make_uri('register') %]
                         class="btn btn-white btn-white-outline"
                       >
                         JOIN FIRST
                       </a>
-                      
+
                     [% ELSIF NOT global.request.user.has_paid %]
-    
+
                       <form method="POST" action="[% make_uri('purchase') %]">
-                        
+
                         <input
                           type="hidden"
                           name="product-registration"
                           value="registration"
                         >
-                        
+
                         [% field_name = 'price-registration' %]
                         <input
                           type="hidden"
                           name="price-registration"
                           value="[% item.forms.$field_name %]"
                         >
-                        
+
                         <button
                           type="submit" name="purchase" value="Buy Now!"
                           class="btn btn-white btn-white-outline"
@@ -138,36 +138,36 @@
                           BUY NOW
                         </button>
                       </form>
-    
+
                     [% ELSE %]
-                      
+
                       <div
                         class="btn btn-white btn-white-outline"
                       >
                         THANK YOU
                       </div>
-                      
+
                     [% END %]
-                    
+
                   </div>
-          
+
                 </div>
-          
+
               </div>
             </div>
-            
+
           [% END %]
-        
+
         </div>
       </div>
-      
+
     </section>
-    
+
   [% END %]
-  
-  
-  
-  
+
+
+
+
   <section class="mbr-section article mbr-section__container" id="content2-q" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
       <div class="container">
           <div class="row">
