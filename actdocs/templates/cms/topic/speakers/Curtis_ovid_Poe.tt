@@ -1,6 +1,6 @@
 [%
     SET CMS.item = {
-        title = "Curtis 'ovid' Poe",
+        title = "Curtis ovid Poe",
         image = "curtis_ovid_poe.jpg",
         intro =
            "Ovid is the CTO of All Around the World, a technology consulting firm building and maintaining software for clients.",
