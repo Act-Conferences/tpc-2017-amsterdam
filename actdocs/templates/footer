@@ -11,7 +11,7 @@
   <div class="container">
     <div class="row">
       <div class="[% col_class %]">
-        <div><img src="[% make_uri_info('img', 'perlconference-amsterdam_logo_128x128.png') %]" alt="[% global.conference.name %] logo"></div>
+        <div><img src="[% make_uri_info('img', 'logo_180x180.png') %]" alt="[% global.conference.name %] logo"></div>
       </div>
       <div class="[% col_class %]">
         <p></p>

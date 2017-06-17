@@ -12,7 +12,7 @@
             
             <div class="mbr-table-cell mbr-right-padding-md-up mbr-valign-top col-md-7">
               <div class="mbr-figure">
-                <img class="hidden-sm-down" src="[% make_uri_info('img', 'perlconference-amsterdam_logo_354x354.png') %]" alt="View of Amsterdam">
+                <img class="hidden-sm-down" src="[% make_uri_info('img', 'painted_logo_351.png') %]" alt="View of Amsterdam">
               </div>
             </div>
             
