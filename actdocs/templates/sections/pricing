@@ -9,7 +9,7 @@
 %]
 
 
-<section class="mbr-section" id="pricing-table1-b" style="background-color: rgb(48, 48, 48); padding-top: 120px; padding-bottom: 120px;">
+<section class="mbr-section" style="background-color: rgb(48, 48, 48); padding-top: 120px; padding-bottom: 45px;">
 
 
   <div class="mbr-section mbr-section__container mbr-section__container--middle">
@@ -93,7 +93,7 @@
                     href=[% make_uri('register') %]
                     class="btn btn-white btn-white-outline"
                   >
-                    JOIN
+                    JOIN FIRST
                   </a>
                   
                 [% ELSIF NOT global.request.user.has_paid %]
@@ -143,5 +143,30 @@
     </div>
   </div>
 
+
+</section>
+
+<section class="mbr-section article" style="background-color: rgb(48, 48, 48); color: rgb(255, 255, 255); padding-top: 45px; padding-bottom: 120px;">
+
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-xs-center">
+        
+        <div class="lead">
+          <p class="">
+            There are more options for buying a ticket. We offer 1-Day tickets
+            and more price ranges for those that want to support the conference
+            in a very generous and apreciated way.
+          </p>
+        </div>
+        <div>
+          <a class="btn btn-secondary" href="[% make_uri('/tickets.html') %]">
+            SEE OTHER TICKETS OPTIONS
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
 
 </section>

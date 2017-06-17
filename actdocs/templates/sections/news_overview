@@ -1,56 +1,40 @@
-<section class="mbr-section mbr-section-full" id="news_overview">
-
-  <div class="mbr-table-cell">
-
-    <div class="container">
-      <div class="row">
-        <div class="mbr-section col-md-10">
-
-
-[% news = global.news(3);
-   IF news.size > 2;
-     more = news.pop;
-   END;
- %]
-
-[% IF news.size %]
-
-  <h2>Latest News</h2>
-  [% FOREACH item = news %]
-  <div class="news-entry">
-    <h3 class="news-header">
-      <span class="news-date">[% date_format(item.datetime, '%Y-%m-%d') %]</span>
-      <span class="news-title">[% item.title %]</span>
-    </h3>
-    
-    <div class="news-text">
-      [% item.content %]
-    </div>
-  </div>
-  [% END %]
-
-[% ELSE %]
-
-  <h2>News overview</h2>
-  <div class="news-text">
-    <p>This is where news will appear - if and when there is news!</p>
-  </div>
-
-[% END %]
-
-[% IF more %]
-<p>
- <a href="[% make_uri('news') %]" class="news-link">Older announcements</a>
-</p>
-[% END %]
-
-
-        </div>
+<section class="mbr-section mbr-section__container article" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="mbr-section-title display-2">Latest News</h3>
+        <small class="mbr-section-subtitle">Don't forget to come back here</small>
       </div>
     </div>
   </div>
-
-  <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#keynote_speakers"><i class="mbr-arrow-icon"></i></a></div>
-
 </section>
+
+[% latest_news = global.news(3);
+   IF latest_news.size > 2;
+     more = latest_news.pop;
+   END;
+ %]
+
+
+[% FOREACH news_item IN latest_news %]
+
+  <section class="mbr-section article mbr-section__container" style="background-color: rgb(255, 255, 255); padding-top: 10px; padding-bottom: 20px;">
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 lead">
+          [% date_format(news_item.datetime, '%Y-%m-%d') %]
+          <br>
+          <h4>[% news_item.title %]</h4>
+          <blockquote class="">
+            [% news_item.content %]
+          </blockquote>
+          
+        </div>
+      </div>
+    </div>
+  
+  </section>
+  
+[% END %]
 

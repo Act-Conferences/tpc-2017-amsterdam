@@ -2,7 +2,7 @@
 
   <div class="navbar-brand">
     <a href="[% make_uri %]" class="navbar-logo">
-      <img src="[% make_uri_info('img', 'perlconference-amsterdam_logo_128x128.png') %]" alt="[% global.conference.name %]" title="Back to home">
+      <img src="[% make_uri_info('img', 'logo_124x124.png') %]" alt="[% global.conference.name %]" title="Back to home">
     </a>
     <a class="navbar-caption" href="[% make_uri %]" title="Back to home">
       <span class="hidden-md-down"                                     >[% global.conference.name %]</span>
