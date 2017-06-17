@@ -4,7 +4,8 @@
         items = [
             'Larry_Wall',
             'Sawyer_X',
-            'Curtis_ovid_Poe'
+            'Curtis_ovid_Poe',
+            'Brian_d_foy',
         ],
         texts = [ ],
     }
