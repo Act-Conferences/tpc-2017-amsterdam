@@ -1,0 +1,25 @@
+[%
+    SET CMS.item = {
+        title = "Coders Essential",
+        image = "sponsor_item_WiFi.png",
+        intro = "Perl Mongers come together to connect ...",
+        texts = [
+           "For a very small amount you will provide the attendees with WiFi!",
+
+           "And we have learned from previous experiences that this is one of
+            the most tricky things to setup for a Perl conference. We are all
+            a bunch of tech people and complain bitterly if not done properly.",
+
+           "Would you want to sponsor something unreliable? So, we have hired a
+            company that will provide enough power and bandwith to keep all
+            attendees happy. And they will have two people on site for technical
+            support!",
+
+           "Sponsor 500Mbit bandwith for the WiFi network for one day! or what
+            about sponsoring the entire WiFi 3Gbit for 3 days. Of course, 500Mb
+            every day is also an option.",
+        ],
+        price = 250,
+        units = "18 × 500Mbit per day"
+    }
+%]
