@@ -6,6 +6,7 @@
             hard work done by contributors to free and opens source software –
             that you benefit from every day!",
         items = [
+            "wifi",
         ],
         texts = [
            "We already have contracted a few large sponsors, but are still in
