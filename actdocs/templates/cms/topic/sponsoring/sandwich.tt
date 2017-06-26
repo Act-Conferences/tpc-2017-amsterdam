@@ -1,0 +1,22 @@
+[%
+    SET CMS.item = {
+        title = "Not your average a sandwich",
+        image = "sponsor_item_Sandwich.png",
+        intro = "But a key element of a good lunch...",
+        texts = [
+           "We coders will not get hungry, because of your generous donation",
+
+           "And it will not just be a sandwich. The catering service is
+            outstanding and will make sure everyone is happy. Enough choice for
+            everybody!",
+
+           "Together with two other sponsors ...you will be the sponsor for that
+            lunch on that day. Of course, you can also sponsor the entire lunch.
+            During lunch, we will make sure the attendees know who paid for
+            their food and drinks.
+            We will offer 1 regular ticket, worth €365.",
+        ],
+        price = 1250,
+        units = "part of the lunch, per day × 3"
+    }
+%]
