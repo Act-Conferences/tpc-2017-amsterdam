@@ -25,6 +25,6 @@
             the network... without being obnoxious",
         ],
         price = 250,
-        units = "500Mbit per day … × 18"
+        units = "500Mbit per day × 18"
     }
 %]
