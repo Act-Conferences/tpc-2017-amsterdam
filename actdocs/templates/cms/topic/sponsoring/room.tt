@@ -1,0 +1,22 @@
+[%
+    SET CMS.item = {
+        title = "Where 'interesting' things happen",
+        image = "sponsor_item_Room.png",
+        intro = "The smaller rooms with awesome presentations...",
+        texts = [
+           "Show your appreciation towards early initiatives and crazy ideas",
+
+           "Our program committee selects the most finest or most obscure talks.
+            They vary much and make the conference most interesting.
+            Those presentations will be held during break-out sessions in
+            smaller, seperate rooms.",
+
+           "Your sponsorship will support during all three days, one of those
+            four rooms. You will have the option to place a roll-up banner next
+            to the presenterdesk.
+            We also will offer 1 regular ticket, worth €365.",
+        ],
+        price = 1000,
+        units = "all three days, per room × 4"
+    }
+%]
