@@ -1,0 +1,20 @@
+[%
+    SET CMS.item = {
+        title = "Where you don’t want to miss it",
+        image = "sponsor_item_Hall.png",
+        intro = "The 'Event Space' with the Keynotes and ...",
+        texts = [
+           "Become one of the main sponors",
+
+           "Most of the conference moments are being held it this 'Event Space'.
+            This will include opening keynote and LightningTalks at the end of
+            the day. But since we have a awesome lineup of speakers, we've
+            decided that we will have an early afternoon planar session here.",
+
+           "Lunch will be setup in this same hall, so, as sponsor you will have
+            maximum exposure during the entire day.",
+        ],
+        price = 750,
+        units = "per day × 6"
+    }
+%]
