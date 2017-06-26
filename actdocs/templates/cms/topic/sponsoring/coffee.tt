@@ -1,0 +1,21 @@
+[%
+    SET CMS.item = {
+        title = "Coders Most Essential",
+        image = "sponsor_item_Coffee.png",
+        intro = "Programming: the art of turning caffeine in code...",
+        texts = [
+           "Your tribute will keep us going",
+
+           "We have gone far, very far, to get the best coffee experience for
+            this Perl Conference.... again!. During the morning and during the
+            afternoon there will be short breaks for coffee, or 'black tea' and
+            other hot drinks.",
+
+           "We will ensure that your name, together with another sponsor, will
+            be associated with this wonderful experience.
+            We also will offer 1 regular ticket, worth €365.",
+        ],
+        price = 500,
+        units = "half break × 12"
+    }
+%]

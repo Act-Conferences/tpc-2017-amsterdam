@@ -9,6 +9,7 @@
             "wifi",
             "hall",
             "room",
+            "coffee",
         ],
         texts = [
            "We already have contracted a few large sponsors, but are still in
