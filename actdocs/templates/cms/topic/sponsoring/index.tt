@@ -7,6 +7,7 @@
             that you benefit from every day!",
         items = [
             "wifi",
+            "hall",
         ],
         texts = [
            "We already have contracted a few large sponsors, but are still in
