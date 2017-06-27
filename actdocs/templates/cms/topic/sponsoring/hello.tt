@@ -1,0 +1,24 @@
+[%
+    SET CMS.item = {
+        title = "Meet & Greet",
+        image = "sponsor_item_Hello.png",
+        intro = "at the pre-social ...",
+        texts = [
+           "Be the first!",
+
+           "We have an exclusive opportunity to sponsor this Perl event!",
+
+           "The evening before, when most international guest have arrived in
+            Amsterdam, we like to come together. We love to share stories and do
+            lot off hugzzz. But we also like good food and lots off drinks",
+
+           "Make sure you are the sponsor that people will remember for the rest
+            of the conference days. Sponsor the first big event.",
+
+           "We will offer 3 regular tickets to hand out to any of your
+            co-workers, worth €365 each.",
+        ],
+        price = 5000,
+        units = "pre-social × 1"
+    }
+%]
