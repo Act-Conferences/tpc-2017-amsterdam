@@ -1,0 +1,13 @@
+[%
+    SET CMS.item = {
+        title = "Freshly squeezed, to keep you healthy",
+        image = "sponsor_item_Juice.png",
+        intro = "and it comes from a good source",
+        texts = [
+           "As much as we enjoy coffee and tea, there are better alternaives to
+            drink. Your sponsorship will increase our own awarness.",
+        ],
+        price = 1250,
+        units = "⅓ of the lunch, per day × 3"
+    }
+%]
