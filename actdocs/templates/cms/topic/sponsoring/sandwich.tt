@@ -17,6 +17,6 @@
             We will offer 1 regular ticket, worth €365.",
         ],
         price = 1250,
-        units = "part of the lunch, per day × 3"
+        units = "⅓ of the lunch, per day × 3"
     }
 %]
