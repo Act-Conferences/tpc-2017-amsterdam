@@ -16,9 +16,10 @@
             appreciation?",
 
            "We will offer 2 regular tickets to hand out to any of your
-            co-workers, worth €365 each.",
+            co-workers, worth €365 each. Additionally, you will be granted time
+            to give a short speech during the dinner",
         ],
         price = 3000,
-        units = "pre-social × 1"
+        units = "speakers dinner × 1"
     }
 %]
