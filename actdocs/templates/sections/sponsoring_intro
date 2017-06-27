@@ -1,4 +1,4 @@
-<section class="mbr-section mbr-section-full" id="sponsoring_intro">
+<section class="mbr-section mbr-section-full">
 
   <div class="mbr-table-cell">
 
@@ -7,23 +7,47 @@
         <div class="mbr-section col-md-10">
 
           <h2>Sponsors make for a better conference</h2>
+
           <p>
-We already have contracted a few large sponsors, but are still in need
-of contributions of various sizes.  Companies, please show our community
-that you appreciate its existence - that you also benefit from.
+            We already have contracted a few large sponsors, but are still in
+            need of contributions of various sizes.  Companies, please show our
+            community that you appreciate its existence - that you also benefit
+            from.
           </p>
+
           <p>
-          
-Contact <a href="mailto:sponsors@perlconference.amsterdam" target="_top">sponsors@perlconference.amsterdam</a> for information about how you
-can help this Perl conference to be affordable for everyone.
+            Contact
+            <a href="mailto:sponsors@perlconference.amsterdam" target="_top">
+              sponsors@perlconference.amsterdam
+            </a> for information about how you can help this Perl conference to
+            be affordable for everyone.
           </p>
 
         </div>
       </div>
     </div>
+ 
   </div>
 
-  <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#venue_intro"><i class="mbr-arrow-icon"></i></a></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-xs-center">
+        
+        <div class="lead">
+          <p class="">
+            If you want to do the Perl community - and yourself a great favour,
+            then check out the various options we offer. Pick and choose to
+            to match your budget. We are sure you can find a great combination
+            and get the best deals!
+          </p>
+        </div>
+        <div>
+          <a class="btn btn-secondary" href="[% make_uri('/sponsoring.html') %]">
+            SEE THE SPONSORING MENU
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </section>
-
