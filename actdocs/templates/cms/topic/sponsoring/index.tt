@@ -6,6 +6,7 @@
             hard work done by contributors to free and opens source software –
             that you benefit from every day!",
         items = [
+            "hello",
             "wifi",
             "hall",
             "room",
@@ -13,7 +14,6 @@
             "sandwich",
             "soup",
             "juice",
-            "hello",
             "thanks",
         ],
         texts = [
