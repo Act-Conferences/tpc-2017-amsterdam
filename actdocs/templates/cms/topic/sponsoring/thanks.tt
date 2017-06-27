@@ -1,0 +1,24 @@
+[%
+    SET CMS.item = {
+        title = "saying “Thank You”",
+        image = "sponsor_item_Thanks.png",
+        intro = "The speakers that made it happen",
+        texts = [
+           "Speakers Dinner!",
+
+           "For those that put in some extra effort and time to prepare the
+            presentations, we like to say “Thank You”.",
+
+           "The venues has an excellent roof-top restaurant and we'd like to
+            treat the speakers well",
+
+           "Will you as sponsor take this opportunity and show your
+            appreciation?",
+
+           "We will offer 2 regular tickets to hand out to any of your
+            co-workers, worth €365 each.",
+        ],
+        price = 3000,
+        units = "pre-social × 1"
+    }
+%]
