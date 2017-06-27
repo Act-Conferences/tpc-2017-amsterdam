@@ -1,0 +1,14 @@
+[%
+    SET CMS.item = {
+        title = "Soup, with balls! or maybe without",
+        image = "sponsor_item_Soup.png",
+        intro = "but it surely will have impact...",
+        texts = [
+           "After hours of focusing on interesting presentations and listening
+            to some speakers, it's time to get a boost... You can help to keep
+            us going for the next series of presentations.",
+        ],
+        price = 1250,
+        units = "⅓ of the lunch, per day × 3"
+    }
+%]
