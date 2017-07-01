@@ -8,6 +8,7 @@
   <div class="alert alert-danger">{{The schedule is not ready to be seen.}}</div>
 [% ELSE %]
   [% IF todo.size %]
+    <!--
     <div class="panel panel-warning">
       <div class="panel-heading">
        {{The time and place of the following talks haven't been decided yet.}}
@@ -52,6 +53,7 @@
         </tbody>
       </table>
     </div>
+    -->
   [% END %]
 
 
