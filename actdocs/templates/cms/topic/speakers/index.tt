@@ -3,6 +3,9 @@
         title = "An awesome line-up of world class speakers",
         items = [
             'Larry_Wall',
+	    'Damian_Conway',
+	    'Brian_d_foy',
+	    'Curtis_ovid_Poe',
             'Sawyer_X',
         ],
         texts = [ ],
