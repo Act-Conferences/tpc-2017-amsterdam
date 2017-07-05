@@ -1,0 +1,56 @@
+<section
+  class="mbr-info mbr-section mbr-section-md-padding mbr-parallax-background mbr-after-navbar"
+  style="background-image: url([% make_uri('/assets/images/call-for-papers-homepage-2000x1046.jpg') %]); padding-top: 120px; padding-bottom: 30px;"
+>
+  <div class="container">
+    <div class="row">
+      <div class="mbr-table-md-up">
+        
+        <div class="mbr-table-cell col-md-4">
+          <div class="text-xs-center">
+            
+            [% IF NOT global.request.user %]
+            
+              <a
+                href=[% make_uri('login?destination') _ '=' _ make_uri('/index.html') %]
+                class="btn btn-white btn-white-outline"
+              >
+                LOGIN FIRST & PROPOSE
+              </a>
+              
+            [% ELSIF NOT global.request.user.has_registered %]
+              
+              <a
+                href=[% make_uri('register') %]
+                class="btn btn-white btn-white-outline"
+              >
+                JOIN FIRST & PROPOSE
+              </a>
+              
+            [% ELSE %]
+              
+              <a
+                href=[% make_uri('newtalk') %]
+                class="btn btn-white btn-white-outline"
+              >
+                SUBMIT A TALK PROPOSAL
+              </a>
+              
+            [% END %]
+            
+          </div>
+        </div>
+        
+        <div class="mbr-table-cell mbr-right-padding-md-up col-md-8 text-xs-center text-md-left">
+          <h3 class="mbr-info-title mbr-section-title display-2">
+            Lets talk about it!
+          </h3>
+          <h2 class="mbr-info-subtitle mbr-section-subtitle">
+            We openened a 4th parallel breakout session and extended the "Call for Paper time
+          </h2>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
