@@ -1,5 +1,3 @@
-<section class="engine"><a rel="external" href="https://mobirise.com">Mobirise Web Page Builder</a></section>
-
 <section
   class="mbr-info mbr-section mbr-section-md-padding mbr-parallax-background mbr-after-navbar"
   style="background-image: url([% make_uri('/assets/images/call-for-papers-homepage-2000x1046.jpg') %]); padding-top: 900px; padding-bottom: 90px;"
