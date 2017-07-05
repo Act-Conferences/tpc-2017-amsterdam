@@ -1,6 +1,6 @@
 <section
   class="mbr-info mbr-section mbr-section-md-padding mbr-parallax-background mbr-after-navbar"
-  style="background-image: url([% make_uri('/assets/images/call-for-papers-homepage-2000x1046.jpg') %]); padding-top: 120px; padding-bottom: 30px;"
+  style="background-image: url([% make_uri('/assets/images/call-for-papers-homepage-2000x1046.jpg') %]); padding-top: 100px; padding-bottom: 70px;"
 >
   <div class="container">
     <div class="row">
@@ -13,7 +13,7 @@
             
               <a
                 href=[% make_uri('login?destination') _ '=' _ make_uri('/index.html') %]
-                class="btn btn-white btn-white-outline"
+                class="btn btn-white"
               >
                 LOGIN FIRST & PROPOSE
               </a>
@@ -22,7 +22,7 @@
               
               <a
                 href=[% make_uri('register') %]
-                class="btn btn-white btn-white-outline"
+                class="btn btn-white"
               >
                 JOIN FIRST & PROPOSE
               </a>
@@ -31,7 +31,7 @@
               
               <a
                 href=[% make_uri('newtalk') %]
-                class="btn btn-white btn-white-outline"
+                class="btn btn-white"
               >
                 SUBMIT A TALK PROPOSAL
               </a>
@@ -42,10 +42,10 @@
         </div>
         
         <div class="mbr-table-cell mbr-right-padding-md-up col-md-8 text-xs-center text-md-left">
-          <h3 class="mbr-info-title mbr-section-title display-2">
+          <h3 class="mbr-info-title mbr-section-title display-2" style="color: rgb(255, 255, 255);">
             Lets talk about it!
           </h3>
-          <h2 class="mbr-info-subtitle mbr-section-subtitle">
+          <h2 class="mbr-info-subtitle mbr-section-subtitle" style="color: rgb(255, 255, 255);">
             We openened a 4th parallel breakout session and extended the "Call for Paper time
           </h2>
         </div>
