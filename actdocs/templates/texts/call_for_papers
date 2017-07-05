@@ -56,11 +56,10 @@ Just to give you some hints about "high end":
 If you are willing to give a talk:
 </p><p>
 <ul>
-  <li>submit proposals to our website before 2017-06-15</li>
-  <li>we probably will confirm some talks soon after the are sent
-      in, but not all of them.  But at least before 2017-07-01</li>
+  <li>submit proposals to our website before 2017-07-08 23:59:59 CET</li>
+  <li>we will confirm talks before 2017-07-16</li>
   <li>come up with a challenging title</li>
-  <li>use 100 upto 300 words to describe the content of your talk. 
+  <li>use 100 up to 300 words to describe the content of your talk. 
       Not too short please, not too long either.</li>
   <li>write-up a short biography of yourself</li>
   <li>pick the preferred length of the talk, the assumed audience
@@ -73,7 +72,7 @@ the content. They will fix language errors without notice.
 
 <h2>Where to submit</h2>
 <p>
-First, you need to be registered as a participant (existing users find a link to <a href="[% make_uri('register') %]">register</a> on their <a href="[% make_uri('main') %]">User settings</a> page, new users click <a href="[% make_uri('register') %]">Register / New user</a>). Then a link to <a href="[% make_uri('newtalk') %]">submit a talk</a> will be available on the <a href="[% make_uri('main') %]">User settings</a> page. You can also find this link in the <em>Talks &amp; events</em> menu.
+First, you need to be registered as a participant (existing users find a link to <a href="[% make_uri('register') %]">register</a> on their <a href="[% make_uri('main') %]">Account settings</a> page, new users click <a href="[% make_uri('login') %]">Login</a> and register by creating an account). Then a link to <a href="[% make_uri('newtalk') %]">submit a talk</a> will be available on your <a href="[% make_uri('main') %]">Account settings</a> page. You can also find this link in the <em>Talks &amp; events</em> menu.
 
 </p><p>
 Please leave remarks in the submission form.  If you have
