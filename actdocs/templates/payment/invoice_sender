@@ -1,10 +1,10 @@
 
-<div style="font-size: 90%";>
-  <h2 style="margin-bottom:0.3em;">[% sender_name %]</h2>
+<div style="font-size: 90%;">
+  <h2 style="margin-top:0;margin-bottom:0.3em;">[% sender_name %]</h2>
 
   <table style="font-size:90%;">
   
-    </tr>
+    <tr>
       <td>[% sender_street_and_number %]</td>
     </tr>
   
@@ -22,7 +22,7 @@
   
   <table style="font-size:90%;">
   
-    </tr>
+    <tr>
       <td>Chambre of Commerce #</td>
       <td>[% invoice_table_sep %]</td>
       <td>[% sender_chamber_of_commerce %]</td>
@@ -33,7 +33,13 @@
       <td>[% invoice_table_sep %]</td>
       <td>[% sender_vat_reg_no %]</td>
     </tr>
-    
+
+    <tr>
+      <td>Bank account (IBAN)</td>
+      <td>[% invoice_table_sep %]</td>
+      <td>[% sender_bank_account %]</td>
+    </tr>
+
   </table>
 
 </div>

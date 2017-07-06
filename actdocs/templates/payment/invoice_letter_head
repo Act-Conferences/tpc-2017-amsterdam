@@ -1,10 +1,12 @@
 <table border="0">
   <tr>
-    <td valign="middle" align="left">
-      <img
-    src="[% sender_logo %]" border="0" valign="top"
-    alt="Perl Programming Republic" width="160" height="160"
-      >
+    <td valign="top" align="left">
+      <div style="background:linear-gradient(142deg, #B00, #880);border-radius:5px;margin:5px;height:[% logo_height %];padding:40px 10px;margin:0;">
+        <img
+    src="[% sender_logo %]" border="0"
+    alt="WenzPerl Logo" width="160" height="70"
+        >
+      </div>
     </td>
     <td width="20"></td>
     <td valign="top">

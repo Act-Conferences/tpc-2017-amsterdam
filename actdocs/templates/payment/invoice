@@ -5,9 +5,10 @@
   sender_street_and_number    = 'Bosstraat 21'    ;
   sender_pc_place             = '6101NV Echt'     ;
   sender_country              = 'The Netherlands' ;
-  sender_vat_reg_no           = '<span style="color:red">&lt;fill in VAT reg. no.&gt;</span>';
-  sender_chamber_of_commerce  = '59473770';
-  sender_logo                 =  make_uri_info('img','wenzperl_logo.png');
+  sender_vat_reg_no           = 'NL853509803'     ;
+  sender_chamber_of_commerce  = '59473770'        ;
+  sender_bank_account         = 'NL93 RABO 0146 4621 73'
+  sender_logo                 =  make_uri_info('img','WenZPerl_logo.png');
   
   conference_dates            = '9th to 11th of August, 2017';
   invoice_table_sep           = '&nbsp;:&nbsp;';
@@ -30,9 +31,11 @@
 <head>
 <title>{{Invoice}}</title>
 </head>
+
 <body bgcolor="#FFFFFF" text="#000000">
-[% PROCESS invoice_body %]
+  [% PROCESS invoice_body logo_height="76px" %]
 </body>
+
 </html>
 
 
@@ -49,10 +52,10 @@
 
 <p>
 Please find below the invoice for your attendance of [% global.conference.name %]. <a href="[% printer_uri %]" target="_blank">Click here for a print-friendly version.</a>
-
 </p>
 <hr>
-[% PROCESS invoice_body %]
+
+[% PROCESS invoice_body logo_height="176px" %]
 
 <div style="margin-top:1em;"></div>
 
