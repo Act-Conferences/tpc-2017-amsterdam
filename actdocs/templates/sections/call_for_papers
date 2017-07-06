@@ -6,15 +6,6 @@
     <div class="row">
       <div class="mbr-table-md-up">
         
-        <div class="mbr-table-cell mbr-right-padding-md-up col-md-8 text-xs-center text-md-left">
-          <h3 class="mbr-info-title mbr-section-title display-2" style="color: rgb(255, 255, 255);">
-            Lets talk about it!
-          </h3>
-          <h2 class="mbr-info-subtitle mbr-section-subtitle" style="color: rgb(255, 255, 255);">
-            We openened a 4th parallel breakout session and extended the "Call for Paper time
-          </h2>
-        </div>
-        
         <div class="mbr-table-cell col-md-4">
           <div class="text-xs-center">
             
@@ -48,6 +39,15 @@
             [% END %]
             
           </div>
+        </div>
+        
+        <div class="mbr-table-cell mbr-right-padding-md-up col-md-8 text-xs-center text-md-left">
+          <h3 class="mbr-info-title mbr-section-title display-2" style="color: rgb(255, 255, 255);">
+            Lets talk about it!
+          </h3>
+          <h2 class="mbr-info-subtitle mbr-section-subtitle" style="color: rgb(255, 255, 255);">
+            We openened a 4th parallel breakout session and extended the "Call for Papers" time
+          </h2>
         </div>
         
       </div>
