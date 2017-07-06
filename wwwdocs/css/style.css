@@ -134,7 +134,7 @@ p.message {
 /*   under #main-menu for bootstrap3 */
 
 #space-for-menu {
-  margin-top: 100px; /* menu must not overlap content */
+  margin-top: 80px; /* menu must not overlap content */
 }
 
 /* create bit more space for menu on bigger screens */
