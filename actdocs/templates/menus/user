@@ -52,7 +52,7 @@
 
   <li [% link_li_attr %]>
     <a [% link_a_attr %] href="[% make_uri('main') %]">
-            <i class="fa fa-user-o [% icon_class %]" title="[% menu_user_text %]"></i>
+      <i class="fa fa-user [% icon_class %]" title="[% menu_user_text %]"></i>
       <span [% head_attr_big    %] title="Login/Register">[% menu_user_text %]</span>
       <span [% head_attr_small  %] title="Login/Register">[% menu_user_text %]</span>
     </a>
