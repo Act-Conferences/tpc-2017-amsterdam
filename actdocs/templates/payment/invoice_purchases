@@ -46,16 +46,28 @@
       </td>
 [% END %]
 
-  [%
-    ex_vat_total = 0;
-    vat_total    = 0;
-    amount_total = 0;
-  %]
-  
+[%
+  ex_vat_total = 0;
+  vat_total    = 0;
+  amount_total = 0;
+
+  address_lines     = invoice.address.split("\n");
+  address_last      = address_lines.last FILTER lower;
+  from_nl           = address_last.search('(^\s*nl\s*\-?\s*\d{4}\s*[a-z]{2}\s|netherlands\s*$|nederland\s*$)');
+  donation_vat_rate = from_nl ? 0.21 : 0;
+%]
+
+[% IF 0 %]
+  <pre>[% invoice.address %]</pre>
+  <pre>[% global.request.user.country %]</pre>
+  <pre>[% address_last %]</pre>
+  <pre>[% from_nl %] => [% donation_vat_rate %]</pre>
+[% END %]
+
   [% FOREACH item IN order.items %]
     
     [%
-      vat_rate      = item.name.search('^Donation$') ? 0 : 0.21;
+      vat_rate      = item.name.search('^Donation$') ? donation_vat_rate : 0.21;
       ex_vat        = item.amount / (1+vat_rate) FILTER format('%.2f');
       vat           = item.amount - ex_vat;
       amount_total  = amount_total + item.amount;
