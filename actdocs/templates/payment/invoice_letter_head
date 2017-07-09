@@ -1,10 +1,12 @@
 <table border="0">
   <tr>
-    <td valign="middle" align="left">
-      <img
-    src="[% sender_logo %]" border="0" valign="top"
-    alt="Perl Programming Republic" width="160" height="160"
-      >
+    <td valign="top" align="left" >
+      <div  style="background-color:#fff;">
+        <img
+    src="[% sender_logo %]" border="0"
+    alt="WenzPerl Logo" width="180" height="176"
+        >
+      </div>
     </td>
     <td width="20"></td>
     <td valign="top">

@@ -1,5 +1,5 @@
 ﻿
-  invoices
+  invoice
     ├─ invoice_letter_head
     │   └─ invoice_sender
     └─ invoice_below_head
