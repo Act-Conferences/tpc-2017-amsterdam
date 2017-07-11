@@ -1,6 +1,6 @@
-<section class="mbr-section mbr-section-full">
+<section class="mbr-section">
 
-  <div class="mbr-table-cell">
+  <div class="mbr-section mbr-section__container mbr-section__container--middle">
 
     <div class="container">
       <div class="row">
@@ -29,25 +29,29 @@
  
   </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 text-xs-center">
-        
-        <div class="lead">
-          <p class="">
-            If you want to do the Perl community - and yourself a great favour,
-            then check out the various options we offer. Pick and choose to
-            to match your budget. We are sure you can find a great combination
-            and get the best deals!
-          </p>
-        </div>
-        <div>
-          <a class="btn btn-secondary" href="[% make_uri('/sponsoring.html') %]">
-            SEE THE SPONSORING MENU
-          </a>
+  <div class="mbr-section mbr-section__container mbr-section__container--middle">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-xs-center">
+          
+          <div class="lead">
+            <p class="">
+              If you want to do the Perl community - and yourself a great favour,
+              then check out the various options we offer. Pick and choose to
+              to match your budget. We are sure you can find a great combination
+              and get the best deals!
+            </p>
+          </div>
+          <div>
+            <a class="btn btn-secondary" href="[% make_uri('/sponsoring.html') %]">
+              SEE THE SPONSORING MENU
+            </a>
+          </div>
         </div>
       </div>
     </div>
+    
   </div>
-
+  
 </section>
