@@ -4,7 +4,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="mbr-section col-md-10">
+        <div class="mbr-section col-md-10" style="padding-top: 70px; padding-bottom: 20px;">
 
           <h2>Sponsors make for a better conference</h2>
 
@@ -33,7 +33,7 @@
     
     <div class="container">
       <div class="row">
-        <div class="mbr-section col-md-10">
+        <div class="mbr-section col-md-10" style="padding-top: 20px; padding-bottom: 90px;">
           
             <p class="">
               If you want to do the Perl community - and yourself a great favour,
