@@ -8,10 +8,22 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     
+    [% UNLESS
+        global.request.user.is_admin 
+        ||
+        global.request.user.is_news_admin
+        ||
+        global.request.user.is_users_admin
+        ||
+        global.request.user.is_talks_admin
+        ||
+        global.request.user.is_treasurer
+    %]
     ga('create', 'UA-101797498-1', 'auto');
     ga('send', 'pageview');
     </script>
     <!-- End Google Analytics -->
+    [% END %]
 
     <!-- link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap.min.css') %]" /> -->
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'font-awesome.min.css') %]" />
