@@ -16,7 +16,7 @@
         texts = [
            "All payments should be made by credit card through our online
             payment system. If you really cannot pay by credit card, please
-            contact us at orga@​theperlconference​.amsterdam",
+            contact us at orga@&#8203;theperlconference&#8203;.amsterdam",
             
            "To purchase your conference ticket, it's best to first make sure
             you're logged in and have registered to attend.",
