@@ -1,0 +1,13 @@
+[%
+    SET CMS.item = {
+        title = "Ruth Holloway",
+        image = "ruth_holloway.jpg",
+        intro =
+           "Ruth is currently a Perl Developer at cPanel in Houston, and also serves as chief of staff for an obnoxious cat.",
+        texts = [
+           "Ruth Holloway has been a system administrator and software developer for a long, long time, getting her professional start on a VAX 11/780, way back when.
+           She spent a lot of her career (so far) serving the technology needs of libraries, and has been a contributor since 2008 to the Koha open source library automation suite.
+           In her copious free time, she occasionally reviews old romance novels on her blog, and is working on her first novel.",
+        ],
+    }
+%]
