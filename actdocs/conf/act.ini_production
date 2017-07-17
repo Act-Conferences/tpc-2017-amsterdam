@@ -52,7 +52,7 @@ type        = YEF
 currency    = EUR
 open        = 1
 invoices    = 1
-products    = registration
+products    = registration upgrade
 
 [product_registration]
 name_en     = Registration
@@ -93,6 +93,14 @@ amount      = 255
 [product_registration_price9]
 name_en     = Unlimited... Coffee
 amount      = 485
+
+[product_upgrade]
+name_en     = Upgrade
+prices      = 1
+
+[product_upgrade_price1]
+name_en     = Upgrade from "Private" to "Corporate"
+amount      = 220
 
 # optional Flickr support
 [flickr]
