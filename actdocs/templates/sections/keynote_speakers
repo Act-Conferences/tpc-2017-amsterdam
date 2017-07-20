@@ -10,12 +10,12 @@
     <div class="mbr-cards-col col-xs-12 col-lg-4">
       <div class="container">
         <div class="card cart-block">
-          <div class="card-img"><img src="assets/images/wall-larry-perl-cowboy-450-600x600-40.jpg" class="card-img-top" alt="Larry Wall" title="Larry Wall"></div>
+          <div class="card-img"><img src="cms/topic/speakers/larry_wall.jpg" class="card-img-top" alt="Larry Wall" title="Larry Wall"></div>
           <div class="card-block">
           <h4 class="card-title">Larry Wall</h4>
           <h5 class="card-subtitle">The Father of Perl &amp; Perl 6</h5>
           <p class="card-text"><cite>“The three chief virtues of a programmer are: Laziness, Impatience and Hubris.”</cite></p>
-          
+
           </div>
         </div>
       </div>
@@ -23,12 +23,12 @@
     <div class="mbr-cards-col col-xs-12 col-lg-4">
       <div class="container">
         <div class="card cart-block">
-          <div class="card-img"><img src="assets/images/damian-conway-osdc-2011-600x600-98.jpg" class="card-img-top" alt="Damian Conway" title="Damina Conway"></div>
+          <div class="card-img"><img src="cms/topic/speakers/damian_conway.jpg" class="card-img-top" alt="Damian Conway" title="Damina Conway"></div>
           <div class="card-block">
             <h4 class="card-title">Damian Conway</h4>
             <h5 class="card-subtitle">Insane Regular Expressions</h5>
             <p class="card-text"><cite>“Programming is a Dark Art, and it always will be. The programmer is fighting against the two most destructive forces in the universe: entropy and human stupidity. These are not things you can overcome with a 'methodology' or on a schedule.”</cite></p>
-            
+
           </div>
         </div>
       </div>
@@ -36,19 +36,21 @@
     <div class="mbr-cards-col col-xs-12 col-lg-4">
       <div class="container">
         <div class="card cart-block">
-          <div class="card-img"><img src="assets/images/red-question-mark-png-215-600x600-51.png" class="card-img-top" alt="red question mark"></div>
+          <div class="card-img"><img src="cms/topic/speakers/ruth_holloway" class="card-img-top" alt="Ruth Holloway" title="Ruth Holloway"></div>
           <div class="card-block">
-            <h4 class="card-title">Mystery Guest</h4>
-            <h5 class="card-subtitle">Don't you love surprises … ?</h5>
-            <p class="card-text">Soon, our main sponsor will let you know who will be the third speaker in this row. Some interesting names have passed by, you won't be disapointed!</p>
-            
+            <h4 class="card-title">Ruth Holloway</h4>
+            <h5 class="card-subtitle">Ruth is currently a Perl Developer at cPanel in Houston.</h5>
+            <p class="card-text">Ruth Holloway has been a system administrator and software developer for a long, long time, getting her professional start on a VAX 11/780, way back when.
+            She spent a lot of her career (so far) serving the technology needs of libraries, and has been a contributor since 2008 to the Koha open source library automation suite.
+            In her copious free time, she occasionally reviews old romance novels on her blog, and is working on her first novel.</p>
+
           </div>
         </div>
       </div>
     </div>
-    
-    
-    
+
+
+
   </div>
 
   <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#sponsoring_intro"><i class="mbr-arrow-icon"></i></a></div>

@@ -9,7 +9,7 @@
     <span [% head_attr_small %]  title="View/manage talks & events">Conference</span>
     <b class="caret"></b>
   </a>
-  
+
   <ul class="dropdown-menu">
     <li><a [% item_a_attr %] href="[% make_uri('#venue_intro')            %]">Venue</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('sponsoring.html')         %]">Sponsoring</a></li>
@@ -17,14 +17,15 @@
     <li><a [% item_a_attr %] href="[% make_uri('where-to-stay.html')      %]">Where to stay</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('the-fabulous-team.html')  %]">Our team</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('tour-in-Amsterdam.html')  %]">Exploring Amsterdam</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('standards_of_conduct.html')  %]">Standards of Conduct</a></li>
 
-[%# payment %]  
+[%# payment %]
     <li [% div_li_attr %]></li>
     <li><a [% item_a_attr %] href="[% make_uri('how-to-register.html') %]">How to register</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('tickets.html') %]">Tickets</a></li>
 
-[%# below is the original users menu %]  
-  
+[%# below is the original users menu %]
+
     <li [% div_li_attr %]></li>
     <li><a [% item_a_attr %] href="[% make_uri('search')            %]">User Search</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('stats')             %]">User Statistics</a></li>
@@ -32,4 +33,3 @@
   </ul>
 
 </li>
-
