@@ -56,7 +56,7 @@ products    = registration upgrade
 
 [product_registration]
 name_en     = Registration
-prices      = 9
+prices      = 10
 
 [product_registration_price1]
 name_en     = Regular price
@@ -93,6 +93,10 @@ amount      = 255
 [product_registration_price9]
 name_en     = Unlimited... Coffee
 amount      = 485
+
+[product_registration_price10]
+name_en     = Speaker (one 20-minute talk)
+amount      = 85
 
 [product_upgrade]
 name_en     = Upgrade
