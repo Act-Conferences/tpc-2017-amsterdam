@@ -1,3 +1,38 @@
+[%
+  thekeys = ['Larry Wall', 'Damian Conway', 'Ruth Holloway'];
+  speaker = {};
+  
+  key = 'Larry Wall';
+  speakers.$key = speaker;
+  speaker.title     = key;
+  speaker.subtitle  = "The Father of Perl &amp; Perl 6";
+  speaker.text      = "The three chief virtues of a programmer are: Laziness, Impatience and Hubris.";
+  speaker.image     = "larry_wall.jpg";
+
+  key = 'Damian Conway';
+  speaker = {};
+  speakers.$key = speaker;
+  speaker.title     = key;
+  speaker.subtitle  = "Insane Regular Expressions";
+  speaker.text      = "Programming is a Dark Art, and it always will be. The programmer is fighting against the two most destructive forces in the universe: entropy and human stupidity. These are not things you can overcome with a 'methodology' or on a schedule.";
+  speaker.image     = "damian_conway.jpg";
+
+  key = 'Ruth Holloway';
+  speaker = {};
+  speakers.$key = speaker;
+  speaker.title     = key;
+  speaker.subtitle  = "Ruth is currently a Perl Developer at cPanel in Houston";
+  speaker.text      = "She spent a lot of her career (so far) serving the technology needs of libraries, and has been a contributor since 2008 to the Koha open source library automation suite.";
+  speaker.image     = "ruth_holloway.jpg";
+
+%]
+
+[%
+  key = 'Larry Wall';
+  speaker = speakers.$key;
+%]
+
+
 <section class="mbr-cards mbr-section mbr-section-nopadding" id="keynote_speakers" style="background-color: rgb(255, 255, 255);">
 
   <div class="mbr-cards-row row">
@@ -7,48 +42,29 @@
   </div>
 
   <div class="mbr-cards-row row">
-    <div class="mbr-cards-col col-xs-12 col-lg-4">
-      <div class="container">
-        <div class="card cart-block">
-          <div class="card-img"><img src="cms/topic/speakers/larry_wall.jpg" class="card-img-top" alt="Larry Wall" title="Larry Wall"></div>
-          <div class="card-block">
-          <h4 class="card-title">Larry Wall</h4>
-          <h5 class="card-subtitle">The Father of Perl &amp; Perl 6</h5>
-          <p class="card-text"><cite>“The three chief virtues of a programmer are: Laziness, Impatience and Hubris.”</cite></p>
+  
+    [% FOREACH key IN thekeys %]
+      [% speaker = speakers.$key %]
 
+      <div class="mbr-cards-col col-xs-12 col-lg-4">
+        <div class="container">
+          <div class="card cart-block">
+            <div class="card-img">
+              <img src="[% make_uri('cms/topic/speakers') %]/[% speaker.image %]" 
+                   class="card-img-top" alt="[% key %]" title="[% key %]"
+                   style="border-style:solid;border-width:4px;border-color:rgb(170,10,10);"
+              >
+            </div>
+            <div class="card-block">
+              <h4 class="card-title">[% speaker.title %]</h4>
+              <h5 class="card-subtitle">[% speaker.subtitle %]</h5>
+              <p class="card-text"><cite>“[% speaker.text %]”</cite></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="mbr-cards-col col-xs-12 col-lg-4">
-      <div class="container">
-        <div class="card cart-block">
-          <div class="card-img"><img src="cms/topic/speakers/damian_conway.jpg" class="card-img-top" alt="Damian Conway" title="Damina Conway"></div>
-          <div class="card-block">
-            <h4 class="card-title">Damian Conway</h4>
-            <h5 class="card-subtitle">Insane Regular Expressions</h5>
-            <p class="card-text"><cite>“Programming is a Dark Art, and it always will be. The programmer is fighting against the two most destructive forces in the universe: entropy and human stupidity. These are not things you can overcome with a 'methodology' or on a schedule.”</cite></p>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="mbr-cards-col col-xs-12 col-lg-4">
-      <div class="container">
-        <div class="card cart-block">
-          <div class="card-img"><img src="cms/topic/speakers/ruth_holloway.jpg" class="card-img-top" alt="Ruth Holloway" title="Ruth Holloway"></div>
-          <div class="card-block">
-            <h4 class="card-title">Ruth Holloway</h4>
-            <h5 class="card-subtitle">Ruth is currently a Perl Developer at cPanel in Houston.</h5>
-            <p class="card-text"><cite>"She spent a lot of her career (so far) serving the technology needs of libraries, and has been a contributor since 2008 to the Koha open source library automation suite."</cite></p>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
+    [% END %]
+    
   </div>
 
   <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#sponsoring_intro"><i class="mbr-arrow-icon"></i></a></div>
