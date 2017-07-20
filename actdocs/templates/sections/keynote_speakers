@@ -40,9 +40,7 @@
           <div class="card-block">
             <h4 class="card-title">Ruth Holloway</h4>
             <h5 class="card-subtitle">Ruth is currently a Perl Developer at cPanel in Houston.</h5>
-            <p class="card-text">Ruth Holloway has been a system administrator and software developer for a long, long time, getting her professional start on a VAX 11/780, way back when.
-            She spent a lot of her career (so far) serving the technology needs of libraries, and has been a contributor since 2008 to the Koha open source library automation suite.
-            In her copious free time, she occasionally reviews old romance novels on her blog, and is working on her first novel.</p>
+            <p class="card-text">"She spent a lot of her career (so far) serving the technology needs of libraries, and has been a contributor since 2008 to the Koha open source library automation suite."</p>
 
           </div>
         </div>
