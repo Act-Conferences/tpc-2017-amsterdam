@@ -40,7 +40,7 @@
           <div class="card-block">
             <h4 class="card-title">Ruth Holloway</h4>
             <h5 class="card-subtitle">Ruth is currently a Perl Developer at cPanel in Houston.</h5>
-            <p class="card-text">"She spent a lot of her career (so far) serving the technology needs of libraries, and has been a contributor since 2008 to the Koha open source library automation suite."</p>
+            <p class="card-text"><cite>"She spent a lot of her career (so far) serving the technology needs of libraries, and has been a contributor since 2008 to the Koha open source library automation suite."</cite></p>
 
           </div>
         </div>
