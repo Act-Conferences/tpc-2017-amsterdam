@@ -1,53 +1,29 @@
 [% WRAPPER ui title = loc("Edit a news item") %]
 
 
-  [%#
-    Required variable $items no longer gets filled in in 
-    Act::Handler::News::Edit
-    
-    A diff of source code from 2010 and 2017 shows:
-    
-137c137
-<             $fields->{items} = $news->items;
----
->             $fields->{title} = $news->{items}{ $Request{language} }{title};
-    
-    Note:
-    The variable $items does NOT multiple news items. Rather it holds various
-    language versions of a single news item.
-    It is a hash holding a single news item's titles and texts 
-    indexed by language, i.e.
-    
-      $items.en.title = English title
-      $items.en.text  = English text
-      etc.
-    
-    Since this template requires $items to be filled in, use the following
-    workaround:
-      - retrieve all news from global.news
-      - get relevant news_id from url arguments
-      - loop over news array and get correct entry based on news_id
-      
-    Unfortunately, this only works for published news. Unpublished news entries
-    are not supplied in global.news.
-  %]
+  <table border="1">
+    <tr>
+      <td colspan="2" style="background-color:lightgrey;">
+        news_id=[% news_id %]
+      </td>
+    </tr>
 
-  [% search_id = global.request.args.news_id %]
-  [% news = global.news %]
-  
-  [% lang = global.config.languages.keys.0 %]
-<p>No. of news items: [% news.size %]</p>
+    <tr>
+      <td>all keys in items</td>
+      <td>[% FOREACH lang IN items.keys %][% lang %][% END %]</td>
+    </tr>
+    
+    <tr>
+      <td>items.en.title</td>
+      <td>[% items.en.title %]</td>
+    </tr>
+    
+    <tr>
+      <td>items.en.text</td>
+      <td>[% items.en.text %]</td>
+    </tr>
+  </table>
 
-  [% FOREACH n = news %]
-    <p>Found: news_id=[% n.news_id %]</p>
-    [% IF search_id==n.news_id %]
-      [% news_id  = search_id %]
-      
-      [% items = n.items %]
-
-    [% END %]
-  [% END %]
-  
 
 [% IF preview;
      FOREACH lang = global.config.languages.keys;
