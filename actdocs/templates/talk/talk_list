@@ -1,10 +1,11 @@
 [% RETURN UNLESS talks.size %]
 [% INCLUDE js/mytalks.js %]
 
-<table class="table table-bordered">
+<table class="talksTable table table-bordered table-striped table-mobile">
   <thead>
     <tr>
       <th>{{Speaker}}</th>
+      <th width="10%">My favs</th>
       <th>{{Talk title}}</th>
       <th>{{Duration}}</th>
 
@@ -23,24 +24,21 @@
   </thead>
   <tbody>
     [% FOREACH t = talks %]
+
       <tr>
         <td>
             [% user_info(t.user) %]
         </td>
+        <td style="text-align: center;">
+          <!--
+          @Modified by Víctor Rivas
+          @Email vrivas@ujaen.es
+          @date 14-Jun-2015
+          @desc Trying to make a star appearing close to the user's favorite talks. The star will also be a link to modify the choice
+          -->
+          [% PROCESS talk/fav_ajax onetalk = t %]
+        </td>
         <td>
-          [% IF global.request.user.has_registered %]
-            <input type="checkbox"
-                   name="mt-[% t.talk_id %]"
-                   value="[% t.talk_id %]"
-                   [% IF global.request.user.is_my_talk(t.talk_id) %]
-                     title = "{{remove from personal schedule}}"
-                     checked = "checked"
-                   [% ELSE %]
-                     title = "{{add to personal schedule}}"
-                   [% END %]
-            />
-          [% END %]
-
           [% talk_link(t) %]
           [% talk_modify_link(t) %]
           [% IF t.url_abstract || t.url_talk %]<br />[[% END %]
@@ -71,5 +69,10 @@
         </td>
         [% END %]
       </tr>
+
     [% END %]
 </table>
+
+
+
+
