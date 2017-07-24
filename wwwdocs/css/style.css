@@ -508,6 +508,7 @@ p.message {
 .talksTable.table-bordered > tfoot > tr > td
 {
 	border-color:#ccc;
+	border: 0px;
 }
 
 .talksTable   a { color:white; }
