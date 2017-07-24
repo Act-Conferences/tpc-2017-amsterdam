@@ -483,3 +483,44 @@ p.message {
   .price_table_col4 {text-align:center;}
 }
 
+/* === styling for talks list === */
+
+#talks_page { color:grey; }
+
+.talksTable.table-striped>tbody>tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+.talksTable.table-striped > tbody > tr:nth-child(2n+1) > td {
+    background-color:rgb(130,10,10);
+}
+
+.talksTable {
+	color:#bbb;;
+}
+
+.talksTable.table-bordered, 
+.talksTable.table-bordered > thead > tr > th, 
+.talksTable.table-bordered > tbody > tr > th, 
+.talksTable.table-bordered > tfoot > tr > th, 
+.talksTable.table-bordered > thead > tr > td, 
+.talksTable.table-bordered > tbody > tr > td, 
+.talksTable.table-bordered > tfoot > tr > td
+{
+	border-color:#ccc;
+}
+
+.talksTable   a { color:white; }
+
+#htmltagcloud 				a {color:#eeeeee; }
+#htmltagcloud .tagcloud5 	a {color:#dddddd; }
+#htmltagcloud .tagcloud4 	a {color:#cccccc; }
+#htmltagcloud .tagcloud3 	a {color:#bbbbbb; }
+#htmltagcloud .tagcloud2 	a {color:#aaaaaa; }
+#htmltagcloud .tagcloud1 	a {color:#999999; }
+#htmltagcloud .tagcloud0 	a {color:#888888; }
+
+#talk_list_update .btn-primary {
+  background-color:#c0a375;
+  border-color:white;
+}

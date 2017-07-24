@@ -7,18 +7,18 @@
       <th>{{Speaker}}</th>
       <th width="10%">My favs</th>
       <th>{{Talk title}}</th>
-      <th>{{Duration}}</th>
+      <th style="text-align:center;">{{Duration}}</th>
 
       [% IF global.config.talks_languages %]
         <th>{{Language}}</th>
       [% END %]
 
       [% IF global.request.user.is_talks_admin OR global.config.talks_show_schedule %]
-        <th>{{Date}}</th>
+        <th style="text-align:center;">{{Date}}</th>
       [% END %]
 
       [% IF global.request.user.is_talks_admin %]
-        <th>{{Accepted}}</th>
+        <th style="text-align:center;">{{Accepted}}</th>
       [% END %]
     </tr>
   </thead>
@@ -51,17 +51,17 @@
           [% END %]
             [% IF t.url_abstract || t.url_talk %]][% END %]
         </td>
-        <td nowrap="nowrap">[% IF t.lightning %]
+        <td nowrap="nowrap"  style="text-align:center;">[% IF t.lightning %]
               {{lightning}}
             [% ELSE %]
-             [% t.duration %] {{minutes}}
+             [% t.duration %] min.
             [% END %]
         </td>
         [% IF global.config.talks_languages %]
         <td>[% global.config.talks_languages.${t.lang} %]</td>
         [% END %]
         [% IF global.request.user.is_talks_admin OR global.config.talks_show_schedule %]
-        <td align="center" nowrap="nowrap">[% IF t.datetime; date_format(t.datetime, 'datetime_short'); ELSE; '&nbsp;'; END %]</td>
+        <td align="center" nowrap="nowrap">[% IF t.datetime; date_format(t.datetime, '%a, %H:%M'); ELSE; '&nbsp;'; END %]</td>
         [% END %]
         [% IF global.request.user.is_talks_admin %]
         <td align="center">

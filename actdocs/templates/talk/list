@@ -1,3 +1,4 @@
+
 [%
   IF tag;
     title = loc("List of talks tagged <tag>", tag);
@@ -7,66 +8,21 @@
 %]
 [% WRAPPER ui title = title %]
 
-[%#
-<p id="conf_id"></p>
+<div id="talks_page">
+
 <script>
-    //var comps = location.pathname.split('/');
-    var x = act.conf_id();
-    document.getElementById("conf_id").innerHTML = x;
+  document.body.style.backgroundColor='rgb(109,10,0)';
 </script>
-%]
 
-<div style="display:none;" class="talksTotalSteal">[% talks_total %]  </div>
-<div style="display:none;" class="talksAcceptedSteal">[% talks_accepted %]  </div>
-<div style="display:none;" class="talksDuration">
-      <div>
-          <p>Total duration of accepted talks:</p>
-          <p>
-            <span>[% talks_duration div 60 %]</span> hours
-            <span>[% talks_duration % 60 %]</span> minutes
-          </p>
-      </div>
-</div>
-<div style="display:none;" class="talksLightning">
-        <p>
-          Accepted lightning talks:
-          <span>[% talks_lightning %]</span>
-        </p>
-</div>
-<div class="register listTalks">
-  <div class="panel panel-default">
-    <div class="panel-body">
-        [% IF talks_total == 0 %]
-          {{No talk was submitted yet.}}
-        [% ELSE %]
-          <div class="talksNumber"><span class="accepted">[% talks_accepted %]</span>
-            <div class="talksStatus">{{Accepted talks:}}</div>
-          </div>
-          <div class="talksNumber"><span class="submitted">[% talks_total %]</span>
-            <div class="talksStatus">{{Submitted talks:}}</div>
-          </div>
-        [% END %]
+<p>
+[% talks_accepted %] regular talks accepted
+[% IF global.request.user.is_talks_admin -%]
+  (of [% talks_total %] submitted)
+[%- END %].
+Total duration: [% talks_duration div 60 %] h [% talks_duration % 60 %] min.<br>
+[% talks_lightning %] lightning talks accepted.
 
-      [% IF global.request.user.is_talks_admin || global.request.user.has_talk %]
-      <!--   <p>
-        {{Accepted talks are shown in bold type.}}
-      </p> -->
-      [% END %]
-
-      [% IF global.request.user.is_talks_admin %]
-        <p>
-          {{Total duration of accepted talks:}}
-          [% talks_duration div 60 %] {{hours}}
-          [% talks_duration % 60 %] {{minutes}}
-        </p>
-        <p>
-          {{Accepted lightning talks:}}
-          [% talks_lightning %]
-        </p>
-      [% END %]
-    </div>
-  </div>
-</div>
+</p>
 
   [% IF !tag AND tagcloud %]
     <h2>{{Tags}}</h2>
@@ -112,12 +68,17 @@
   [% END %]
 
   [% IF global.request.user.is_talks_admin %]
-    <br />
-
     [% IF talks_total != 0 %]
-      <input type="submit" class="btn btn-primary sendLink table" name="ok" value="{{Update}}" />
+      <div class="row">
+        <div class="col-md-offset-8 col-md-4"  id="talk_list_update" >
+          <input type="submit" class="btn btn-primary sendLink table" name="ok" value="Update accepted talks" />
+        </div>
+      </div>
     [% END %]
 
     </form>
   [% END %]
+
+</div>
 [% END %]
+
