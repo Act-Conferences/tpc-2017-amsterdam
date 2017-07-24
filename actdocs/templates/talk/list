@@ -1,26 +1,56 @@
 [%
-  IF tag; 
+  IF tag;
     title = loc("List of talks tagged <tag>", tag);
   ELSE;
     title = loc("List of talks");
   END;
 %]
 [% WRAPPER ui title = title %]
+
+[%#
+<p id="conf_id"></p>
+<script>
+    //var comps = location.pathname.split('/');
+    var x = act.conf_id();
+    document.getElementById("conf_id").innerHTML = x;
+</script>
+%]
+
+<div style="display:none;" class="talksTotalSteal">[% talks_total %]  </div>
+<div style="display:none;" class="talksAcceptedSteal">[% talks_accepted %]  </div>
+<div style="display:none;" class="talksDuration">
+      <div>
+          <p>Total duration of accepted talks:</p>
+          <p>
+            <span>[% talks_duration div 60 %]</span> hours
+            <span>[% talks_duration % 60 %]</span> minutes
+          </p>
+      </div>
+</div>
+<div style="display:none;" class="talksLightning">
+        <p>
+          Accepted lightning talks:
+          <span>[% talks_lightning %]</span>
+        </p>
+</div>
+<div class="register listTalks">
   <div class="panel panel-default">
     <div class="panel-body">
-      <p>
         [% IF talks_total == 0 %]
           {{No talk was submitted yet.}}
         [% ELSE %]
-          {{Submitted talks:}} [% talks_total %]<br />
-          {{Accepted talks:}} [% talks_accepted %]
+          <div class="talksNumber"><span class="accepted">[% talks_accepted %]</span>
+            <div class="talksStatus">{{Accepted talks:}}</div>
+          </div>
+          <div class="talksNumber"><span class="submitted">[% talks_total %]</span>
+            <div class="talksStatus">{{Submitted talks:}}</div>
+          </div>
         [% END %]
-      </p>
 
       [% IF global.request.user.is_talks_admin || global.request.user.has_talk %]
-        <p>
-          {{Accepted talks are shown in bold type.}}
-        </p>
+      <!--   <p>
+        {{Accepted talks are shown in bold type.}}
+      </p> -->
       [% END %]
 
       [% IF global.request.user.is_talks_admin %]
@@ -36,6 +66,7 @@
       [% END %]
     </div>
   </div>
+</div>
 
   [% IF !tag AND tagcloud %]
     <h2>{{Tags}}</h2>
@@ -84,7 +115,7 @@
     <br />
 
     [% IF talks_total != 0 %]
-      <input type="submit" class="btn btn-primary" name="ok" value="{{Update}}" />
+      <input type="submit" class="btn btn-primary sendLink table" name="ok" value="{{Update}}" />
     [% END %]
 
     </form>

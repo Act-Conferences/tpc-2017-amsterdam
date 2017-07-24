@@ -1,5 +1,30 @@
 [% WRAPPER ui title = loc("Edit a news item") %]
 
+
+  <table border="1">
+    <tr>
+      <td colspan="2" style="background-color:lightgrey;">
+        news_id=[% news_id %]
+      </td>
+    </tr>
+
+    <tr>
+      <td>all keys in items</td>
+      <td>[% FOREACH lang IN items.keys %][% lang %][% END %]</td>
+    </tr>
+    
+    <tr>
+      <td>items.en.title</td>
+      <td>[% items.en.title %]</td>
+    </tr>
+    
+    <tr>
+      <td>items.en.text</td>
+      <td>[% items.en.text %]</td>
+    </tr>
+  </table>
+
+
 [% IF preview;
      FOREACH lang = global.config.languages.keys;
        IF global.config.languages.keys.size > 1 %]
@@ -80,9 +105,6 @@ END %]
   </td>
 </tr>
 
-
-   </td>
-</tr>
 <tr>
    <td colspan="3" align="right">
       <input type="submit" name="preview" value="{{Preview}}" />
