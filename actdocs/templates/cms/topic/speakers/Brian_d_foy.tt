@@ -6,7 +6,7 @@
            "Brian d foy is a prolific Perl trainer and writer, and runs The Perl Review to help people use and understand Perl through educational, consulting, code review, and more.",
         texts = [
            "Brian d foy was the publisher and editor of The Perl Review, a magazine devoted to Perl and co-author of several books on Perl including Learning Perl, Intermediate Perl and Mastering Perl.
-           He was also the founder of Perl Mongers, the founder of the White Camel Awards, a frequent speaker at conferences including The Perl Conference and YAPC (Yet Another Perl Conference) and a veteran of the Iraq War.
+           He was also the founder of Perl Mongers, the founder of the White Camel Awards, a frequent speaker at conferences including The Perl Conference and YAPC (Yet Another Perl Conference).
            He is the author of multiple Perl modules on CPAN and maintains the perlfaq portions of the core Perl documentation.
            He was a partner at Stonehenge Consulting Services from 1998 to 2009.",
         ],
