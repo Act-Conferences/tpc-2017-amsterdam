@@ -47,7 +47,7 @@ $(function () {
                 save_inversion(cb.data('talkid'), 0, function(e){
                     update_tooltip(cb);
                     cb.data('talkfav','0');
-                    cb.find('img').attr('src', act.make_uri(conf_id, 'img/no-fav-3.png') );
+                    cb.find('img').attr('src', act.make_uri(conf_id, 'img/amsterdam-kruisje-outline.png') );
                     if(cb.data('needreload'))
                         setTimeout(function(){ location.reload(); }, 300);
                 });
@@ -55,7 +55,7 @@ $(function () {
                 save_inversion(cb.data('talkid'), 1, function(e){
                     update_tooltip(cb);
                     cb.data('talkfav','1');
-                    cb.find('img').attr('src', act.make_uri(conf_id, 'img/fav-3.png') );
+                    cb.find('img').attr('src', act.make_uri(conf_id, 'img/amsterdam-kruisje-filled.png') );
                     if(cb.data('needreload'))
                         setTimeout(function(){ location.reload(); }, 300);
                 });
