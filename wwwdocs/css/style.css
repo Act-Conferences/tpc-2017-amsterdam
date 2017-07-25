@@ -85,25 +85,28 @@ p.message {
   border: 0 !important;
 }
 .venue .alert {
-  background-color: #FFCC00;
+  background-color: #AA0A0A;
 }
 .out .alert {
   background-color: #EEEEEE;
 }
-.r1 .alert {
+.r0 .alert {
   background-color: #FFD3D3;
 }
+.r1 .alert {
+  background-color: #D3D3D3;
+}
 .r2 .alert {
-  background-color: #D3FFD3;
+  background-color: #D3D3D3;
 }
 .r3 .alert {
-  background-color: #D3D3FF;
+  background-color: #D3D3D3;
 }
 .r4 .alert {
-  background-color: #FFFFD3;
+  background-color: #D3D3D3;
 }
 .r5 .alert {
-  background-color: #D3FFFF;
+  background-color: #D3D3D3;
 }
 .mtbutton {
   cursor:pointer;
