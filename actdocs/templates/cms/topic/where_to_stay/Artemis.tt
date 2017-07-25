@@ -3,7 +3,7 @@
         title = "Artemis, Dutch Design",
         image = "artemis_room.jpg",
         large = "artemis_hall.jpg",
-        intro = "Luxery and design, just minutes from B.Amsterdam, the venue",
+        intro = "Luxury and design, just minutes from B.Amsterdam, the venue",
         price = 100, # per night
         venue =   5, # walking
         inner =  30, # 20mins tram 2 + 10mins walk
