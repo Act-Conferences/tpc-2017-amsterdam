@@ -5,7 +5,7 @@
   <thead>
     <tr>
       <th>{{Speaker}}</th>
-      <th width="10%">My favs</th>
+      <th width="20%" style="text-align:center;">You're going?</th>
       <th>{{Talk title}}</th>
       <th style="text-align:center;">{{Duration}}</th>
 
@@ -36,7 +36,9 @@
           @date 14-Jun-2015
           @desc Trying to make a star appearing close to the user's favorite talks. The star will also be a link to modify the choice
           -->
-          [% PROCESS talk/fav_ajax onetalk = t %]
+          [% IF t.accepted %]
+            [% PROCESS talk/fav_ajax this_talk_id=t.talk_id %]
+          [% END %]
         </td>
         <td>
           [% talk_link(t) %]

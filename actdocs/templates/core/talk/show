@@ -1,34 +1,21 @@
 [% INCLUDE js/mytalks.js %]
 [% conf_id = global.request.conference %]
 
+<script>
+  document.body.style.backgroundColor='rgb(109,10,0)';
+</script>
+
 <div class="row register show-talk">
   <div class="panel panel-default">
     <div class="panel-body">
 
-    [% IF global.request.user.has_registered %]
-
+      [%# the favs toggle creates multiple identical attended if talk is not accepted %]
+      [%# not showing it for non-accepted is just as well %]
+      [% IF global.request.user.has_registered AND accepted %]
         <div class="text-right">
-          <a href="/[% conf_id %]/talk/[% talk_id %]" style="margin-right:5px"
-          [% IF global.request.user.is_my_talk(talk_id) %]
-              title="{{remove from personal schedule}}"
-              data-toggle="tooltip" data-placement="top"
-              class="talk-checkbox" data-needreload="1"
-              data-talkfav="1" data-talkid="[% talk_id %]"
-              data-titlerev="{{add to personal schedule}}">
-            <img src="/[% conf_id %]/img/fav-3.png" width="20px">
-          [% ELSE %]
-              title="{{add to personal schedule}}"
-              data-toggle="tooltip" data-placement="top"
-              class="talk-checkbox" data-needreload="1"
-              data-talkfav="0" data-talkid="[% talk_id %]"
-              data-titlerev="{{remove from personal schedule}}">
-            <img src="/[% conf_id %]/img/no-fav-3.png" width="20px">
-          [% END %]
-          </a>
+          [% PROCESS talk/fav_ajax this_talk_id=talk_id data_needreload='1' %]
         </div>
       [% END %]
-
-
 
       <div class="col-md-6 form-horizontal">
         <div class="form-group">
@@ -45,7 +32,7 @@
 
         [% IF user.pm_group %]
           <div class="form-group">
-            <label class="col-xs-4 control-label">[% loc('from').ucfirst %]:</label>
+            <label class="col-xs-4 control-label">[% loc('from') FILTER ucfirst %]:</label>
             <div class="col-xs-8 ">
               <p class="form-control-static">
                 [% IF user.pm_group_url %]

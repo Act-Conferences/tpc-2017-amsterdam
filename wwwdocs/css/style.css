@@ -498,7 +498,9 @@ p.message {
     background-color:rgb(130,10,10);
 }
 
-.talksTable {
+.talksTable ,
+.show-talk
+{
 	color:#bbb;;
 }
 
@@ -514,7 +516,17 @@ p.message {
 	border: 0px;
 }
 
-.talksTable   a { color:white; }
+.talksTable   a ,
+.show-talk a
+{ 
+  color:white; 
+}
+
+.show-talk ,
+.show-talk .panel
+{
+  background-color:rgb(109,10,10);
+}
 
 #htmltagcloud 				a {color:#eeeeee; }
 #htmltagcloud .tagcloud5 	a {color:#dddddd; }
