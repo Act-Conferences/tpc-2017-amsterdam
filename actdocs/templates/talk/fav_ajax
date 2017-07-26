@@ -1,0 +1,21 @@
+[% conf_id = global.request.conference %]
+          [% IF global.request.user.has_registered %]
+          <a href="/[% conf_id %]/talk/[% this_talk_id %]"
+                   [%# For best toggling state, reversed test and this_talk_id stored in tag data- items: %]
+                   [% IF global.request.user.is_my_talk(this_talk_id) %]
+                     title="{{remove from personal schedule}}"
+                     data-toggle="tooltip" data-placement="top"
+                     class="talk-checkbox" data-needreload="[% data_needreload %]"
+                     data-talkfav="1" data-talkid="[% this_talk_id %]"
+                     data-titlerev="{{add to personal schedule}}">
+                     <img src="/[% conf_id %]/img/amsterdam-kruisje-filled.png" width="23px">
+                   [% ELSE %]
+                     title="{{add to personal schedule}}"
+                     data-toggle="tooltip" data-placement="top"
+                     class="talk-checkbox" data-needreload="[% data_needreload %]"
+                     data-talkfav="0" data-talkid="[% this_talk_id %]"
+                     data-titlerev="{{remove from personal schedule}}">
+                     <img src="/[% conf_id %]/img/amsterdam-kruisje-outline.png" width="23px">
+                  [% END %]
+          </a>
+          [% END %]

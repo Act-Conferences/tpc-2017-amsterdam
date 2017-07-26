@@ -1,41 +1,28 @@
+
 [%
-  IF tag; 
+  IF tag;
     title = loc("List of talks tagged <tag>", tag);
   ELSE;
     title = loc("List of talks");
   END;
 %]
 [% WRAPPER ui title = title %]
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <p>
-        [% IF talks_total == 0 %]
-          {{No talk was submitted yet.}}
-        [% ELSE %]
-          {{Submitted talks:}} [% talks_total %]<br />
-          {{Accepted talks:}} [% talks_accepted %]
-        [% END %]
-      </p>
 
-      [% IF global.request.user.is_talks_admin || global.request.user.has_talk %]
-        <p>
-          {{Accepted talks are shown in bold type.}}
-        </p>
-      [% END %]
+<div id="talks_page">
 
-      [% IF global.request.user.is_talks_admin %]
-        <p>
-          {{Total duration of accepted talks:}}
-          [% talks_duration div 60 %] {{hours}}
-          [% talks_duration % 60 %] {{minutes}}
-        </p>
-        <p>
-          {{Accepted lightning talks:}}
-          [% talks_lightning %]
-        </p>
-      [% END %]
-    </div>
-  </div>
+<script>
+  document.body.style.backgroundColor='rgb(109,10,0)';
+</script>
+
+<p>
+[% talks_accepted %] regular talks accepted
+[% IF global.request.user.is_talks_admin -%]
+  (of [% talks_total %] submitted)
+[%- END %].
+Total duration: [% talks_duration div 60 %] h [% talks_duration % 60 %] min.<br>
+[% talks_lightning %] lightning talks accepted.
+
+</p>
 
   [% IF !tag AND tagcloud %]
     <h2>{{Tags}}</h2>
@@ -81,12 +68,17 @@
   [% END %]
 
   [% IF global.request.user.is_talks_admin %]
-    <br />
-
     [% IF talks_total != 0 %]
-      <input type="submit" class="btn btn-primary" name="ok" value="{{Update}}" />
+      <div class="row">
+        <div class="col-md-offset-8 col-md-4"  id="talk_list_update" >
+          <input type="submit" class="btn btn-primary sendLink table" name="ok" value="Update accepted talks" />
+        </div>
+      </div>
     [% END %]
 
     </form>
   [% END %]
+
+</div>
 [% END %]
+
