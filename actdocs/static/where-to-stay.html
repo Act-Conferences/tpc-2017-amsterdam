@@ -38,7 +38,7 @@
       class="mbr-section mbr-parallax-background"
       id="msg-box6-h"
       style="
-        background-image: url([% '/tpc-2017-amsterdam/cms/topic/where_to_stay/' _ item.large %]);
+        background-image: url([% "/${global.request.conference}/cms/topic/where_to_stay/" _ item.large %]);
         padding-top: 120px;
         padding-bottom: 120px;
       ">
@@ -53,13 +53,13 @@
                 [% PROCESS description item = item %]
               </div>
               <div class="mbr-table-cell mbr-left-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 40%;">
-                <div class="mbr-figure"><img src="[% '/tpc-2017-amsterdam/cms/topic/where_to_stay/' _ item.image %]"></div>
+                <div class="mbr-figure"><img src="[% "/${global.request.conference}/cms/topic/where_to_stay/" _ item.image %]"></div>
               </div>
               
             [% ELSE %]
               
               <div class="mbr-table-cell mbr-left-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 40%;">
-                <div class="mbr-figure"><img src="[% '/tpc-2017-amsterdam/cms/topic/where_to_stay/' _ item.image %]"></div>
+                <div class="mbr-figure"><img src="[% "/${global.request.conference}/cms/topic/where_to_stay/" _ item.image %]"></div>
               </div>
               <div class="mbr-table-cell col-md-5 text-xs-center text-md-left content-size">
                 [% PROCESS description item = item %]
