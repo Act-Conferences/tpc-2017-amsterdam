@@ -5,7 +5,7 @@
         tasks = "Has to keep the website running",
         intro = "I'm an interpreter too...",
         texts = [
-"I'm actually an interpreter of the other kind - the one that sits in a booth and is expected to reproduce the things someone says in one natural language in another natural language on-the-fly. But I'm also a geek at heart and most of my activities in life start with writing some Perl code to support me in it, and so I started hanging out with the Dutch Perl Mongers. Then I somehow ended up with the task of coming up with a website for the Dutch Perl workshops every year and now this conference... Having said that, where the design looks good, it's probably Theo's work.",
+"I'm actually an interpreter of the other kind - the one that sits in a booth and is expected to reproduce the things someone says in one natural language in another natural language on-the-fly. But I'm also a geek at heart and most of my activities in life start with writing some Perl code to support me in it, and so I started hanging out with the Dutch Perl Mongers. Then I somehow ended up with the task of coming up with a website for the Dutch Perl workshops every year and now this conference... Having said that, where the design looks good, it's probably Theo's work, and I'm very grateful to Melinda for taking on quite a bit of the content.",
 
 "If you're equally intrigued by the syntax of natural and computer languages and/or have ever failed or succeeded in learning Mandarin, feel free to seek me out for a chat at the conference!",
         ],
