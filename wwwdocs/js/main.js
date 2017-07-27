@@ -47,7 +47,7 @@ $(function () {
                 save_inversion(cb.data('talkid'), 0, function(e){
                     update_tooltip(cb);
                     cb.data('talkfav','0');
-                    cb.find('img').attr('src', act.make_uri(conf_id, 'img/amsterdam-plusje-plusje.png') );
+                    cb.find('img').attr('src', act.make_uri(conf_id, 'img/amsterdam-plusje-outline.png') );
                     if(cb.data('needreload'))
                         setTimeout(function(){ location.reload(); }, 300);
                 });
