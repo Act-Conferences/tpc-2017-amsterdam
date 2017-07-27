@@ -15,7 +15,7 @@
                      class="talk-checkbox" data-needreload="[% data_needreload %]"
                      data-talkfav="0" data-talkid="[% this_talk_id %]"
                      data-titlerev="{{remove from personal schedule}}">
-                     <img src="/[% conf_id %]/img/amsterdam-plusje.png" width="29px">
+                     <img src="/[% conf_id %]/img/amsterdam-plusje-outline.png" width="29px">
                   [% END %]
           </a>
           [% END %]
