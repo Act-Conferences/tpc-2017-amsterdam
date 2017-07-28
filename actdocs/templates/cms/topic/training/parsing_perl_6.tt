@@ -1,0 +1,36 @@
+[%
+    SET CMS.item = {
+        title       = "Parsing Perl 6",
+        trainer     = "Damian Conway",
+        image       = "damian_conway.jpg",
+        intro       = "Parsing with regular expressions and grammars in Perl 6 is the process of detecting and verifying the structure of incoming data and then processing that data so as to make it available to a program in convenient ways.",
+        texts       = [
+           "This full-day tutorial will introduce beginner and intermediate programmers to the powerful and efficient parsing mechanisms built into Perl 6, and will explore specific techniques for parsing data in a variety of commonly used formats.
+           Topics covered in the full course include:",
+        ],
+        topics      = [
+           "topic Simple parsing with regexes",
+           "topic Structured parsing with grammars",
+           "topic dealing with XML and other tagged formats",
+           "topic extracting data structures from structured data",
+           "topic coping with incomplete, malformed, and ambiguous data",
+           "topic integrating parsing and object oriented programming",
+           "topic data mining (parsing as a data recognition tool)",
+           "topic error detection and consistency checking (parsing as a data validation tool)",
+           "topic structured I/O (parsing as a data acquisition tool)",
+           "topic recognition and extraction (parsing as a data search tool)",
+           "topic hierarchical data processing (parsing as a data transformation tool)",
+        ]
+        price       = 250,
+        date        = "Monday 7 August 2017, 09:00-17:00",
+        time_start  = "09:00",
+        time_end    = "17:00",
+        audience    = "Perl 5 or Perl 6 programmers who are familiar with simple regular expressions.
+                      The techniques presented are not restricted to the particular applications mentioned,
+                      and will be useful to anyone who needs to process or transform structured textual data of any kind.",
+        forms = { # be warned, these values are in Act.ini
+            'product_trainingmon'  = "1",
+            'price-trainingmon'    = "2"
+        },
+    }
+%]

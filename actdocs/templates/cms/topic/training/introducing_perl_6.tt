@@ -1,0 +1,27 @@
+[%
+    SET CMS.item = {
+        title       = "Introducing Perl 6",
+        trainer     = "Jeff Goff",
+        image       = "",
+        intro       = "Jeffrey Goff offers an introduction to Perl 6, a powerful new language combining the pedigree of Perl 5 with a brand new metaprogramming system, built-in concurrency, and software-definable grammars, among many other features.",
+        texts       = [
+           "Jeffrey Goff offers an introduction to Perl 6, a powerful new language combining the pedigree of Perl 5 with a brand new metaprogramming system, built-in concurrency, and software-definable grammars, among many other features. Starting from one-liners like "Hello, world!" Jeffrey explores all of the programming styles that Perl 6 has on offer, from basic procedural programming to object-oriented style, aspect-oriented, functional programming, and even logic programming. From the basics of sigils (the $ signs that so many scratch their heads over) and context, you'll banish lazy evaluation, march through infinite lists, and stalk the wild hyperoperators. Jeffrey introduces simple variables and user I/O by way of a guessing game. After discussing variables and how they're affected by the context they're used in, Jeffrey delves into what's traditionally been the core of Perl: regular expressions. Starting with some simple matching tasks, Jeffrey explains how to parse what even Perl 5 regular expressions can't tackle with a custom grammar. This custom grammar helps teach you object orientation and aspect-oriented programming. You'll then build an interpreter with the help of some hyperoperators and use Perl 6 roles to construct both an interpreter and assembler inside Perl 6. Jeffrey also discusses the community surrounding the language, how to find other programmers, and how to find and share your Perl 6 code. You'll walk out of the tutorial with a solid grasp of the fundamentals of Perl 6 and an exposure to what lies beyond the world of basic scripting.",
+
+           "Materials or downloads needed in advance:
+            Attendees should bring a laptop with at least 4GB of RAM and a working Perl 6 installation from either Docker (recommended for Mac or Linux), Rakudobrew (recommended on Linux, and what the instructor uses inside his VM), or the MSI installer on Windows.",
+        ],
+        topics      = [
+
+        ]
+        price       = 250,
+        date        = "Tuesday 8 August 2017, 09:00-17:00",
+        time_start  = "09:00",
+        time_end    = "17:00",
+        audience    = "Attendees should be familiar with at least one programming language (C, JavaScript, Python, Ruby, etc.).
+                      While object orientation will be discussed, you do not need to be familiar with this beforehand.",
+        forms = { # be warned, these values are in Act.ini
+            'product_trainingmon'  = "1",
+            'price-trainingmon'    = "2"
+        },
+    }
+%]
