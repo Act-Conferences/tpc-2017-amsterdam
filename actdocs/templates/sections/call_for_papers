@@ -1,6 +1,6 @@
 <section
   class="mbr-info mbr-section mbr-section-md-padding mbr-parallax-background mbr-after-navbar"
-  style="background-image: url([% make_uri('/assets/images/call-for-papers-homepage-2000x1046.jpg') %]); padding-top: 100px; padding-bottom: 70px;"
+  style="background-image: url([% make_uri('/assets/images/call-for-papers-homepage-2000x1046.jpg') %]); padding-top: 100px; padding-bottom: 70px;" id='call_for_papers'
 >
   <div class="container">
     <div class="row">
@@ -15,7 +15,7 @@
                 href=[% make_uri('login?destination') _ '=' _ make_uri('/index.html') %]
                 class="btn btn-white"
               >
-                LOGIN FIRST & PROPOSE
+                LOGIN FIRST &amp; PROPOSE
               </a>
               
             [% ELSIF NOT global.request.user.has_registered %]
@@ -24,7 +24,7 @@
                 href=[% make_uri('register') %]
                 class="btn btn-white"
               >
-                JOIN FIRST & PROPOSE
+                JOIN FIRST &amp; PROPOSE
               </a>
               
             [% ELSE %]
@@ -42,11 +42,11 @@
         </div>
         
         <div class="mbr-table-cell mbr-right-padding-md-up col-md-8 text-xs-center text-md-left">
-          <h3 class="mbr-info-title mbr-section-title display-2" style="color: rgb(255, 255, 255);">
-            Lets talk about it!
+          <h3 class="mbr-info-title mbr-section-title display-2" style="color: rgb(255, 255, 255);font-size:140%;">
+            Your lightning talk?
           </h3>
           <h2 class="mbr-info-subtitle mbr-section-subtitle" style="color: rgb(255, 255, 255);">
-            We openened a 4th parallel breakout session and extended the "Call for Papers" time
+            The schedule is nearing completion, so we can no longer accept regular talks, but we still welcome lightning talks!
           </h2>
         </div>
         
