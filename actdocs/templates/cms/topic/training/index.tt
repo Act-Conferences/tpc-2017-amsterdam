@@ -1,0 +1,30 @@
+[%
+    SET CMS.index = {
+        title = "Top Class Training to get you to the Next Level",
+        intro =
+           "The two days before the actual Perl Conference, there is time for
+            additional training. Don't miss out on them if you want improve your
+            skills and knowledge
+            ",
+        items = [
+            "mastering_perl",
+            "parsing_perl_6",
+            "effective_perl_programming",
+            "introducing_perl_6",
+            "presentation_aikido",
+        ],
+        texts = [
+           "Each of the well known trainers are very experienced trainers and do
+            give training on a variety of subjects.",
+           "The classes are targeted for different audience and some may require
+            a little basic level of understanding. Others may require you to do
+            some little homework before the training, so you arrive prepared",
+           "We've negotiated with most knowledgable trainers and think we got
+            the best deal ever for an entire day training.",
+           "On top of that - for any TPCiA speaker - is ... 'for the benefit of
+            the conference', an all low price offer for 'Presentation Aikido' on
+            Tuesday. Get prepared for your presentation!"
+        ],
+        image = 'training.jpg',
+    }
+%]
