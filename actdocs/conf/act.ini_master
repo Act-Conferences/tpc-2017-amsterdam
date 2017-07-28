@@ -52,7 +52,7 @@ type = Fake
 currency    = EUR
 open        = 1
 invoices    = 1
-products    = registration training upgrade
+products    = registration trainingmon trainingtue upgrade
 
 [product_registration]
 name_en     = Registration
@@ -98,29 +98,37 @@ amount      = 485
 name_en     = Speaker (one 20-minute talk)
 amount      = 85
 
-[product_training]
-name_en     = Training (full day 9:00 - 17:00 h)
-prices      = 5
+[product_trainingmon]
+name_en     = Training (Monday 7 Aug., full day 9:00 - 17:00 h)
+prices      = 2
 
-[product_training_price1]
-name_en     = "Mastering Perl", Brian D. Foy, Mon 7 Aug.
+[product_trainingmon_price1]
+name_en     = "Mastering Perl", brian d foy
 amount      = 150
 
-[product_training_price2]
-name_en     = "Parsing Perl 6", Damian Conway, Mon 7 Aug.
+[product_trainingmon_price2]
+name_en     = "Parsing Perl 6", Damian Conway
 amount      = 150
 
-[product_training_price3]
-name_en     = "Effective Perl Programming", Brian D. Foy, Tue 8 Aug.
+[product_trainingtue]
+name_en     = Training (Tuesday 8 Aug., full day 9:00 - 17:00 h)
+prices      = 4
+
+[product_trainingtue_price1]
+name_en     = "Effective Perl Programming", brian d foy
 amount      = 150
 
-[product_training_price4]
-name_en     = "Presentation Aikido", Damian Conway, Tue 8 Aug.
+[product_trainingtue_price2]
+name_en     = "Introducing Perl 6", Jeff 'DrForr' Goff
 amount      = 150
 
-[product_training_price5]
-name_en     = "Introducing Perl 6", Jeff 'DrForr' Goff, Tue 8 Aug.
+[product_trainingtue_price3]
+name_en     = "Presentation Aikido", Damian Conway
 amount      = 150
+
+[product_trainingtue_price4]
+name_en     = "Presentation Aikido", Damian Conway (special price for speakers, at least one 20-minute talk)
+amount      = 55
 
 [product_upgrade]
 name_en     = Upgrade
