@@ -1,6 +1,6 @@
 [general]
-full_uri   = http://theperlconference.amsterdam/
-#full_uri  = http://act.perlconference.org/tpc-2017-amsterdam/
+#full_uri = http://theperlconference.amsterdam/
+full_uri  = http://act.perlconference.org/tpc-2017-amsterdam/
 #full_uri  = http://cv:9000/yapc2017/
 #full_uri  = http://test.mongueurs.net/tpc-2017-amsterdam/
 languages = en
@@ -29,7 +29,7 @@ notify_accept = 1
 edition_open  = 0
 show_schedule = 1
 durations  = 20 45 70
-start_date = 2017-08-09 08:00:00
+start_date = 2017-08-07 08:00:00
 end_date   = 2017-08-11 20:00:00
 levels = 4
 #languages = fr en
@@ -41,23 +41,27 @@ level3_name_en = Intermediate
 level4_name_en = Advanced
 
 [rooms]
-rooms = r0 r1 r2 r3
+rooms = r0 r1 r2 r3 t1 t2 t3
 r0_name_en = "0.e.1 the Wiechert --- Main Hall"
 r1_name_en = "0.e.2 the Richard"
 r2_name_en = "0.e.3 the Muhammed"
 r3_name_en = "0.e.4 the Chris"
+
+t1_name_en = "training room 1"
+t2_name_en = "training room 2"
+t3_name_en = "training room 3"
 
 [payment]
 type        = YEF
 #type = Fake
 currency    = EUR
 open        = 1
-invoices    = 0
-products    = registration upgrade
+invoices    = 1
+products    = registration trainingmon trainingtue upgrade
 
 [product_registration]
 name_en     = Registration
-prices      = 9
+prices      = 10
 
 [product_registration_price1]
 name_en     = Regular price
@@ -94,6 +98,42 @@ amount      = 255
 [product_registration_price9]
 name_en     = Unlimited... Coffee
 amount      = 485
+
+[product_registration_price10]
+name_en     = Speaker (one 20-minute talk)
+amount      = 85
+
+[product_trainingmon]
+name_en     = Training (Monday 7 Aug., full day 9:00 - 17:00 h)
+prices      = 2
+
+[product_trainingmon_price1]
+name_en     = "Mastering Perl", brian d foy
+amount      = 150
+
+[product_trainingmon_price2]
+name_en     = "Parsing Perl 6", Damian Conway
+amount      = 150
+
+[product_trainingtue]
+name_en     = Training (Tuesday 8 Aug., full day 9:00 - 17:00 h)
+prices      = 4
+
+[product_trainingtue_price1]
+name_en     = "Effective Perl Programming", brian d foy
+amount      = 150
+
+[product_trainingtue_price2]
+name_en     = "Introducing Perl 6", Jeff 'DrForr' Goff
+amount      = 150
+
+[product_trainingtue_price3]
+name_en     = "Presentation Aikido", Damian Conway
+amount      = 150
+
+[product_trainingtue_price4]
+name_en     = "Presentation Aikido", Damian Conway (special price for speakers)
+amount      = 55
 
 [product_upgrade]
 name_en     = Upgrade
