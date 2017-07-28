@@ -131,7 +131,7 @@ name_en     = "Presentation Aikido", Damian Conway
 amount      = 150
 
 [product_trainingtue_price4]
-name_en     = "Presentation Aikido", Damian Conway (special price for speakers, at least one 20-minute talk)
+name_en     = "Presentation Aikido", Damian Conway (special price for speakers)
 amount      = 55
 
 [product_upgrade]
