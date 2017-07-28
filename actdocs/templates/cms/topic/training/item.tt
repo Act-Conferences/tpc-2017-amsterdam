@@ -1,0 +1,29 @@
+[%
+    SET CMS.item = {
+        title       = "title",
+        trainer     = "Trainer Name",
+        image       = "trainer.png",
+        intro       = "Hey this is cool ...",
+        texts       = [
+           "paragraph
+            1",
+
+           "paragraph
+            2",
+
+        ],
+        topics      = [
+           "topic Foo",
+           "topic Bar",
+        ]
+        price       = 250,
+        date        = "Someday",
+        time_start  = "09:00",
+        time_end    = "17:00",
+        audience    = "Newbies",
+        forms = { # be warned, these values are in Act.ini
+            'product_trainingmon'  = "1",
+            'price-trainingmon'    = "2"
+        },
+    }
+%]
