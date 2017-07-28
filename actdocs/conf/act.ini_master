@@ -46,6 +46,10 @@ r1_name_en = "0.e.2 the Richard"
 r2_name_en = "0.e.3 the Muhammed"
 r3_name_en = "0.e.4 the Chris"
 
+t1_name_en = "training room 1"
+t2_name_en = "training room 2"
+t3_name_en = "training room 3"
+
 [payment]
 #type        = YEF
 type = Fake
@@ -127,7 +131,7 @@ name_en     = "Presentation Aikido", Damian Conway
 amount      = 150
 
 [product_trainingtue_price4]
-name_en     = "Presentation Aikido", Damian Conway (special price for speakers, at least one 20-minute talk)
+name_en     = "Presentation Aikido", Damian Conway (special price for speakers)
 amount      = 55
 
 [product_upgrade]
