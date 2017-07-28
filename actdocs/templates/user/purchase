@@ -75,6 +75,13 @@
     });
   </script>
 
+[%
+  purchase_class_left      ='col-xs-12';
+  purchase_class_left_sub  ='col-xs-offset-1 col-xs-11';
+  purchase_class_mid       ='col-xs-2';
+  purchase_class_right     ='col-xs-1';
+%]
+
   <div class="row">
     <div class="col-sm-12">
       <form method="POST" action="[% global.request.r.uri %]">
@@ -85,12 +92,12 @@
 
               <tr class="act-product">
                 <td class="act-description">
-                  <div class="col-xs-12">
+                  <div class="[% purchase_class_left %]">
                     <input type="checkbox" value="[% p %]" id="product-[% p %]" name="product-[% p %]"[% ' checked="checked"' IF products.$p.checked %] />
                     <label for="product-[% p %]">[% products.$p.name %]</label>
                   </div>
                 </td>
-                <td class="act-amount col-xs-3 text-right">
+                <td class="act-amount [% purchase_class_mid %] text-right">
                   [% IF products.$p.prices.size == 1 %] [% products.$p.prices.0.amount %] [% END %]
                 </td>
                 <td class="act-currency">
@@ -104,7 +111,7 @@
                   [% IF i.promocode; ispromo = 1 %]
                     <tr class="act-price">
                       <td class="act-description">
-                        <div class="col-xs-10 col-xs-offset-2 col-md-11 col-md-offset-1">
+                        <div class="[% purchase_class_left_sub %]">
                           <span class="act-desciption">
                             <label for="promo-[% p %]">{{Promotion code}}</label></td>
                           </span>
@@ -117,14 +124,14 @@
                   [% ELSE %]
                     <tr class="act-price">
                       <td class="act-description">
-                        <div class="col-xs-10 col-xs-offset-2 col-md-11 col-md-offset-1">
+                        <div class="[% purchase_class_left_sub %]">
                           <span class="act-desciption">
                             <input type="radio" id="price-[% p %]-[% i.price_id %]" name="price-[% p %]" value="[% i.price_id %]"[% ' checked="checked"' IF i.checked %] />
                             <label for="price-[% p %]-[% i.price_id %]"> [% i.name %]</label>
                           </span>
                         </div>
                       </td>
-                      <td class="act-amount col-xs-3 text-right">
+                      <td class="act-amount [% purchase_class_mid %] text-right">
                         [% i.amount %]
                       </td>
                       <td class="act-currency">
@@ -138,11 +145,11 @@
 
             <tr class="act-donation">
               <td class="act-description">
-                <div class="col-xs-12 act-select">
+                <div class="[% purchase_class_left %] act-select">
                   <label for="form-donation">{{Donation}}</label>
                 </div>
               </td>
-              <td class="act-amount col-xs-3 text-right">
+              <td class="act-amount [% purchase_class_mid %] text-right">
                 <input name="donation" id="form-donation" type="text" class="form-control" value="[% donation %]" />
               </td>
               <td class="act-currency">
@@ -152,11 +159,11 @@
 
             <tr id="total" style="">
               <td class="act-description">
-                <div class="col-xs-12 act-select">
+                <div class="[% purchase_class_left %] act-select">
                   <b><label for="form-donation">{{Total}}</label></b>
                 </div>
               </td>
-              <td class="act-amount col-xs-3 text-right">
+              <td class="act-amount [% purchase_class_mid %] text-right">
                 <b><span id="totalamount">0</span></b>
               </td>
               <td class="act-currency">

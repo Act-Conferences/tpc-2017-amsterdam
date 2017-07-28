@@ -28,7 +28,7 @@ notify_accept = 1
 edition_open  = 0
 show_schedule = 1
 durations  = 20 45 70
-start_date = 2017-08-09 08:00:00
+start_date = 2017-08-07 08:00:00
 end_date   = 2017-08-11 20:00:00
 levels = 4
 #languages = fr en
@@ -40,7 +40,7 @@ level3_name_en = Intermediate
 level4_name_en = Advanced
 
 [rooms]
-rooms = r0 r1 r2 r3
+rooms = r0 r1 r2 r3 t1 t2 t3
 r0_name_en = "0.e.1 the Wiechert --- Main Hall"
 r1_name_en = "0.e.2 the Richard"
 r2_name_en = "0.e.3 the Muhammed"
@@ -52,7 +52,7 @@ type = Fake
 currency    = EUR
 open        = 1
 invoices    = 1
-products    = registration upgrade
+products    = registration training upgrade
 
 [product_registration]
 name_en     = Registration
@@ -97,6 +97,30 @@ amount      = 485
 [product_registration_price10]
 name_en     = Speaker (one 20-minute talk)
 amount      = 85
+
+[product_training]
+name_en     = Training (full day 9:00 - 17:00 h)
+prices      = 5
+
+[product_training_price1]
+name_en     = "Mastering Perl", Brian D. Foy, Mon 7 Aug.
+amount      = 150
+
+[product_training_price2]
+name_en     = "Parsing Perl 6", Damian Conway, Mon 7 Aug.
+amount      = 150
+
+[product_training_price3]
+name_en     = "Effective Perl Programming", Brian D. Foy, Tue 8 Aug.
+amount      = 150
+
+[product_training_price4]
+name_en     = "Presentation Aikido", Damian Conway, Tue 8 Aug.
+amount      = 150
+
+[product_training_price5]
+name_en     = "Introducing Perl 6", Jeff 'DrForr' Goff, Tue 8 Aug.
+amount      = 150
 
 [product_upgrade]
 name_en     = Upgrade
