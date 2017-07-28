@@ -1,5 +1,30 @@
 [% INCLUDE js/mytalks.js %]
 
+
+[%
+    MACRO timeslot_fav_ajax(t)
+    BLOCK;
+        IF t.type == 'Act::Talk';
+            PROCESS talk/fav_ajax this_talk_id=t.talk_id fav_ajax_width='20px' data_needreload=1;
+
+            user_info(t.user); ' - '; talk_confirmed_link(t);
+            ' ('; t.duration; '&nbsp;'; loc('min');
+            IF global.config.talks_languages;
+                ', '; global.config.talks_languages.${t.lang};
+            END;
+            ')';
+            IF t.track_id %] [<a href="[% make_uri('talks') %]#[% t.track_id %]">[%
+                          t.track.title.split('\W').0 %]</a>][% END;
+            ' '; talk_modify_link(t);
+        ELSIF t.type == 'Act::Event';
+            event_link(t); ' ('; t.duration; '&nbsp;'; loc('min'); ')';
+            ' '; event_modify_link(t);
+        ELSE;
+            t;
+        END;
+    END;
+%]
+
 [% UNLESS ( global.request.user.is_talks_admin
          or global.request.user.is_staff
          or global.config.talks_show_schedule )
@@ -111,7 +136,7 @@
                [% ELSE %]
                  <td valign="top" [% IF col.height AND col.height > 1 %]rowspan="[% col.height %]"[% END %] [% IF col.room %]class="[% col.room %]"[% IF col.room.match('^(?:out|venue)$') %] colspan="[% maxwidth.$d %]"[% END %][% END %]>
                    <div class="alert">
-                     [% timeslot(col) %]
+                     [% timeslot_fav_ajax(col) %]
                      <span id="starcount-[% col.id %]" style="white-space:nowrap">
                        [% IF col.stars %]
                          <span class="starcount">[% col.stars %]</span>
@@ -133,7 +158,6 @@
           <a class="btn btn-default btn-lg" href="[% ical || make_uri('timetable.ics') %]">{{iCal export}}</a>
           [% IF global.request.user.has_registered %]
             <input type="hidden" name="day" value="[% day %]" />
-            <input class="btn btn-lg btn-primary" type="submit" class="mytalks_submit" value="{{Submit}}" />
           [% END %]
         </div>
       </form>
