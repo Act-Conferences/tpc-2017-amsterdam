@@ -1,21 +1,23 @@
-[% conf_id = global.request.conference %]
-          [% IF global.request.user.has_registered %]
-          <a href="/[% conf_id %]/talk/[% this_talk_id %]"
-                   [%# For best toggling state, reversed test and this_talk_id stored in tag data- items: %]
-                   [% IF global.request.user.is_my_talk(this_talk_id) %]
+[% IF global.request.user.has_registered %]
+  [% fav_ajax_width = fav_ajax_width || '29px' %]
+  
+  <a href="[% make_uri_info('talk', this_talk_id) %]"
+    [%# For best toggling state, reversed test and this_talk_id stored in tag data- items: %]
+      [% IF global.request.user.is_my_talk(this_talk_id) %]
                      title="{{remove from personal schedule}}"
                      data-toggle="tooltip" data-placement="top"
                      class="talk-checkbox" data-needreload="[% data_needreload %]"
                      data-talkfav="1" data-talkid="[% this_talk_id %]"
                      data-titlerev="{{add to personal schedule}}">
-                     <img src="/[% conf_id %]/img/amsterdam-kruisje.svg" width="29px">
-                   [% ELSE %]
+                     [% fav_ajax_text.yes %]<img src="[% make_uri_info('img', 'amsterdam-kruisje.svg') %]" width="[% fav_ajax_width %]">
+      [% ELSE %]
                      title="{{add to personal schedule}}"
                      data-toggle="tooltip" data-placement="top"
                      class="talk-checkbox" data-needreload="[% data_needreload %]"
                      data-talkfav="0" data-talkid="[% this_talk_id %]"
                      data-titlerev="{{remove from personal schedule}}">
-                     <img src="/[% conf_id %]/img/amsterdam-plusje.svg" width="29px">
-                  [% END %]
-          </a>
-          [% END %]
+                     [% fav_ajax_text.no %]<img src="[% make_uri_info('img', 'amsterdam-plusje.svg') %]" width="[% fav_ajax_width %]">
+      [% END %]
+  </a>
+
+[% END %]

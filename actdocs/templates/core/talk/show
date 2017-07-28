@@ -1,5 +1,12 @@
 [% INCLUDE js/mytalks.js %]
-[% conf_id = global.request.conference %]
+[% 
+  fav_ajax_span0 = '<span style="font-size:80%;">';
+  fav_ajax_span1 = '</span>';
+  use_fav_ajax_text = {
+    yes = fav_ajax_span0 _ loc('remove from personal schedule') _ ' ' _ fav_ajax_span1
+    no  = fav_ajax_span0 _ loc('add to personal schedule')      _ ' ' _ fav_ajax_span1
+  };
+%]
 
 <script>
   document.body.style.backgroundColor='rgb(109,10,0)';
@@ -13,7 +20,7 @@
       [%# not showing it for non-accepted is just as well %]
       [% IF global.request.user.has_registered AND accepted %]
         <div class="text-right">
-          [% PROCESS talk/fav_ajax this_talk_id=talk_id data_needreload='1' %]
+          [% PROCESS talk/fav_ajax this_talk_id=talk_id data_needreload='1' fav_ajax_text=use_fav_ajax_text %]
         </div>
       [% END %]
 
