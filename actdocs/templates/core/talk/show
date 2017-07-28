@@ -1,10 +1,10 @@
 [% INCLUDE js/mytalks.js %]
 [% 
-  fav_ajax_span0 = '<span style="font-size:80%;">';
-  fav_ajax_span1 = '</span>';
+  fav_ajax_span0 = '<span style="font-size:80%;text-decoration:none;">';
+  fav_ajax_span1 = '&nbsp;</span>';
   use_fav_ajax_text = {
-    yes = fav_ajax_span0 _ loc('remove from personal schedule') _ ' ' _ fav_ajax_span1
-    no  = fav_ajax_span0 _ loc('add to personal schedule')      _ ' ' _ fav_ajax_span1
+    yes = fav_ajax_span0 _ loc('remove from personal schedule') _ fav_ajax_span1
+    no  = fav_ajax_span0 _ loc('add to personal schedule')      _ fav_ajax_span1
   };
 %]
 

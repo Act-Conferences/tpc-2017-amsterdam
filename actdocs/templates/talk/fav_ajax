@@ -1,7 +1,7 @@
 [% IF global.request.user.has_registered %]
   [% fav_ajax_width = fav_ajax_width || '29px' %]
   
-  <a href="[% make_uri_info('talk', this_talk_id) %]"
+  <a href="[% make_uri_info('talk', this_talk_id) %]" style="text-decoration:none;"
     [%# For best toggling state, reversed test and this_talk_id stored in tag data- items: %]
       [% IF global.request.user.is_my_talk(this_talk_id) %]
                      title="{{remove from personal schedule}}"
