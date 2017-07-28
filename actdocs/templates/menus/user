@@ -67,9 +67,15 @@
     var conf_id   = comps.shift();
     var path_info = comps.join('/');
     
-    // create a link that goes back to the page we were on before login
-    var a = document.getElementById('menu_user_login');
-    a.href = '/'+conf_id+'/login?destination='+path_info;
+    if ( path_info == 'logout' ) {
+      path_info = 'main';
+    }
+    
+    if ( path_info != 'main' ) {
+      // create a link that goes back to the page we were on before login
+      var a = document.getElementById('menu_user_login');
+      a.href = '/'+conf_id+'/login?destination='+path_info;
+    }
   </script>
 
 
