@@ -50,12 +50,34 @@
   [% menu_user_text = 'Login' %]
   <li class="nav-item dropdown">
 
-  <li [% link_li_attr %]>
-    <a [% link_a_attr %] href="[% make_uri('main') %]">
-      <i class="fa fa-user [% icon_class %]" title="[% menu_user_text %]"></i>
-      <span [% head_attr_big    %] title="Login/Register">[% menu_user_text %]</span>
-      <span [% head_attr_small  %] title="Login/Register">[% menu_user_text %]</span>
-    </a>
+    <li [% link_li_attr %]>
+      <a [% link_a_attr %] href="[% make_uri('main') %]" id='menu_user_login'>
+        <i class="fa fa-user [% icon_class %]" title="[% menu_user_text %]"></i>
+        <span [% head_attr_big    %] title="Login/Register">[% menu_user_text %]</span>
+        <span [% head_attr_small  %] title="Login/Register">[% menu_user_text %]</span>
+      </a>
+    </li>
+  
   </li>
+
+  <script>
+    //get the page we're and extract conf_id and path_info
+    var comps = location.pathname.split('/');
+    comps.shift();
+    var conf_id   = comps.shift();
+    var path_info = comps.join('/');
+    
+    if ( path_info == 'logout' ) {
+      path_info = 'main';
+    }
+    
+    if ( path_info != 'main' ) {
+      // create a link that goes back to the page we were on before login
+      var a = document.getElementById('menu_user_login');
+      a.href = '/'+conf_id+'/login?destination='+path_info;
+    }
+  </script>
+
+
 
 [% END %]
