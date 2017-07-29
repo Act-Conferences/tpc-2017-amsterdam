@@ -16,7 +16,7 @@
     </div>
     <div class="container" style="color:#d8d8d8">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-xs-center">
+        <div class="col-md-8 col-md-offset-2">
           <h3 class="mbr-section-title display-2">[% CMS.index.title %]</h3>
           <div class="lead">
             <p class="">
@@ -65,7 +65,7 @@
             
             <div class="mbr-table-cell col-md-5 text-xs-center text-md-left content-size">
               <h3 class="mbr-section-title display-2">[% item.title %]</h3>
-              <h4 class="mbr-section-title display-2">[% item.trainer %]</h4>
+              <h4 class="mbr-section-title display-3">[% item.trainer %]</h4>
               
               <div class="lead">
                 
@@ -81,15 +81,17 @@
                 
               </div>
               <div>
-                <ul>
-
-                  [% FOREACH words IN item.texts %]
-                    <li>
-                      [% words %]
-                    </li>
-                  [% END %]
-
-                </ul>
+                <p>
+                  <ul>
+  
+                    [% FOREACH words IN item.texts %]
+                      <li>
+                        [% words %]
+                      </li>
+                    [% END %]
+  
+                  </ul>
+                </p>
               </div>
               <div class="lead">
                 [% item.audience %]
