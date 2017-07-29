@@ -99,52 +99,51 @@
               <h3 class="mbr-section-title display-2" style="text-align: right;">€ [% item.price %]</h3>
               <h4 class="mbr-section-title display-4" style="text-align: right;">[% item.date %] [% item.time_start %]-[% item.time_end %]</h4>
 
-            </div>
-
-
-            <div class="mbr-plan-btn">
-
-              [% IF NOT global.request.user %]
-
-                <a
-                  href=[% make_uri('login?destination') _ '=' _ make_uri('/training.html') %]
-                  class="btn btn-white btn-white-outline"
-                >
-                  LOGIN FIRST
-                </a>
-
-              [% ELSIF NOT global.request.user.has_registered %]
-
-                <a
-                  href=[% make_uri('register') %]
-                  class="btn btn-white btn-white-outline"
-                >
-                  JOIN FIRST
-                </a>
-
-              [% ELSE %]
-
-                <form method="POST" action="[% make_uri('purchase') %]">
-                  [% FOREACH form_input IN item.forms %]
-                    <input
-                      type="hidden"
-                      name="[% form_input.key %]"
-                      value="[% form_input.value %]"
-                    >
-                  [% END %]
-
-                  <button
-                    type="submit" name="purchase" value="Buy Now!"
-                    class="btn btn-white btn-white-outline"
+              <div class="mbr-plan-btn">
+  
+                [% IF NOT global.request.user %]
+  
+                  <a
+                    href=[% make_uri('login?destination') _ '=' _ make_uri('/training.html') %]
+                    class="btn btn-white btn-black-outline"
                   >
-                    BUY NOW
-                  </button>
-                </form>
+                    LOGIN FIRST
+                  </a>
+  
+                [% ELSIF NOT global.request.user.has_registered %]
+  
+                  <a
+                    href=[% make_uri('register') %]
+                    class="btn btn-white btn-black-outline"
+                  >
+                    JOIN FIRST
+                  </a>
+  
+                [% ELSE %]
+  
+                  <form method="POST" action="[% make_uri('purchase') %]">
+                    [% FOREACH form_input IN item.forms %]
+                      <input
+                        type="hidden"
+                        name="[% form_input.key %]"
+                        value="[% form_input.value %]"
+                      >
+                    [% END %]
+  
+                    <button
+                      type="submit" name="purchase" value="Buy Now!"
+                      class="btn btn-white btn-black-outline"
+                    >
+                      BUY NOW
+                    </button>
+                  </form>
+  
+                [% END %]
+  
+              </div>
 
-              [% END %]
 
             </div>
-
           </div>
         </div>
       </div>
