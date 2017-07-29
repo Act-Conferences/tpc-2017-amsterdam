@@ -1,0 +1,38 @@
+[%
+    SET CMS.item = {
+        title       = "Presentation Aikido",
+        trainer     = "Damian Conway,",
+        image       = "damian_conway.jpg",
+        intro       = "The best, most effective presentations capture the
+                       audience quickly, hold their interest effortlessly,
+                       educate and entertain them in equal measure, and
+                       sometimes even inspire them.",
+        texts       = [
+           "This class explores simple and effective techniques for achieving
+            those goals in any kind of presentation.",
+        ],
+        topics      = [
+            "The first half of the course focuses on preparation, content
+             selection, delivery techniques, and handling questions (or the lack
+             thereof)",
+            "The second half of the course is an in-depth tutorial on improving
+             the 'look and feel' of presentation materials--especially
+             Powerpoint/Impress presentations",
+            "In particular, it demonstrates practical techniques for making your
+             slides not suck.",
+            "The optional final day is a workshop, where each attendee has the
+             opportunity to give a short presentation they have previously
+             created, after which we work through it together to improve its
+             design and delivery."
+        ],
+        price       = 55,
+        date        = "Tuesday",
+        time_start  = "09:00",
+        time_end    = "17:00",
+        audience    = "Anyone who is required to present technical information in front of an audience.",
+        forms = { # be warned, these values are in Act.ini
+            'product-trainingtue'  = "trainingtue",
+            'price-trainingtue'    = "4",
+        },
+    }
+%]

@@ -1,0 +1,23 @@
+[%
+    SET CMS.item = {
+        title = "Eric de Hont",
+        image = "erich.jpg",
+        tasks = "Organiser",
+        intro = "As long as my scripts kept my web forum free from spam, Perl made me happy. Who cares what all those sigils mean?",
+        texts = [
+           "I started in 1999 with my first utterances of baby Perl, soon to
+            become fluent in cargo cult Perl. Thanks to the enormous amount of
+            Perl books, other documentation and help from the fine Perl
+            Community, things eventually started to make sense and the love grew
+            stronger.",
+
+           "My first Perl Conference was in Cluj in 2016 which I enjoyed beyond
+            my wildest expectations.",
+
+           "Time to do something in return for the community, so you will find
+            me at the Conference trying to be as helpful as I can.",
+
+           "I wish you all a great Perl Conference!",
+        ],
+    }
+%]

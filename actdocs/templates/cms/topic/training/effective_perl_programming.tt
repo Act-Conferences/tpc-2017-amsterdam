@@ -1,0 +1,30 @@
+[%
+    SET CMS.item = {
+        title       = "Effective Perl Programming",
+        trainer     = "brian d foy",
+        image       = "brian_d_foy.jpg",
+        intro       = "brian presents selected topics from his book Effective
+                       Perl Programming."
+        texts       = [
+           "Each item explores a small feature of Perl and how it fits into
+            programming in the large.",
+           "See: https://www.effectiveperlprogramming.com",
+        ],
+        topics      = [
+           "Regular Expressions",
+           "Unicode",
+           "Pack",
+           "Subroutines",
+           "Tricks with Filehandles",
+        ],
+        price       = 150,
+        date        = "Tuesday",
+        time_start  = "09:00",
+        time_end    = "17:00",
+        audience    = "Anyone with interest in programming",
+        forms = { # be warned, these values are in Act.ini
+            'product-trainingtue'  = "trainingtue",
+            'price-trainingtue'    = "1",
+        },
+    }
+%]

@@ -15,7 +15,7 @@
         topics      = [
            "topic Foo",
            "topic Bar",
-        ]
+        ],
         price       = 250,
         date        = "Someday",
         time_start  = "09:00",

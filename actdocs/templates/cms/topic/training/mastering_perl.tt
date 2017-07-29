@@ -1,39 +1,29 @@
 [%
     SET CMS.item = {
-        title       = "Mastering Per",
-        trainer     = "Brian d Foy",
-        image       = "brian_d_foy.png",
-        intro       = "brian will present topics from his book, Mastering Perl (https://www.masteringperl.org).
-                      This isn't a collection of clever tricks, but a way of thinking about Perl programming for solving programmers everyday problems.",
+        title       = "Mastering Perl",
+        trainer     = "brian d foy",
+        image       = "brian_d_foy.jpg",
+        intro       = "brian will present topics from his book, Mastering Perl",
         texts       = [
-           "Modulinos
-            1",
-
-           "Dynamic Subroutines
-            2",
-
-           "Data Security
-             3",
-
-           "Benchmarking
-             4",
-
-           "Bonus material chosen by the class
-             5",
-
+           "This isn't a collection of clever tricks, but a way of thinking
+            about Perl programming for solving programmers everyday problems.",
+           "See: https://www.masteringperl.org",
         ],
         topics      = [
-           "topic Foo",
-           "topic Bar",
-        ]
-        price       = 250,
-        date        = "Monday 2017-08-07",
+           "Modulinos",
+           "Dynamic Subroutines",
+           "Data Security",
+           "Benchmarking",
+           "Bonus material chosen by the class",
+        ],
+        price       = 150,
+        date        = "Monday",
         time_start  = "09:00",
         time_end    = "17:00",
-        audience    = "Newbies",
+        audience    = "Anyone with interest in programming",
         forms = { # be warned, these values are in Act.ini
-            'product_trainingmon'  = "1",
-            'price-trainingmon'    = "2"
+            'product-trainingmon'  = "trainingmon",
+            'price-trainingmon'    = "1",
         },
     }
 %]
