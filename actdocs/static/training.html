@@ -125,7 +125,7 @@
               [% ELSIF %]
 
                 <form method="POST" action="[% make_uri('purchase') %]">
-                  [% FOREACH form_input IN forms %]
+                  [% FOREACH form_input IN item.forms %]
                     <input
                       type="hidden"
                       name="[% form_input.key %]"
