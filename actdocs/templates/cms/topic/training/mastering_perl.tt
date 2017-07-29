@@ -6,7 +6,7 @@
         intro       = "brian will present topics from his book, Mastering Perl",
         texts       = [
            "This isn't a collection of clever tricks, but a way of thinking
-            about Perl programming for solving programmers everyday problems.",
+            about Perl programming for solving programmers' everyday problems.",
            "See: https://www.masteringperl.org",
         ],
         topics      = [
