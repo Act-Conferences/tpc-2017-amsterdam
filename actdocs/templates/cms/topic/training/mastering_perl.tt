@@ -3,26 +3,27 @@
         title       = "Mastering Perl",
         trainer     = "brian d foy",
         image       = "brian_d_foy.jpg",
-        intro       = "brian will present topics from his book, Mastering Perl (https://www.masteringperl.org).
-                      This isn't a collection of clever tricks, but a way of thinking about Perl programming for solving programmers everyday problems.",
+        intro       = "brian will present topics from his book, Mastering Perl",
         texts       = [
-
+           "This isn't a collection of clever tricks, but a way of thinking
+            about Perl programming for solving programmers everyday problems.",
+           "See: https://www.masteringperl.org",
         ],
         topics      = [
-           "topic Modulinos",
-           "topic Dynamic Subroutines",
-           "topic Data Security",
-           "topic Benchmarking",
-           "topic Bonus material chosen by the class",
-        ]
-        price       = 250,
-        date        = "Monday 2017-08-07",
+           "Modulinos",
+           "Dynamic Subroutines",
+           "Data Security",
+           "Benchmarking",
+           "Bonus material chosen by the class",
+        ],
+        price       = 150,
+        date        = "Monday",
         time_start  = "09:00",
         time_end    = "17:00",
         audience    = "Anyone with interest in programming",
         forms = { # be warned, these values are in Act.ini
             'product_trainingmon'  = "1",
-            'price-trainingmon'    = "2"
+            'price-trainingmon'    = "1",
         },
     }
 %]
