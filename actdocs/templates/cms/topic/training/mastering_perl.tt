@@ -22,7 +22,7 @@
         time_end    = "17:00",
         audience    = "Anyone with interest in programming",
         forms = { # be warned, these values are in Act.ini
-            'product_trainingmon'  = "1",
+            'product_trainingmon'  = "trainingmon",
             'price-trainingmon'    = "1",
         },
     }

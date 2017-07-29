@@ -49,7 +49,7 @@
                        While object orientation will be discussed, you do not
                        need to be familiar with this beforehand.",
         forms = { # be warned, these values are in Act.ini
-            'product_trainingtue'  = "1",
+            'product_trainingtue'  = "trainingtue",
             'price-trainingtue'    = "2",
         },
     }
