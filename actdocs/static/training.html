@@ -96,9 +96,12 @@
               <div>
                 [% item.audience %]
               </div>
-              <h3 class="mbr-section-title display-2" style="text-align: right;">€ [% item.price %]</h3>
+              [%
+                tr_price_text = item.price_custom_text ? item.price_custom_text : '€ ' _ item.price;
+                tr_style      = item.price_custom_text ? 'font-size:160%;'       : ''               ;
+              %]
+              <h3 class="mbr-section-title display-2" style="text-align: right;[% tr_style %]">[% tr_price_text %]</h3>
               <h4 class="mbr-section-title display-4" style="text-align: right;">[% item.date %] [% item.time_start %]-[% item.time_end %]</h4>
-
               <div class="mbr-plan-btn" style="text-align: right;">
   
                 [% IF NOT global.request.user %]
@@ -121,22 +124,39 @@
   
                 [% ELSE %]
   
-                  <form method="POST" action="[% make_uri('purchase') %]">
-                    [% FOREACH form_input IN item.forms %]
-                      <input
-                        type="hidden"
-                        name="[% form_input.key %]"
-                        value="[% form_input.value %]"
+                  [%
+                    tr_n_buttons = item.title=='Presentation Aikido' ? 2 : 1;
+                    tr_i = 1;
+                  %]  
+
+                  [% WHILE tr_i <= tr_n_buttons %]
+                    [%
+                      use_forms       = tr_i==2 ? item.forms2       : item.forms;
+                      tr_submit_text  = tr_i==2 ? item.submit_text2 : item.submit_text;
+                      IF !tr_submit_text;
+                        tr_submit_text = 'BUY NOW';
+                      END;
+                    %]
+
+                    <form method="POST" action="[% make_uri('purchase') %]">
+                      [% FOREACH form_input IN use_forms %]
+                        <input
+                          type="hidden"
+                          name="[% form_input.key %]"
+                          value="[% form_input.value %]"
+                        >
+                      [% END %]
+    
+                      <button
+                        type="submit" name="purchase" value="Buy Now!"
+                        class="btn btn-white btn-black-outline"
                       >
-                    [% END %]
-  
-                    <button
-                      type="submit" name="purchase" value="Buy Now!"
-                      class="btn btn-white btn-black-outline"
-                    >
-                      BUY NOW
-                    </button>
-                  </form>
+                        [% tr_submit_text %]
+                      </button>
+                    </form>
+                    
+                    [% tr_i = tr_i+1 %]
+                  [% END %]
   
                 [% END %]
   
