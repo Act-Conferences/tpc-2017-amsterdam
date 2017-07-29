@@ -25,14 +25,14 @@
              created, after which we work through it together to improve its
              design and delivery."
         ],
-        price       = 55,
+        price       = 150,
         date        = "Tuesday",
         time_start  = "09:00",
         time_end    = "17:00",
         audience    = "Anyone who is required to present technical information in front of an audience.",
         forms = { # be warned, these values are in Act.ini
             'product-trainingtue'  = "trainingtue",
-            'price-trainingtue'    = "4",
+            'price-trainingtue'    = "3",
         },
     }
 %]
