@@ -1,7 +1,7 @@
 [%
     SET CMS.item = {
         title       = "Presentation Aikido",
-        trainer     = "Damian Conway,",
+        trainer     = "Damian Conway",
         image       = "damian_conway.jpg",
         intro       = "The best, most effective presentations capture the
                        audience quickly, hold their interest effortlessly,
@@ -26,11 +26,20 @@
              design and delivery."
         ],
         price       = 150,
+        price_custom_text = '&euro; 55 (speakers) / &euro; 150 (non-speakers)',
+        
+        submit_text  = 'BUY NOW (speakers)',
+        submit_text2 = 'BUY NOW (non-speakers)',
+        
         date        = "Tuesday",
         time_start  = "09:00",
         time_end    = "17:00",
         audience    = "Anyone who is required to present technical information in front of an audience.",
         forms = { # be warned, these values are in Act.ini
+            'product-trainingtue'  = "trainingtue",
+            'price-trainingtue'    = "4",
+        },
+        forms2 = { # be warned, these values are in Act.ini
             'product-trainingtue'  = "trainingtue",
             'price-trainingtue'    = "3",
         },
