@@ -32,7 +32,7 @@
 [% BLOCK amount_cell %]
   [% bold_attr = bold ? 'font-weight:bold;' : '' %]
       <td style="text-align:right;padding:0 0.5em;min-width:85px;[% bold_attr %]">
-        [% IF amount>0 %]
+        [% IF amount>0 OR !allow_na %]
           [%
             amount 
               FILTER format('%.2f') 
@@ -76,9 +76,9 @@
     %]
     <tr>
       <td style="text-align:left;padding:0 0.5em;">[% item.name %]</td>
-      [% PROCESS amount_cell amount=ex_vat %]
-      [% PROCESS amount_cell amount=vat    %]
-      [% PROCESS amount_cell amount=item.amount %]
+      [% PROCESS amount_cell amount=ex_vat       allow_na=0 %]
+      [% PROCESS amount_cell amount=vat          allow_na=1 %]
+      [% PROCESS amount_cell amount=item.amount  allow_na=0 %]
     </tr>
   [% END %]
 
@@ -86,9 +86,9 @@
     <td colspan="1" style="text-align:right;font-weight:bold;padding-right:0.5em;">
       {{Total due}}
     </td>
-    [% PROCESS amount_cell amount=ex_vat_total    bold=1 %]
-    [% PROCESS amount_cell amount=vat_total       bold=1 %]
-    [% PROCESS amount_cell amount=invoice.amount  bold=1 %]
+    [% PROCESS amount_cell amount=ex_vat_total    bold=1 allow_na=0 %]
+    [% PROCESS amount_cell amount=vat_total       bold=1 allow_na=0 %]
+    [% PROCESS amount_cell amount=invoice.amount  bold=1 allow_na=0 %]
   </tr>
 
 </table>
