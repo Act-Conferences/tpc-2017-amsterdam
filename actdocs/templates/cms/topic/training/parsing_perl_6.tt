@@ -36,7 +36,7 @@
                        will be useful to anyone who needs to process or
                        transform structured textual data of any kind.",
         forms = { # be warned, these values are in Act.ini
-            'product_trainingmon'  = "trainingmon",
+            'product-trainingmon'  = "trainingmon",
             'price-trainingmon'    = "2",
         },
     }
