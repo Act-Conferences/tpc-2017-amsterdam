@@ -122,7 +122,7 @@
                   JOIN FIRST
                 </a>
 
-              [% ELSIF %]
+              [% ELSE %]
 
                 <form method="POST" action="[% make_uri('purchase') %]">
                   [% FOREACH form_input IN item.forms %]
