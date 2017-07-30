@@ -1,6 +1,6 @@
 <section
   class="mbr-info mbr-section mbr-section-md-padding mbr-parallax-background mbr-after-navbar"
-  style="background-image: url([% make_uri('/assets/images/training_backdrop.png') %]); padding-top: 100px; padding-bottom: 70px;" id='training'
+  style="background-image: url([% make_uri('/assets/images/training_backdrop.png') %]); padding-top: 100px; padding-bottom: 130px;" id='training'
 >
   <div class="container">
     <div class="row">
