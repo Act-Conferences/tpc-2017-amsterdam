@@ -1,0 +1,34 @@
+<section
+  class="mbr-info mbr-section mbr-section-md-padding mbr-parallax-background mbr-after-navbar"
+  style="background-image: url([% make_uri('/assets/images/training_backdrop.png') %]); padding-top: 100px; padding-bottom: 70px;" id='training'
+>
+  <div class="container">
+    <div class="row">
+      <div class="mbr-table-md-up">
+        
+        <div class="mbr-table-cell col-md-4">
+          <div class="text-xs-center">
+            
+            <a
+              href=[% make_uri('newtalk') %]
+              class="btn btn-white"
+            >
+              GET TO THE NEXT LEVEL
+            </a>
+            
+          </div>
+        </div>
+        
+        <div class="mbr-table-cell mbr-right-padding-md-up col-md-8 text-xs-center text-md-left">
+          <h3 class="mbr-info-title mbr-section-title display-2" style="color: rgb(255, 255, 255);font-size:140%;">
+            Top Class Training
+          </h3>
+          <h2 class="mbr-info-subtitle mbr-section-subtitle" style="color: rgb(255, 255, 255);">
+            The two days before the actual Perl Conference, there is time for additional training. Don't miss out on them if you want to improve your skills and knowledge
+          </h2>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
