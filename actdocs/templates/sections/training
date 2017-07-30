@@ -10,7 +10,7 @@
           <div class="text-xs-center">
             
             <a
-              href=[% make_uri('newtalk') %]
+              href=[% make_uri('training') %]
               class="btn btn-white"
             >
               GET TO THE NEXT LEVEL
