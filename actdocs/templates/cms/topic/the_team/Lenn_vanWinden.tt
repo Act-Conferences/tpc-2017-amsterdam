@@ -2,7 +2,7 @@
     SET CMS.item = {
         title = "Lenn van Winden",
         image = "lenn.jpg",
-        tasks = "Administration and Planing",
+        tasks = "Administration and Planning",
         intro = "Administration for The Perl Conference in Amsterdam",
         texts = [
            "Happy to assist the team on planning, administration, booking and all other kind of activities you can expect from an assistant.
