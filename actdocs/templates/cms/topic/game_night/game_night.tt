@@ -1,0 +1,56 @@
+[%
+    SET CMS.item = {
+        title = "Game night",
+        image = "fluxx.jpg",
+        tasks = "Have fun!",
+        intro = "Game night.",
+        texts = [
+"Games that Liz and Wendy will bring (and they would like to bring them back home in the same state as they were brought, please):" ,
+
+"<ul>
+    <li>Aquarius</li>
+    <li>Babylon 5 Board Game</li>
+    <li>Backgammon</li>
+    <li>Barragoon</li>
+    <li>Black Stories</li>
+    <li>Camel Cup</li>
+    <li>Carcassonne (several types, and many extensions)</li>
+    <li>Cards (several packs of regular playing cards)</li>
+    <li>Cards Against Humanity (big box), Crabs Adjust Humidity</li>
+    <li>Cathedral</li>
+    <li>Chess</li>
+    <li>Chrononauts</li>
+    <li>Dice (just several sets of dice)</li>
+    <li>Dominoes</li>
+    <li>Evolution</li>
+    <li>Fluxx (15+ types, plus the board game)</li>
+    <li>Giza</li>
+    <li>Godz</li>
+    <li>Ligretto</li>
+    <li>Mah-Jongg</li>
+    <li>Martians</li>
+    <li>Munchkin</li>
+    <li>Mutant Meeples</li>
+    <li>Oh Hell</li>
+    <li>Om Nom Nom</li>
+    <li>Oxford Proverbs...</li>
+    <li>Pandemic & Pandemic Contagion</li>
+    <li>Poker (a box set)</li>
+    <li>Quidler</li>
+    <li>Risk</li>
+    <li>Rummikub</li>
+    <li>Scrabble</li>
+    <li>Set & Set Cubed</li>
+    <li>Stratego & Stratego for 4</li>
+    <li>Tracktic</li>
+    <li>Trivial Pursuit</li>
+    <li>Uno</li>
+    <li>War on Terror</li>
+  </ul>" ,
+'Sjoelen (Dutch version:  <a href="https://nl.wikipedia.org/wiki/Sjoelen which is a variation">nl.wikipedia.org/wiki/Sjoelen</a> of <a href="https://en.wikipedia.org/wiki/Table_shuffleboard">en.wikipedia.org/wiki/Table_shuffleboard</a> ).
+Sjoelen can be quite loud, so we might ask you to move to another room, or stop playing.' ,
+
+"Opposite of the registration desk is the Nolan Room.  It has several arcade games: one pinball machine and six other possible addictive games.  We are promised that the games will be ready to play, playing will be free, and the Nolan room will be open during the whole conference.  We hope this will work out, the machines are a bit \"vintage\". ",
+        ],
+    }
+%]

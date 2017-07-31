@@ -1,0 +1,19 @@
+[%
+    SET CMS.index = {
+        title = "Game night!",
+        items = [
+            'game_night',
+        ],
+        texts = [
+"Thursday evening after schedule, from 19:00 until 23:00, we will host a Game Night in the lobby of the venue.  A lot of board and card games will be available.  Of course, you are very much welcome to bring your own board game, card game of other type of game." ,
+
+"The lobby and the bar will be open until 23:00.  That means drinks and snacks and nice beer (you will have to pay for yourself, unless a sponsor makes a nice offer)." ,
+
+"It would be very nice if we could help clean up a bit at the end, so the staff can go home after a long day too." ,
+
+"Cards Against Humanity, and Crabs Adjust Humidity, are available too, but because these games can infringe on the Standards of Conduct, players are asked to find a quiet spot and keep their voice down, or to find a separate room.",
+
+"Make sure that you meet them during the conference and buy them a beer",
+        ],
+    }
+%]

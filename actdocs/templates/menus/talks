@@ -14,6 +14,7 @@
     <li><a [% item_a_attr %] href="[% make_uri('schedule') %]">{{Schedule}}</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('talks')    %]">{{Presentations}}</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('favtalks') %]">{{Favorite Talks}}</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('game-night.html') %]">Game night!</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('call-for-papers.html') %]">Call for Papers</a></li>
 
 [% IF global.config.talks_submissions_open OR global.request.user.is_talks_admin %]
