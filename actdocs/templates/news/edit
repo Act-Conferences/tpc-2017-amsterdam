@@ -1,11 +1,21 @@
 [% WRAPPER ui title = loc("Edit a news item") %]
 
-
+<p>
+Note: this is a custom version of news/edit as a workaround for the problem that the variable [&#x25; items &#x25;] currently doesn't get filled in Act::Handler::News::Edit.
+This custom template retrieves [&#x25; items &#x25;] by looping over [&#x25; global.news &#x25;] and retrieving [&#x25; items &#x25;] by id.<br>
+However this only works for published news!<br>
+</p>
+<p>
+See the current state of [&#x25; items &#x25;] in the below table. Once [&#x25; items.en.title &#x25;] and [&#x25; items.en.text &#x25;] are filled again, we can go back to the default template and editing also works for unpublished news.
+</p>
   <table border="1">
     <tr>
-      <td colspan="2" style="background-color:lightgrey;">
-        news_id=[% news_id %]
-      </td>
+      <th>variable</td>
+      <th>value</td>
+    </tr>
+    <tr>
+      <td>news_id</td>
+      <td>[% news_id %]</td>
     </tr>
 
     <tr>
@@ -23,7 +33,47 @@
       <td>[% items.en.text %]</td>
     </tr>
   </table>
+<br>
+<p>
+Meanwhile you better keep your unpublished news around in some text file if you later want to edit it.
+</p>
 
+  [%#
+    Required variable $items no longer gets filled in in 
+    Act::Handler::News::Edit
+    
+    A diff of source code from 2010 and 2017 shows:
+    
+137c137
+<             $fields->{items} = $news->items;
+---
+>             $fields->{title} = $news->{items}{ $Request{language} }{title};
+    
+    Note:
+    The variable $items does NOT hold multiple news items.
+    Rather it holds various language versions of a single news item.
+    It is a hash holding a single news item's titles and texts 
+    indexed by language, i.e.
+    
+      $items.en.title = English title
+      $items.en.text  = English text
+      etc.
+    
+    Since this template requires $items to be filled in, use the following
+    workaround:
+      - retrieve all news from global.news
+      - get relevant news_id from url arguments
+      - loop over news array and get correct entry based on news_id
+      
+    Unfortunately, this only works for published news. Unpublished news entries
+    are not supplied in global.news.
+  %]
+
+  [% search_id = global.request.args.news_id %]
+  [% news = global.news %]
+  
+  [% lang = global.config.languages.keys.0 %]
+  
 
 [% IF preview;
      FOREACH lang = global.config.languages.keys;
