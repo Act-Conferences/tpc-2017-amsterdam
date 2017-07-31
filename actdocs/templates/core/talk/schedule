@@ -113,7 +113,7 @@
       <form method="POST" action="[% make_uri('updatemytalks') %]" />
         <div class="panel-body">
           [% d = day %]
-          <table class="table table-schedule">
+          <table class="table table-schedule" style="height:100%;">
             <thead>
               <tr class="header">
                 <th>
@@ -129,13 +129,13 @@
 
             <tbody>
              [% FOREACH row IN table.$d %]
-             <tr class="header">
+             <tr class="header" style="height:100%;">
               [% FOREACH col IN row %]
                [% IF loop.first %]
                  <td class="header">[% date_format(col, 'time').replace(' ', '&nbsp;') %]</td>
                [% ELSE %]
-                 <td valign="top" [% IF col.height AND col.height > 1 %]rowspan="[% col.height %]"[% END %] [% IF col.room %]class="[% col.room %]"[% IF col.room.match('^(?:out|venue)$') %] colspan="[% maxwidth.$d %]"[% END %][% END %]>
-                   <div class="alert">
+                 <td valign="top" [% IF col.height AND col.height > 1 %]rowspan="[% col.height %]"[% END %] [% IF col.room %]class="[% col.room %]"[% IF col.room.match('^(?:out|venue)$') %] colspan="[% maxwidth.$d %]"[% END %][% END %] style="height:inherit;">
+                   <div class="alert" style="height:100%;">
                      [% timeslot_fav_ajax(col) %]
                      <span id="starcount-[% col.id %]" style="white-space:nowrap">
                        [% IF col.stars %]
