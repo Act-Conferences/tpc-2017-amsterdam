@@ -69,12 +69,18 @@ Meanwhile you better keep your unpublished news around in some text file if you 
     are not supplied in global.news.
   %]
 
+[%# search the relevant news message based on news_id in args %]
   [% search_id = global.request.args.news_id %]
   [% news = global.news %]
-  
   [% lang = global.config.languages.keys.0 %]
   
-
+  [% FOREACH n = news %]
+    [% IF search_id==n.news_id %]
+      [% news_id  = search_id %]
+      [% items = n.items %]
+    [% END %]
+  [% END %]
+  
 [% IF preview;
      FOREACH lang = global.config.languages.keys;
        IF global.config.languages.keys.size > 1 %]
