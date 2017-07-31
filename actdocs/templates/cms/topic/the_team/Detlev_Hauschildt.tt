@@ -3,7 +3,7 @@
         title = "Detlev Hauschildt",
         image = "detlev.jpg",
         tasks = "Has to keep the website running",
-        intro = "I'm an interpreter too...",
+        intro = "I'm an interpreter too - but I do natural languages.",
         texts = [
 "I'm actually an interpreter of the other kind - the one that sits in a booth and is expected to reproduce the things someone says in one natural language in another natural language on-the-fly. But I'm also a geek at heart and most of my activities in life start with writing some Perl code to support me in them, and so I started hanging out with the Dutch Perl Mongers. Then I somehow ended up with the task of coming up with a website for the Dutch Perl workshops every year and now this conference... Having said that, where the design looks good, it's probably Theo's work, and I'm very grateful to Melinda for taking on quite a bit of the content.",
 
