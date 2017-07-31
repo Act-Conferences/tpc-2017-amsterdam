@@ -81,6 +81,10 @@
     -->
   [% END %]
 
+[%
+  sc_colwidth1 = '30px';
+  sc_colwidth  = '60px';
+%]
 
   [% IF table.keys.size %]
     <div class="panel panel-default">
@@ -113,15 +117,15 @@
       <form method="POST" action="[% make_uri('updatemytalks') %]" />
         <div class="panel-body">
           [% d = day %]
-          <table class="table table-schedule" style="height:100%;">
+          <table class="table table-schedule" id='table-schedule' style="height:100%;">
             <thead>
               <tr class="header">
-                <th>
+                <th style="width:sc_colwidth1;" >
                   {{Time}}
                 </th>
                 [% FOREACH r IN room.keys.sort %]
                   [% IF width.$r.$d %]
-                    <th colspan="[% width.$r.$d %]">[% r == 'sidetrack' ? loc('room_sidetrack') : global.config.rooms.$r %]</th>
+                    <th style="width:sc_colwidth;" colspan="[% width.$r.$d %]">[% r == 'sidetrack' ? loc('room_sidetrack') : global.config.rooms.$r %]</th>
                   [% END %]
                 [% END %]
               </tr>

@@ -76,7 +76,7 @@ p.message {
 }
 
 /*~------------------------------------------------------------------*/
-/* Timetable colours                                                 */
+/* Timetable colours and styling                                     */
 /*~------------------------------------------------------------------*/
 .table-schedule td.center {
   text-align: center;
@@ -116,6 +116,19 @@ p.message {
   font-size: small;
 }
 
+#table-schedule > thead > tr > th, 
+#table-schedule > tbody > tr > th, 
+#table-schedule > tfoot > tr > th, 
+#table-schedule > thead > tr > td, 
+#table-schedule > tbody > tr > td, 
+#table-schedule > tfoot > tr > td
+{
+  padding: 1px;
+}
+
+#table-schedule > tbody > tr .header {
+  padding-right:0.3em;
+}
 
 /* yapc2017 */
 
