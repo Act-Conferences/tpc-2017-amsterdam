@@ -1,5 +1,42 @@
 [% WRAPPER ui title = loc("Edit a news item") %]
 
+<p>
+Note: this is a custom version of news/edit as a workaround for the problem that the variable [&#x25; items &#x25;] currently doesn't get filled in Act::Handler::News::Edit.
+This custom template retrieves [&#x25; items &#x25;] by looping over [&#x25; global.news &#x25;] and retrieving [&#x25; items &#x25;] by id.<br>
+However this only works for published news!<br>
+</p>
+<p>
+See the current state of [&#x25; items &#x25;] in the below table. Once [&#x25; items.en.title &#x25;] and [&#x25; items.en.text &#x25;] are filled again, we can go back to the default template and editing also works for unpublished news.
+</p>
+  <table border="1">
+    <tr>
+      <th>variable</td>
+      <th>value</td>
+    </tr>
+    <tr>
+      <td>news_id</td>
+      <td>[% news_id %]</td>
+    </tr>
+
+    <tr>
+      <td>all keys in items</td>
+      <td>[% FOREACH lang IN items.keys %][% lang %][% END %]</td>
+    </tr>
+    
+    <tr>
+      <td>items.en.title</td>
+      <td>[% items.en.title %]</td>
+    </tr>
+    
+    <tr>
+      <td>items.en.text</td>
+      <td>[% items.en.text %]</td>
+    </tr>
+  </table>
+<br>
+<p>
+Meanwhile you better keep your unpublished news around in some text file if you later want to edit it.
+</p>
 
   [%#
     Required variable $items no longer gets filled in in 
@@ -32,23 +69,18 @@
     are not supplied in global.news.
   %]
 
+[%# search the relevant news message based on news_id in args %]
   [% search_id = global.request.args.news_id %]
   [% news = global.news %]
-  
   [% lang = global.config.languages.keys.0 %]
-<p>No. of news items: [% news.size %]</p>
-
+  
   [% FOREACH n = news %]
-    <p>Found: news_id=[% n.news_id %]</p>
     [% IF search_id==n.news_id %]
       [% news_id  = search_id %]
-      
       [% items = n.items %]
-
     [% END %]
   [% END %]
   
-
 [% IF preview;
      FOREACH lang = global.config.languages.keys;
        IF global.config.languages.keys.size > 1 %]
