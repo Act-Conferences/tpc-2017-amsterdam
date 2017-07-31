@@ -126,6 +126,10 @@ p.message {
   padding: 1px;
 }
 
+#table-schedule > tbody > tr .header {
+  padding-right:0.3em;
+}
+
 /* yapc2017 */
 
 /* === Customizations of bootstrap3 templates === */
