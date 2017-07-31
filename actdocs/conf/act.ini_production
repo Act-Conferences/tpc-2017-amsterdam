@@ -144,11 +144,11 @@ name_en     = Upgrade from "Private" to "Corporate"
 amount      = 220
 
 [product_partner]
-name_en     = Ticket for your partner (for social meetings / partner's talks)
+name_en     = Additional 'Social Events' ticket for your partner
 prices      = 1
 
 [product_partner_price1]
-name_en     = Ticket for your partner (for social meetings / partner's talks)
+name_en     = Additional 'Social Events' ticket for your partner
 amount      = 30
 
 # optional Flickr support
