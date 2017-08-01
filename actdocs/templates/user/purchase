@@ -109,17 +109,22 @@
                 [% ispromo = 0 %]
                 [% FOREACH i IN products.$p.prices %]
                   [% IF i.promocode; ispromo = 1 %]
-                    <tr class="act-price">
-                      <td class="act-description">
-                        <div class="[% purchase_class_left_sub %]">
-                          <span class="act-desciption">
-                            <label for="promo-[% p %]">{{Promotion code}}</label></td>
-                          </span>
-                        </div>
-                      </td>
-                      <td class="act-amount"><input class="form-control" type="text" id="promo-[% p %]" name="promo-[% p %]" value="[% promo.$p %]" /></td>
-                      <td></td>
-                    </tr>
+                  
+                    [%# disable promo row: doesn't seem to work, treasurer must enter payment %]
+                    [% sc_disable_promo_row=1 %]
+                    [% IF !sc_disable_promo_row %]
+                      <tr class="act-price">
+                        <td class="act-description">
+                          <div class="[% purchase_class_left_sub %]">
+                            <span class="act-desciption">
+                              <label for="promo-[% p %]">{{Promotion code}}</label></td>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="act-amount"><input class="form-control" type="text" id="promo-[% p %]" name="promo-[% p %]" value="[% promo.$p %]" /></td>
+                        <td></td>
+                      </tr>
+                    [% END %]
 
                   [% ELSE %]
                     <tr class="act-price">
