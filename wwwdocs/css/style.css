@@ -84,6 +84,12 @@ p.message {
 .table-schedule td {
   border: 0 !important;
 }
+.table-schedule .alert {
+    padding: 0px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+    border: 0px;
+}
 .venue .alert {
   background-color: #AA0A0A;
 }
