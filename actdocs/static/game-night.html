@@ -8,14 +8,105 @@
 
 [% WRAPPER ui_mobirise3 title=CMS.index.title %]
 
-<section class="mbr-section" id="testimonials2-3" style="background-color: rgb(255, 255, 255); padding-top: 120px; padding-bottom: 120px;">
+[% INCLUDE js/mytalks.js %]
+<section class="mbr-section" id="testimonials2-3" style="background-color: rgb(255, 255, 255); padding-top: 120px; padding-bottom: 80px;">
 
   <div class="mbr-section mbr-section__container mbr-section__container--middle">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 text-xs-center">
 
-          <h3 class="mbr-section-title display-2">
+
+[% 
+  fav_ajax_span0 = '<span style="font-size:90%;text-decoration:none;">';
+  fav_ajax_span1 = '&nbsp;</span>';
+  use_fav_ajax_text = {
+    yes = fav_ajax_span0 _ loc('remove from personal schedule') _ fav_ajax_span1 ,
+    no  = fav_ajax_span0 _ loc('add to personal schedule')      _ fav_ajax_span1 ,
+  };
+  
+  base_url = global.request.base_url;
+  IF    base_url.search('^https?\:\/\/\w+\:9000');
+    this_talk_id='47';
+  ELSIF base_url.search('^https?\:\/\/test\.mongueurs\.net');
+    this_talk_id='209';
+  ELSE;
+    this_talk_id='7146';
+  END;
+
+%]
+
+<script>
+// This provides ajax favorites toggling:
+$(function () {
+    if (window.act) {
+
+        // all features attached to .talk-checkbox class:
+        $('.talk-checkbox').click( function(e){
+            var conf_id = act.conf_id();
+            e.stopPropagation();
+
+            // local helpers:
+            // ajax saver for data:
+            var save_inversion = function(talk_id, state, ok_callback) {
+                $.post(act.make_uri(conf_id, 'updatemytalks_a'), {talk_id: talk_id, state: state},
+                    ok_callback);
+            };
+            
+            // on click on this checkbox-item (mostly it's 'a' tag in code) we toggle it:
+            var cb = $(this);
+            if( cb.data('talkfav') == 1 ) {
+                save_inversion(cb.data('talkid'), 0, function(e){
+                    //update_tooltip(cb);
+                    cb.data('talkfav','0');
+                    //cb.find('img').attr('src', act.make_uri(conf_id, 'img/amsterdam-plusje.svg') );
+                    if(cb.data('needreload'))
+                        setTimeout(function(){ location.reload(); }, 300);
+                });
+            } else {
+                save_inversion(cb.data('talkid'), 1, function(e){
+                    //update_tooltip(cb);
+                    cb.data('talkfav','1');
+                    //cb.find('img').attr('src', act.make_uri(conf_id, 'img/amsterdam-kruisje.svg') );
+                    if(cb.data('needreload'))
+                        setTimeout(function(){ location.reload(); }, 300);
+                });
+            }
+
+        });
+    }
+});
+</script>
+
+        <div style="position:absolute;right:0px;top:-60px;">
+        
+                  [% IF global.request.user.has_registered %]
+                    [% fav_ajax_width = fav_ajax_width || '20px' %]
+                    
+                    <a href="#" style="text-decoration:none;background-color:rgb(107,10,0);border-radius:3px;padding:3px 8px;"
+                      [%# For best toggling state, reversed test and this_talk_id stored in tag data- items: %]
+                        [% IF global.request.user.is_my_talk(this_talk_id) %]
+                                      title="{{remove from personal schedule}}"
+                                      data-toggle="tooltip" data-placement="top"
+                                      class="talk-checkbox" data-needreload="1"
+                                      data-talkfav="1" data-talkid="[% this_talk_id %]"
+                                      data-titlerev="{{add to personal schedule}}">
+                                      [% use_fav_ajax_text.yes %]<img src="[% make_uri_info('img', 'amsterdam-kruisje.svg') %]" width="[% fav_ajax_width %]">
+                        [% ELSE %]
+                                      title="{{add to personal schedule}}"
+                                      data-toggle="tooltip" data-placement="top"
+                                      class="talk-checkbox" data-needreload="1"
+                                      data-talkfav="0" data-talkid="[% this_talk_id %]"
+                                      data-titlerev="{{remove from personal schedule}}">
+                                      [% use_fav_ajax_text.no %]<img src="[% make_uri_info('img', 'amsterdam-plusje.svg') %]" width="[% fav_ajax_width %]">
+                        [% END %]
+                    </a>
+                  
+                  [% END %]
+
+      </div>
+
+          <h3 class="mbr-section-title display-2" style="margin-bottom:60px;">
             [% CMS.index.title %]
           </h3>
 
@@ -23,6 +114,12 @@
             [% FOREACH words IN CMS.index.texts %]
               [% words %]<br>
             [% END %]
+          </small>
+          
+          <small class="mbr-section-subtitle">
+            See also:
+              <a href="[% "/${global.request.conference}/wiki?node=GameNight" %]">The Game Night's wiki page</a> ,
+              <a href="[% "/${global.request.conference}/talk/${this_talk_id}" %]">The Game Night's talk page</a> 
           </small>
 
         </div>
@@ -40,7 +137,7 @@
 
               <div class="card-block">
                 [% FOREACH words IN item.texts %]
-                  <p>[% words %]</p>
+                  [% words %]
                 [% END %]
               </div>
 
