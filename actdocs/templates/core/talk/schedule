@@ -1,13 +1,23 @@
 [% INCLUDE js/mytalks.js %]
 
 
+
+[%
+    MACRO talk_confirmed_link_insert_whitespace(talk)
+    BLOCK;
+        sc_title = talk.title FILTER replace('::','::&#8203;');
+        %]<a href="[% make_uri_info( 'talk', talk.talk_id ) %]">
+            [%- "<b>" IF talk.confirmed %]&lrm;[% sc_title %]&lrm;[% "</b>" IF talk.confirmed %]</a>
+  [%- END;
+%]
+
 [%
     MACRO timeslot_fav_ajax(t)
     BLOCK;
         IF t.type == 'Act::Talk';
             PROCESS talk/fav_ajax this_talk_id=t.talk_id fav_ajax_width='20px' data_needreload=1;
 
-            user_info(t.user); ' - '; talk_confirmed_link(t);
+            user_info(t.user); ' - '; talk_confirmed_link_insert_whitespace(t);
             ' ('; t.duration; '&nbsp;'; loc('min');
             IF global.config.talks_languages;
                 ', '; global.config.talks_languages.${t.lang};
@@ -24,6 +34,7 @@
         END;
     END;
 %]
+
 
 [% UNLESS ( global.request.user.is_talks_admin
          or global.request.user.is_staff
