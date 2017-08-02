@@ -19,7 +19,8 @@
 
             user_info(t.user); ' - '; talk_confirmed_link_insert_whitespace(t);
             ' ('; t.duration; '&nbsp;'; loc('min');
-            IF global.config.talks_languages;
+            sc_omit_lang=1;
+            IF !sc_omit_lang && global.config.talks_languages;
                 ', '; global.config.talks_languages.${t.lang};
             END;
             ')';
