@@ -8,7 +8,7 @@
         texts       = [
            "Each item explores a small feature of Perl and how it fits into
             programming in the large.",
-           "See: https://www.effectiveperlprogramming.com",
+           'See: <a href="https://www.effectiveperlprogramming.com">www.effectiveperlprogramming.com</a>',
         ],
         topics      = [
            "Regular Expressions",
@@ -21,7 +21,7 @@
         date        = "Tuesday",
         time_start  = "09:00",
         time_end    = "17:00",
-        audience    = "Anyone with interest in programming",
+        audience    = "Anyone with an interest in programming",
         forms = { # be warned, these values are in Act.ini
             'product-trainingtue'  = "trainingtue",
             'price-trainingtue'    = "1",
