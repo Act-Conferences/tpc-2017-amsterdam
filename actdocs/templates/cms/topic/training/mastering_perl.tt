@@ -7,7 +7,7 @@
         texts       = [
            "This isn't a collection of clever tricks, but a way of thinking
             about Perl programming for solving programmers' everyday problems.",
-           "See: https://www.masteringperl.org",
+           "See: <a href=\"https://www.masteringperl.org\">www.masteringperl.org</a>",
         ],
         topics      = [
            "Modulinos",
