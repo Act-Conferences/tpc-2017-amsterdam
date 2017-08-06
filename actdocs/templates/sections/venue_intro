@@ -19,7 +19,7 @@
         <div class="mbr-section row">
           <div class="mbr-table-md-up">
 
-            <div class="mbr-table-cell mbr-right-padding-md-up col-md-5 text-xs-center text-md-right">
+            <div class="mbr-table-cell mbr-right-padding-lg-up col-md-6 col-lg-4 text-xs-center text-md-right">
 
               <h3 class="mbr-section-title display-4">A city in a building</h3>
 
@@ -42,12 +42,14 @@
               [%# <div class="mbr-section-btn"><a class="btn btn-primary" href="https://mobirise.com">MORE</a></div> %]
 
             </div>
-            <div class="mbr-table-cell mbr-valign-top col-md-7">
-              <div class="mbr-figure">
-                <a href="[% make_uri_info('img', 'b-amsterdam1.jpg') %]">
-                  <img src="[% make_uri_info('img', 'b-amsterdam1.jpg') %]" alt="Map for venue B.Amsterdam" style="height:460px;">
-                </a>
+            <div class="mbr-table-cell mbr-valign-top col-md-6 col-lg-8">
+
+              <div class="mbr-map" id="embedded-map">
+                <iframe 
+                  frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJXUl4ro7hxUcRtA8lwFsg8mk" allowfullscreen="">
+                </iframe>
               </div>
+
             </div>
 
           </div>
