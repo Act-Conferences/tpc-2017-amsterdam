@@ -563,3 +563,9 @@ p.message {
   background-color:#c0a375;
   border-color:white;
 }
+
+/* === styling for venue intro */
+
+@media (min-width: 1200px) 					       {  #embedded-map { height:500px; } }
+@media (min-width:  992px) and (max-width: 1199px) {  #embedded-map { height:600px; } }
+@media (min-width:  768px) and (max-width:  991px) {  #embedded-map { height:500px; } }
