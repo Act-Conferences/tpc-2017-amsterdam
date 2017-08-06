@@ -3,7 +3,7 @@
 
         <div class="mbr-cards-col col-xs-12 col-lg-6" style="padding-top: 5px; padding-bottom: 5px;">
             <div class="container">
-                <div class="card cart-block">
+                <div class="card card-block">
                     <div class="card-img">
                         <a href="booking.com" target="_blank">
                             <img src="cms/topic/sponsors/booking_com.png" class="card-img-top" alt="Booking.com" title="Booking.com">
@@ -15,7 +15,7 @@
 
         <div class="mbr-cards-col col-xs-12 col-lg-6" style="padding-top: 10px; padding-bottom: 10px;">
             <div class="container">
-                <div class="card cart-block">
+                <div class="card card-block">
                     <div class="card-img">
                         <a href="cpanel.com" target="_blank">
                             <img src="cms/topic/sponsors/cpanel.png" class="card-img-top" alt="cPanel" title="cPanel">
@@ -35,7 +35,7 @@
 
         <div class="mbr-cards-col col-xs-12 col-lg-4" style="padding-top: 5px; padding-bottom: 5px;">
             <div class="container">
-                <div class="card cart-block">
+                <div class="card card-block">
                     <div class="card-img">
                         <a href="eligo.com" target="_blank">
                             <img src="cms/topic/sponsors/eligo.png" class="card-img-top" alt="Eligo" title="Eligo">
@@ -49,7 +49,7 @@
 
         <div class="mbr-cards-col col-xs-12 col-lg-4" style="padding-top: 5px; padding-bottom: 10px;">
             <div class="container">
-                <div class="card cart-block">
+                <div class="card card-block">
                     <div class="card-img">
                         <a href="perl-careers.com" target="_blank">
                             <img src="cms/topic/sponsors/perl-careers.png" class="card-img-top" alt="Perl Careers" title="Perl Careers">
@@ -71,7 +71,7 @@
 
         <div class="mbr-cards-col col-xs-12 col-lg-2" style="padding-top: 20px; padding-bottom: 20px;">
             <div class="container">
-                <div class="card cart-block">
+                <div class="card card-block">
                     <div class="card-img">
                         <a href="www.zaaksysteem.nl" target="_blank">
                             <img src="cms/topic/sponsors/zaaksysteem.png" class="card-img-top" alt="Zaaksysteem NL" title="Zaaksysteem NL">
@@ -85,7 +85,7 @@
 
         <div class="mbr-cards-col col-xs-12 col-lg-2" style="padding-top: 15px; padding-bottom: 15px;">
             <div class="container">
-                <div class="card cart-block">
+                <div class="card card-block">
                     <div class="card-img">
                         <a href="geizhals.at" target="_blank">
                             <img src="cms/topic/sponsors/geizhals.png" class="card-img-top" alt="Geizhals" title="Geizhals Preisvergleich">
@@ -99,7 +99,7 @@
 
         <div class="mbr-cards-col col-xs-12 col-lg-2" style="padding-top: 5px; padding-bottom: 10px;">
             <div class="container">
-                <div class="card cart-block">
+                <div class="card card-block">
                     <div class="card-img">
                         <a href="www.broadbean.com" target="_blank">
                             <img src="cms/topic/sponsors/broadbean.png" class="card-img-top" alt="Broadbean" title="Broadbean Technology">
@@ -121,7 +121,7 @@
 
         <div class="mbr-cards-col col-xs-12 col-lg-2">
             <div class="container">
-                <div class="card cart-block">
+                <div class="card card-block">
                     <div class="card-img">
                         <a href="www.perl6.org" target="_blank">
                             <img src="cms/topic/sponsors/camelia.png" class="card-img-top" alt="Camelia" title="Camelia">
@@ -135,7 +135,7 @@
 
         <div class="mbr-cards-col col-xs-12 col-lg-2" style="padding-top: 10px; padding-bottom: 10px;">
             <div class="container">
-                <div class="card cart-block">
+                <div class="card card-block">
                     <div class="card-img">
                         <img src="cms/topic/sponsors/themamedia.png" class="card-img-top" style="width: 50%;">
                     </div>
