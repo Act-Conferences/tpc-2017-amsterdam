@@ -1,4 +1,4 @@
-<section class="mbr-cards mbr-section mbr-section-nopadding" style="background-color: rgb(34, 34, 34);">
+<section class="mbr-cards mbr-section mbr-section-nopadding sponsors-block" style="background-color: rgb(34, 34, 34);">
     <div class="mbr-cards-row row">
 
         <div class="mbr-cards-col col-xs-12 col-lg-6" style="padding-top: 5px; padding-bottom: 5px;">
@@ -28,7 +28,7 @@
     </div>
 </section>
 
-<section class="mbr-cards mbr-section mbr-section-nopadding" style="background-color: rgb(34, 34, 34);">
+<section class="mbr-cards mbr-section mbr-section-nopadding sponsors-block" style="background-color: rgb(34, 34, 34);">
     <div class="mbr-cards-row row">
 
         <div class="mbr-cards-col col-xs-12 col-lg-4" style="width: 5%;"></div>
@@ -64,7 +64,7 @@
     </div>
 </section>
 
-<section class="mbr-cards mbr-section mbr-section-nopadding" style="background-color: rgb(34, 34, 34);">
+<section class="mbr-cards mbr-section mbr-section-nopadding sponsors-block" style="background-color: rgb(34, 34, 34);">
     <div class="mbr-cards-row row">
 
         <div class="mbr-cards-col col-xs-12 col-lg-2" style="width: 5%;"></div>
@@ -114,7 +114,7 @@
     </div>
 </section>
 
-<section class="mbr-cards mbr-section mbr-section-nopadding" style="background-color: rgb(34, 34, 34);">
+<section class="mbr-cards mbr-section mbr-section-nopadding sponsors-block" style="background-color: rgb(34, 34, 34);">
     <div class="mbr-cards-row row">
 
         <div class="mbr-cards-col col-xs-12 col-lg-2" style="width: 20%;"></div>
