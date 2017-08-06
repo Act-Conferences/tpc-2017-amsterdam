@@ -1,3 +1,5 @@
+[% PROCESS sections/sponsor_block %]
+
 [% IF NOT bootstrap3 %]
   [% col_class         = 'mbr-footer-content col-xs-12 col-md-3' %]
 
