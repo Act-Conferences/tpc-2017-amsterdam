@@ -30,7 +30,7 @@
             [% ELSE %]
               
               <a
-                href=[% make_uri('newtalk') %]
+                href="[% make_uri('newtalk') %]"
                 class="btn btn-white"
               >
                 SUBMIT A TALK PROPOSAL
