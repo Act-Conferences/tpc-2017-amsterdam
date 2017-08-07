@@ -21,7 +21,7 @@
             [% ELSIF NOT global.request.user.has_registered %]
               
               <a
-                href=[% make_uri('register') %]
+                href="[% make_uri('register') %]"
                 class="btn btn-white"
               >
                 JOIN FIRST &amp; PROPOSE
