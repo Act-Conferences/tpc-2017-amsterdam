@@ -12,7 +12,7 @@
             [% IF NOT global.request.user %]
             
               <a
-                href=[% make_uri('login?destination') _ '=' _ make_uri('/index.html') %]
+                href="[% make_uri('login?destination') _ '=' _ make_uri('index.html') %]"
                 class="btn btn-white"
               >
                 LOGIN FIRST &amp; PROPOSE
