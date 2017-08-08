@@ -176,7 +176,7 @@
   sb_sponsor = {};  
   sb_group.members.1        = sb_sponsor;
   sb_sponsor.img            = 'themamedia.png';
-  sb_sponsor.url            = 'http://www.geizhals.at';
+  sb_sponsor.url            = 'http://thema-media.nl/';
   sb_sponsor.title          = 'themamedia';
 
   IF !bootstrap3;
