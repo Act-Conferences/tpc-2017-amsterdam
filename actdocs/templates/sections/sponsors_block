@@ -1,149 +1,255 @@
-<section class="mbr-cards mbr-section mbr-section-nopadding sponsors-block" style="background-color: rgb(34, 34, 34); padding-top: 20px;">
-    <div class="mbr-cards-row row">
+<div style="padding-bottom:40px;background-color: rgb(34, 34, 34);" id="sponsors_block"></div>
 
-        <div class="mbr-cards-col col-xs-12 col-lg-6" style="padding-top: 5px; padding-bottom: 5px;">
+[%
+  
+  IF NOT bootstrap3;
+    sb_section_classes = 'mbr-section mbr-section-md-padding mbr-footer footer1';
+  ELSE;
+    sb_section_classes = 'footer1';
+    sb_wide            = 'hidden-xs';
+    sb_xs              = 'hidden-sm hidden-md hidden-lg';
+  END;
+
+%]
+
+[%
+  # preparation for all 4 groups of sponsors;
+  sb_imgpath  = make_uri('cms/topic/sponsors');
+  sb_groups = [];
+  
+  
+  # detailed settings for group 0
+  sb_groups.0         = {};
+  sb_group            = sb_groups.0;
+  sb_group.members    = [];
+  
+  IF !bootstrap3;
+    sb_group.cols       = 'col-xs-12 col-lg-6';
+  ELSE;
+    sb_group.cols       = 'col-xs-12 col-sm-4';
+  END;
+
+  sb_sponsor = {};
+  sb_group.members.0        = sb_sponsor;
+  sb_sponsor.img            = 'booking_com.png';
+  sb_sponsor.url            = 'https://workingatbooking.com';
+  sb_sponsor.title          = 'Booking.com';
+  
+  IF !bootstrap3;
+    sb_sponsor.central_style  = 'padding-top: 5px; padding-bottom: 5px;';
+  ELSE;
+    sb_sponsor.img_style_wide     = 'width:105%;';
+    sb_sponsor.img_style_xs       = sb_sponsor.img_style_wide;
+  END;
+  
+  sb_sponsor = {};
+  sb_group.members.1        = sb_sponsor;
+  sb_sponsor.img            = 'cpanel.png';
+  sb_sponsor.url            = 'https://jobs.cpanel.com';
+  sb_sponsor.title          = 'cPanel';
+  IF !bootstrap3;
+    sb_sponsor.central_style  = 'padding-top: 10px; padding-bottom: 10px;';
+  ELSE;
+    sb_sponsor.img_style_wide     = 'width:90%;';
+    sb_sponsor.img_style_xs       = sb_sponsor.img_style_wide;
+  END;
+
+  # detailed settings for group 1
+  sb_groups.1         = {};
+  sb_group            = sb_groups.1;
+  sb_group.members    = [];
+
+  IF !bootstrap3;
+    sb_group.cols       = 'col-xs-12 col-lg-4';
+  ELSE;
+    sb_group.cols      = 'col-xs-12 col-sm-4';
+  END;
+  
+  sb_sponsor = {};
+  sb_group.members.0        = sb_sponsor;
+  sb_sponsor.img            = 'eligo.png';
+  sb_sponsor.url            = 'http://www.eligo.co.uk';
+  sb_sponsor.title          = 'Eligo';
+
+  IF !bootstrap3;
+    sb_sponsor.prec_style     = 'width: 5%;';
+    sb_sponsor.central_style  = 'padding-top: 5px; padding-bottom: 5px;';
+  ELSE;
+    sb_sponsor.img_style_wide     = 'width:80%;';
+    sb_sponsor.img_style_xs       = sb_sponsor.img_style_wide;
+  END;
+
+  sb_sponsor = {};  
+  sb_group.members.1        = sb_sponsor;
+  sb_sponsor.img            = 'perl-careers.png';
+  sb_sponsor.url            = 'http://perl.careers';
+  sb_sponsor.title          = 'Perl Careers';
+  
+  IF !bootstrap3;
+    sb_sponsor.prec_style     = 'width: 10%;';
+    sb_sponsor.central_style  = 'padding-top: 5px; padding-bottom: 10px;';
+    sb_sponsor.trail_style    = 'width:  5%;';
+  ELSE;
+    sb_sponsor.img_style_wide = 'width:80%;padding-top:10%';
+    sb_sponsor.img_style_xs   = sb_sponsor.img_style_wide;
+  END;
+
+  # detailed settings for group 2
+  sb_groups.2         = {};
+  sb_group            = sb_groups.2;
+  sb_group.members    = [];
+
+  IF !bootstrap3;
+    sb_group.cols       = 'col-xs-12 col-lg-2';
+  ELSE;
+    sb_group.cols      = 'col-xs-12 col-sm-3';
+  END;
+  
+  sb_sponsor = {};
+  sb_group.members.0        = sb_sponsor;
+  sb_sponsor.img            = 'zaaksysteem.png';
+  sb_sponsor.url            = 'http://www.zaaksysteem.nl';
+  sb_sponsor.title          = 'Zaaksysteem NL';
+  
+  IF !bootstrap3;
+    sb_sponsor.prec_style     = 'width:  5%;';
+    sb_sponsor.central_style  = 'padding-top: 20px; padding-bottom: 20px;';
+  ELSE;
+    sb_sponsor.img_style_wide     = 'width:70%;padding-top:15%;position:relative;left:0%';
+    sb_sponsor.img_style_xs       = 'width:70%;padding-top:15%;';
+  END;
+
+  sb_sponsor = {};  
+  sb_group.members.1        = sb_sponsor;
+  sb_sponsor.img            = 'geizhals.png';
+  sb_sponsor.url            = 'http://www.geizhals.at';
+  sb_sponsor.title          = 'Geizhals Preisvergleich';
+  
+  IF !bootstrap3;
+    sb_sponsor.prec_style     = 'width:  5%;';
+    sb_sponsor.central_style  = 'padding-top: 15px; padding-bottom: 15px;';
+  ELSE;
+    sb_sponsor.img_style_wide     = 'width:70%;padding-top:8%;position:relative;left:-15%;';
+    sb_sponsor.img_style_xs       = 'width:70%;padding-top:15px;';
+  END;
+
+  sb_sponsor = {};  
+  sb_group.members.2        = sb_sponsor;
+  sb_sponsor.img            = 'broadbean.png';
+  sb_sponsor.url            = 'http://www.broadbean.com';
+  sb_sponsor.title          = 'Broadbean Technology';
+  
+  IF !bootstrap3;
+    sb_sponsor.prec_style     = 'width:  5%;';
+    sb_sponsor.central_style  = 'padding-top: 5px; padding-bottom: 10px;';
+    sb_sponsor.trail_style    = 'width:  5%;';
+  ELSE;
+    sb_sponsor.img_style_wide     = 'width:70%;position:relative;left:-30%;';
+    sb_sponsor.img_style_xs       = 'width:70%;';
+  END;
+
+  # detailed settings for group 3
+  sb_groups.3         = {};
+  sb_group            = sb_groups.3;
+  sb_group.members    = [];
+  
+  IF !bootstrap3;
+    sb_group.cols       = 'col-xs-12 col-lg-2';
+  ELSE;
+    sb_group.cols      = 'col-xs-12 col-sm-3';
+  END;
+
+  sb_sponsor = {};
+  sb_group.members.0        = sb_sponsor;
+  sb_sponsor.img            = 'camelia.png';
+  sb_sponsor.url            = 'http://www.perl6.org';
+  sb_sponsor.title          = 'Camelia';
+  
+  IF !bootstrap3;
+    sb_sponsor.prec_style     = 'width: 20%;';
+    sb_sponsor.central_style  = '';
+  ELSE;
+    sb_sponsor.img_style_wide     = 'width:50%;position:relative;left:40%;';
+    sb_sponsor.img_style_xs       = 'width:50%;';
+  END;
+  
+  sb_sponsor = {};  
+  sb_group.members.1        = sb_sponsor;
+  sb_sponsor.img            = 'themamedia.png';
+  sb_sponsor.url            = 'http://www.geizhals.at';
+  sb_sponsor.title          = 'themamedia';
+
+  IF !bootstrap3;
+    sb_sponsor.prec_style     = 'width: 10%;';
+    sb_sponsor.central_style  = 'padding-top: 10px; padding-bottom: 10px;';
+    sb_sponsor.trail_style    = 'width: 20%;';
+    sb_sponsor.img_style      = 'width: 70%;';
+  ELSE;
+    sb_sponsor.img_style_wide     = 'width:40%;position:relative;left:40%;';
+    sb_sponsor.img_style_xs       = 'width:40%;';
+  END;
+
+%]
+
+[% IF !bootstrap3 %]
+
+  [% FOREACH sb_group IN sb_groups; "\n" %]
+    <section class="mbr-cards mbr-section mbr-section-nopadding sponsors-block" style="background-color: rgb(34, 34, 34);">
+      <div class="mbr-cards-row row">
+  
+        [% FOREACH sponsor IN sb_group.members; "\n" %]
+          [% IF sponsor.prec_style %]
+            <div class="mbr-cards-col [% sb_group.cols %]" style="[% sponsor.prec_style %]"></div>
+          [% END %]
+          
+          <div class="mbr-cards-col [% sb_group.cols %]" style="[% sponsor.central_style %]">
             <div class="container">
-                <div class="card card-block">
-                    <div class="card-img">
-                        <a href="https://workingatbooking.com" target="_blank">
-                            <img src="cms/topic/sponsors/booking_com.png" class="card-img-top" alt="Booking.com" title="Booking.com">
-                        </a>
-                    </div>
+              <div class="card card-block">
+                <div class="card-img">
+                  <a href="[% sponsor.url %]" target="_blank">
+                    <img style="[% sponsor.img_style %]" src="[% "$sb_imgpath/$sponsor.img" %]" class="card-img-top" alt="[% sponsor.title %]" title="[% sponsor.title %]">
+                  </a>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
+          
+          [% IF sponsor.trail_style %]
+            <div class="mbr-cards-col [% sb_group.cols %]" style="[% sponsor.trail_style %]"></div>
+          [% END %]
+        [% END %]
+  
+      </div>
+    </section>
+  [% END %]
+  <div style="padding:20px;background-color: rgb(34, 34, 34);"></div>
 
-        <div class="mbr-cards-col col-xs-12 col-lg-6" style="padding-top: 10px; padding-bottom: 10px;">
-            <div class="container">
-                <div class="card card-block">
-                    <div class="card-img">
-                        <a href="https://jobs.cpanel.com" target="_blank">
-                            <img src="cms/topic/sponsors/cpanel.png" class="card-img-top" alt="cPanel" title="cPanel">
-                        </a>
-                    </div>
-                </div>
+[% ELSE %]
+
+  [% FOREACH sb_group IN sb_groups; "\n" %]
+    <section class="sponsors-block footer1" style="background-color: rgb(34, 34, 34);padding-top: 20px; padding-bottom: 20px;">
+  
+      <div class="container">
+        <div class="row">
+  
+          [% FOREACH sb_sponsor IN sb_group.members; "\n" %]
+            <div class="[% sb_group.cols %]">
+      
+              <div>
+                <a href="[% sb_sponsor.url %]" target="_blank" >
+                  <img class="center-block [% sb_wide %]" style="[% sb_sponsor.img_style_wide %]" src='[% "$sb_imgpath/$sb_sponsor.img" %]' alt="[% sb_sponsor.title %]" title="[% sb_sponsor.title %]">
+                  <img class="center-block [% sb_xs   %]" style="[% sb_sponsor.img_style_xs   %]" src='[% "$sb_imgpath/$sb_sponsor.img" %]' alt="[% sb_sponsor.title %]" title="[% sb_sponsor.title %]">
+                </a>
+              </div>
+          
             </div>
+          [% END %]
+    
         </div>
-
-    </div>
-</section>
-
-<section class="mbr-cards mbr-section mbr-section-nopadding sponsors-block" style="background-color: rgb(34, 34, 34);">
-    <div class="mbr-cards-row row">
-
-        <div class="mbr-cards-col col-xs-12 col-lg-4" style="width: 5%;"></div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-4" style="padding-top: 5px; padding-bottom: 5px;">
-            <div class="container">
-                <div class="card card-block">
-                    <div class="card-img">
-                        <a href="http://www.eligo.co.uk" target="_blank">
-                            <img src="cms/topic/sponsors/eligo.png" class="card-img-top" alt="Eligo" title="Eligo">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-4" style="width: 10%;"></div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-4" style="padding-top: 5px; padding-bottom: 10px;">
-            <div class="container">
-                <div class="card card-block">
-                    <div class="card-img">
-                        <a href="http://perl.careers" target="_blank">
-                            <img src="cms/topic/sponsors/perl-careers.png" class="card-img-top" alt="Perl Careers" title="Perl Careers">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-4" style="width: 5%;"></div>
-
-    </div>
-</section>
-
-<section class="mbr-cards mbr-section mbr-section-nopadding sponsors-block" style="background-color: rgb(34, 34, 34);">
-    <div class="mbr-cards-row row">
-
-        <div class="mbr-cards-col col-xs-12 col-lg-2" style="width: 5%;"></div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-2" style="padding-top: 20px; padding-bottom: 20px;">
-            <div class="container">
-                <div class="card card-block">
-                    <div class="card-img">
-                        <a href="http://www.zaaksysteem.nl" target="_blank">
-                            <img src="cms/topic/sponsors/zaaksysteem.png" class="card-img-top" alt="Zaaksysteem NL" title="Zaaksysteem NL">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-2" style="width: 5%;"></div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-2" style="padding-top: 15px; padding-bottom: 15px;">
-            <div class="container">
-                <div class="card card-block">
-                    <div class="card-img">
-                        <a href="http://www.geizhals.at" target="_blank">
-                            <img src="cms/topic/sponsors/geizhals.png" class="card-img-top" alt="Geizhals" title="Geizhals Preisvergleich">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-2" style="width: 5%;"></div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-2" style="padding-top: 5px; padding-bottom: 10px;">
-            <div class="container">
-                <div class="card card-block">
-                    <div class="card-img">
-                        <a href="http://www.broadbean.com" target="_blank">
-                            <img src="cms/topic/sponsors/broadbean.png" class="card-img-top" alt="Broadbean" title="Broadbean Technology">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-2" style="width: 5%;"></div>
-
-    </div>
-</section>
-
-<section class="mbr-cards mbr-section mbr-section-nopadding sponsors-block" style="background-color: rgb(34, 34, 34); padding-bottom: 50px;">
-    <div class="mbr-cards-row row">
-
-        <div class="mbr-cards-col col-xs-12 col-lg-2" style="width: 20%;"></div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-2">
-            <div class="container">
-                <div class="card card-block">
-                    <div class="card-img">
-                        <a href="http://www.perl6.org" target="_blank">
-                            <img src="cms/topic/sponsors/camelia.png" class="card-img-top" alt="Camelia" title="Camelia">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-2" style="width: 10%;"></div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-2" style="padding-top: 10px; padding-bottom: 10px;">
-            <div class="container">
-                <div class="card card-block">
-                    <div class="card-img">
-                        <img src="cms/topic/sponsors/themamedia.png" class="card-img-top" style="width: 50%;">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mbr-cards-col col-xs-12 col-lg-2" style="width: 20%;"></div>
-
-    </div>
-</section>
+        
+      </div>
+      
+    </section>
+  [% END %]
+  
+[% END %]
