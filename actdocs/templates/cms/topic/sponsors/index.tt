@@ -4,6 +4,7 @@
         intro =
            "A BIG THANK YOU for the companies that invested in this conference.",
         items = [
+            "booking_com",
         ],
         texts = [
            "Throughout the years the Perl Conference has been accessible for all
