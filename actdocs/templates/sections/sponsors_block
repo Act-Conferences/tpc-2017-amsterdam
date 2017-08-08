@@ -31,7 +31,7 @@
 
   sb_sponsor = {};
   sb_group.members.0        = sb_sponsor;
-  sb_sponsor.img            = 'booking_com.png';
+  sb_sponsor.img            = 'booking_com__grey.png';
   sb_sponsor.url            = 'https://workingatbooking.com';
   sb_sponsor.title          = 'Booking.com';
   
@@ -44,7 +44,7 @@
   
   sb_sponsor = {};
   sb_group.members.1        = sb_sponsor;
-  sb_sponsor.img            = 'cpanel.png';
+  sb_sponsor.img            = 'cpanel__grey.png';
   sb_sponsor.url            = 'https://jobs.cpanel.com';
   sb_sponsor.title          = 'cPanel';
   IF !bootstrap3;
@@ -67,7 +67,7 @@
   
   sb_sponsor = {};
   sb_group.members.0        = sb_sponsor;
-  sb_sponsor.img            = 'eligo.png';
+  sb_sponsor.img            = 'eligo__grey.png';
   sb_sponsor.url            = 'http://www.eligo.co.uk';
   sb_sponsor.title          = 'Eligo';
 
@@ -81,7 +81,7 @@
 
   sb_sponsor = {};  
   sb_group.members.1        = sb_sponsor;
-  sb_sponsor.img            = 'perl-careers.png';
+  sb_sponsor.img            = 'perl-careers__grey.png';
   sb_sponsor.url            = 'http://perl.careers';
   sb_sponsor.title          = 'Perl Careers';
   
@@ -107,7 +107,7 @@
   
   sb_sponsor = {};
   sb_group.members.0        = sb_sponsor;
-  sb_sponsor.img            = 'zaaksysteem.png';
+  sb_sponsor.img            = 'zaaksysteem__grey.png';
   sb_sponsor.url            = 'http://www.zaaksysteem.nl';
   sb_sponsor.title          = 'Zaaksysteem NL';
   
@@ -121,7 +121,7 @@
 
   sb_sponsor = {};  
   sb_group.members.1        = sb_sponsor;
-  sb_sponsor.img            = 'geizhals.png';
+  sb_sponsor.img            = 'geizhals__grey.png';
   sb_sponsor.url            = 'http://www.geizhals.at';
   sb_sponsor.title          = 'Geizhals Preisvergleich';
   
@@ -135,7 +135,7 @@
 
   sb_sponsor = {};  
   sb_group.members.2        = sb_sponsor;
-  sb_sponsor.img            = 'broadbean.png';
+  sb_sponsor.img            = 'broadbean__grey.png';
   sb_sponsor.url            = 'http://www.broadbean.com';
   sb_sponsor.title          = 'Broadbean Technology';
   
@@ -161,7 +161,7 @@
 
   sb_sponsor = {};
   sb_group.members.0        = sb_sponsor;
-  sb_sponsor.img            = 'camelia.png';
+  sb_sponsor.img            = 'camelia__grey.png';
   sb_sponsor.url            = 'http://www.perl6.org';
   sb_sponsor.title          = 'Camelia';
   
@@ -175,7 +175,7 @@
   
   sb_sponsor = {};  
   sb_group.members.1        = sb_sponsor;
-  sb_sponsor.img            = 'themamedia.png';
+  sb_sponsor.img            = 'themamedia__grey.png';
   sb_sponsor.url            = 'http://thema-media.nl/';
   sb_sponsor.title          = 'themamedia';
 
