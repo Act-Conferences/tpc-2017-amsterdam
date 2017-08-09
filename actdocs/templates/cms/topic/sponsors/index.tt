@@ -7,6 +7,7 @@
             "booking_com",
             'cpanel' ,
             'eligo'  ,
+            'perl_careers' ,
         ],
         texts = [
            "Throughout the years the Perl Conference has been accessible for all
