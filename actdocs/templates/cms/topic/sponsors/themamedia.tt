@@ -1,0 +1,14 @@
+[%
+    SET CMS.item = {
+        title       = "THEMA MEDIA",
+        image       = "themamedia__color.png",
+        intro       = "",
+        texts       = [ ""
+        ],
+        level       = 1,
+        block       = "themamedia__grey.png",
+        website     = "http://thema-media.nl",
+        sponsoring  = [
+        ] ,
+    }
+%]

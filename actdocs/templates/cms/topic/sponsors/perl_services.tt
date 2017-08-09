@@ -1,0 +1,16 @@
+[%
+    SET CMS.item = {
+        title       = "Perl Services",
+        image       = "perl-services__color.png",
+        intro       = "We develop your software in Perl",
+        texts       = [ 
+"Are you looking for a reliable partner with a long history of Perl experience? Would you like to have a fixed (and not constantly changing) contact person who is well-versed in anything relating to Perl? Or do you have another concern that requires Perl knowledge? Then you're at the right address: we support you in (nearly) everything to do with Perl."
+        ],
+        level       = 1,
+        block       = "perl-services__grey.png",
+        website     = "https://www.perl-services.de/",
+        sponsoring  = [
+          'Coders most essential' ,
+        ] ,
+    }
+%]

@@ -10,6 +10,7 @@
         block       = "perl-careers__grey.png",
         website     = "https://opensource.careers/perl-careers",
         sponsoring  = [
+          'Contributed to the venue' ,
         ]
     }
 %]

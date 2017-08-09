@@ -2,13 +2,14 @@
     SET CMS.item = {
         title       = "Eligo Technology",
         image       = "eligo__color.png",
-        intro       = "The niche recruitment agency with a team of dedicated consultants that live and breathe the market.",
+        intro       = "The niche recruitment agency with a team of dedicated consultants that live and breathe the market",
         texts       = [ "We sponsor, present at, and host many events within the Perl family. Come talk to us for insight into the current Perl market and help in finding you the right person or job in Perl, no matter what you’re looking for."
         ],
         level       = 1,
         block       = "eligo__grey.png",
         website     = "http://eligo.co.uk/technology",
         sponsoring  = [
+          'Contributed to the venue' ,
         ] ,
     }
 %]

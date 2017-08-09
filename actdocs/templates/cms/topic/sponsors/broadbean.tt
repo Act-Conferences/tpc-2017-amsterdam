@@ -1,0 +1,16 @@
+[%
+    SET CMS.item = {
+        title       = "broadbean",
+        image       = "broadbean__color.png",
+        intro       = "Recruitment made simple",
+        texts       = [ "The only candidate sourcing and data management solution you need."
+        ],
+        level       = 1,
+        block       = "broadbean__grey.png",
+        website     = "https://www.broadbean.com/
+        ",
+        sponsoring  = [
+          'The lunch' ,
+        ] ,
+    }
+%]

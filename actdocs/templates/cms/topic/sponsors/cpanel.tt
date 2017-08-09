@@ -2,7 +2,7 @@
     SET CMS.item = {
         title       = "cPanel",
         image       = "cpanel__color.png",
-        intro       = "Since 1996, cPanel, Inc. has been delivering the web hosting industry’s most reliable, intuitive control panel.",
+        intro       = "Since 1996, cPanel, Inc. has been delivering the web hosting industry’s most reliable, intuitive control panel",
         texts       = [
            "The robust automation software helps businesses thrive and allows them to focus on more important things. Customers and partners receive first-class support and a rich feature set, making cPanel &amp; WHM the hosting platform of choice."
         ],
@@ -10,6 +10,7 @@
         block       = "cpanel__grey.png",
         website     = "https://cpanel.com",
         sponsoring  = [
+          'Contributed to the venue'
         ] ,
     }
 %]
