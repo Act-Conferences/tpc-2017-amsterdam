@@ -1,0 +1,110 @@
+[% PROCESS 'CMS.tt'
+    CMS = {
+        topic = 'sponsors',
+        index = {},
+        items = {},
+    }
+%]
+
+[% WRAPPER ui_mobirise3 title=CMS.index.title %]
+
+
+
+  <section class="mbr-section article mbr-parallax-background" style="background-image: none; padding-top: 120px; padding-bottom: 120px; position: relative; background-attachment: scroll; background-size: auto;" data-jarallax-original-styles="background-image: url([% make_uri( 'cms/topic/' _ CMS.topic _ '/' _ CMS.index.image ) %]); padding-top: 120px; padding-bottom: 120px; position: relative;">
+    
+    <div class="mbr-overlay" style="opacity: 0.9; background-color: rgb(0, 0, 0);">
+    </div>
+    <div class="container" style="color:#d8d8d8">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h3 class="mbr-section-title display-2">[% CMS.index.title %]</h3>
+          <div class="lead">
+            <p class="">
+              <em class="">
+                <span style="font-size: 1.07rem; line-height: 1.5;">[% CMS.index.intro %]</span>
+              </em>
+            </p>
+            [% FOREACH words IN CMS.index.texts %]
+              <p class="">
+                [% words %]
+              </p>
+            [% END %]
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="jarallax-container-1" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -100;">
+      <div style="background-size: 100%; background-image: url([% make_uri( 'cms/topic/' _ CMS.topic _ '/' _ CMS.index.image ) %]); position: fixed; top: 0px; left: 0px; width: 100%; height: 874.88px; overflow: hidden; pointer-events: none; margin-left: 0px; margin-top: 39.06px; visibility: visible; transform: translate3d(0px, 137.69999999999996px, 0px); background-position: 50% 50%; background-repeat: no-repeat no-repeat;">
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  [% FOREACH item_name IN CMS.index.items %][% item = CMS.items.$item_name %]
+    
+    <section class="mbr-section" style="background-color: rgb(242, 242, 242); padding-top: 80px; padding-bottom: 120px;">
+      
+      
+      <div class="container">
+        <div class="row">
+          <div class="mbr-table-md-up">
+            
+            <div class="mbr-table-cell mbr-right-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 20%;">
+              <div class="mbr-figure">
+                <img
+                  src="[% make_uri( 'cms/topic/' _ CMS.topic _ '/' ) _ item.image %]"
+                  alt="logo of [% item.title %]"
+                  title="[% item.title %]"
+                >
+              </div>
+            </div>
+            
+            <div class="mbr-table-cell col-md-5 text-md-left content-size">
+              <h3 class="mbr-section-title display-2">[% item.title %]</h3>
+              
+              <div>
+                
+                <p>
+                  <i>[% item.intro %]</i>
+                </p>
+                
+              </div>
+              <div>
+                [% FOREACH words IN item.texts %]
+                    <p>[% words %]</p>
+                [% END %]
+              </div>
+              
+              <div>
+                [% FOREACH sponsor_item IN item.sponsoring %]
+                  <h5 class="mbr-section-title display-5" style="text-align: right;">[% sponsor_item %]</h4>
+                [% END %]
+              </div>
+              
+              <div style="margin:0 0 40px 0;"></div>
+              
+              <div class="mbr-plan-btn" style="text-align: right;">
+                <a
+                  href="[% item.website %]"
+                  class="btn btn-white btn-black-outline"
+                >
+                  VISIT THEIR WEBSITE
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    </section>
+    
+  [% END %]
+  
+  
+[% END %]
