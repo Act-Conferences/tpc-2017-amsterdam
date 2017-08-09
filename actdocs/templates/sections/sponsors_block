@@ -4,6 +4,8 @@
   
   IF NOT bootstrap3;
     sb_section_classes = 'mbr-section mbr-section-md-padding mbr-footer footer1';
+    sb_wide            = 'hidden-md-down';
+    sb_narr            = 'hidden-lg-up';
   ELSE;
     sb_section_classes = 'footer1';
     sb_wide            = 'hidden-xs';
@@ -168,8 +170,10 @@
   IF !bootstrap3;
     sb_sponsor.prec_style     = 'width: 20%;';
     sb_sponsor.central_style  = '';
+    sb_sponsor.img_style_wide      = 'width:100%;position:relative;left:-40%;';
+    sb_sponsor.img_style_narr      = 'width:100%;';
   ELSE;
-    sb_sponsor.img_style_wide     = 'width:50%;position:relative;left:40%;';
+    sb_sponsor.img_style_wide     = 'width:50%;';
     sb_sponsor.img_style_xs       = 'width:50%;';
   END;
   
@@ -183,10 +187,28 @@
     sb_sponsor.prec_style     = 'width: 10%;';
     sb_sponsor.central_style  = 'padding-top: 10px; padding-bottom: 10px;';
     sb_sponsor.trail_style    = 'width: 20%;';
-    sb_sponsor.img_style      = 'width: 70%;';
+    sb_sponsor.img_style_wide      = 'width: 100%;position:relative;left:-40%;';
+    sb_sponsor.img_style_narr      = 'width:  80%;';
   ELSE;
-    sb_sponsor.img_style_wide     = 'width:40%;position:relative;left:40%;';
+    sb_sponsor.img_style_wide     = 'width:40%;position:relative;left:-10%;';
     sb_sponsor.img_style_xs       = 'width:40%;';
+  END;
+
+  sb_sponsor = {};  
+  sb_group.members.2        = sb_sponsor;
+  sb_sponsor.img            = 'perl-services__grey.png';
+  sb_sponsor.url            = 'http://www.perl-services.de/';
+  sb_sponsor.title          = 'perl Services';
+
+  IF !bootstrap3;
+    sb_sponsor.prec_style     = 'width: 0%;';
+    sb_sponsor.central_style  = 'padding-top: 10px; padding-bottom: 10px;';
+    sb_sponsor.trail_style    = 'width: 0%;';
+    sb_sponsor.img_style_wide      = 'width: 200%;position:relative;left:-80%;';
+    sb_sponsor.img_style_narr      = 'width: 60%;';
+  ELSE;
+    sb_sponsor.img_style_wide     = 'width:50%;position:relative;left:-30%;';
+    sb_sponsor.img_style_xs       = 'width:50%;';
   END;
 
 %]
@@ -207,7 +229,8 @@
               <div class="card card-block">
                 <div class="card-img">
                   <a href="[% sponsor.url %]" target="_blank">
-                    <img style="[% sponsor.img_style %]" src="[% "$sb_imgpath/$sponsor.img" %]" class="card-img-top" alt="[% sponsor.title %]" title="[% sponsor.title %]">
+                    <img style="[% sponsor.img_style_wide %]" src="[% "$sb_imgpath/$sponsor.img" %]" class="[% sb_wide %] card-img-top" alt="[% sponsor.title %]" title="[% sponsor.title %]">
+                    <img style="[% sponsor.img_style_narr %]" src="[% "$sb_imgpath/$sponsor.img" %]" class="[% sb_narr %] card-img-top" alt="[% sponsor.title %]" title="[% sponsor.title %]">
                   </a>
                 </div>
               </div>
