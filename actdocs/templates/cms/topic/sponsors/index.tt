@@ -6,8 +6,18 @@
         items = [
             "booking_com",
             'cpanel' ,
+            
             'eligo'  ,
             'perl_careers' ,
+            
+            'zaaksysteem' ,
+            'geizhals' ,
+            'broadbean' ,
+            
+            'camelia' ,
+            'themamedia' ,
+            'perl_services' ,
+            
         ],
         texts = [
            "Throughout the years the Perl Conference has been accessible for all
