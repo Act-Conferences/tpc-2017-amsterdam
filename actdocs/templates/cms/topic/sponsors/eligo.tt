@@ -9,6 +9,6 @@
         block       = "eligo__grey.png",
         website     = "http://eligo.co.uk/technology",
         sponsoring  = [
-        ]
+        ] ,
     }
 %]

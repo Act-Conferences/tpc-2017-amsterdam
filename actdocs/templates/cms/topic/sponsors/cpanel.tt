@@ -10,6 +10,6 @@
         block       = "cpanel__grey.png",
         website     = "https://cpanel.com",
         sponsoring  = [
-        ]
+        ] ,
     }
 %]
