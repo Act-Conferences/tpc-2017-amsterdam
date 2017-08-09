@@ -2,7 +2,7 @@
     SET CMS.index = {
         title = "Partners of The Perl Conference",
         intro =
-           "A BIG THANK YOU for the companies that invested in this conference.",
+           "A BIG THANK YOU to the companies that invested in this conference.",
         items = [
             "booking_com",
             'cpanel' ,
@@ -23,9 +23,8 @@
            "Throughout the years the Perl Conference has been accessible for all
             developers from all over the world for a very reasonable price. And
             we always will strive to make it affordable for everyone.",
-           "But it wouldn't be without the companies mentioned below that do
-            support the Perl Community. Without their investment, ticket prices
-            would be doubled",
+           "But this wouldn't have been possible without the companies listed below that support the Perl Community. Without their investment, ticket prices
+            would be twice as high.",
            "Enough reason to say 'thank you' here on the website, but also when
             you see one of their people during the conference.",
            "THANK YOU",
