@@ -14,7 +14,7 @@
     <li><a [% item_a_attr %] href="[% make_uri('training.html')           %]">Training courses</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('#venue_intro')            %]">Venue</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('volunteers.html')         %]">Volunteering ?!</a></li>
-    <li><a [% item_a_attr %] href="[% make_uri('sponsoring.html')         %]">Sponsoring</a></li>
+    <li><a [% item_a_attr %] href="[% make_uri('sponsors.html')         %]">Our inavaluable sponsors</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('speakers.html')           %]">Main speakers</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('where-to-stay.html')      %]">Where to stay</a></li>
     <li><a [% item_a_attr %] href="[% make_uri('the-fabulous-team.html')  %]">Our team</a></li>
