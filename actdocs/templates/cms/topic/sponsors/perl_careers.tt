@@ -2,7 +2,7 @@
     SET CMS.item = {
         title       = "Perl Careers",
         image       = "perl-careers__color.png",
-        intro       = "The Perl-focused recruitment consultancy.",
+        intro       = "The Perl-focused recruitment consultancy",
         texts       = [
            "Perl Careers is a Perl-focused recruitment consultancy specializing in the UK and the US, and run by a CPAN contributor."
         ],
