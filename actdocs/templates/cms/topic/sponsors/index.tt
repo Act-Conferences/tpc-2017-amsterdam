@@ -6,7 +6,6 @@
         items = [
             "booking_com",
             'cpanel' ,
-            #'eligo'  ,
             'perl_careers' ,
         ],
         texts = [
