@@ -1,0 +1,14 @@
+[%
+    SET CMS.item = {
+        title       = "perl6.org",
+        image       = "camelia__color.png",
+        intro       = "The Perl 6 Programming Language",
+        texts       = [ "Hi, my name is Camelia. I'm the spokesbug for Perl 6, the plucky little sister of Perl 5. Like her world-famous big sister, Perl 6 intends to carry forward the high ideals of the Perl community. Perl 6 is currently being developed by a team of dedicated and enthusiastic volunteers. You can help too. The only requirement is that you know how to be nice to all kinds of people (and butterflies). Go to #perl6 (irc.freenode.net) and someone will be glad to help you get started."
+        ],
+        level       = 1,
+        block       = "camelia__grey.png",
+        website     = "http://www.perl6.org",
+        sponsoring  = [
+        ] ,
+    }
+%]

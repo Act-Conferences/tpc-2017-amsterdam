@@ -1,0 +1,15 @@
+[%
+    SET CMS.item = {
+        title       = "Geizhals Preisvergleich",
+        image       = "geizhals__color.png",
+        intro       = "",
+        texts       = [ ""
+        ],
+        level       = 1,
+        block       = "geizhals__grey.png",
+        website     = "http://geizhals.at",
+        sponsoring  = [
+          'Coders most essential' ,
+        ] ,
+    }
+%]

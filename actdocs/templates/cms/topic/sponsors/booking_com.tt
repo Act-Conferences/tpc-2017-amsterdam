@@ -1,0 +1,20 @@
+[%
+    SET CMS.item = {
+        title       = "Booking . com",
+        image       = "booking_com__color.png",
+        intro       = "To empower people to experience the world",
+        texts       = [
+           "Booking.com is an international success that build their website on
+            Perl. Booking.com runs one of the world’s largest Perl-powered
+            websites and they offer a rapidly evolving and dynamic environment.
+            Their technology is focused on development, scaling and automation."
+        ],
+        level       = 1,
+        block       = "booking_com__grey.png",
+        website     = "https://workingatbooking.com",
+        sponsoring  = [
+            "ZuidStrand - Social Event",
+            "Keynote Speakers",
+        ]
+    }
+%]

@@ -1,0 +1,16 @@
+[%
+    SET CMS.item = {
+        title       = "Perl Careers",
+        image       = "perl-careers__color.png",
+        intro       = "The Perl-focused recruitment consultancy.",
+        texts       = [
+           "Perl Careers is a Perl-focused recruitment consultancy specializing in the UK and the US, and run by a CPAN contributor."
+        ],
+        level       = 1,
+        block       = "perl-careers__grey.png",
+        website     = "https://opensource.careers/perl-careers",
+        sponsoring  = [
+          'Contributed to the venue' ,
+        ]
+    }
+%]

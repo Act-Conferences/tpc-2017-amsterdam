@@ -1,0 +1,16 @@
+[%
+    SET CMS.item = {
+        title       = "Zaaksysteem",
+        image       = "zaaksysteem__color.png",
+        intro       = "SaaS",
+        texts       = [ 
+        "Zaaksysteem.nl is de SaaS-leverancier binnen de overheid. Al van het begin wordt onze oplossing alleen als SaaS-oplossing aangeboden. Wij hebben dan ook ruime ervaring op dit gebied en hebben de laatste technieken toegepast om een snel en gebruiksvriendelijk systeem aan te bieden."
+        ],
+        level       = 1,
+        block       = "zaaksysteem__grey.png",
+        website     = "http://www.zaaksystem.nl",
+        sponsoring  = [
+          'The lunch' ,
+        ] ,
+    }
+%]

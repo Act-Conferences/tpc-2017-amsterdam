@@ -1,0 +1,35 @@
+[%
+    SET CMS.index = {
+        title = "Partners of The Perl Conference",
+        intro =
+           "A BIG THANK YOU for the companies that invested in this conference.",
+        items = [
+            "booking_com",
+            'cpanel' ,
+            
+            'eligo'  ,
+            'perl_careers' ,
+            
+            'zaaksysteem' ,
+            'geizhals' ,
+            'broadbean' ,
+            
+            'camelia' ,
+            'themamedia' ,
+            'perl_services' ,
+            
+        ],
+        texts = [
+           "Throughout the years the Perl Conference has been accessible for all
+            developers from all over the world for a very reasonable price. And
+            we always will strive to make it affordable for everyone.",
+           "But it wouldn't be without the companies mentioned below that do
+            support the Perl Community. Without their investment, ticket prices
+            would be doubled",
+           "Enough reason to say 'thank you' here on the website, but also when
+            you see one of their people during the conference.",
+           "THANK YOU",
+        ],
+        image = '',
+    }
+%]
